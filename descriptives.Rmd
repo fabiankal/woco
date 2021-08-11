@@ -45,7 +45,7 @@ Dieses Dokument zeigt verschiedene Graphentypen der zentralen Variablen des Aust
 
 ```{r data import, include = FALSE}
 #setwd("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse")
-bern_data_long2_factored = readRDS("./../../data/processed/W1-24_CORONAPANEL_recoded.rds")
+bern_data_long2_factored = readRDS("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/processed/W1-24_CORONAPANEL_recoded.rds")
 
 #bern_data_long2_factored <- bern_data_long2_factored %>% mutate_if(is.factor, ~(na_if(.,"Weiss nicht")))
 #bern_data_long2_factored <- bern_data_long2_factored %>% mutate_if(is.factor, ~(na_if(.,"keine Angabe")))
@@ -101,6 +101,10 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 data_long <- gather(lr_gen_w1, condition, measurement, ges_per_gefahr:ges_pub_gefahr, factor_key=TRUE)
 data_long$measurement<-as.factor(data_long$measurement)
 
+data_plot_long_N<-data_long %>% filter(!is.na(measurement)) %>% 
+ group_by(wave,condition) %>% tally()
+
+
 data_plot_long<-data_long %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wave,condition,measurement) %>% 
@@ -115,7 +119,6 @@ levels(data_plot_long$condition) <- c("Persönlich", "Für die österr. Bevölke
 levels(data_plot_long$measurement) <- c("sehr groß", "groß", "mittelmäßig", "klein", "sehr klein")
 
 data_plot_long$measurement <- fct_relevel(data_plot_long$measurement, "sehr klein", "klein", "mittelmäßig", "groß", "sehr groß")
-
 
 cat("  \n")
 
@@ -132,7 +135,7 @@ ggplot(data_plot_long, aes(fill=measurement,x=wave, y=prop)) +
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) +
     scale_x_discrete(guide = guide_axis(n.dodge = 2))
-ggsave("figure1_stack_gesundh.png", units="in", width=6.8, height=4, type="cairo-png")
+ggsave("./output/figures/figure1_stack_gesundh.png", units="in", width=6.8, height=4, type="cairo-png")
 
 #mean line attention recoding 5= sehr groß 1= sehr klein
 data_plot_long_mean <- data_long  %>% filter(!is.na(measurement)) %>%
@@ -160,7 +163,12 @@ ggplot(data_plot_long_mean, aes(wavedate, mean_measurement, colour = condition))
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) +
     scale_x_date(date_breaks = "month",date_labels = "%b-%y",guide = guide_axis(n.dodge = 2))
-ggsave("figure1_mean_gesundh.png", units="in", width=8, height=5, type="cairo-png")
+ggsave("./output/figures/figure1_mean_gesundh.png", units="in", width=8, height=5, type="cairo-png")
+
+write.csv(data_plot_long, "./output/tables/figure1_shares.csv", na = "NA")
+write.csv(data_plot_long_mean, "./output/tables/figure1_mean.csv", na = "NA")
+write.csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
+
 
 ```
 
