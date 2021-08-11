@@ -165,9 +165,10 @@ ggplot(data_plot_long_mean, aes(wavedate, mean_measurement, colour = condition))
     scale_x_date(date_breaks = "month",date_labels = "%b-%y",guide = guide_axis(n.dodge = 2))
 ggsave("./output/figures/figure1_mean_gesundh.png", units="in", width=8, height=5, type="cairo-png")
 
-write.csv(data_plot_long, "./output/tables/figure1_shares.csv", na = "NA")
-write.csv(data_plot_long_mean, "./output/tables/figure1_mean.csv", na = "NA")
-write.csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
+
+write_csv(data_plot_long%>%filter(condition=="Für die österr. Bevölkerung"), "./output/tables/figure1_shares.csv", na = "NA")
+write_csv(data_plot_long_mean%>%filter(condition=="Für die österr. Bevölkerung"), "./output/tables/figure1_mean.csv", na = "NA")
+write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
 
 
 ```
