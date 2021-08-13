@@ -90,8 +90,7 @@ bern_data_long2_factored$alter_g <- fct_relevel(bern_data_long2_factored$alter_g
 
 ## Wahrnehmung der Corona-Krise 
 
-### Einschätzung der gesundheitlichen Gefahr
-
+### Einschätzung der gesundheitlichen Gefahr - datawrapper
 
 ```{r gesundheitliche Gefahr, echo=FALSE, fig.width=8, fig.height=5, results='asis'}
 #GESUNDHEITLICH#########################
@@ -103,7 +102,6 @@ data_long$measurement<-as.factor(data_long$measurement)
 
 data_plot_long_N<-data_long %>% filter(!is.na(measurement)) %>% 
  group_by(wave,condition) %>% tally()
-
 
 data_plot_long<-data_long %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
@@ -120,14 +118,104 @@ levels(data_plot_long$measurement) <- c("sehr groß", "groß", "mittelmäßig", 
 
 data_plot_long$measurement <- fct_relevel(data_plot_long$measurement, "sehr klein", "klein", "mittelmäßig", "groß", "sehr groß")
 
+#mean line attention recoding 5= sehr groß 1= sehr klein
+data_plot_long_mean <- data_long  %>% filter(!is.na(measurement)) %>%
+  as_survey_design(weights = c(WEIGHTD)) %>%
+  group_by(wavedate,condition) %>%
+  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,condition) %>%
+     mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se)
+
+levels(data_plot_long_mean$condition) <- c("Persönlich", "Für die österr. Bevölkerung")
+
+data_plot_long_mean_export <- data_plot_long_mean %>% 
+  select(-c(mean_measurement_se)) %>%
+  pivot_wider(id_cols = c(wavedate,condition),names_from=condition, values_from=c(mean_measurement,ymax,ymin), names_glue = "{condition}_{.value}")
+
+data_plot_long_mean_export_rn <- data_plot_long_mean_export %>% ungroup() %>%
+  rename("Persönlich"='Persönlich_mean_measurement',
+         "Für die österr. Bevölkerung"='Für die österr. Bevölkerung_mean_measurement')
+
+write_csv(data_plot_long%>%filter(condition=="Für die österr. Bevölkerung"), "./output/tables/figure1_shares.csv", na = "NA")
+write_csv(data_plot_long_mean_export_rn, "./output/tables/figure1_mean.csv", na = "NA")
+write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
+```
+
+### Einschätzung der gesundheitlichen Gefahr - shiny
+
+```{r gesundheitliche Gefahr, echo=FALSE, fig.width=8, fig.height=5, results='asis'}
+#GESUNDHEITLICH#########################
+
+lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
+
+data_long <- gather(lr_gen_w1, variable, measurement, c(ges_per_gefahr,ges_pub_gefahr,wir_per_gefahr,wir_pub_gefahr), factor_key=TRUE)
+data_long$measurement<-as.factor(data_long$measurement)
+
+data_plot_long_N<-data_long %>% filter(!is.na(measurement)) %>% 
+ group_by(wavedate,variable) %>% tally() %>% rename(N_total=n)
+
+levels(data_plot_long_N$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
+
+data_plot_long<-data_long %>% filter(!is.na(measurement)) %>%
+  as_survey_design(weights = c(WEIGHTD)) %>%
+  group_by(wavedate,variable,measurement) %>% 
+  summarise(n=survey_total(vartype = c("se")))
+
+data_plot_long<-data_plot_long %>% group_by(wavedate,variable) %>%
+     mutate(prop = n/sum(n),ymax=prop+1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n, ymin=prop-1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n)
+
+levels(data_plot_long$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
+levels(data_plot_long$measurement) <- c("sehr groß", "groß", "mittelmäßig", "klein", "sehr klein")
+
+data_plot_long$measurement <- fct_relevel(data_plot_long$measurement, "sehr klein", "klein", "mittelmäßig", "groß", "sehr groß")
+
+#mean line attention recoding 5= sehr groß 1= sehr klein
+data_plot_long_mean <- data_long  %>% filter(!is.na(measurement)) %>%
+  as_survey_design(weights = c(WEIGHTD)) %>%
+  group_by(wavedate,variable) %>%
+  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable) %>%
+     mutate(ymax_mean=mean_measurement+1.96*mean_measurement_se, ymin_mean=mean_measurement-1.96*mean_measurement_se)
+
+levels(data_plot_long_mean$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
+
+export_shiny_data <- left_join(data_plot_long, data_plot_long_mean,by=c("wavedate"="wavedate","variable"="variable"))
+export_shiny_data <- left_join(export_shiny_data, data_plot_long_N,by=c("wavedate"="wavedate","variable"="variable"))
+
+write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
+
+#write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
+```
+
+### Einschätzung der wirtschaftlichen Gefahr
+
+```{r wirtschaftliche gefahr, echo=FALSE, fig.width=8, fig.height=5, results='asis'}  
+#WIRTSCHAFTLICH#########################
+
+lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
+
+data_long <- gather(lr_gen_w1, condition, measurement, c(wir_per_gefahr,wir_pub_gefahr), factor_key=TRUE)
+data_long$measurement<-as.factor(data_long$measurement)
+
+data_plot_long<-data_long %>% filter(!is.na(measurement)) %>%
+  as_survey_design(weights = c(WEIGHTD)) %>%
+  group_by(wave,condition,measurement) %>%
+  summarise(n=survey_total(,vartype = c("se"))) %>% group_by(wave,condition) %>%
+     mutate(prop = n/sum(n),ymax=prop+1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n, ymin=prop-1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n)
+
+data_plot_long$wave<-as.factor(data_plot_long$wave)
+levels(data_plot_long$wave) <-c("W1", "W2", "W3","W4","W5","W6","W7","W8","W9","W10","W11","W12","W13","W14","W15","W16","W17","W18","W19","W20","W21","W22","W23","W24")
+levels(data_plot_long$condition) <- c("Persönlich", "Für die österr. Bevölkerung")
+levels(data_plot_long$measurement) <- c("sehr groß", "groß", "mittelmäßig", "klein", "sehr klein")
+data_plot_long$measurement <- fct_relevel(data_plot_long$measurement, "sehr klein", "klein", "mittelmäßig", "groß", "sehr groß")
+
+
 cat("  \n")
 
 # stacked graph
 ggplot(data_plot_long, aes(fill=measurement,x=wave, y=prop)) + 
     geom_bar(position="stack", show.legend = TRUE,stat = "identity", width=0.7) +
     geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction =-1) +  #alternative:Blues
-    labs(y = "Prozent", x= "",fill="",title="Einschätzung der gesundheitlichen Gefahr") +
+    scale_fill_brewer(palette = "RdYlBu", direction=-1) +  #alternative:Blues
+    labs(y = "Prozent", x= "",fill="") +
     facet_grid(~condition) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     theme_hc() +
@@ -135,7 +223,8 @@ ggplot(data_plot_long, aes(fill=measurement,x=wave, y=prop)) +
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) +
     scale_x_discrete(guide = guide_axis(n.dodge = 2))
-ggsave("./output/figures/figure1_stack_gesundh.png", units="in", width=6.8, height=4, type="cairo-png")
+ggsave("figure1_stack_wirtsch.png", units="in", width=8, height=5, type="cairo-png")
+
 
 #mean line attention recoding 5= sehr groß 1= sehr klein
 data_plot_long_mean <- data_long  %>% filter(!is.na(measurement)) %>%
@@ -150,35 +239,23 @@ levels(data_plot_long_mean$condition) <- c("Persönlich", "Für die österr. Bev
 #levels(data_plot_long$measurement) <- c("sehr groß", "groß", "mittelmäßig", "klein", "sehr klein")
 
 cat("  \n")
-
+cat("  \n")
 # mean line
 ggplot(data_plot_long_mean, aes(wavedate, mean_measurement, colour = condition)) +
   geom_line(aes(group = condition),size=1.2) +
   geom_errorbar(aes(ymin = ymin, ymax = ymax), width = 5,size=1.2) +
     scale_fill_brewer(palette = "RdYlBu") +  #alternative:Blues
-    labs(y = "Einschätzung der gesundheitlichen Gefahr \n (1 sehr klein - 5 sehr groß)", x= "",colour="") +
+    labs(y = "Einschätzung der wirtschaftlichen Gefahr \n (1 sehr klein - 5 sehr groß)", x= "",colour="") +
  #   scale_y_continuous(labels = scales::percent) +
     theme_hc() +
  #   theme(axis.text.x  = element_text(angle=45, hjust = 1)) +
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) +
     scale_x_date(date_breaks = "month",date_labels = "%b-%y",guide = guide_axis(n.dodge = 2))
-ggsave("./output/figures/figure1_mean_gesundh.png", units="in", width=8, height=5, type="cairo-png")
-
-data_plot_long_mean_export <- data_plot_long_mean %>% 
-  select(-c(mean_measurement_se)) %>%
-  pivot_wider(id_cols = c(wavedate,condition),names_from=condition, values_from=c(mean_measurement,ymax,ymin), names_glue = "{condition}_{.value}")
-
-data_plot_long_mean_export_rn <- data_plot_long_mean_export %>% ungroup() %>%
-  rename("Persönlich"='Persönlich_mean_measurement',
-         "Für die österr. Bevölkerung"='Für die österr. Bevölkerung_mean_measurement')
-
-write_csv(data_plot_long%>%filter(condition=="Für die österr. Bevölkerung"), "./output/tables/figure1_shares.csv", na = "NA")
-write_csv(data_plot_long_mean_export_rn, "./output/tables/figure1_mean.csv", na = "NA")
-write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
-
+ggsave("figure1_mean_wirtsch.png", units="in", width=8, height=5, type="cairo-png")
 
 ```
+
 
 ### Einschätzung der wirtschaftlichen Gefahr
 

@@ -1,0 +1,69 @@
+---
+title: "Old Faithful Eruptions"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+---
+
+```{r global, include=FALSE}
+library(plotly)
+# load data in 'global' chunk so it can be shared by all users of the dashboard
+data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/figure1_mean.csv")
+
+my_autocomplete_list <- c("John Doe","Ash","Ajay sharma",
+                          "Ken Chong","Will Smith","Neo","Wahrgenommene Gefahr durch COVID-19")
+
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Waiting time between eruptions and the duration of the eruption for the
+Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
+
+```{r}
+selectizeInput(
+    inputId = 'variables',
+    label = 'Variablen',
+    choices = my_autocomplete_list,
+    selected = "Wahrgenommene Gefahr durch COVID-19",
+    multiple = TRUE, # allow for multiple inputs
+    options = list(create = FALSE), # if TRUE, allows newly created inputs
+  )
+selectInput("groupby", label = "Gruppierung",
+            choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Keine")
+
+checkboxInput(inputId = 'confidence', label = "95% Konfidenzintervalle", value = FALSE)
+checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
+checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value = FALSE)
+
+sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+            min = 0.2, max = 2, value = 1, step = 0.2)
+
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Line Plot
+
+```{r}
+
+renderPlotly({
+  p <- data %>%
+  plot_ly(x = ~wavedate,mode = 'lines')
+  p <- p %>% add_lines(y=~Persönlich,name = 'Persönlich')
+  p <- p %>% add_lines(y=~`Für die österr. Bevölkerung`,name = 'Für die österr. Bevölkerung')
+  p <- p %>% layout(title = "Average agreement",
+         xaxis = list(title = ""),
+         yaxis = list (title = ""))
+  p
+})
+
+renderPlot({
+  hist(data$'Persönlich', probability = TRUE, breaks = as.numeric(input$n_breaks),
+       xlab = "Duration (minutes)", main = "Geyser Eruption Duration")
+  
+  dens <- density(data$'Persönlich', adjust = input$bw_adjust)
+  lines(dens, col = "blue")
+})
+```
