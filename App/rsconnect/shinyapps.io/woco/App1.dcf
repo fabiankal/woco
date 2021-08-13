@@ -1,0 +1,13 @@
+name: App1
+title: App1
+username:
+account: woco
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4488861
+bundleId: 4919247
+url: https://woco.shinyapps.io/App1/
+when: 1628853801.65418
+lastSyncTime: 1628853801.65418
+asMultiple: FALSE
+asStatic: FALSE
