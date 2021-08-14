@@ -1,5 +1,5 @@
 ---
-title: "Old Faithful Eruptions"
+title: "Work and Corona Dashboard"
 output: flexdashboard::flex_dashboard
 runtime: shiny
 ---
@@ -18,8 +18,7 @@ my_autocomplete_list <- unique(data$variable)
 Column {.sidebar}
 -----------------------------------------------------------------------
 
-Waiting time between eruptions and the duration of the eruption for the
-Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
+Choose wisely.
 
 ```{r}
 selectizeInput(
@@ -58,6 +57,8 @@ Column
 #     pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")})
 # verbatimTextOutput('out1')
 
+#eventReactive(input$groupby, { })
+
 renderPlotly({
   data2 = data %>% select(wavedate,variable,mean_measurement,ymax_mean,ymin_mean) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
@@ -65,18 +66,38 @@ renderPlotly({
     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
 
   p <- data2 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,mode = 'lines',linetype=~variable)
+  plot_ly(x = ~wavedate, y= ~mean_measurement,mode = 'lines+markers',linetype=~variable)
   p <- p %>% layout(title = "Average agreement",
          xaxis = list(title = ""),
-         yaxis = list (title = ""))
+         yaxis = list (title = ""),
+         legend = list(orientation = 'h'))
   p
 })
 
-#renderPlot({
-#  hist(data$'Persönlich', probability = TRUE, breaks = as.numeric(input$n_breaks),
- #      xlab = "Duration (minutes)", main = "Geyser Eruption Duration")
-  
- # dens <- density(data$'Persönlich', adjust = input$bw_adjust)
- # lines(dens, col = "blue")
-#})
+```
+
+### Infos
+
+```{r}
+
+tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$strong("Y"))
+
+output$out1 <- renderPrint(input$groupby)
+verbatimTextOutput('out1')
+
+renderPlotly({
+  data2 = data %>% select(wavedate,variable,mean_measurement,ymax_mean,ymin_mean) %>%
+    distinct(wavedate,variable, .keep_all = TRUE) %>%
+    filter(variable %in% input$variables) %>%
+    filter(grouping %in% input$groupby)
+
+  p <- data2 %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,mode = 'lines+markers',linetype=~grouping)
+  p <- p %>% layout(title = "Average agreement",
+         xaxis = list(title = ""),
+         yaxis = list (title = ""),
+         legend = list(orientation = 'h'))
+  p
+})
+
 ```
