@@ -12,7 +12,7 @@ library(rlang)
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv")
 
-data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv")
+data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv")
 
 my_autocomplete_list <- unique(data$variable)
 
@@ -85,7 +85,7 @@ tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$stro
 
 ```
 
-### Infos
+### By Group
 
 ```{r}
 #output$out1 <- renderPrint(input$groupby)
@@ -98,7 +98,7 @@ tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$stro
 
 renderPlotly({
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
-    filter(variable %in% input$variables) %>%
+    filter(variable %in% input$variables[1]) %>%
     filter(case_when(input$groupby=="Gender"~ groupby=="ge",
                      input$groupby=="Age"~ groupby=="ag",
                      input$groupby=="Education"~ groupby=="ed",
@@ -119,8 +119,54 @@ renderPlotly({
 Share plots
 =======================================================================
 
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Choose wisely.
+
+```{r}
+selectInput(
+    inputId = 'var_shares',
+    label = 'Variablen',
+    choices = my_autocomplete_list,
+    selected = my_autocomplete_list[1],
+    multiple = FALSE, # allow for multiple inputs
+    #options = list(create = FALSE), # if TRUE, allows newly created inputs
+  )
+
+```
+
+Column
+-----------------------------------------------------------------------
+
 ### To do
 
 ```{r}
+
+renderPlotly({
+  data3 = data_shares %>% select(wavedate,variable,measurement,prop) %>%
+    filter(variable %in% input$var_shares) 
+  
+  p <- ggplot(data3, aes(fill=measurement,x=wavedate, y=prop)) + 
+    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.8) + #geom_bar width=0.7
+    geom_point(position=position_stack(),colour="white") +
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=1) +  #alternative:Blues
+    labs(y = "Prozent", x= "",fill="") +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_date(date_breaks = "2 month",date_labels = "%b-%y",guide = guide_axis(n.dodge = 2))
+    theme(legend.position="bottom") + 
+    guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
+
+  ggplotly(p)
+  # p <- data3 %>%
+  # plot_ly(x = ~wavedate, y= ~prop,type = 'bar',color = ~measurement,barmode = 'stack')
+  # p <- p %>% layout(title = "Shares",
+  #        xaxis = list(title = ""),
+  #        yaxis = list (title = ""),
+  #        legend = list(orientation = 'h'))
+  
+  
+})
 
 ```
