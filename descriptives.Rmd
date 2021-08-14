@@ -254,9 +254,21 @@ export_shiny_data <- bind_rows(export_shiny_data, data_plot_long_mean_hi)
 
 export_shiny_data <- left_join(export_shiny_data, data_plot_long_N,by=c("wavedate"="wavedate","variable"="variable"))
 
-write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
+export_shiny_data <- export_shiny_data %>% mutate(mean_measurement=round(mean_measurement,2),
+                                                  mean_measurement_se=round(mean_measurement_se,2),
+                                                  ymax=round(ymax,2),
+                                                  ymin=round(ymin,2))
 
-#write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
+export_shiny_data_shares <- left_join(data_plot_long, data_plot_long_N,by=c("wavedate"="wavedate","variable"="variable"))
+
+export_shiny_data_shares <- export_shiny_data_shares %>% select(-c(n,n_se)) %>% mutate(prop=round(prop,3),
+                                                                                       ymax=round(ymax,3),
+                                                                                       ymin=round(ymin,3))
+
+
+write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
+write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.csv", na = "NA")
+
 ```
 
 ### Einschätzung der wirtschaftlichen Gefahr

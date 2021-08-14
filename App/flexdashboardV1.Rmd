@@ -7,13 +7,19 @@ runtime: shiny
 ```{r global, include=FALSE}
 library(plotly)
 library(tidyr)
+library(dplyr)
 library(rlang)
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv")
 
+data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv")
+
 my_autocomplete_list <- unique(data$variable)
 
 ```
+
+Mean plots
+=======================================================================
 
 Column {.sidebar}
 -----------------------------------------------------------------------
@@ -36,8 +42,8 @@ checkboxInput(inputId = 'confidence', label = "95% Konfidenzintervalle", value =
 checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value = FALSE)
 
-sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-            min = 0.2, max = 2, value = 1, step = 0.2)
+# sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+#             min = 0.2, max = 2, value = 1, step = 0.2)
 
 ```
 
@@ -60,13 +66,47 @@ Column
 #eventReactive(input$groupby, { })
 
 renderPlotly({
-  data2 = data %>% select(wavedate,variable,mean_measurement,ymax_mean,ymin_mean) %>%
+  data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% input$variables) #%>%
+    filter(variable %in% input$variables & groupby=="all") #%>%
     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
 
   p <- data2 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,mode = 'lines+markers',linetype=~variable)
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~variable)
+  p <- p %>% layout(title = "Average agreement",
+         xaxis = list(title = ""),
+         yaxis = list (title = ""),
+         legend = list(orientation = 'h'))
+  p
+})
+
+tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$strong("Y"))
+
+
+```
+
+### Infos
+
+```{r}
+#output$out1 <- renderPrint(input$groupby)
+#verbatimTextOutput('out1')
+
+# data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
+#     filter(variable %in% test2) %>%
+#     filter(case_when(test=="Gender"~ groupby=="ge",
+#                test=="Age"~ groupby=="ag"))
+
+renderPlotly({
+  data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
+    filter(variable %in% input$variables) %>%
+    filter(case_when(input$groupby=="Gender"~ groupby=="ge",
+                     input$groupby=="Age"~ groupby=="ag",
+                     input$groupby=="Education"~ groupby=="ed",
+                     input$groupby=="Region"~ groupby=="bl",
+                     input$groupby=="Income"~ groupby=="hi"))
+
+  p <- data3 %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)
   p <- p %>% layout(title = "Average agreement",
          xaxis = list(title = ""),
          yaxis = list (title = ""),
@@ -76,28 +116,11 @@ renderPlotly({
 
 ```
 
-### Infos
+Share plots
+=======================================================================
+
+### To do
 
 ```{r}
-
-tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$strong("Y"))
-
-output$out1 <- renderPrint(input$groupby)
-verbatimTextOutput('out1')
-
-renderPlotly({
-  data2 = data %>% select(wavedate,variable,mean_measurement,ymax_mean,ymin_mean) %>%
-    distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% input$variables) %>%
-    filter(grouping %in% input$groupby)
-
-  p <- data2 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,mode = 'lines+markers',linetype=~grouping)
-  p <- p %>% layout(title = "Average agreement",
-         xaxis = list(title = ""),
-         yaxis = list (title = ""),
-         legend = list(orientation = 'h'))
-  p
-})
 
 ```

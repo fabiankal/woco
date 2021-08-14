@@ -1,0 +1,481 @@
+wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
+2020-03-28,Ges. Gefahr Persönlich,sehr groß,0.102,0.105,0.098,none,1534
+2020-03-28,Ges. Gefahr Persönlich,groß,0.164,0.166,0.161,none,1534
+2020-03-28,Ges. Gefahr Persönlich,mittelmäßig,0.38,0.382,0.379,none,1534
+2020-03-28,Ges. Gefahr Persönlich,klein,0.221,0.223,0.219,none,1534
+2020-03-28,Ges. Gefahr Persönlich,sehr klein,0.133,0.136,0.13,none,1534
+2020-03-28,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.19,0.192,0.187,none,1534
+2020-03-28,Ges. Gefahr Für die österr. Bevölkerung,groß,0.39,0.392,0.389,none,1534
+2020-03-28,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.36,0.362,0.359,none,1534
+2020-03-28,Ges. Gefahr Für die österr. Bevölkerung,klein,0.042,0.048,0.036,none,1534
+2020-03-28,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.018,0.027,0.008,none,1534
+2020-03-28, Wir. Gefahr Persönlich,sehr groß,0.144,0.147,0.142,none,1534
+2020-03-28, Wir. Gefahr Persönlich,groß,0.223,0.225,0.22,none,1534
+2020-03-28, Wir. Gefahr Persönlich,mittelmäßig,0.359,0.36,0.357,none,1534
+2020-03-28, Wir. Gefahr Persönlich,klein,0.185,0.187,0.183,none,1534
+2020-03-28, Wir. Gefahr Persönlich,sehr klein,0.089,0.093,0.085,none,1534
+2020-03-28,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.451,0.452,0.45,none,1533
+2020-03-28,Wir. Gefahr Für die österr. Bevölkerung,groß,0.39,0.391,0.388,none,1533
+2020-03-28,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.145,0.148,0.142,none,1533
+2020-03-28,Wir. Gefahr Für die österr. Bevölkerung,klein,0.01,0.023,-0.002,none,1533
+2020-03-28,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.004,0.024,-0.015,none,1533
+2020-04-04,Ges. Gefahr Persönlich,sehr groß,0.078,0.082,0.073,none,1547
+2020-04-04,Ges. Gefahr Persönlich,groß,0.165,0.168,0.163,none,1547
+2020-04-04,Ges. Gefahr Persönlich,mittelmäßig,0.375,0.376,0.374,none,1547
+2020-04-04,Ges. Gefahr Persönlich,klein,0.237,0.239,0.235,none,1547
+2020-04-04,Ges. Gefahr Persönlich,sehr klein,0.145,0.148,0.142,none,1547
+2020-04-04,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.136,0.139,0.133,none,1548
+2020-04-04,Ges. Gefahr Für die österr. Bevölkerung,groß,0.363,0.364,0.362,none,1548
+2020-04-04,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.408,0.409,0.406,none,1548
+2020-04-04,Ges. Gefahr Für die österr. Bevölkerung,klein,0.075,0.079,0.071,none,1548
+2020-04-04,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.018,0.028,0.009,none,1548
+2020-04-04, Wir. Gefahr Persönlich,sehr groß,0.117,0.12,0.113,none,1541
+2020-04-04, Wir. Gefahr Persönlich,groß,0.209,0.211,0.207,none,1541
+2020-04-04, Wir. Gefahr Persönlich,mittelmäßig,0.352,0.353,0.351,none,1541
+2020-04-04, Wir. Gefahr Persönlich,klein,0.215,0.217,0.213,none,1541
+2020-04-04, Wir. Gefahr Persönlich,sehr klein,0.107,0.111,0.104,none,1541
+2020-04-04,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.38,0.381,0.378,none,1548
+2020-04-04,Wir. Gefahr Für die österr. Bevölkerung,groß,0.415,0.416,0.414,none,1548
+2020-04-04,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.186,0.188,0.184,none,1548
+2020-04-04,Wir. Gefahr Für die österr. Bevölkerung,klein,0.014,0.025,0.004,none,1548
+2020-04-04,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.005,0.023,-0.013,none,1548
+2020-04-11,Ges. Gefahr Persönlich,sehr groß,0.058,0.063,0.052,none,1490
+2020-04-11,Ges. Gefahr Persönlich,groß,0.133,0.136,0.13,none,1490
+2020-04-11,Ges. Gefahr Persönlich,mittelmäßig,0.376,0.377,0.374,none,1490
+2020-04-11,Ges. Gefahr Persönlich,klein,0.263,0.265,0.261,none,1490
+2020-04-11,Ges. Gefahr Persönlich,sehr klein,0.171,0.174,0.168,none,1490
+2020-04-11,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.083,0.087,0.078,none,1489
+2020-04-11,Ges. Gefahr Für die österr. Bevölkerung,groß,0.368,0.369,0.366,none,1489
+2020-04-11,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.424,0.425,0.423,none,1489
+2020-04-11,Ges. Gefahr Für die österr. Bevölkerung,klein,0.11,0.113,0.106,none,1489
+2020-04-11,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.016,0.026,0.006,none,1489
+2020-04-11, Wir. Gefahr Persönlich,sehr groß,0.09,0.094,0.086,none,1484
+2020-04-11, Wir. Gefahr Persönlich,groß,0.188,0.191,0.186,none,1484
+2020-04-11, Wir. Gefahr Persönlich,mittelmäßig,0.356,0.358,0.355,none,1484
+2020-04-11, Wir. Gefahr Persönlich,klein,0.247,0.249,0.245,none,1484
+2020-04-11, Wir. Gefahr Persönlich,sehr klein,0.119,0.122,0.115,none,1484
+2020-04-11,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.321,0.322,0.319,none,1488
+2020-04-11,Wir. Gefahr Für die österr. Bevölkerung,groß,0.436,0.437,0.434,none,1488
+2020-04-11,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.227,0.229,0.225,none,1488
+2020-04-11,Wir. Gefahr Für die österr. Bevölkerung,klein,0.013,0.024,0.001,none,1488
+2020-04-11,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.004,0.026,-0.019,none,1488
+2020-04-17,Ges. Gefahr Persönlich,sehr groß,0.047,0.052,0.041,none,1521
+2020-04-17,Ges. Gefahr Persönlich,groß,0.107,0.111,0.104,none,1521
+2020-04-17,Ges. Gefahr Persönlich,mittelmäßig,0.366,0.367,0.365,none,1521
+2020-04-17,Ges. Gefahr Persönlich,klein,0.276,0.278,0.274,none,1521
+2020-04-17,Ges. Gefahr Persönlich,sehr klein,0.204,0.206,0.202,none,1521
+2020-04-17,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.073,0.077,0.068,none,1519
+2020-04-17,Ges. Gefahr Für die österr. Bevölkerung,groß,0.285,0.286,0.283,none,1519
+2020-04-17,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.483,0.484,0.482,none,1519
+2020-04-17,Ges. Gefahr Für die österr. Bevölkerung,klein,0.132,0.135,0.129,none,1519
+2020-04-17,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.028,0.035,0.02,none,1519
+2020-04-17, Wir. Gefahr Persönlich,sehr groß,0.073,0.078,0.069,none,1514
+2020-04-17, Wir. Gefahr Persönlich,groß,0.163,0.166,0.16,none,1514
+2020-04-17, Wir. Gefahr Persönlich,mittelmäßig,0.371,0.372,0.369,none,1514
+2020-04-17, Wir. Gefahr Persönlich,klein,0.262,0.264,0.26,none,1514
+2020-04-17, Wir. Gefahr Persönlich,sehr klein,0.131,0.134,0.128,none,1514
+2020-04-17,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.264,0.265,0.262,none,1520
+2020-04-17,Wir. Gefahr Für die österr. Bevölkerung,groß,0.441,0.442,0.44,none,1520
+2020-04-17,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.263,0.265,0.261,none,1520
+2020-04-17,Wir. Gefahr Für die österr. Bevölkerung,klein,0.028,0.036,0.021,none,1520
+2020-04-17,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.004,0.024,-0.016,none,1520
+2020-04-25,Ges. Gefahr Persönlich,sehr groß,0.035,0.042,0.028,none,1499
+2020-04-25,Ges. Gefahr Persönlich,groß,0.123,0.126,0.12,none,1499
+2020-04-25,Ges. Gefahr Persönlich,mittelmäßig,0.311,0.312,0.309,none,1499
+2020-04-25,Ges. Gefahr Persönlich,klein,0.296,0.298,0.294,none,1499
+2020-04-25,Ges. Gefahr Persönlich,sehr klein,0.235,0.237,0.233,none,1499
+2020-04-25,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.056,0.062,0.051,none,1499
+2020-04-25,Ges. Gefahr Für die österr. Bevölkerung,groß,0.261,0.263,0.259,none,1499
+2020-04-25,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.478,0.479,0.477,none,1499
+2020-04-25,Ges. Gefahr Für die österr. Bevölkerung,klein,0.16,0.163,0.157,none,1499
+2020-04-25,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.045,0.051,0.039,none,1499
+2020-04-25, Wir. Gefahr Persönlich,sehr groß,0.088,0.092,0.084,none,1500
+2020-04-25, Wir. Gefahr Persönlich,groß,0.167,0.169,0.164,none,1500
+2020-04-25, Wir. Gefahr Persönlich,mittelmäßig,0.353,0.355,0.352,none,1500
+2020-04-25, Wir. Gefahr Persönlich,klein,0.243,0.245,0.241,none,1500
+2020-04-25, Wir. Gefahr Persönlich,sehr klein,0.149,0.151,0.146,none,1500
+2020-04-25,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.284,0.286,0.282,none,1501
+2020-04-25,Wir. Gefahr Für die österr. Bevölkerung,groß,0.42,0.421,0.419,none,1501
+2020-04-25,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.251,0.253,0.249,none,1501
+2020-04-25,Wir. Gefahr Für die österr. Bevölkerung,klein,0.035,0.042,0.029,none,1501
+2020-04-25,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.01,0.023,-0.003,none,1501
+2020-05-03,Ges. Gefahr Persönlich,sehr groß,0.027,0.034,0.019,none,1538
+2020-05-03,Ges. Gefahr Persönlich,groß,0.084,0.088,0.08,none,1538
+2020-05-03,Ges. Gefahr Persönlich,mittelmäßig,0.332,0.334,0.331,none,1538
+2020-05-03,Ges. Gefahr Persönlich,klein,0.286,0.288,0.284,none,1538
+2020-05-03,Ges. Gefahr Persönlich,sehr klein,0.271,0.273,0.269,none,1538
+2020-05-03,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.044,0.049,0.038,none,1537
+2020-05-03,Ges. Gefahr Für die österr. Bevölkerung,groß,0.239,0.241,0.237,none,1537
+2020-05-03,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.457,0.458,0.456,none,1537
+2020-05-03,Ges. Gefahr Für die österr. Bevölkerung,klein,0.202,0.205,0.2,none,1537
+2020-05-03,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.058,0.063,0.053,none,1537
+2020-05-03, Wir. Gefahr Persönlich,sehr groß,0.086,0.09,0.082,none,1535
+2020-05-03, Wir. Gefahr Persönlich,groß,0.163,0.165,0.16,none,1535
+2020-05-03, Wir. Gefahr Persönlich,mittelmäßig,0.33,0.332,0.329,none,1535
+2020-05-03, Wir. Gefahr Persönlich,klein,0.268,0.27,0.267,none,1535
+2020-05-03, Wir. Gefahr Persönlich,sehr klein,0.153,0.155,0.15,none,1535
+2020-05-03,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.263,0.264,0.261,none,1537
+2020-05-03,Wir. Gefahr Für die österr. Bevölkerung,groß,0.447,0.448,0.446,none,1537
+2020-05-03,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.248,0.25,0.246,none,1537
+2020-05-03,Wir. Gefahr Für die österr. Bevölkerung,klein,0.037,0.044,0.031,none,1537
+2020-05-03,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.005,0.023,-0.013,none,1537
+2020-05-09,Ges. Gefahr Persönlich,sehr groß,0.029,0.036,0.021,none,1507
+2020-05-09,Ges. Gefahr Persönlich,groß,0.068,0.073,0.064,none,1507
+2020-05-09,Ges. Gefahr Persönlich,mittelmäßig,0.279,0.28,0.277,none,1507
+2020-05-09,Ges. Gefahr Persönlich,klein,0.304,0.305,0.302,none,1507
+2020-05-09,Ges. Gefahr Persönlich,sehr klein,0.321,0.322,0.319,none,1507
+2020-05-09,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.037,0.044,0.031,none,1505
+2020-05-09,Ges. Gefahr Für die österr. Bevölkerung,groß,0.186,0.189,0.184,none,1505
+2020-05-09,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.472,0.473,0.471,none,1505
+2020-05-09,Ges. Gefahr Für die österr. Bevölkerung,klein,0.223,0.225,0.221,none,1505
+2020-05-09,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.081,0.086,0.077,none,1505
+2020-05-09, Wir. Gefahr Persönlich,sehr groß,0.083,0.087,0.078,none,1503
+2020-05-09, Wir. Gefahr Persönlich,groß,0.138,0.141,0.135,none,1503
+2020-05-09, Wir. Gefahr Persönlich,mittelmäßig,0.332,0.333,0.33,none,1503
+2020-05-09, Wir. Gefahr Persönlich,klein,0.27,0.272,0.268,none,1503
+2020-05-09, Wir. Gefahr Persönlich,sehr klein,0.177,0.18,0.175,none,1503
+2020-05-09,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.259,0.261,0.257,none,1505
+2020-05-09,Wir. Gefahr Für die österr. Bevölkerung,groß,0.418,0.419,0.417,none,1505
+2020-05-09,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.275,0.277,0.274,none,1505
+2020-05-09,Wir. Gefahr Für die österr. Bevölkerung,klein,0.031,0.038,0.023,none,1505
+2020-05-09,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.017,0.027,0.007,none,1505
+2020-05-16,Ges. Gefahr Persönlich,sehr groß,0.028,0.035,0.02,none,1485
+2020-05-16,Ges. Gefahr Persönlich,groß,0.071,0.076,0.067,none,1485
+2020-05-16,Ges. Gefahr Persönlich,mittelmäßig,0.271,0.273,0.269,none,1485
+2020-05-16,Ges. Gefahr Persönlich,klein,0.29,0.291,0.288,none,1485
+2020-05-16,Ges. Gefahr Persönlich,sehr klein,0.34,0.342,0.339,none,1485
+2020-05-16,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.036,0.043,0.03,none,1485
+2020-05-16,Ges. Gefahr Für die österr. Bevölkerung,groß,0.158,0.161,0.155,none,1485
+2020-05-16,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.464,0.465,0.463,none,1485
+2020-05-16,Ges. Gefahr Für die österr. Bevölkerung,klein,0.245,0.247,0.243,none,1485
+2020-05-16,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.097,0.101,0.093,none,1485
+2020-05-16, Wir. Gefahr Persönlich,sehr groß,0.076,0.08,0.072,none,1484
+2020-05-16, Wir. Gefahr Persönlich,groß,0.131,0.134,0.127,none,1484
+2020-05-16, Wir. Gefahr Persönlich,mittelmäßig,0.343,0.344,0.341,none,1484
+2020-05-16, Wir. Gefahr Persönlich,klein,0.264,0.266,0.262,none,1484
+2020-05-16, Wir. Gefahr Persönlich,sehr klein,0.187,0.189,0.184,none,1484
+2020-05-16,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.214,0.217,0.212,none,1486
+2020-05-16,Wir. Gefahr Für die österr. Bevölkerung,groß,0.414,0.416,0.413,none,1486
+2020-05-16,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.29,0.292,0.289,none,1486
+2020-05-16,Wir. Gefahr Für die österr. Bevölkerung,klein,0.058,0.063,0.053,none,1486
+2020-05-16,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.023,0.032,0.015,none,1486
+2020-05-24,Ges. Gefahr Persönlich,sehr groß,0.023,0.031,0.014,none,1485
+2020-05-24,Ges. Gefahr Persönlich,groß,0.066,0.071,0.062,none,1485
+2020-05-24,Ges. Gefahr Persönlich,mittelmäßig,0.274,0.275,0.272,none,1485
+2020-05-24,Ges. Gefahr Persönlich,klein,0.287,0.289,0.285,none,1485
+2020-05-24,Ges. Gefahr Persönlich,sehr klein,0.35,0.352,0.349,none,1485
+2020-05-24,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.041,0.047,0.035,none,1484
+2020-05-24,Ges. Gefahr Für die österr. Bevölkerung,groß,0.158,0.161,0.155,none,1484
+2020-05-24,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.448,0.45,0.447,none,1484
+2020-05-24,Ges. Gefahr Für die österr. Bevölkerung,klein,0.25,0.252,0.248,none,1484
+2020-05-24,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.102,0.106,0.098,none,1484
+2020-05-24, Wir. Gefahr Persönlich,sehr groß,0.076,0.08,0.071,none,1481
+2020-05-24, Wir. Gefahr Persönlich,groß,0.14,0.143,0.137,none,1481
+2020-05-24, Wir. Gefahr Persönlich,mittelmäßig,0.339,0.34,0.337,none,1481
+2020-05-24, Wir. Gefahr Persönlich,klein,0.266,0.268,0.264,none,1481
+2020-05-24, Wir. Gefahr Persönlich,sehr klein,0.179,0.182,0.177,none,1481
+2020-05-24,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.206,0.208,0.203,none,1485
+2020-05-24,Wir. Gefahr Für die österr. Bevölkerung,groß,0.419,0.42,0.418,none,1485
+2020-05-24,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.311,0.312,0.309,none,1485
+2020-05-24,Wir. Gefahr Für die österr. Bevölkerung,klein,0.046,0.051,0.04,none,1485
+2020-05-24,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.019,0.028,0.01,none,1485
+2020-05-29,Ges. Gefahr Persönlich,sehr groß,0.022,0.03,0.013,none,1481
+2020-05-29,Ges. Gefahr Persönlich,groß,0.065,0.069,0.06,none,1481
+2020-05-29,Ges. Gefahr Persönlich,mittelmäßig,0.246,0.248,0.244,none,1481
+2020-05-29,Ges. Gefahr Persönlich,klein,0.293,0.294,0.291,none,1481
+2020-05-29,Ges. Gefahr Persönlich,sehr klein,0.375,0.377,0.374,none,1481
+2020-05-29,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.038,0.044,0.031,none,1483
+2020-05-29,Ges. Gefahr Für die österr. Bevölkerung,groß,0.13,0.133,0.127,none,1483
+2020-05-29,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.41,0.411,0.409,none,1483
+2020-05-29,Ges. Gefahr Für die österr. Bevölkerung,klein,0.303,0.304,0.301,none,1483
+2020-05-29,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.12,0.123,0.117,none,1483
+2020-05-29, Wir. Gefahr Persönlich,sehr groß,0.07,0.074,0.065,none,1483
+2020-05-29, Wir. Gefahr Persönlich,groß,0.137,0.14,0.134,none,1483
+2020-05-29, Wir. Gefahr Persönlich,mittelmäßig,0.334,0.335,0.332,none,1483
+2020-05-29, Wir. Gefahr Persönlich,klein,0.246,0.248,0.244,none,1483
+2020-05-29, Wir. Gefahr Persönlich,sehr klein,0.214,0.216,0.211,none,1483
+2020-05-29,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.184,0.186,0.181,none,1484
+2020-05-29,Wir. Gefahr Für die österr. Bevölkerung,groß,0.408,0.409,0.407,none,1484
+2020-05-29,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.321,0.323,0.32,none,1484
+2020-05-29,Wir. Gefahr Für die österr. Bevölkerung,klein,0.06,0.065,0.055,none,1484
+2020-05-29,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.027,0.035,0.019,none,1484
+2020-06-13,Ges. Gefahr Persönlich,sehr groß,0.025,0.033,0.017,none,1498
+2020-06-13,Ges. Gefahr Persönlich,groß,0.064,0.069,0.06,none,1498
+2020-06-13,Ges. Gefahr Persönlich,mittelmäßig,0.242,0.244,0.24,none,1498
+2020-06-13,Ges. Gefahr Persönlich,klein,0.294,0.296,0.293,none,1498
+2020-06-13,Ges. Gefahr Persönlich,sehr klein,0.374,0.376,0.373,none,1498
+2020-06-13,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.044,0.05,0.038,none,1498
+2020-06-13,Ges. Gefahr Für die österr. Bevölkerung,groß,0.129,0.132,0.126,none,1498
+2020-06-13,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.437,0.438,0.435,none,1498
+2020-06-13,Ges. Gefahr Für die österr. Bevölkerung,klein,0.263,0.265,0.261,none,1498
+2020-06-13,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.127,0.13,0.123,none,1498
+2020-06-13, Wir. Gefahr Persönlich,sehr groß,0.077,0.082,0.073,none,1491
+2020-06-13, Wir. Gefahr Persönlich,groß,0.125,0.128,0.122,none,1491
+2020-06-13, Wir. Gefahr Persönlich,mittelmäßig,0.337,0.338,0.335,none,1491
+2020-06-13, Wir. Gefahr Persönlich,klein,0.266,0.268,0.264,none,1491
+2020-06-13, Wir. Gefahr Persönlich,sehr klein,0.195,0.198,0.193,none,1491
+2020-06-13,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.197,0.199,0.195,none,1497
+2020-06-13,Wir. Gefahr Für die österr. Bevölkerung,groß,0.373,0.375,0.372,none,1497
+2020-06-13,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.345,0.346,0.343,none,1497
+2020-06-13,Wir. Gefahr Für die österr. Bevölkerung,klein,0.058,0.063,0.053,none,1497
+2020-06-13,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.027,0.035,0.02,none,1497
+2020-06-27,Ges. Gefahr Persönlich,sehr groß,0.031,0.038,0.023,none,1505
+2020-06-27,Ges. Gefahr Persönlich,groß,0.088,0.092,0.084,none,1505
+2020-06-27,Ges. Gefahr Persönlich,mittelmäßig,0.271,0.273,0.27,none,1505
+2020-06-27,Ges. Gefahr Persönlich,klein,0.304,0.306,0.303,none,1505
+2020-06-27,Ges. Gefahr Persönlich,sehr klein,0.306,0.308,0.304,none,1505
+2020-06-27,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.053,0.058,0.047,none,1506
+2020-06-27,Ges. Gefahr Für die österr. Bevölkerung,groß,0.2,0.203,0.198,none,1506
+2020-06-27,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.451,0.453,0.45,none,1506
+2020-06-27,Ges. Gefahr Für die österr. Bevölkerung,klein,0.218,0.22,0.216,none,1506
+2020-06-27,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.078,0.082,0.073,none,1506
+2020-06-27, Wir. Gefahr Persönlich,sehr groß,0.083,0.088,0.079,none,1506
+2020-06-27, Wir. Gefahr Persönlich,groß,0.141,0.144,0.138,none,1506
+2020-06-27, Wir. Gefahr Persönlich,mittelmäßig,0.319,0.321,0.317,none,1506
+2020-06-27, Wir. Gefahr Persönlich,klein,0.27,0.271,0.268,none,1506
+2020-06-27, Wir. Gefahr Persönlich,sehr klein,0.187,0.189,0.184,none,1506
+2020-06-27,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.178,0.181,0.176,none,1505
+2020-06-27,Wir. Gefahr Für die österr. Bevölkerung,groß,0.422,0.423,0.421,none,1505
+2020-06-27,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.336,0.338,0.335,none,1505
+2020-06-27,Wir. Gefahr Für die österr. Bevölkerung,klein,0.051,0.056,0.045,none,1505
+2020-06-27,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.013,0.024,0.001,none,1505
+2020-07-11,Ges. Gefahr Persönlich,sehr groß,0.041,0.047,0.035,none,1515
+2020-07-11,Ges. Gefahr Persönlich,groß,0.095,0.099,0.091,none,1515
+2020-07-11,Ges. Gefahr Persönlich,mittelmäßig,0.314,0.315,0.312,none,1515
+2020-07-11,Ges. Gefahr Persönlich,klein,0.299,0.301,0.298,none,1515
+2020-07-11,Ges. Gefahr Persönlich,sehr klein,0.251,0.253,0.249,none,1515
+2020-07-11,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.066,0.071,0.061,none,1514
+2020-07-11,Ges. Gefahr Für die österr. Bevölkerung,groß,0.243,0.245,0.241,none,1514
+2020-07-11,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.453,0.454,0.452,none,1514
+2020-07-11,Ges. Gefahr Für die österr. Bevölkerung,klein,0.172,0.175,0.17,none,1514
+2020-07-11,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.065,0.07,0.061,none,1514
+2020-07-11, Wir. Gefahr Persönlich,sehr groß,0.074,0.078,0.07,none,1514
+2020-07-11, Wir. Gefahr Persönlich,groß,0.157,0.16,0.154,none,1514
+2020-07-11, Wir. Gefahr Persönlich,mittelmäßig,0.318,0.319,0.316,none,1514
+2020-07-11, Wir. Gefahr Persönlich,klein,0.278,0.28,0.276,none,1514
+2020-07-11, Wir. Gefahr Persönlich,sehr klein,0.174,0.176,0.171,none,1514
+2020-07-11,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.195,0.197,0.193,none,1515
+2020-07-11,Wir. Gefahr Für die österr. Bevölkerung,groß,0.416,0.417,0.415,none,1515
+2020-07-11,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.316,0.318,0.315,none,1515
+2020-07-11,Wir. Gefahr Für die österr. Bevölkerung,klein,0.047,0.053,0.042,none,1515
+2020-07-11,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.026,0.033,0.018,none,1515
+2020-08-15,Ges. Gefahr Persönlich,sehr groß,0.038,0.044,0.031,none,1531
+2020-08-15,Ges. Gefahr Persönlich,groß,0.103,0.106,0.099,none,1531
+2020-08-15,Ges. Gefahr Persönlich,mittelmäßig,0.356,0.357,0.354,none,1531
+2020-08-15,Ges. Gefahr Persönlich,klein,0.281,0.282,0.279,none,1531
+2020-08-15,Ges. Gefahr Persönlich,sehr klein,0.224,0.226,0.221,none,1531
+2020-08-15,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.08,0.084,0.076,none,1530
+2020-08-15,Ges. Gefahr Für die österr. Bevölkerung,groß,0.26,0.262,0.258,none,1530
+2020-08-15,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.425,0.426,0.423,none,1530
+2020-08-15,Ges. Gefahr Für die österr. Bevölkerung,klein,0.152,0.155,0.15,none,1530
+2020-08-15,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.083,0.087,0.079,none,1530
+2020-08-15, Wir. Gefahr Persönlich,sehr groß,0.087,0.091,0.083,none,1525
+2020-08-15, Wir. Gefahr Persönlich,groß,0.146,0.148,0.143,none,1525
+2020-08-15, Wir. Gefahr Persönlich,mittelmäßig,0.348,0.349,0.346,none,1525
+2020-08-15, Wir. Gefahr Persönlich,klein,0.253,0.255,0.251,none,1525
+2020-08-15, Wir. Gefahr Persönlich,sehr klein,0.167,0.17,0.164,none,1525
+2020-08-15,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.214,0.216,0.212,none,1527
+2020-08-15,Wir. Gefahr Für die österr. Bevölkerung,groß,0.41,0.411,0.409,none,1527
+2020-08-15,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.316,0.317,0.314,none,1527
+2020-08-15,Wir. Gefahr Für die österr. Bevölkerung,klein,0.039,0.045,0.033,none,1527
+2020-08-15,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.021,0.03,0.012,none,1527
+2020-09-12,Ges. Gefahr Persönlich,sehr groß,0.039,0.045,0.032,none,1566
+2020-09-12,Ges. Gefahr Persönlich,groß,0.11,0.113,0.107,none,1566
+2020-09-12,Ges. Gefahr Persönlich,mittelmäßig,0.376,0.378,0.375,none,1566
+2020-09-12,Ges. Gefahr Persönlich,klein,0.258,0.26,0.256,none,1566
+2020-09-12,Ges. Gefahr Persönlich,sehr klein,0.217,0.219,0.215,none,1566
+2020-09-12,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.101,0.104,0.097,none,1566
+2020-09-12,Ges. Gefahr Für die österr. Bevölkerung,groß,0.266,0.268,0.264,none,1566
+2020-09-12,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.437,0.438,0.436,none,1566
+2020-09-12,Ges. Gefahr Für die österr. Bevölkerung,klein,0.12,0.124,0.117,none,1566
+2020-09-12,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.076,0.08,0.072,none,1566
+2020-09-12, Wir. Gefahr Persönlich,sehr groß,0.097,0.101,0.094,none,1564
+2020-09-12, Wir. Gefahr Persönlich,groß,0.158,0.16,0.155,none,1564
+2020-09-12, Wir. Gefahr Persönlich,mittelmäßig,0.33,0.332,0.329,none,1564
+2020-09-12, Wir. Gefahr Persönlich,klein,0.243,0.245,0.242,none,1564
+2020-09-12, Wir. Gefahr Persönlich,sehr klein,0.171,0.174,0.169,none,1564
+2020-09-12,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.246,0.248,0.244,none,1565
+2020-09-12,Wir. Gefahr Für die österr. Bevölkerung,groß,0.415,0.416,0.413,none,1565
+2020-09-12,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.287,0.289,0.285,none,1565
+2020-09-12,Wir. Gefahr Für die österr. Bevölkerung,klein,0.038,0.044,0.032,none,1565
+2020-09-12,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.015,0.025,0.005,none,1565
+2020-10-17,Ges. Gefahr Persönlich,sehr groß,0.04,0.046,0.034,none,1652
+2020-10-17,Ges. Gefahr Persönlich,groß,0.127,0.13,0.124,none,1652
+2020-10-17,Ges. Gefahr Persönlich,mittelmäßig,0.372,0.373,0.371,none,1652
+2020-10-17,Ges. Gefahr Persönlich,klein,0.265,0.267,0.264,none,1652
+2020-10-17,Ges. Gefahr Persönlich,sehr klein,0.196,0.198,0.194,none,1652
+2020-10-17,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.117,0.12,0.114,none,1655
+2020-10-17,Ges. Gefahr Für die österr. Bevölkerung,groß,0.325,0.326,0.323,none,1655
+2020-10-17,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.365,0.366,0.364,none,1655
+2020-10-17,Ges. Gefahr Für die österr. Bevölkerung,klein,0.131,0.134,0.128,none,1655
+2020-10-17,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.063,0.067,0.058,none,1655
+2020-10-17, Wir. Gefahr Persönlich,sehr groß,0.099,0.102,0.095,none,1653
+2020-10-17, Wir. Gefahr Persönlich,groß,0.174,0.176,0.171,none,1653
+2020-10-17, Wir. Gefahr Persönlich,mittelmäßig,0.35,0.351,0.348,none,1653
+2020-10-17, Wir. Gefahr Persönlich,klein,0.251,0.253,0.249,none,1653
+2020-10-17, Wir. Gefahr Persönlich,sehr klein,0.127,0.13,0.124,none,1653
+2020-10-17,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.301,0.303,0.3,none,1653
+2020-10-17,Wir. Gefahr Für die österr. Bevölkerung,groß,0.42,0.421,0.419,none,1653
+2020-10-17,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.244,0.246,0.242,none,1653
+2020-10-17,Wir. Gefahr Für die österr. Bevölkerung,klein,0.027,0.034,0.02,none,1653
+2020-10-17,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.008,0.021,-0.006,none,1653
+2020-11-14,Ges. Gefahr Persönlich,sehr groß,0.072,0.076,0.068,none,1584
+2020-11-14,Ges. Gefahr Persönlich,groß,0.16,0.163,0.158,none,1584
+2020-11-14,Ges. Gefahr Persönlich,mittelmäßig,0.365,0.367,0.364,none,1584
+2020-11-14,Ges. Gefahr Persönlich,klein,0.244,0.245,0.242,none,1584
+2020-11-14,Ges. Gefahr Persönlich,sehr klein,0.159,0.162,0.157,none,1584
+2020-11-14,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.201,0.203,0.199,none,1583
+2020-11-14,Ges. Gefahr Für die österr. Bevölkerung,groß,0.376,0.377,0.375,none,1583
+2020-11-14,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.293,0.295,0.292,none,1583
+2020-11-14,Ges. Gefahr Für die österr. Bevölkerung,klein,0.081,0.085,0.077,none,1583
+2020-11-14,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.049,0.054,0.043,none,1583
+2020-11-14, Wir. Gefahr Persönlich,sehr groß,0.125,0.128,0.121,none,1584
+2020-11-14, Wir. Gefahr Persönlich,groß,0.187,0.19,0.185,none,1584
+2020-11-14, Wir. Gefahr Persönlich,mittelmäßig,0.337,0.338,0.336,none,1584
+2020-11-14, Wir. Gefahr Persönlich,klein,0.21,0.212,0.207,none,1584
+2020-11-14, Wir. Gefahr Persönlich,sehr klein,0.142,0.144,0.139,none,1584
+2020-11-14,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.368,0.37,0.367,none,1584
+2020-11-14,Wir. Gefahr Für die österr. Bevölkerung,groß,0.42,0.421,0.418,none,1584
+2020-11-14,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.172,0.175,0.17,none,1584
+2020-11-14,Wir. Gefahr Für die österr. Bevölkerung,klein,0.031,0.038,0.024,none,1584
+2020-11-14,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.009,0.022,-0.004,none,1584
+2020-12-13,Ges. Gefahr Persönlich,sehr groß,0.05,0.055,0.045,none,1553
+2020-12-13,Ges. Gefahr Persönlich,groß,0.121,0.125,0.118,none,1553
+2020-12-13,Ges. Gefahr Persönlich,mittelmäßig,0.351,0.353,0.35,none,1553
+2020-12-13,Ges. Gefahr Persönlich,klein,0.273,0.275,0.271,none,1553
+2020-12-13,Ges. Gefahr Persönlich,sehr klein,0.204,0.207,0.202,none,1553
+2020-12-13,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.122,0.125,0.119,none,1554
+2020-12-13,Ges. Gefahr Für die österr. Bevölkerung,groß,0.335,0.337,0.334,none,1554
+2020-12-13,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.387,0.389,0.386,none,1554
+2020-12-13,Ges. Gefahr Für die österr. Bevölkerung,klein,0.106,0.11,0.103,none,1554
+2020-12-13,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.049,0.054,0.043,none,1554
+2020-12-13, Wir. Gefahr Persönlich,sehr groß,0.093,0.097,0.09,none,1551
+2020-12-13, Wir. Gefahr Persönlich,groß,0.158,0.161,0.156,none,1551
+2020-12-13, Wir. Gefahr Persönlich,mittelmäßig,0.353,0.354,0.351,none,1551
+2020-12-13, Wir. Gefahr Persönlich,klein,0.24,0.242,0.238,none,1551
+2020-12-13, Wir. Gefahr Persönlich,sehr klein,0.155,0.158,0.153,none,1551
+2020-12-13,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.31,0.311,0.308,none,1555
+2020-12-13,Wir. Gefahr Für die österr. Bevölkerung,groß,0.422,0.423,0.421,none,1555
+2020-12-13,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.225,0.227,0.223,none,1555
+2020-12-13,Wir. Gefahr Für die österr. Bevölkerung,klein,0.034,0.04,0.027,none,1555
+2020-12-13,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.01,0.022,-0.003,none,1555
+2021-01-16,Ges. Gefahr Persönlich,sehr groß,0.05,0.055,0.045,none,1599
+2021-01-16,Ges. Gefahr Persönlich,groß,0.134,0.137,0.131,none,1599
+2021-01-16,Ges. Gefahr Persönlich,mittelmäßig,0.362,0.364,0.361,none,1599
+2021-01-16,Ges. Gefahr Persönlich,klein,0.26,0.262,0.258,none,1599
+2021-01-16,Ges. Gefahr Persönlich,sehr klein,0.193,0.196,0.191,none,1599
+2021-01-16,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.124,0.127,0.121,none,1603
+2021-01-16,Ges. Gefahr Für die österr. Bevölkerung,groß,0.337,0.338,0.336,none,1603
+2021-01-16,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.363,0.365,0.362,none,1603
+2021-01-16,Ges. Gefahr Für die österr. Bevölkerung,klein,0.119,0.122,0.116,none,1603
+2021-01-16,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.056,0.061,0.051,none,1603
+2021-01-16, Wir. Gefahr Persönlich,sehr groß,0.112,0.115,0.109,none,1596
+2021-01-16, Wir. Gefahr Persönlich,groß,0.181,0.183,0.179,none,1596
+2021-01-16, Wir. Gefahr Persönlich,mittelmäßig,0.318,0.319,0.316,none,1596
+2021-01-16, Wir. Gefahr Persönlich,klein,0.257,0.259,0.256,none,1596
+2021-01-16, Wir. Gefahr Persönlich,sehr klein,0.132,0.135,0.129,none,1596
+2021-01-16,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.392,0.393,0.391,none,1601
+2021-01-16,Wir. Gefahr Für die österr. Bevölkerung,groß,0.397,0.399,0.396,none,1601
+2021-01-16,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.179,0.182,0.177,none,1601
+2021-01-16,Wir. Gefahr Für die österr. Bevölkerung,klein,0.021,0.029,0.013,none,1601
+2021-01-16,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.01,0.022,-0.002,none,1601
+2021-02-13,Ges. Gefahr Persönlich,sehr groß,0.041,0.047,0.035,none,1562
+2021-02-13,Ges. Gefahr Persönlich,groß,0.109,0.112,0.105,none,1562
+2021-02-13,Ges. Gefahr Persönlich,mittelmäßig,0.364,0.365,0.363,none,1562
+2021-02-13,Ges. Gefahr Persönlich,klein,0.269,0.271,0.267,none,1562
+2021-02-13,Ges. Gefahr Persönlich,sehr klein,0.217,0.219,0.215,none,1562
+2021-02-13,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.093,0.097,0.089,none,1562
+2021-02-13,Ges. Gefahr Für die österr. Bevölkerung,groß,0.317,0.318,0.315,none,1562
+2021-02-13,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.388,0.389,0.387,none,1562
+2021-02-13,Ges. Gefahr Für die österr. Bevölkerung,klein,0.137,0.139,0.134,none,1562
+2021-02-13,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.066,0.07,0.061,none,1562
+2021-02-13, Wir. Gefahr Persönlich,sehr groß,0.107,0.11,0.103,none,1557
+2021-02-13, Wir. Gefahr Persönlich,groß,0.159,0.162,0.156,none,1557
+2021-02-13, Wir. Gefahr Persönlich,mittelmäßig,0.349,0.351,0.348,none,1557
+2021-02-13, Wir. Gefahr Persönlich,klein,0.24,0.242,0.239,none,1557
+2021-02-13, Wir. Gefahr Persönlich,sehr klein,0.145,0.148,0.142,none,1557
+2021-02-13,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.316,0.318,0.315,none,1559
+2021-02-13,Wir. Gefahr Für die österr. Bevölkerung,groß,0.438,0.439,0.437,none,1559
+2021-02-13,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.212,0.215,0.21,none,1559
+2021-02-13,Wir. Gefahr Für die österr. Bevölkerung,klein,0.022,0.03,0.014,none,1559
+2021-02-13,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.011,0.023,-0,none,1559
+2021-03-13,Ges. Gefahr Persönlich,sehr groß,0.046,0.051,0.04,none,1561
+2021-03-13,Ges. Gefahr Persönlich,groß,0.104,0.108,0.101,none,1561
+2021-03-13,Ges. Gefahr Persönlich,mittelmäßig,0.342,0.344,0.341,none,1561
+2021-03-13,Ges. Gefahr Persönlich,klein,0.277,0.279,0.275,none,1561
+2021-03-13,Ges. Gefahr Persönlich,sehr klein,0.231,0.233,0.229,none,1561
+2021-03-13,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.104,0.108,0.101,none,1560
+2021-03-13,Ges. Gefahr Für die österr. Bevölkerung,groß,0.326,0.328,0.325,none,1560
+2021-03-13,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.374,0.375,0.372,none,1560
+2021-03-13,Ges. Gefahr Für die österr. Bevölkerung,klein,0.124,0.127,0.121,none,1560
+2021-03-13,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.072,0.076,0.067,none,1560
+2021-03-13, Wir. Gefahr Persönlich,sehr groß,0.099,0.103,0.095,none,1559
+2021-03-13, Wir. Gefahr Persönlich,groß,0.18,0.182,0.177,none,1559
+2021-03-13, Wir. Gefahr Persönlich,mittelmäßig,0.319,0.321,0.318,none,1559
+2021-03-13, Wir. Gefahr Persönlich,klein,0.248,0.25,0.246,none,1559
+2021-03-13, Wir. Gefahr Persönlich,sehr klein,0.155,0.157,0.152,none,1559
+2021-03-13,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.324,0.326,0.323,none,1560
+2021-03-13,Wir. Gefahr Für die österr. Bevölkerung,groß,0.415,0.416,0.414,none,1560
+2021-03-13,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.218,0.22,0.216,none,1560
+2021-03-13,Wir. Gefahr Für die österr. Bevölkerung,klein,0.028,0.035,0.02,none,1560
+2021-03-13,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.015,0.025,0.005,none,1560
+2021-04-16,Ges. Gefahr Persönlich,sehr groß,0.045,0.051,0.039,none,1514
+2021-04-16,Ges. Gefahr Persönlich,groß,0.103,0.106,0.099,none,1514
+2021-04-16,Ges. Gefahr Persönlich,mittelmäßig,0.344,0.345,0.343,none,1514
+2021-04-16,Ges. Gefahr Persönlich,klein,0.262,0.264,0.26,none,1514
+2021-04-16,Ges. Gefahr Persönlich,sehr klein,0.246,0.248,0.245,none,1514
+2021-04-16,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.076,0.08,0.072,none,1514
+2021-04-16,Ges. Gefahr Für die österr. Bevölkerung,groß,0.294,0.296,0.293,none,1514
+2021-04-16,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.413,0.415,0.412,none,1514
+2021-04-16,Ges. Gefahr Für die österr. Bevölkerung,klein,0.139,0.142,0.136,none,1514
+2021-04-16,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.077,0.081,0.073,none,1514
+2021-04-16, Wir. Gefahr Persönlich,sehr groß,0.081,0.086,0.077,none,1513
+2021-04-16, Wir. Gefahr Persönlich,groß,0.152,0.155,0.149,none,1513
+2021-04-16, Wir. Gefahr Persönlich,mittelmäßig,0.35,0.352,0.349,none,1513
+2021-04-16, Wir. Gefahr Persönlich,klein,0.253,0.255,0.251,none,1513
+2021-04-16, Wir. Gefahr Persönlich,sehr klein,0.164,0.166,0.161,none,1513
+2021-04-16,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.276,0.278,0.275,none,1511
+2021-04-16,Wir. Gefahr Für die österr. Bevölkerung,groß,0.405,0.407,0.404,none,1511
+2021-04-16,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.272,0.274,0.271,none,1511
+2021-04-16,Wir. Gefahr Für die österr. Bevölkerung,klein,0.03,0.037,0.023,none,1511
+2021-04-16,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.016,0.026,0.006,none,1511
+2021-05-22,Ges. Gefahr Persönlich,sehr groß,0.023,0.032,0.015,none,1488
+2021-05-22,Ges. Gefahr Persönlich,groß,0.072,0.077,0.068,none,1488
+2021-05-22,Ges. Gefahr Persönlich,mittelmäßig,0.283,0.285,0.281,none,1488
+2021-05-22,Ges. Gefahr Persönlich,klein,0.315,0.316,0.313,none,1488
+2021-05-22,Ges. Gefahr Persönlich,sehr klein,0.307,0.308,0.305,none,1488
+2021-05-22,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.038,0.045,0.032,none,1488
+2021-05-22,Ges. Gefahr Für die österr. Bevölkerung,groß,0.184,0.187,0.182,none,1488
+2021-05-22,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.472,0.473,0.471,none,1488
+2021-05-22,Ges. Gefahr Für die österr. Bevölkerung,klein,0.209,0.211,0.207,none,1488
+2021-05-22,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.096,0.1,0.092,none,1488
+2021-05-22, Wir. Gefahr Persönlich,sehr groß,0.07,0.075,0.066,none,1484
+2021-05-22, Wir. Gefahr Persönlich,groß,0.146,0.149,0.143,none,1484
+2021-05-22, Wir. Gefahr Persönlich,mittelmäßig,0.328,0.329,0.326,none,1484
+2021-05-22, Wir. Gefahr Persönlich,klein,0.252,0.254,0.25,none,1484
+2021-05-22, Wir. Gefahr Persönlich,sehr klein,0.204,0.207,0.202,none,1484
+2021-05-22,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.205,0.208,0.203,none,1486
+2021-05-22,Wir. Gefahr Für die österr. Bevölkerung,groß,0.392,0.393,0.391,none,1486
+2021-05-22,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.337,0.338,0.335,none,1486
+2021-05-22,Wir. Gefahr Für die österr. Bevölkerung,klein,0.044,0.05,0.038,none,1486
+2021-05-22,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.022,0.03,0.013,none,1486
+2021-06-26,Ges. Gefahr Persönlich,sehr groß,0.027,0.035,0.02,none,1497
+2021-06-26,Ges. Gefahr Persönlich,groß,0.067,0.072,0.062,none,1497
+2021-06-26,Ges. Gefahr Persönlich,mittelmäßig,0.238,0.24,0.236,none,1497
+2021-06-26,Ges. Gefahr Persönlich,klein,0.312,0.314,0.311,none,1497
+2021-06-26,Ges. Gefahr Persönlich,sehr klein,0.356,0.357,0.354,none,1497
+2021-06-26,Ges. Gefahr Für die österr. Bevölkerung,sehr groß,0.04,0.046,0.034,none,1493
+2021-06-26,Ges. Gefahr Für die österr. Bevölkerung,groß,0.169,0.172,0.167,none,1493
+2021-06-26,Ges. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.431,0.432,0.43,none,1493
+2021-06-26,Ges. Gefahr Für die österr. Bevölkerung,klein,0.249,0.251,0.247,none,1493
+2021-06-26,Ges. Gefahr Für die österr. Bevölkerung,sehr klein,0.11,0.114,0.107,none,1493
+2021-06-26, Wir. Gefahr Persönlich,sehr groß,0.057,0.062,0.052,none,1494
+2021-06-26, Wir. Gefahr Persönlich,groß,0.133,0.136,0.129,none,1494
+2021-06-26, Wir. Gefahr Persönlich,mittelmäßig,0.312,0.314,0.311,none,1494
+2021-06-26, Wir. Gefahr Persönlich,klein,0.266,0.268,0.264,none,1494
+2021-06-26, Wir. Gefahr Persönlich,sehr klein,0.232,0.234,0.23,none,1494
+2021-06-26,Wir. Gefahr Für die österr. Bevölkerung,sehr groß,0.147,0.15,0.144,none,1495
+2021-06-26,Wir. Gefahr Für die österr. Bevölkerung,groß,0.359,0.36,0.357,none,1495
+2021-06-26,Wir. Gefahr Für die österr. Bevölkerung,mittelmäßig,0.404,0.406,0.403,none,1495
+2021-06-26,Wir. Gefahr Für die österr. Bevölkerung,klein,0.066,0.071,0.061,none,1495
+2021-06-26,Wir. Gefahr Für die österr. Bevölkerung,sehr klein,0.024,0.033,0.016,none,1495
