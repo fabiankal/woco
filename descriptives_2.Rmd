@@ -162,30 +162,35 @@ write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA
 ### Einschätzung der gesundheitlichen Gefahr - shiny
 
 ```{r gesundheitliche Gefahr, echo=FALSE, fig.width=8, fig.height=5, results='asis'}
-#GESUNDHEITLICH#########################
-
 lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 
-variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr","wochentag","kontakt","zeit" ,"konflikt","kinder")
+#List of all variables in the data
+#names(lr_gen_w1)
+#paste(names(lr_gen_w1),collapse=",")
+
+#What variables should be used for the dashboard
+variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
+                  "wochentag","kontakt","zeit" ,"konflikt","kinder",
+                  "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9")
+
+#What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
 sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","bula","hh_inc_cur_quintile")
 
+#Get the different factor scales in the data and generate a dataframe indicating which variables use different answer scales
 labels <- lr_gen_w1 %>% ungroup() %>% select(variablelist) %>%  sapply(levels)
 
 df <- do.call(rbind, labels) %>% as.data.frame()
-
-
 df <-bind_rows(lapply(labels,function(y) as.data.frame(t(y),stringsAsFactors=FALSE,y.id = "column_label")))
-
 rownames(df)<-names(labels)
 grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7)) %>% mutate(variable=rownames(.))
 #df %>% mutate(ID = group_indices(.,noquote(paste(names(df), collapse=", "))))
 
 grouped_labels<-grouped_labels%>% group_by(ID) %>% summarise(variable)
 
-grouped_labels%>%filter(ID==1)%>%ungroup()%>%pull(variable)
+#select the data for analyses
+lr_gen_w2 <- lr_gen_w1 %>% select(c(variablelist,sociodem))
 
-
-lr_gen_w2 <- lr_gen_w1 %>% select(variablelist)
+#group the data into different dataframes within a list according to their answer scales
 count=0
 out <- vector('list', max(unique(grouped_labels$ID)))
 for (val in unique(grouped_labels$ID)) {
@@ -194,108 +199,124 @@ out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter
 print(count)
 }
 
-data_long$measurement<-as.factor(data_long$measurement)
-levels(data_long$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-
-
-data_plot_long_N<-data_long %>% filter(!is.na(measurement)) %>% 
+#calculate N and shares of variables by wave and variable within each specific scale specific dataframe 
+data_plot_long_N<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long<- vector('list', max(unique(grouped_labels$ID)))
+for (val in unique(grouped_labels$ID)) {
+data_plot_long_N[[val]]<-out[[val]] %>% filter(!is.na(measurement)) %>% 
  group_by(wavedate,variable) %>% tally() %>% rename(N_total=n)
 
-
-data_plot_long<-data_long %>% filter(!is.na(measurement)) %>%
+data_plot_long[[val]]<-out[[val]] %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,measurement) %>% 
   summarise(n=survey_total(vartype = c("se")))
 
-data_plot_long<-data_plot_long %>% group_by(wavedate,variable) %>%
+data_plot_long[[val]]<-data_plot_long[[val]] %>% group_by(wavedate,variable) %>%
      mutate(prop = n/sum(n),ymax=prop+1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n, ymin=prop-1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n,groupby="none")
+}
 
-#levels(data_plot_long$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-levels(data_plot_long$measurement) <- c("sehr groß", "groß", "mittelmäßig", "klein", "sehr klein")
+#append it and add new variable with levels of measurement as content indicating different scales
+data_plot_long_new<-bind_rows(data_plot_long, .id = 'scales')
+data_plot_long_N_new<-bind_rows(data_plot_long_N, .id = 'scales')
 
-data_plot_long$measurement <- fct_relevel(data_plot_long$measurement, "sehr klein", "klein", "mittelmäßig", "groß", "sehr groß")
+#Remove "Number = " in labels of measurement
+data_plot_long_new<-data_plot_long_new %>% mutate(measurement=gsub("^.*?= ","",measurement))
+
+#MEAN VALUES#################################################################
+#out
 
 #mean line attention recoding 5= sehr groß 1= sehr klein
-data_plot_long_mean <- data_long  %>% filter(!is.na(measurement)) %>%
+
+data_plot_long_mean<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long_mean_ge<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long_mean_ag<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long_mean_ed<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long_mean_bl<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long_mean_hi<- vector('list', max(unique(grouped_labels$ID)))
+
+for (val in unique(grouped_labels$ID)) {
+#mean general
+data_plot_long_mean[[val]] <- out[[val]]  %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable) %>%
-  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable) %>%
+  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="none")
 
 #mean by Gender
-data_plot_long_mean_ge <- data_long  %>% filter(!is.na(measurement)&!is.na(gender)) %>%
+data_plot_long_mean_ge[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(gender)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,gender) %>%
-  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable,gender) %>%
+  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,gender) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ge")
 
 #mean by Age
-data_plot_long_mean_ag <- data_long  %>% filter(!is.na(measurement)&!is.na(alter_g)) %>%
+data_plot_long_mean_ag[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(alter_g)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,alter_g) %>%
-  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable,alter_g) %>%
+  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,alter_g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ag")
 
 #mean by Education
-data_plot_long_mean_ed <- data_long  %>% filter(!is.na(measurement)&!is.na(edu4)) %>%
+data_plot_long_mean_ed[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(edu4)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,edu4) %>%
-  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable,edu4) %>%
+  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,edu4) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ed")
 
 #mean by Region
-data_plot_long_mean_bl <- data_long  %>% filter(!is.na(measurement)&!is.na(bula)) %>%
+data_plot_long_mean_bl[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(bula)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,bula) %>%
-  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable,bula) %>%
+  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,bula) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="bl")
 
 #mean by Household Income
-data_plot_long_mean_hi <- data_long  %>% filter(!is.na(measurement)&!is.na(hh_inc_cur_quintile)) %>%
+data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(hh_inc_cur_quintile)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,hh_inc_cur_quintile) %>%
-  summarise(mean_measurement=survey_mean(6-as.numeric(measurement),vartype = c("se"))) %>% group_by(wavedate,variable,hh_inc_cur_quintile) %>%
+  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,hh_inc_cur_quintile) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="hi")
+}
+
+#append it and add new variable with levels of measurement as content indicating different scales
+data_plot_long_mean_new<-bind_rows(data_plot_long_mean, .id = 'scales')
+data_plot_long_mean_ge_new<-bind_rows(data_plot_long_mean_ge, .id = 'scales')%>%rename("subgroup" = gender)
+data_plot_long_mean_ag_new<-bind_rows(data_plot_long_mean_ag, .id = 'scales')%>%rename("subgroup" = alter_g)
+data_plot_long_mean_ed_new<-bind_rows(data_plot_long_mean_ed, .id = 'scales')%>%rename("subgroup" = edu4)
+data_plot_long_mean_bl_new<-bind_rows(data_plot_long_mean_bl, .id = 'scales')%>%rename("subgroup" = bula)
+data_plot_long_mean_hi_new<-bind_rows(data_plot_long_mean_hi, .id = 'scales')%>%rename("subgroup" = hh_inc_cur_quintile)
 
 
-#levels(data_plot_long_mean$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-#levels(data_plot_long_mean_ge$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-#levels(data_plot_long_mean_ag$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-#levels(data_plot_long_mean_ed$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-#levels(data_plot_long_mean_bl$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-#levels(data_plot_long_mean_hi$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
-
-#export_shiny_data <- left_join(data_plot_long, data_plot_long_mean,by=c("wavedate"="wavedate","variable"="variable"))
-
-data_plot_long_mean_ge<-data_plot_long_mean_ge%>%rename("subgroup" = gender)
-data_plot_long_mean_ag<-data_plot_long_mean_ag%>%rename("subgroup" = alter_g)
-data_plot_long_mean_ed<-data_plot_long_mean_ed%>%rename("subgroup" = edu4)
-data_plot_long_mean_bl<-data_plot_long_mean_bl%>%rename("subgroup" = bula)
-data_plot_long_mean_hi<-data_plot_long_mean_hi%>%rename("subgroup" = hh_inc_cur_quintile)
-
-export_shiny_data <- bind_rows(data_plot_long_mean, data_plot_long_mean_ge)
-export_shiny_data <- bind_rows(export_shiny_data, data_plot_long_mean_ag)
-export_shiny_data <- bind_rows(export_shiny_data, data_plot_long_mean_ed)
-export_shiny_data <- bind_rows(export_shiny_data, data_plot_long_mean_bl)
-export_shiny_data <- bind_rows(export_shiny_data, data_plot_long_mean_hi)
+export_shiny_data <- bind_rows(data_plot_long_mean_new, data_plot_long_mean_ge_new,data_plot_long_mean_ag_new,data_plot_long_mean_ed_new,data_plot_long_mean_bl_new,data_plot_long_mean_hi_new)
 
 
-export_shiny_data <- left_join(export_shiny_data, data_plot_long_N,by=c("wavedate"="wavedate","variable"="variable"))
+#combine shares and N to one dataframe
+export_shiny_data <- left_join(export_shiny_data, data_plot_long_N_new,by=c("wavedate"="wavedate","variable"="variable","scales"="scales"))
 
+#Round the data before exporting
 export_shiny_data <- export_shiny_data %>% mutate(mean_measurement=round(mean_measurement,2),
                                                   mean_measurement_se=round(mean_measurement_se,2),
                                                   ymax=round(ymax,2),
                                                   ymin=round(ymin,2))
 
-export_shiny_data_shares <- left_join(data_plot_long, data_plot_long_N,by=c("wavedate"="wavedate","variable"="variable"))
+#combine shares and N to one dataframe
+export_shiny_data_shares <- left_join(data_plot_long_new, data_plot_long_N_new,by=c("wavedate"="wavedate","variable"="variable","scales"="scales"))
 
+#Round the data before exporting
 export_shiny_data_shares <- export_shiny_data_shares %>% select(-c(n,n_se)) %>% mutate(prop=round(prop,3),
                                                                                        ymax=round(ymax,3),
                                                                                        ymin=round(ymin,3))
 
-
+#Export the data
 write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
 write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.csv", na = "NA")
+
+
+#data_long$measurement<-as.factor(data_long$measurement)
+#levels(data_long$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
+
+#levels(data_plot_long_mean$variable) <- c("Ges. Gefahr Persönlich", "Ges. Gefahr Für die österr. Bevölkerung"," Wir. Gefahr Persönlich", "Wir. Gefahr Für die österr. Bevölkerung")
+
 
 ```
 

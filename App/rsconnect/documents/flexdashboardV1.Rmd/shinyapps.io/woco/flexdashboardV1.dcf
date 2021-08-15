@@ -1,0 +1,13 @@
+name: flexdashboardV1
+title: flexdashboardV1
+username:
+account: woco
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4492973
+bundleId: 4923542
+url: https://woco.shinyapps.io/flexdashboardV1/
+when: 1628960782.10856
+lastSyncTime: 1628960782.10856
+asMultiple: FALSE
+asStatic: FALSE
