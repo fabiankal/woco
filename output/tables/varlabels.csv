@@ -1,0 +1,459 @@
+labels,variable
+Gesundheitliche Gefahr: Fuer mich persoenlich,ges_per_gefahr
+Gesundheitliche Gefahr: Fuer die oesterreichische Bevoelkerung,ges_pub_gefahr
+Wirtschaftliche Gefahr: Fuer mich persoenlich,wir_per_gefahr
+Wirtschaftliche Gefahr: Fuer die oesterreichische Bevoelkerung,wir_pub_gefahr
+Wohlfuehlen: Wohnsituation,wohnsit
+Corona-Ampel: Ich bin gut informiert,ampel_inf
+"Corona-Ampel: Ich weiss, was zu tun ist",ampel_tun
+Corona-Ampel: Ich richte mein Verhalten an der Ampel aus,ampel_ovr
+Corona-Ampel: Andere richten ihr Verhalten an der Ampel aus,ampel_avr
+Anzahl Kontakpersonen: Letzte Woche,anz_kont_lw
+Anzahl Kontaktpersonen: In der Weihnachtswoche,anz_kont_ww
+Anzahl Kontakpersonen: In der Woche zu Silvester / Neujahr,anz_kont_sw
+Anzahl der Infizierten (amtlich),anz_infiz_amt
+Anzahl der Infizierten (eigene Einschaetzung),anz_infiz_sub
+Gesundheitszustand,subj_gesund
+Corona-Diagnose: Respondent,cor_diag_pos
+Corona positiv: Wieder genesen?,cor_diag_gen
+Corona: Versucht getestet zu werden?,cor_diag_tes
+Corona bisher nicht positiv: Wahrscheinlichkeit an Corona zu erkranken,cor_prop_per
+Corona-Diagnose: Direkter persoenlicher Kontakt,cor_diag_con
+Familie und Freunde: Wahrscheinlichkeit an Corona zu erkranken,cor_prop_fff
+Familie und Freunde: Wahrscheinlichkeit an Corona zu erkranken (weitere Person),cor_prop_ffp
+Auswirkungen: Vergesse Wochentag,wochentag
+Auswirkungen: Fehlt Kontakt,kontakt
+"Auswirkungen: Dinge tun, fuer die sonst keine Zeit",zeit
+Auswirkungen: Konflikte in Beziehung/Familie,konflikt
+Aussage: Kinderbetreuung stellt Problem dar,kinder
+Depressivitaet: ruhig und gelassen,depress_A1
+Depressivitaet: einsam,depress_A2
+Depressivitaet: aergerlich,depress_A3
+Depressivitaet: so niedergeschlagen,depress_A4
+Depressivitaet: gluecklich,depress_A5
+Depressivitaet: sehr nervoes,depress_A6
+Depressivitaet: aengstlich,depress_A7
+Depressivitaet: bedrueckt und traurig,depress_A8
+Depressivitaet: voller Energie,depress_A9
+Zuhause verlassen: Arbeit,ausgeh_arbeit
+Zuhause verlassen: Sport,ausgeh_sport
+Zuhause verlassen: Freunde oder Verwandte treffen,ausgeh_freunde
+"Zuhause verlassen: Medikamente, medizinische Versorgung, Pflege, Hilfe",ausgeh_medikamente
+Zuhause verlassen: Essen einkaufen,ausgeh_essen
+Zuhause verlassen: Haustier ausfuehren,ausgeh_haustier
+Zuhause verlassen: Langeweile im Haus/um Freiheit zu geniessen,ausgeh_langeweile
+Zuhause verlassen: Sonstige Besorgungen,ausgeh_sonsbes
+Zuhause verlassen: Andere Gruende,ausgeh_andere
+Chance: Zusammenhalt hat sich erhoeht,zusammenhalt
+Chance: Gut fuer Umwelt und Klima,umweundklima
+Chance: Umstellung auf Online-Kommunikation,onlinekommun
+Demokratiezufriedenheit: Oesterreich,demokratie
+Lebenszufriedenheit,lebensz
+Reaktion: Meinung fuer sich behalten,meinungmich
+Reaktion: Ruhig ausdiskutieren,meinungdisk
+Reaktion: Laut streiten,streiten
+Reaktion: Handgreiflich werden,hand
+Gemeinschaftsgefuehl: Geben alle unser Bestes,zus_bestes
+"Gemeinschaftsgefuehl: Einig, dass Zusammenhalt wichtig",zus_einig
+"Gemeinschaftsgefuehl: Ruecken zusammen, um Schwache zu schuetzen",zus_schutzen
+Alkoholkonsum,alkohol
+Rauchverhalten,tabak
+Zufriedenheit Bundesregierung: Bilanz,blianz_reg
+Zufriedenheit Bundesregierung: Bekaempfung der Arbeitslosigkeit,zuf_reg_al
+Zufriedenheit Bundesregierung: Stuetzung der kleinen und mittleren Unternehmen,zuf_reg_un
+Zufriedenheit Bundesregierung: Stuetzung der Wirtschaft allgemein,zuf_reg_wi
+Massnahmen der Regierung: Angemessenheit,mas_angemessen
+Massnahmen der Regierung: Effektivitaet,mas_effektiv
+Aussage: Akzeptabel hoehere Steuern zu zahlen,skept_steuer
+Aussage: Lebensweise aendern,skept_lebens
+Aussage: Wichtigeres als Corona im Leben,skept_wichti
+Aussage: Behauptungen ueber Corona uebertrieben,skept_behaup
+Aussage: Solange andere Verhalten nicht aendern keine Verhaltensaenderung,skept_andere
+Aussage: Massnahmen zur Eindaemmung des Coronavirus waren Fehler,skept_fehler
+Aussage: Regierung uebertreibt hinsichtlich gesundheitlicher Gefahr,skept_uebert
+Aussage: Das Coronavirus ist gefaehrlicher als eine normale Grippe.,skept_grippe
+Aussage: Alles in allem empfinde ich die Corona-Massnahmen als gerecht.,skept_gerech
+"Aussage: Die meisten in meinem Umfeld sind bereit, ihre Lebensweise zu aendern.",skept_lebumg
+Politische Entscheidungen: Experten sollten entscheiden,mas_wissenschaft
+Politische Entscheidungen: Massnahmen obwohl Mehrheit dagegen,mas_gmehrheit
+Politische Entscheidungen: Entscheidungen Folge leisten,mas_compliance
+Politische Entscheidungen: Gesundheit hat Vorrang vor Wirtschaft,mas_geswirt
+Politische Entscheidungen: Vorbereitungen noetig auch wenn hohe Kosten,mas_vorbereitk
+Politische Entscheidungen: Unternehmen staerken anstatt Arbeitnehmer,mas_arbnarbeitg
+Geschaetzte Dauer der Krise,dauer
+Geschaetzte Dauer der Krise: Mehr als 6 Monate,dauer_ext
+Gefahr zweite Welle des Coronavirus,danger_2wave
+Ueberwachung: per Video ueberwachen,komp_video
+Ueberwachung: Informationen sammeln ohne Wissen,komp_infos
+Ueberwachung: per Handyortung aufspueren,komp_handy
+Ueberwachung: behoerdliche Schliessung,komp_schliessen
+Ueberwachung: Ausgangssperren,komp_ausgansp
+Ueberwachung: Nicht-Einhaltung bestrafen,komp_bestrafen
+Ueberwachung: App,komp_appaufenth
+App: Nutzung,app_nutzung_old
+App: Nuetzlichkeit,app_nutzlich
+App: Benutzerfreundlichkeit,app_freundlich
+App: Datenschutz,app_schutz
+App: Pflicht,app_pflicht
+App: Nutzung,app_nutzung_new
+App: Nuetzlichkeit,app_nutzlich
+App: Benutzerfreundlichkeit,app_freundlich
+App: Datenschutz,app_schutz
+App: Pflicht,app_pflicht
+App: Zu komplex,app_komplex
+App: Funktionalitaet verstaendlich,app_verstae
+Aussage: Beitrag zur Finanzierung durch alle Personen gleich,tax_gleich
+Aussage: Kluft zwischen Arm und Reich wird durch Krise groesser,tax_ineq
+Aussage: Neue Steuern schaden Wirtschaftsstandort Oesterreich,tax_hurt
+Aussage: Ausgangsbeschraenkungen treffen arme Menschen staerker als reiche,tax_quarant
+Finanzierung: allgemeine Einkommenssteuer,fstax_eink_g
+Finanzierung: allgemeine Vermoegenssteuer,fstax_verm_g
+Finanzierung: allgemeine Erbschaftssteuer,fstax_erb_g
+Finanzierung: progressive Einkommenssteuer,fstax_eink_h
+Finanzierung: progressive Vermoegenssteuer,fstax_verm_h
+Finanzierung: progressive Erbschaftssteuer,fstax_erb_h
+Finanzierungsmoeglichkeit: Kuerzung Sozialausgaben,gentax_aussoz
+Finanzierungsmoeglichkeit: Kuerzung Bildungsausgaben,gentax_ausbil
+Finanzierungsmoeglichkeit: Steuererhoehung,gentax_steuer
+Finanzierungsmoeglichkeit: neue Staatsschulden,gentax_schuld
+Einkommensdezil,subj_eink
+Glueck vs. Leistung,bel_luckef
+Haushaltsgegenstaende: Gute Zeit zu kaufen,kaufen_haus
+Guter/schlechter Zeitpunkt: Geld sparen,zeitp_spar
+Guter/schlechter Zeitpunkt: Geld investieren,zeitp_inve
+Guter/schlechter Zeitpunkt: Liegenschaft erwerben,zeitp_lieg
+Guter/schlechter Zeitpunkt: Geld ausgeben,zeitp_ausg
+Guter/schlechter Zeitpunkt: Kredit aufnehmen,zeitp_kred
+Konsum: Zeitungs- oder Zeitschriftenabonnement,kons_zeit
+Konsum: Bekleidung und Schuhe,kons_bekl
+"Konsum: Heimtextilien, Geschirr und kleinere Haushaltsartikel",kons_text
+"Konsum: Spielwaren, Sportgeraete und Sportausruestung, Buecher",kons_spie
+Konsum: Unterhaltungselektronik,kons_elek
+Konsum: Schmuck und Uhren,kons_schm
+Konsum: Fahrzeuge,kons_fahr
+"Konsum: Gastronomiedienstleistungen (Restaurant, Café)",kons_gast
+"Konsum: Dienstleistungen zur Koerperpflege (z.B. Kosmetik, Friseur)",kons_pfle
+Urlaub: Gute Zeit zu planen,urlaub_planen
+Urlaubsziel: Oesterreich,urlaub_ziel_at
+Urlaubsziel: Italien,urlaub_ziel_it
+Urlaubsziel: Deutschland,urlaub_ziel_de
+Urlaubsziel: Kroatien,urlaub_ziel_cr
+Urlaubsziel: Spanien,urlaub_ziel_es
+Urlaubsziel: Griechenland,urlaub_ziel_gr
+Urlaubsziel: Grossbritannien,urlaub_ziel_gb
+Urlaubsziel: anderes EU-Land,urlaub_ziel_eu
+Urlaubsziel: ausserhalb EU,urlaub_ziel_ex
+Urlaubsziel: weiss nicht,urlaub_ziel_wn
+Urlaubsziel: keine Angabe,urlaub_ziel_ka
+Urlaubsziel Oesterreich: Vorarlberg,urlaub_zielaut_vb
+Urlaubsziel Oesterreich: Tirol,urlaub_zielaut_ti
+Urlaubsziel Oesterreich: Salzburg,urlaub_zielaut_sb
+Urlaubsziel Oesterreich: Steiermark,urlaub_zielaut_st
+Urlaubsziel Oesterreich: Kaernten,urlaub_zielaut_kt
+Urlaubsziel Oesterreich: Oberoesterreich,urlaub_zielaut_oo
+Urlaubsziel Oesterreich: Niederoesterreich,urlaub_zielaut_no
+Urlaubsziel Oesterreich: Wien,urlaub_zielaut_wi
+Urlaubsziel Oesterreich: Burgenland,urlaub_zielaut_bg
+Urlaubsziel Oesterreich: weiss nicht,urlaub_zielaut_wn
+Urlaubsziel Oesterreich: keine Angabe,urlaub_zielaut_ka
+Urlaubsbeginn Monat,urlaub_beginn
+"Urlaubsart: Kultur-, Besichtigungs- und Staedteurlaub",urlaub_art_kult
+"Urlaubsart: Wander-, Rad- und Bergsteig-Urlaub",urlaub_art_wand
+Urlaubsart: Strand- und Badeurlaub,urlaub_art_strand
+Urlaubsart: Verwandten- und Bekannten-Besuch,urlaub_art_verwa
+Urlaubsart: Wellness- und Schoenheitsurlaub,urlaub_art_welln
+Urlaubsart: Skiurlaub,urlaub_art_ski
+Urlaubsart: Weltreise,urlaub_art_welt
+Urlaubsart: Kreuzfahrt,urlaub_art_kreuz
+Urlaubsart: Andere Art von Urlaub,urlaub_art_andere
+Urlaubsart: Weiss nicht,urlaub_art_wn
+Urlaubsart: Keine Angabe,urlaub_art_ka
+EU: Hoehere Mitgliedsbeitraege in Ordnung,EU1_hohebeitr
+EU: Grenzkontrollen dauerhaft noetig,EU1_grenzkontr
+EU: Krisen staerker zentral steuern,EU1_zentralst
+EU: Ausfuhrstopp durch Oesterreich fuer notwendige Gueter,EU1_ausfuhrst_eu
+EU: Ausfuhrstopp durch andere Mitgliedslaender fuer notwendige Gueter,EU1_ausfuhrst_aut
+"EU: Oesterreich profitiert davon, andere EU-Staaten finanziell zu unterstuetzen",EU2_autprof
+EU: Personenfreizuegigkeit foerdert Wirtschaftswachstum in Oesterreich,EU2_personenfr
+EU: Freihandel wichtiger als Schutz heimischer Wirtschaft,EU2_freihandel
+EU-Krisenfinanzierung: hoehere Beitraege durch Mitgliedsstaaten,EU_fin_beitr
+EU-Krisenfinanzierung: gemeinsame Schulden,EU_fin_schuld
+EU-Krisenfinanzierung: gemeinsamer Fond zur Kreditvergabe,EU_fin_fond
+EU-Krisenfinanzierung: freiwillige Vergabe von Hilfsgeldern ohne Rueckzahlung,EU_fin_hilfsg
+EU-Krisenfinanzierung: freiwillige Sachspenden an Mitgliedsstaaten,EU_fin_sachsp
+Tradeoff Preis-Herkunft: Lebensmittel,preisherk_lebens
+Tradeoff Preis-Herkunft: Medikamente/Medizinische Produkte,preisherk_medik
+Tradeoff Preis-Herkunft: Kleidung,preisherk_kleid
+Entscheidungskompetenz: Gesundheitspolitik,eintscheidk_ges
+Entscheidungskompetenz: Handelspolitik,eintscheidk_han
+Entscheidungskompetenz: Asylpolitik,eintscheidk_asy
+Entscheidungskompetenz: Steuerpolitik,eintscheidk_ste
+Entscheidungskompetenz: Arbeitsmarktpolitik,eintscheidk_arb
+Entscheidungskompetenz: Umweltpolitik,eintscheidk_umw
+Entscheidungskompetenz: Landwirtschaftspolitik,eintscheidk_agr
+Referendum EU-Mitgliedschaft,EU_referendum
+EU-Reformen: Erhebung von Steuern durch die EU zur Finanzierung des EU-Budgets,EU_reform_fina
+EU-Reformen: EU-weiter Verteilungsschluessel fuer Fluechtlinge,EU_reform_vert
+EU-Reformen: Mindeststeuern fuer Unternehmensgewinne in der EU,EU_reform_mste
+EU-Reformen: Einheitlicher europaeischer Mindestlohn,EU_reform_mloh
+Corona-Hilfspaket Beispielland A,EU_vert_el_ul_bh
+Corona-Hilfspaket Beispielland B,EU_vert_eh_ul_bh
+Corona-Hilfspaket Beispielland C,EU_vert_el_uh_bh
+Corona-Hilfspaket Beispielland D,EU_vert_eh_uh_bh
+Corona-Hilfspaket Beispielland E,EU_vert_el_ul_bl
+Corona-Hilfspaket Beispielland F,EU_vert_eh_ul_bl
+Corona-Hilfspaket Beispielland G,EU_vert_el_uh_bl
+Corona-Hilfspaket Beispielland H,EU_vert_eh_uh_bl
+Links-Rechts-Selbsteinstufung,lrscale
+Aktuelles Haushaltseinkommen,hh_inc_cur
+Finanzielles Auskommen: Aktuell,fin_ausk_akt
+Finanzielles Auskommen: Februar 2020,fin_ausk_feb
+Finanzielles Auskommen: In 3 Monaten,fin_ausk_mon
+Finanzielles Auskommen: In 12 Monaten,fin_ausk_yea
+Wirtschaftslage: In 3 Monaten,eco_ausk_mon
+Wirtschaftslage: In 12 Monaten,eco_ausk_yea
+Meinung anderer Oesterreicher: Geschaefte sollen geschlossen bleiben,sozialn_mein_and_ges
+Meinung anderer Oesterreicher: Alle muessen zu Hause bleiben,sozialn_mein_and_hau
+Meinung anderer Oesterreicher: Nicht-Einhaltung von Massnahmen bestrafen,sozialn_mein_and_bes
+Meinung anderer Oesterreicher: Alle muessen 1m Abstand halten,sozialn_mein_and_abs
+Meinung anderer Oesterreicher: Verletzungen muessen vermieden werden,sozialn_mein_and_ver
+Meinung anderer Oesterreicher: Schutzmasken im oeffentlichen Raum tragen,sozialn_mein_and_sch
+Verhalten anderer Oesterreicher: Bleiben zu Hause,sozialn_verh_and_hau
+Verhalten anderer Oesterreicher: Halten Abstand,sozialn_verh_and_abs
+Verhalten anderer Oesterreicher: Vermeiden Verletzungen,sozialn_verh_and_ver
+Verhalten anderer Oesterreicher: Tragen Schutzmasken,sozialn_verh_and_sch
+Eigenes Verhalten: Zu Hause bleiben,sozialn_verh_eig_hau
+Eigenes Verhalten: Abstand halten,sozialn_verh_eig_abs
+Eigenes Verhalten: Verletzungen vermeiden,sozialn_verh_eig_ver
+Eigenes Verhalten: Schutzmaske tragen,sozialn_verh_eig_sch
+Massnahme: Einschraenkung von Kontakten ausserhalb des Haushalts,masgelten_kontakt
+"Massnahme: Schliessung von Gaststaetten, Cafés, Bars und Restaurants",masgelten_gastaet
+Massnahme: Verbot von Veranstaltungen mit vielen Teilnehmer*innen,masgelten_veranst
+Massnahme: Schliessung von Schwimmbaedern,masgelten_schwimm
+Massnahme: Schliessung von Spielplaetzen,masgelten_spielpl
+Massnahme: Schliessung von Volks- und hoeheren Schulen,masgelten_schulen
+Massnahme: Schliessung von Kindergaerten und Kindertagesstaetten,masgelten_kinderg
+Massnahme: Besuchsverbot in Pflege- und Seniorenwohnheimen,masgelten_senheim
+Massnahme: Schliessung aller Geschaefte abseits der Grundversorgung,masgelten_geschae
+Massnahme: Einschraenkung der Reisefreiheit,masgelten_reisefr
+Massnahme: Weitgehendes Betretungsverbot des oeffentlichen Raums,masgelten_betretu
+Massnahme: Maskenpflicht in Geschaeften und oeffentlichen Verkehrsmitteln,masgelten_maskenp
+"Massnamen: Verpflichtung fuer Betriebe, Daten ihrer Besucher zu erfassen",masgelten_gastreg
+Massnahmen: Naechtliche Aussgangsbeschraenkungen,masgelten_nachtau
+Massnahme: Einschraenkung von Kontakten ausserhalb des Haushalts,masgelten_kontakt
+"Massnahme: Schliessung von Gaststaetten, Cafés, Bars und Restaurants",masgelten_gastaet
+Massnahme: Verbot von Veranstaltungen mit vielen Teilnehmer*innen,masgelten_veranst
+Massnahmen: Verpflichtende Zutrittstests zu Veranstaltungen,masgelten_zutesve
+Massnahmen: Verpflichtende Zutrittstests zu Gastronomie und Hotellerie,masgelten_zutesga
+Massnahmen: Verpflichtende Zutrittstest fuer koerpernahe Dienstleistungen,masgelten_zutesdi
+Weihnachten/Neujahr: Eingeschraenkte Kontakte ausserhalb des eigenen Haushalts,masgelten_weih_kontakt
+"Weihnachten/Neujahr: Schliessung von Gaststaetten, Cafés, Bars und Restaurants",masgelten_weih_gastaet
+Weihnachten/Neujahr: Verbot von Veranstaltungen mit vielen Teilnehmer*innen,masgelten_weih_veranst
+Weihnachten/Neujahr: Besuchsverbot in Pflege- und Seniorenwohnheimen,masgelten_weih_senheim
+Weihnachten/Neujahr: Schliessung aller Geschaefte abseits der Grundversorgung,masgelten_weih_geschae
+Weihnachten/Neujahr: Einschraenkung der Reisefreiheit,masgelten_weih_reisefr
+Weihnachten/Neujahr: Maskenpflicht in Geschaeften/oeffentlichen Verkehrsmitteln,masgelten_weih_maskenp
+Weihnachten/Neujahr: Verzicht auf religioese Zusammenkuenfte,masgelten_weih_sreligo
+Massentests: Habe/werde mich testen lassen,getestet_old
+Corona-Test: Haeufigkeit in den letzten vier Wochen,getestet_new
+Corona-Test: Haeufigkeit [Wenn mehr als 4 Mal],getestet_ext
+Massentests: Anmeldung funktioniert problemlos,mastest_anm
+Massentests: Durchfuehrung erfolgt professionell,mastest_dur
+Massentests: Teststation weit von Wohnort entfernt,mastest_woh
+Massentests: Lange Menschenschlangen vor Teststationen,mastest_war
+Massentests: Effektive Massnahme gegen Corona,mastest_eff
+Massentests: Ergebnis ist zuverlaessig,mastest_zuv
+"Massentests: Negativer Test bedeutet, dass ich mehr Personen treffen kann",mastest_tre
+Massentests: Trotz negativen Testergebnisses kann ich das Coronavirus verbreiten,mastest_ver
+Massentests: Privater Test kurz vor Weihnachten,mastest_pri
+"Massentests: keine Teilnahme, da Quarantaene nicht leistbar",mastest_qua
+Corona-Tests: Strengere Massnahmen fuer Personen ohne Test,mastest_str
+Corona-Test: Moeglich sich schnell testen zu lassen,mastest_mot
+Umgang mit Corona: Moeglichst harte Massnahmen fuer eine kuerzere Krise,umgcor_hart
+"Umgang mit Corona: Massnahmen erst lockern, wenn Neuansteckungen bei Null sind.",umgcor_zero
+"Umgang mit Corona: Sobald Risikogruppen geimpft sind, sollte geoeffnet werden.",umgcor_impf
+"Umgang mit Corona: Alle Beschraenkungen aufheben, dafuer Eigenverantwortung",umgcor_eigv
+"Umgang mit Corona: Massnahmen lockern, auch wenn das mehr Infizierte bedeutet",umgcor_lock
+"Ansteckungsgefahr: Restaurants, Cafés und Bars",anst_rest
+Ansteckungsgefahr: Oeffentliche Verkehrsmittel,anst_oeff
+Ansteckungsgefahr: Ihrer Arbeitsstaette [wenn: erwerbstaetig],anst_arbe
+Ansteckungsgefahr: Schulen und Kindergaerten,anst_schu
+Ansteckungsgefahr: Oeffentliche Parks und Spielplaetze,anst_park
+Ansteckungsgefahr: Arzt,anst_arzt
+Ansteckungsgefahr: Familienfeier,anst_fami
+Anstreckungsgefahr: Treffen von Freunden Zuhause,anst_freu
+Bereits gegen Corona geimpft,geimpft
+Geimpft: welcher Impfstoff,geim_impfs
+Geimpft: beide Impfungen,geim_beide
+Impfen: ehestmoeglich,impf_ehe
+Impfen: Impfpflicht fuer alle,impf_pfl
+Impfen: gratis Impfstoff,impf_gra
+Impfen: Impfpflicht fuer Berufsgruppen mit hohem Risiko,impf_pfb
+"Impfen: Sollte Moeglichkeit haben, mich sofort impfen zu lassen",impf_sof
+"Impfen: Es ist unfair, dass bestimmte Gruppen die Impfung frueher erhalten",impf_unf
+Impfen: Meisten Personen in meinem Umfeld sind bereit sich impfen zu lassen,impf_soz
+Aussage: Ich mache mir Sorgen ueber unvorhergesehene Nebenwirkungen der Impfung.,impfe_sor
+Aussage: Ich verlasse mich lieber auf mein Immunsystem als auf eine Impfung.,impfe_imm
+Aussage: Ich fuehle mich ueber die Wirkweise der Impfstoffe informiert.,impfe_ini
+Aussage: Die Impfung erlaubt mir ein Leben wie vor der Pandemie.,impfe_leb
+Aussage: Mit einer Impfung kann ich andere schuetzen.,impfe_asc
+"Aussage: Ich lasse mich nur impfen, wenn andere sich zuerst impfen lassen.",impfe_aim
+Aussage: Mit einer Impfung kann ich mich selbst schuetzen.,impfe_ssc
+Aussage: Behoerdlich zugelassene Impfungen sind sicher.,impfe_sic
+Aussage: Behoerden informieren hinreichend ueber die Wirkweise der Impfstoffe.,impfe_inb
+"Aussage: Mein Alltag ist zu stressig, ich habe keine Zeit fuer eine Impfung.",impfe_str
+Impfbereitschaft: BioNTech-Pfizer,impfs_bnp
+Impfbereitschaft: AstraZeneca,impfs_asz
+Impfbereitschaft: Moderna,impfs_mod
+Impfbereitschaft: Johnson & Johnson,impfs_jaj
+Impfbereitschaft: Sputnik V,impfs_spv
+Aussage: FFP2-Schutzmasken sind effektive Massnahme zur Eindaemmung der Corona-K,ffp_eff
+Aussage: Mit einer FFP2-Schutzmaske kann ich andere schuetzen.,ffp_and
+Aussage: Mit einer FFP2-Schutzmaske kann ich mich selbst schuetzen.,ffp_slb
+Erwerbstaetigkeit aktuell,berufst
+Erwerbstaetigkeit Partner(in): aktuell,berufst_pa
+Erwerbstaetigkeit Partner(in): Februar 2020,berufst_pf
+Arbeitsstunden: Jetzt pro Woche,workh_akt
+Aenderung berufliche Situation: Home-Office,berufa_home
+Aenderung berufliche Situation: Abbau Zeitausgleich/Urlaub,berufa_urla
+Aenderung berufliche Situation: Kuendigung,berufa_kuen
+Aenderung berufliche Situation: Stundenaufstockung,berufa_aufs
+Aenderung berufliche Situation: Kurzarbeit,berufa_kurz
+Aenderung berufliche Situation: Arbeitslosenunterstuetzung,berufa_arbu
+Aenderung berufliche Situation: Geld aus Haertefonds,berufa_hafo
+Aenderung berufliche Situation: aws-Kredit,berufa_awsk
+Aenderung berufliche Situation: Sozialhilfe,berufa_sozh
+Aenderung berufliche Situation: keine Arbeit und keine staatliche Unterstuetzung,berufa_kasa
+Aenderung berufliche Situation: keine Aenderung,berufa_kaen
+Aenderung berufliche Situation: keine Angabe,berufa_kang
+Zeit: Medienkonsum (in Sek.),zeitv_medi
+Zeit: Chatten/Telefonieren  (in Sek.),zeitv_telc
+Zeit: Hobbys  (in Sek.),zeitv_hobb
+Zeit: Hausarbeit / Einkaufen  (in Sek.),zeitv_eink
+Zeit: Pflege / Kinderbetreuung  (in Sek.),zeitv_betr
+Zeit: Bezahlte Arbeit (wenn Erwerbstaetigk. = erwerbstaetig; in Sek.),zeitv_arbe
+Zeit: Studium (wenn: Erwerbstaetigkeit = Studium)  (in Sek.),zeitv_stud
+Zeit: Weiterbildung / Bewerbung (arbeitslos)  (in Sek.),zeitv_weit
+Zeit: Schlafen (inklusive normaler Nachtruhe)  (in Sek.),zeitv_schl
+Aussage: Politik muss soziale Ungleichheit bekaempfen,issue_ungl
+Aussage: Sozialstaat macht Menschen traege und faul,issue_faul
+Aussage: Arbeitslosigkeit durch Staatsschulden bekaempfen,issue_albe
+Aussage: wenig Eingriff in Wirtschaft durch Politik,issue_wirt
+Aussage: Bevorzugung von Frauen bei gleicher Qualifikation,issue_frau
+Aussage: Ausweitung der Befugnisse der Polizei,issue_poli
+Aussage: Zuwanderung nach Oesterreich nur in Ausnahmefaellen,issue_zuwa
+Aussage: Umweltschutz um jeden Preis,issue_umwe
+Aussage: Einkommensunterschiede in Oesterreich sind zu gross,issue_eink
+Aussage: Generationenvertrag,issue_gena
+Aussage: Reduktion von Einkommensunterschieden durch staatliche Massnahmen,issue_redu
+Issue-Position: Steuern vs. Sozialleistungen,steuervssozl
+Ersatzleistung (Euro): Person mit 1500 Euro Bruttoentgelt bei 0% Kurzarbeit,ersatz_linc_kurz
+Ersatzleistung (Euro): Person mit 5000 Euro Bruttoentgelt bei 0% Kurzarbeit,ersatz_hinc_kurz
+Ersatzleistung (Euro): Person mit 1500 Euro Bruttoentgelt bei Arbeitslosigkeit,ersatz_linc_arbl
+Ersatzleistung (Euro): Person mit 5000 Euro Bruttoentgelt bei Arbeitslosigkeit,ersatz_hinc_arbl
+Aussage: Arbeitslose suchen nicht nach Arbeitsstelle,welfshov_such
+Aussage: Leute mit geringem Einkommen erhalten weniger Sozialleistungen,welfshov_zust
+"Aussage: Es gelingt Leuten, Sozialleistungen zu erhalten, ohne Anspruch",welfshov_sozl
+Verantwortung Regierung: angemessenen Lebensstandard fuer Pensionisten,verant_pens
+Verantwortung Regierung: angemessenen Lebensstandard fuer Arbeitslose,verant_arbl
+Verantwortung Regierung: ausreichend Kinderbetreuungsdienste fuer Berufstaetige,verant_kind
+Verantwortung Regierung: universitaere Ausbildung in guter Qualitaet,verant_univ
+Verantwortung Regierung: hochqualitative gesundheitl. Versorgung,verant_gesu
+Zufriedenheit: Arbeitsbedingungen,zuf_arb
+Jobattribut-Praeferenz: Ein sicherer Arbeitsplatz,joa_swc
+Jobattribut-Praeferenz: Ein hohes Einkommen,joa_hin
+"Jobattribut-Praeferenz: Ein Job, bei dem man anderen Menschen helfen kann",joa_hel
+"Jobattribut-Praeferenz: Ein Job, der es einem erlaubt, eigenstaendig zu arbeiten",joa_ind
+"Jobattribut-Praeferenz: Ein Job, der es einem erlaubt, neue Dinge zu lernen",joa_lea
+"Jobattribut-Praeferenz: Ein Job, der einem viel Freizeit laesst",joa_lei
+"Jobattribut-Praeferenz: Ein Job, der es einem erlaubt, kreativ zu sein",joa_cre
+Jobattribut-Praeferenz: Viel Kontakt mit anderen Menschen,joa_con
+"Jobattribut-Praeferenz: Ein Job, der einem ein gutes Selbstwertgefuehl gibt",joa_int
+Jobattribut-Praeferenz: Arbeit und andere Verpflichtungen unter einem Hut,joa_oth
+Lotto-Frage,lottoq
+Aussage: Arbeit ist eine Pflicht gegenueber der Gesellschaft.,wo_dty
+Aussage: Arbeit immer vor Freizeit,wo_lei
+"Aussage: Mann soll Geld verdienen, Frau sich um Haushalt kuemmern",wo_mal
+Staatliche Massnahmen: nur nachhaltige Unternehmen vs. alle gleichermassen,staatmas_unte
+Staatliche Massnahmen: nur Aermeren vs. fuer alle,staatmas_haus
+Staatliche Massnahmen: Geld ausbezahlen vs. Gutscheine/Praemien,staatmas_form
+Staatliche Massnahmen: nachhaltige Produkte foerdern vs. alle gleichermassen,staatmas_prod
+Staatliche Massnahmen: Unternehmen ausbezahlen vs. direkt Buerger ausbezahlen,staatmas_empf
+"Pflegebeduerftige Angehoerige: Ja, in 24h Pflege",pflege_bet_24h
+Pflegebeduerftige Angehoerige: teilweise Pflege,pflege_bet_tei
+Pflegebeduerftige Angehoerige: Pflege durch mich selbst,pflege_bet_sel
+Pflegebeduerftige Angehoerige: Pflege durch Partner/in,pflege_bet_par
+Pflegebeduerftige Angehoerige: Nein,pflege_bet_nei
+Pflegebeduerftige Angehoerige: weiss nicht,pflege_bet_wni
+Pflegebeduerftige Angehoerige: keine Angabe,pflege_bet_kan
+Pflege stellt Problem dar,pflege_sit_prob
+Pflege: Neue Pflegekraft finden (selbst oder Haushaltsperson),pflege_sit_nkra
+Pflege: Neue Pflegekraft finden (Agentur/Hilfsorganisation),pflege_sit_nage
+Pflege: Musste selbst pflegen,pflege_sit_eige
+Pflege: Sonstige Aenderung,pflege_sit_sons
+Pflege: Es hat sich nichts geaendert,pflege_sit_nich
+Pflege: Keine Angabe,pflege_sit_kang
+Erwartung Pflege aufrechterhalten zu koennen,pflege_aufre
+Pflege durch Angehoerige,pflege_angeh
+Politikinteresse,pol_inter
+Vertrauen: ORF,ver_orf
+Vertrauen: Polizei,ver_pol
+Vertrauen: Parlament,ver_par
+Vertrauen: Gesundheitswesen,ver_ges
+Vertrauen: Bundesregierung,ver_gov
+Vertrauen: Bundesheer,ver_mil
+Vertrauen: Sozialpartnerschaft,ver_soz
+Vertrauen: AMS,ver_ams
+Vertrauen: EU,ver_eur
+Vertrauen: WHO,ver_who
+Vertrauen: Justiz,ver_jus
+Vertrauen: Wissenschaft und Forschung,ver_sci
+Vertrauen: Landesregierung,ver_lan
+Vertrauen: Pharmaunternehmen,ver_pha
+Mediennutzung: Kronen Zeitung oder www.krone.at,med_kro
+Mediennutzung: Der Standard oder derstandard.at,med_sta
+Mediennutzung: Die Presse oder diepresse.com,med_pre
+Mediennutzung: Oesterreich oder oe24.at,med_oes
+Mediennutzung: Kurier oder kurier.at,med_kur
+Mediennutzung: Salzburger Nachrichten oder salzburg.at,med_sbg
+Mediennutzung: Sonstige oesterreichische Tageszeitungen,med_son
+Mediennutzung: orf.at,med_oat
+Mediennutzung: ORF (Nachrichten),new_orf
+Mediennutzung: Privatfernsehen (Nachrichten),new_pri
+Verbundenheit: Wohnort,verbunden_gem
+Verbundenheit: Bundesland,verbunden_bdl
+Verbundenheit: Oesterreich,verbunden_aut
+Verbundenheit: Europa,verbunden_eur
+Gerechtigkeitsprinzipien: gleichmaessige Verteilung von Einkommen und Vermoegen,gerechtp_gle
+Gerechtigkeitsprinzipien: Belohnung nach Leistung,gerechtp_lei
+Gerechtigkeitsprinzipien: Unterstuetzung fuer Beduerftige,gerechtp_bed
+Gerechtigkeitsprinzipien: Privilegien durch Status,gerechtp_sta
+Gerechtigkeitsprinzipien: Glueck bei wirtschaftlichem Erfolg,gerechtp_zuf
+Wahlabsicht (Sonntagsfrage),sonntagsfrage
+Wahrscheinlichkeit: Wieder Arbeit zu finden,risk_fwrk
+Wahrscheinlichkeit: Job zu verlieren,risk_lwrk
+Wahrscheinlichkeit: gewohnte Arbeit wieder aufnehmen,risk_buwk
+Soziale Kontakte: Haeufigkeit ausgetauscht/Kontakt gehalten,sozkont
+Gerechter Anteil,geranteil
+Oben-unten: Selbsteinstufung,sss_akt
+Oben-unten: Selbsteinstufung (zukuenftige Situation),sss_5yr
+Grundeinkommen,greinkom
+Wahrnehmung Verdienst: ein praktischer Arzt: <...> Euro,eik_perc_doc
+"Wahrnehmung Verdienst: Vorstandsvorsitzender, grosses Unternehmes: <...> Euro",eik_perc_ceo
+Wahrnehmung Verdienst: ein Verkaeufer in einem Kaufhaus: <...> Euro,eik_perc_ang
+Wahrnehmung Verdienst: ein ungelernter Fabrikarbeiter: <...> Euro,eik_perc_arb
+Wahrnehmung Verdienst: ein Minister in der Bundesregierung: <...> Euro,eik_perc_reg
+Staatshilfe nach Leistungsprinzip,ger_sth_equi
+Staatshilfe nach Bedarf,ger_sth_need
+Staatshilfe gleich verteilt,ger_sth_equa
+Staatshilfe bei Verlust gesellschaftlicher Stellung,ger_sth_stat
+Aktuelles persoenliches Einkommen,inc_pers
+Risikobereitschaft,risikob
+Psychologie: habe Leben selbst in der Hand,psy_leb
+Psychologie: Belohnung durch Anstrengung,psy_bel
+Psychologie: Fremdbestimmung,psy_fbe
+Psychologie: Schicksal,psy_sci
+Zufriedenheit: Familienleben,zuf_fam
+Zufriedenheit: Partnerschaft,zuf_par
+Zufriedenheit: Beruf,zuf_ber
+Zufriedenheit: Freizeit,zuf_frz
