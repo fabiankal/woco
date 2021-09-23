@@ -312,6 +312,8 @@ export_shiny_data <- export_shiny_data %>% mutate(mean_measurement=round(mean_me
 
 grouped_labels<-grouped_labels %>%rename(scales=ID)
 
+grouped_labels2<-df %>%mutate(variable=rownames(.)) %>% left_join(grouped_labels,by = c("variable"))
+
 #combine shares and N to one dataframe
 export_shiny_data_shares <- left_join(data_plot_long_new, data_plot_long_N_new,by=c("wavedate"="wavedate","variable"="variable","scales"="scales"))
 
@@ -323,7 +325,7 @@ export_shiny_data_shares <- export_shiny_data_shares %>% select(-c(n,n_se)) %>% 
 #Export the data
 write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
 write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.csv", na = "NA")
-write_csv(grouped_labels, "./output/tables/grouped_labels.csv", na = "NA")
+write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
 
 
 #data_long$measurement<-as.factor(data_long$measurement)

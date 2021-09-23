@@ -1,19 +1,19 @@
-scales,variable
-1,ges_per_gefahr
-1,ges_pub_gefahr
-1,wir_per_gefahr
-1,wir_pub_gefahr
-2,wochentag
-2,kontakt
-2,zeit
-2,konflikt
-2,kinder
-3,depress_A1
-3,depress_A2
-3,depress_A3
-3,depress_A4
-3,depress_A5
-3,depress_A6
-3,depress_A7
-3,depress_A8
-3,depress_A9
+V1,V2,V3,V4,V5,V6,V7,variable,scales
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,ges_per_gefahr,1
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,ges_pub_gefahr,1
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,wir_per_gefahr,1
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,wir_pub_gefahr,1
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,wochentag,2
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,kontakt,2
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,zeit,2
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,konflikt,2
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,kinder,2
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A1,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A2,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A3,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A4,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A5,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A6,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A7,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A8,3
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,depress_A9,3
