@@ -19,7 +19,7 @@ data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/
 
 
 #epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
-epidf =            read.delim("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv")
 
 my_autocomplete_list <- unique(data$variable)
 
@@ -157,7 +157,7 @@ checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value 
 Column
 -----------------------------------------------------------------------
 
-### Line Plot
+### Plot averages per wave {data-height=450}
 
 ```{r}
 
@@ -202,7 +202,7 @@ renderPlotly({
 
   p <- data2 %>%
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~variable)
-  p <- p %>% layout(title = "Average agreement",
+  p <- p %>% layout(title = "",
          xaxis = list(title = ""),
          yaxis = list (title = ""),
          legend = list(orientation = 'h')#,
@@ -251,7 +251,7 @@ renderPlotly({
 # geom_area(data = epidf_rc %>% filter(time<as.Date('2021-04-20')), aes(x = time, y = daily_inf/10000, fill="lightgrey"), 
 ```
 
-### Labels
+### {data-height=100}
 ```{r}
 #output$out1 <- renderPrint(input$variables)
 #verbatimTextOutput('out1')
@@ -293,7 +293,7 @@ htmlOutput("selected_var")
 
 ```
 
-### By Group
+### Show averages by group {data-height=450}
 
 ```{r}
 #output$out1 <- renderPrint(input$groupby)
@@ -315,7 +315,7 @@ renderPlotly({
 
   p <- data3 %>%
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)
-  p <- p %>% layout(title = "Average agreement",
+  p <- p %>% layout(title = "",
          xaxis = list(title = ""),
          yaxis = list (title = ""),
          legend = list(orientation = 'h'))

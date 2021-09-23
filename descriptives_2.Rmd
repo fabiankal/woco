@@ -336,3 +336,10 @@ write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
 
 ```
 
+```{r download and export covid19 cases, echo=FALSE, fig.width=8, fig.height=5, results='asis'}
+
+epidf2 =            read.delim("https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+
+write_csv(epidf2, "./output/tables/CovidFaelle_Timeline.csv", na = "NA")
+
+```
