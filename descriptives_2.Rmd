@@ -180,7 +180,13 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 #What variables should be used for the dashboard
 variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
                   "wochentag","kontakt","zeit" ,"konflikt","kinder",
-                  "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9")
+                  "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
+                  "zusammenhalt","umweundklima","onlinekommun",
+                  "demokratie","lebensz",
+                  "zus_bestes","zus_einig","zus_schutzen",
+                  "blianz_reg",
+                  "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
+                  "mas_angemessen","mas_effektiv")
 
 #What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
 sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","bula","hh_inc_cur_quintile")

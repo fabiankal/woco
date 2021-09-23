@@ -17,11 +17,13 @@ data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/
 
 data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv")
 
+data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv")
+
 
 #epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
 epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv")
 
-my_autocomplete_list <- unique(data$variable)
+my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data$variable)]
 
 hlinedata = data.frame(x = c("16.03.2020",
                              "14.04.2020",
@@ -179,9 +181,12 @@ Column
 # })
 
 renderPlotly({
+  
+  inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variables]
+  
   data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% input$variables & groupby=="all") #%>%
+    filter(variable %in% inputvariables & groupby=="all") #%>%
     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
   
   variables=0
@@ -262,9 +267,11 @@ myval <- reactiveValues()
  #Observe changes in variables (will run when variables change)
   observeEvent(input$variables, {
     
+    inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variables]
+    
     data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% input$variables & groupby=="all") #%>%
+    filter(variable %in% inputvariables & groupby=="all") #%>%
     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
   
   variables=0
@@ -274,7 +281,7 @@ myval <- reactiveValues()
   text=0
   for(i in 1:length(unique(data2$scales)))
       {
-       variables[i]=paste(unique(data2$variable[data2$scales==i]),sep=", ",collapse=", ")
+       variables[i]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
        labels_st[i]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
        labels_en[i]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
        labels_ms[i]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
@@ -305,8 +312,11 @@ htmlOutput("selected_var")
 #                test=="Age"~ groupby=="ag"))
 
 renderPlotly({
+  
+  inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variables]
+
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
-    filter(variable %in% input$variables[1]) %>%
+    filter(variable %in% inputvariables[1]) %>%
     filter(case_when(input$groupby=="Gender"~ groupby=="ge",
                      input$groupby=="Age"~ groupby=="ag",
                      input$groupby=="Education"~ groupby=="ed",
@@ -352,8 +362,11 @@ Column
 ```{r}
 
 renderPlotly({
+  
+  inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares]
+  
   data3 = data_shares %>% select(wavedate,variable,measurement,prop) %>%
-    filter(variable %in% input$var_shares) 
+    filter(variable %in% inputvariable_shares) 
   
   p <- ggplot(data3, aes(fill=measurement,x=wavedate, y=prop)) + 
     geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.8) + #geom_bar width=0.7
