@@ -15,8 +15,11 @@ data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/
 
 data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv")
 
-epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv")
 
+
+#epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+epidf =            read.delim("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
 
 my_autocomplete_list <- unique(data$variable)
 
@@ -139,7 +142,7 @@ selectizeInput(
     multiple = TRUE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
-selectInput("groupby", label = "Gruppierung",
+selectInput("groupby", label = "Gruppierung (der ersten Variable)",
             choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Keine")
 
 checkboxInput(inputId = 'confidence', label = "95% Konfidenzintervalle", value = FALSE)
@@ -176,23 +179,43 @@ Column
 # })
 
 renderPlotly({
-  data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin) %>%
+  data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
     filter(variable %in% input$variables & groupby=="all") #%>%
     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
+  
+  variables=0
+  labels_st=0
+  labels_en=0
+  labels_ms=0
+  text=0
+  for(i in 1:length(unique(data2$scales)))
+      {
+       variables[i]=paste(unique(data2$variable[data2$scales==i]),sep=", ",collapse=", ")
+       labels_st[i]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
+       labels_en[i]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
+       labels_ms[i]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
+      text[i]=paste('The scale of variable(s)', variables[i], 'goes from',labels_st[i],'to',labels_en[i],'. Missing values:',labels_ms[i], sep=" ", collapse=" ")
+  }
+  
+  
 
   p <- data2 %>%
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~variable)
   p <- p %>% layout(title = "Average agreement",
          xaxis = list(title = ""),
          yaxis = list (title = ""),
-         legend = list(orientation = 'h'),
-         annotations = list(text = 'The scale of this variable goes from ',
-                            font = list(size = 12,color='black'),
-                            showarrow = FALSE,
-                            xref = 'paper', x = 0,
-                            yref = 'paper', y = -0.1,
-                            xanchor='left', yanchor='auto', xshift=0, yshift=0))
+         legend = list(orientation = 'h')#,
+         #annotations = list(text = paste(text),
+         #                   font = list(size = 12,color='black'),
+         #                   showarrow = FALSE,
+         #                   xref = 'paper', x = 0,
+         #                   yref = 'paper', y = -0.1,
+         #                   xanchor='left', yanchor='auto', xshift=0, yshift=0)
+         )
+  
+  
+  
   if(input$relevantdates)
   {
     for(i in 1:length(hlinedata$x))
@@ -226,6 +249,48 @@ renderPlotly({
 
 #p %>% layout(shapes = list(add_vline(hlinedata$x)))
 # geom_area(data = epidf_rc %>% filter(time<as.Date('2021-04-20')), aes(x = time, y = daily_inf/10000, fill="lightgrey"), 
+```
+
+### Labels
+```{r}
+#output$out1 <- renderPrint(input$variables)
+#verbatimTextOutput('out1')
+
+#get a reactive (text) variable
+myval <- reactiveValues()
+
+ #Observe changes in variables (will run when variables change)
+  observeEvent(input$variables, {
+    
+    data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
+    distinct(wavedate,variable, .keep_all = TRUE) %>%
+    filter(variable %in% input$variables & groupby=="all") #%>%
+    #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
+  
+  variables=0
+  labels_st=0
+  labels_en=0
+  labels_ms=0
+  text=0
+  for(i in 1:length(unique(data2$scales)))
+      {
+       variables[i]=paste(unique(data2$variable[data2$scales==i]),sep=", ",collapse=", ")
+       labels_st[i]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
+       labels_en[i]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
+       labels_ms[i]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
+      text[i]=paste('The scale of variable(s)', variables[i], 'goes from',labels_st[i],'to',labels_en[i],'. Missing values:',labels_ms[i], sep=" ", collapse=" ")
+  }
+
+    myval$calc <- text #write text in dynamic variable
+
+  })
+
+output$selected_var <- renderUI({
+   HTML(paste(myval$calc, collapse="<br/>"))
+  })
+
+htmlOutput("selected_var")
+
 ```
 
 ### By Group
