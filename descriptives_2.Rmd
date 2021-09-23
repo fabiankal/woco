@@ -319,6 +319,15 @@ export_shiny_data <- export_shiny_data %>% mutate(mean_measurement=round(mean_me
 grouped_labels<-grouped_labels %>%rename(scales=ID)
 
 grouped_labels2<-df %>%mutate(variable=rownames(.)) %>% left_join(grouped_labels,by = c("variable"))
+grouped_labels2 <- grouped_labels2 %>% mutate(na=rowSums(is.na(.)))
+
+grouped_labels2$wn <- apply(df=='Weiss nicht', 1, FUN= function(x) toString(names(na.omit(x))[na.omit(x)]))
+grouped_labels2$ka <- apply(df=='keine Angabe', 1, FUN= function(x) toString(names(na.omit(x))[na.omit(x)]))
+grouped_labels2$wn[grouped_labels2$wn==""]<-NA
+grouped_labels2$ka[grouped_labels2$ka==""]<-NA
+grouped_labels2 <- grouped_labels2 %>% mutate(scalenumber=12-na-(!is.na(wn))-(!is.na(ka)))
+
+# count number of discrete values and WN/KA variable #TO DO##########################################
 
 #combine shares and N to one dataframe
 export_shiny_data_shares <- left_join(data_plot_long_new, data_plot_long_N_new,by=c("wavedate"="wavedate","variable"="variable","scales"="scales"))

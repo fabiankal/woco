@@ -140,7 +140,7 @@ selectizeInput(
     inputId = 'variables',
     label = 'Variablen',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[1],
+    selected = my_autocomplete_list[2],
     multiple = TRUE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -186,27 +186,13 @@ renderPlotly({
   
   data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% inputvariables & groupby=="all") #%>%
+    filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_varlab,by=c("variable"))
+  
+  #%>%
     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
   
-  variables=0
-  labels_st=0
-  labels_en=0
-  labels_ms=0
-  text=0
-  for(i in 1:length(unique(data2$scales)))
-      {
-       variables[i]=paste(unique(data2$variable[data2$scales==i]),sep=", ",collapse=", ")
-       labels_st[i]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
-       labels_en[i]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
-       labels_ms[i]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
-      text[i]=paste('The scale of variable(s)', variables[i], 'goes from',labels_st[i],'to',labels_en[i],'. Missing values:',labels_ms[i], sep=" ", collapse=" ")
-  }
-  
-  
-
   p <- data2 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~variable)
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~labels)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
          yaxis = list (title = ""),
@@ -279,16 +265,19 @@ myval <- reactiveValues()
   labels_en=0
   labels_ms=0
   text=0
-  for(i in 1:length(unique(data2$scales)))
+  k=0
+  for(i in unique(data2$scales))
       {
-       variables[i]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
-       labels_st[i]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
-       labels_en[i]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
-       labels_ms[i]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
-      text[i]=paste('The scale of variable(s)', variables[i], 'goes from',labels_st[i],'to',labels_en[i],'. Missing values:',labels_ms[i], sep=" ", collapse=" ")
+      k=k+1
+       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
+       labels_st[k]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
+       labels_en[k]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
+       labels_ms[k]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
+      text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labels_st[k],'to',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+      
   }
-
-    myval$calc <- text #write text in dynamic variable
+    
+     myval$calc <- text #write text in dynamic variable
 
   })
 

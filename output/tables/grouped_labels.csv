@@ -1,33 +1,33 @@
-V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,variable,scales
-1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_per_gefahr,2
-1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_pub_gefahr,2
-1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,wir_per_gefahr,2
-1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,wir_pub_gefahr,2
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,wochentag,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kontakt,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zeit,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,konflikt,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kinder,4
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A1,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A2,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A3,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A4,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A5,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A6,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A7,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A8,7
-nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A9,7
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zusammenhalt,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,umweundklima,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,onlinekommun,4
-1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,demokratie,3
-0 = aeusserst unzufrieden,1,2,3,4,5,6,7,8,9,10 = aeusserst zufrieden,Weiss nicht,lebensz,1
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zus_bestes,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zus_einig,4
-1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zus_schutzen,4
-1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,blianz_reg,3
-1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zuf_reg_al,3
-1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zuf_reg_un,3
-1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zuf_reg_wi,3
-1 = ueberhaupt nicht ausreichend,2 = eher nicht ausreichend,3 = angemessen,4 = eher zu stark,5 = zu extrem,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,mas_angemessen,5
-1 = ueberhaupt nicht effektiv,2 = eher nicht effektiv,3 = teils effektiv,4 = eher effektiv,5 = sehr effektiv,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,mas_effektiv,6
+V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,variable,scales,na,wn,ka,scalenumber
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_per_gefahr,2,6,NA,V6,5
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_pub_gefahr,2,6,NA,V6,5
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,wir_per_gefahr,2,6,NA,V6,5
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,wir_pub_gefahr,2,6,NA,V6,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,wochentag,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kontakt,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zeit,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,konflikt,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kinder,4,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A1,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A2,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A3,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A4,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A5,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A6,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A7,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A8,7,5,V6,V7,5
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A9,7,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zusammenhalt,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,umweundklima,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,onlinekommun,4,5,V6,V7,5
+1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,demokratie,3,5,V6,V7,5
+0 = aeusserst unzufrieden,1,2,3,4,5,6,7,8,9,10 = aeusserst zufrieden,Weiss nicht,lebensz,1,0,V12,NA,11
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zus_bestes,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zus_einig,4,5,V6,V7,5
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zus_schutzen,4,5,V6,V7,5
+1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,blianz_reg,3,5,V6,V7,5
+1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zuf_reg_al,3,5,V6,V7,5
+1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zuf_reg_un,3,5,V6,V7,5
+1 = Sehr zufrieden,2 = Eher zufrieden,3 = Teils-teils,4 = Eher unzufrieden,5 = Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zuf_reg_wi,3,5,V6,V7,5
+1 = ueberhaupt nicht ausreichend,2 = eher nicht ausreichend,3 = angemessen,4 = eher zu stark,5 = zu extrem,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,mas_angemessen,5,5,V6,V7,5
+1 = ueberhaupt nicht effektiv,2 = eher nicht effektiv,3 = teils effektiv,4 = eher effektiv,5 = sehr effektiv,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,mas_effektiv,6,5,V6,V7,5
