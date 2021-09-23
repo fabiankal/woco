@@ -9,12 +9,116 @@ library(plotly)
 library(tidyr)
 library(dplyr)
 library(rlang)
+library(stringr)
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv")
 
 data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv")
 
+epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+
+
 my_autocomplete_list <- unique(data$variable)
+
+hlinedata = data.frame(x = c("16.03.2020",
+                             "14.04.2020",
+                             "15.05.2020",
+                             "15.05.2020",
+                             "24.07.2020",
+                             "21.09.2020",
+                             "03.11.2020",
+                             "17.11.2020",
+                             "07.12.2020",
+                             "26.12.2020",
+                             "25.01.2021",
+                             "08.02.2021",
+                             "01.04.2021",
+                             "03.05.2021",
+                             "19.05.2021",
+                             "01.07.2021"),
+                     label_en=c("Lockdown",
+                             "Easing of\nmeasurments",
+                             "Reopening\nrestaurants",
+                             "Easing of mask rules",
+                             "Mask rules\nnew",
+                             "Closing hour",
+                             "Nightly\ncurfew",
+                             "Lockdown\n",
+                             "Reop.\ncommerce",
+                             "Lock-\ndown",
+                             "FFP2-\nmasks",
+                             "Reopening",
+                             "Lockdown\neast",
+                             "Reopening\neast",
+                             "Reopening",
+                             "Easing of mask rules"),
+                      label_de=c("Lockdown",
+                             "Erste\nÖffnungen",
+                             "Gastro-\nöffnung",
+                             "Lockerung\nMasken",
+                             "Maskenpflicht\nneu",
+                             "Sperrstunde",
+                             "Ausgangs-\nbeschränkungen",
+                             "Lockdown",
+                             "Öffnung\nHandel",
+                             "Lockdown",
+                             "FFP2-\nMasken",
+                             "Öffnung",
+                             "Lockdown\nOst",
+                             "Öffnung\nOst",
+                             "Öffnung",
+                             "Lockerung\nMasken"),
+                       y = c(1.1,1.1,1.1,1.1,1.1,
+                             1.1,1.1,1.1,1.1,1.1,
+                             1.1,1.1,1.1,1.1,1.1,
+                             1.1))
+
+hlinedata$x<-as.Date(hlinedata$x,"%d.%m.%Y")
+
+
+# Add vertical line(s) at position x to plotly plot p
+# Additional arguments: color, width (px), dash ('solid','dot', 'dash', etc)
+# See https://plotly.com/r/reference/#layout-shapes-items-shape-line
+add_vline = function(p, x, ...) {
+
+  if(!is.null(p$x$layoutAttrs)){
+      index <- unname(which(sapply(p$x$layoutAttrs, function(x) 
+  !is.null(x$shapes))))
+    } else {
+      index <- integer()
+    }
+
+    l_shape = list(
+      type = "line",
+      y0 = 0, y1 = 1, yref = "paper", # i.e. y as a proportion of visible region
+      x0 = x, x1 = x,
+      line = list(
+        ...
+      ),
+      layer = "below"
+    )
+
+    if(length(index) > 0){
+      shapes <- p$x$layoutAttrs[[index]]$shapes
+      shapes[[length(shapes) + 1]] <- l_shape
+      p$x$layoutAttrs[[index]]$shapes <- shapes
+    } else {
+      p <- plotly::layout(
+        p = p,
+        shapes = list(l_shape)
+      )
+    }
+   p
+}
+
+epidf_rc = epidf %>% filter(BundeslandID==10) %>% rename(daily_inf = names(epidf)[5],
+                                                         daily_inf_7T = names(epidf)[7])
+
+epidf_rc$time = as.Date(str_split(string = epidf_rc$Time, 
+                        pattern = "[[:space:]]", 
+                        simplify = TRUE)[, 1],
+                        "%d.%m.%Y")
+
 
 ```
 
@@ -54,7 +158,7 @@ Column
 
 ```{r}
 
-#output$out1 <- renderPrint(input$variables)
+#output$out1 <- renderPrint(input$relevantdates)
 #verbatimTextOutput('out1')
 
 # output$out1 <- renderPrint({data %>% select(wavedate,variable,mean_measurement,ymax_mean,ymin_mean) %>% 
@@ -64,6 +168,12 @@ Column
 # verbatimTextOutput('out1')
 
 #eventReactive(input$groupby, { })
+
+# renderPlotly({
+# dt <- data.frame(x = 1:10, y = rnorm(10))    
+# annotation <- list(yref = 'paper', xref = "x", y = 0, x = 2, text = "annotation")
+# plot_ly(type = "scatter", mode = "lines") %>% add_trace(x = dt$x, y = dt$y, mode = "lines") %>% layout(annotations= list(annotation))%>% add_vline(hlinedata$x)
+# })
 
 renderPlotly({
   data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin) %>%
@@ -76,13 +186,46 @@ renderPlotly({
   p <- p %>% layout(title = "Average agreement",
          xaxis = list(title = ""),
          yaxis = list (title = ""),
-         legend = list(orientation = 'h'))
+         legend = list(orientation = 'h'),
+         annotations = list(text = 'The scale of this variable goes from ',
+                            font = list(size = 12,color='black'),
+                            showarrow = FALSE,
+                            xref = 'paper', x = 0,
+                            yref = 'paper', y = -0.1,
+                            xanchor='left', yanchor='auto', xshift=0, yshift=0))
+  if(input$relevantdates)
+  {
+    for(i in 1:length(hlinedata$x))
+      {
+      p <- p %>% add_trace(x = hlinedata$x[i],y= ~mean_measurement, type = 'scatter', mode = 'lines',
+                        line = list(color = "red", dash = "dash"),
+                        text = hlinedata$label_de[i],showlegend = F,inherit = FALSE)
+      }
+  }
+  if(input$incidence)
+  {
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~epidf_rc$daily_inf, type = 'scatter', mode = 'none', name = 'Incidence',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right"))
+  }
+  if(input$confidence)
+  {
+     p <- p %>% error_y = list(type = "data",
+                    symmetric = FALSE,
+                    array = c(~ymax),arrayminus = c(~ymin),
+                    orientation = "v",
+                    type = "bar")
+  }
   p
+#   fig <- plot_ly(x = ~epidf_rc$time, y = ~epidf_rc$daily_inf, type = 'scatter', mode = 'lines', name = 'Fair cut',yaxis = "y2", fill = 'tozeroy')
+# fig
+  
 })
 
-tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$strong("Y"))
 
 
+#tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$strong("Y"))
+
+#p %>% layout(shapes = list(add_vline(hlinedata$x)))
+# geom_area(data = epidf_rc %>% filter(time<as.Date('2021-04-20')), aes(x = time, y = daily_inf/10000, fill="lightgrey"), 
 ```
 
 ### By Group
@@ -139,7 +282,7 @@ selectInput(
 Column
 -----------------------------------------------------------------------
 
-### To do
+### Plots with shares
 
 ```{r}
 
