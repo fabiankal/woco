@@ -327,6 +327,11 @@ grouped_labels2$wn[grouped_labels2$wn==""]<-NA
 grouped_labels2$ka[grouped_labels2$ka==""]<-NA
 grouped_labels2 <- grouped_labels2 %>% mutate(scalenumber=12-na-(!is.na(wn))-(!is.na(ka)))
 
+grouped_labels2$wn[is.na(grouped_labels2$wn)]<-"nown"
+grouped_labels2$ka[is.na(grouped_labels2$ka)]<-"noka"
+grouped_labels2$nown="no WN option"
+grouped_labels2$noka="no KA option"
+
 # count number of discrete values and WN/KA variable #TO DO##########################################
 
 #combine shares and N to one dataframe

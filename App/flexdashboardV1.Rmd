@@ -266,14 +266,28 @@ myval <- reactiveValues()
   labels_ms=0
   text=0
   k=0
+  
+data_labels$wn[is.na(data_labels$wn)]<-"nown"
+data_labels$ka[is.na(data_labels$ka)]<-"noka"
+data_labels$nown="no WN option"
+data_labels$noka="no KA option"
+  
   for(i in unique(data2$scales))
       {
       k=k+1
        variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
-       labels_st[k]=paste(unique(data_labels$V1[data_labels$scales==i]),sep=", ",collapse=", ")
-       labels_en[k]=paste(unique(data_labels$V5[data_labels$scales==i]),sep=", ",collapse=", ")
-       labels_ms[k]=paste(unique(data_labels$V6[data_labels$scales==i]),unique(data_labels$V7[data_labels$scales==i]),sep=", ",collapse=", ")
-      text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labels_st[k],'to',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+       labels_st[k]=paste(data_labels %>% filter(scales==i) %>% select(V1) %>% distinct(),sep=", ",collapse=", ")
+       labels_en[k]=paste(data_labels %>% filter(scales==i) %>% 
+                            select(paste('V',data_labels %>% filter(scales==i) %>% select(scalenumber) %>% distinct(),sep="")) %>%
+                            distinct(),sep=", ",collapse=", ")
+       labels_ms[k]=paste(data_labels %>% filter(scales==i)  %>% 
+                            select(paste(data_labels %>% filter(scales==i) %>% select(wn) %>% distinct())) %>% 
+                            distinct(),
+                          data_labels %>% filter(scales==i)  %>% 
+                            select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>% 
+                            distinct(),
+                          sep=", ",collapse=", ")
+       text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labels_st[k],'to',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
       
   }
     
