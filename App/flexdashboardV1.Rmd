@@ -279,11 +279,15 @@ data_labels$noka="no KA option"
       k=k+1
        variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
        labeln_st[k]=paste(data_labels %>% filter(scales==i) %>% 
+                            select(min) %>% distinct()-
+                          data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct(),sep=", ",collapse=", ")
        labels_st[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(V1) %>% distinct(),sep=", ",collapse=", ")
        labeln_en[k]=paste(data_labels %>% filter(scales==i) %>% 
-                            select(max) %>% distinct(),sep=", ",collapse=", ")
+                            select(max) %>% distinct()-
+                          data_labels %>% filter(scales==i) %>% 
+                            select(min) %>% distinct(),sep=", ",collapse=", ")
        labels_en[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(paste('V',data_labels %>% filter(scales==i) %>% select(scalenumber) %>% distinct(),sep="")) %>%
                             distinct(),sep=", ",collapse=", ")
@@ -294,8 +298,14 @@ data_labels$noka="no KA option"
                             select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>% 
                             distinct(),
                           sep=", ",collapse=", ")
-       text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_st[k],'to',labeln_en[k],'=',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
-      
+       if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0") 
+         {
+         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_st[k],'to',labeln_en[k],'=',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         }
+       else
+         {
+         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_en[k],'to',labeln_en[k],'=',labels_st[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         }
   }
     
      myval$calc <- text #write text in dynamic variable
