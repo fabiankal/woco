@@ -146,7 +146,7 @@ labels <- lr_gen_w1 %>% ungroup() %>% select(variablelist) %>%  sapply(levels)
 df <- do.call(rbind, labels) %>% as.data.frame()
 df <-bind_rows(lapply(labels,function(y) as.data.frame(t(y),stringsAsFactors=FALSE,y.id = "column_label")))
 rownames(df)<-names(labels)
-grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7)) %>% mutate(variable=rownames(.))
+grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12)) %>% mutate(variable=rownames(.))
 #df %>% mutate(ID = group_indices(.,noquote(paste(names(df), collapse=", "))))
 
 grouped_labels<-grouped_labels%>% group_by(ID) %>% summarise(variable)
@@ -291,6 +291,10 @@ export_shiny_data <- export_shiny_data %>% mutate(mean_measurement=round(mean_me
 #MERGE LABELING of SCALES TO DATA
 
 grouped_labels<-grouped_labels %>%rename(scales=ID)
+
+#Remove "Number = " in labels of measurement
+df<-df %>% mutate_all(~(gsub("^.*?= ","",.)))
+
 
 grouped_labels2<-df %>%mutate(variable=rownames(.)) %>% left_join(grouped_labels,by = c("variable"))
 grouped_labels2 <- grouped_labels2 %>% mutate(na=rowSums(is.na(.)))

@@ -276,7 +276,8 @@ data_labels$noka="no KA option"
       {
       k=k+1
        variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
-       labels_st[k]=paste(data_labels %>% filter(scales==i) %>% select(V1) %>% distinct(),sep=", ",collapse=", ")
+       labels_st[k]=paste(data_labels %>% filter(scales==i) %>% 
+                            select(V1) %>% distinct(),sep=", ",collapse=", ")
        labels_en[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(paste('V',data_labels %>% filter(scales==i) %>% select(scalenumber) %>% distinct(),sep="")) %>%
                             distinct(),sep=", ",collapse=", ")
