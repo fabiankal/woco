@@ -1,6 +1,6 @@
-V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,variable,scales,na,wn,ka,scalenumber,nown,noka
-sehr gross,gross,mittelmaessig,klein,sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_per_gefahr,2,6,nown,V6,5,no WN option,no KA option
-sehr gross,gross,mittelmaessig,klein,sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_pub_gefahr,2,6,nown,V6,5,no WN option,no KA option
-Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,wochentag,3,5,V6,V7,5,no WN option,no KA option
-Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kontakt,3,5,V6,V7,5,no WN option,no KA option
-aeusserst unzufrieden,1,2,3,4,5,6,7,8,9,aeusserst zufrieden,Weiss nicht,lebensz,1,0,V12,noka,11,no WN option,no KA option
+V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,variable,scales,labels,min,max,rev,na,wn,ka,scalenumber,nown,noka
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_per_gefahr,2,Gesundheitliche Gefahr: Fuer mich persoenlich,1,5,1,6,nown,V6,5,no WN option,no KA option
+1 = sehr gross,2 = gross,3 = mittelmaessig,4 = klein,5 = sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_pub_gefahr,2,Gesundheitliche Gefahr: Fuer die oesterreichische Bevoelkerung,1,5,1,6,nown,V6,5,no WN option,no KA option
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,wochentag,3,Auswirkungen: Vergesse Wochentag,1,5,1,5,V6,V7,5,no WN option,no KA option
+1 = Trifft voll und ganz zu,2 = Trifft eher zu,3 = Teils-teils,4 = Trifft eher nicht zu,5 = Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kontakt,3,Auswirkungen: Fehlt Kontakt,1,5,1,5,V6,V7,5,no WN option,no KA option
+0 = aeusserst unzufrieden,1,2,3,4,5,6,7,8,9,10 = aeusserst zufrieden,Weiss nicht,lebensz,1,Lebenszufriedenheit,0,10,0,0,V12,noka,11,no WN option,no KA option
