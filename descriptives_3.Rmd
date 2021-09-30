@@ -125,15 +125,17 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 #paste(names(lr_gen_w1),collapse=",")
 
 #What variables should be used for the dashboard
-variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
-                  "wochentag","kontakt","zeit" ,"konflikt","kinder",
-                  "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
-                  "zusammenhalt","umweundklima","onlinekommun",
-                  "demokratie","lebensz",
-                  "zus_bestes","zus_einig","zus_schutzen",
-                  "blianz_reg",
-                  "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
-                  "mas_angemessen","mas_effektiv")
+# variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
+#                   "wochentag","kontakt","zeit" ,"konflikt","kinder",
+#                   "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
+#                   "zusammenhalt","umweundklima","onlinekommun",
+#                   "demokratie","lebensz",
+#                   "zus_bestes","zus_einig","zus_schutzen",
+#                   "blianz_reg",
+#                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
+#                   "mas_angemessen","mas_effektiv")
+
+variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
 #What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
 sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","bula","hh_inc_cur_quintile")
@@ -162,9 +164,9 @@ out <- vector('list', max(unique(grouped_labels$ID)))
 for (val in unique(grouped_labels$ID)) {
 count = count+1
 out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), factor_key=TRUE)
-out[[count]]$rev=grouped_labels$rev[val] # add info whether to reverse the scale
-out[[count]]$min=grouped_labels$rev[val] # add info whether on min of scale
-out[[count]]$max=grouped_labels$rev[val] # add info whether on max of scale
+#out[[count]]$rev=grouped_labels$rev[val] # add info whether to reverse the scale
+#out[[count]]$min=grouped_labels$rev[val] # add info whether on min of scale
+#out[[count]]$max=grouped_labels$rev[val] # add info whether on max of scale
 print(count)
 }
 
@@ -189,7 +191,7 @@ data_plot_long_new<-bind_rows(data_plot_long, .id = 'scales')
 data_plot_long_N_new<-bind_rows(data_plot_long_N, .id = 'scales')
 
 #Remove "Number = " in labels of measurement
-data_plot_long_new<-data_plot_long_new %>% mutate(measurement=gsub("^.*?= ","",measurement))
+#data_plot_long_new<-data_plot_long_new %>% mutate(measurement=gsub("^.*?= ","",measurement))
 
 #MEAN VALUES#################################################################
 #out
@@ -203,47 +205,65 @@ data_plot_long_mean_ed<- vector('list', max(unique(grouped_labels$ID)))
 data_plot_long_mean_bl<- vector('list', max(unique(grouped_labels$ID)))
 data_plot_long_mean_hi<- vector('list', max(unique(grouped_labels$ID)))
 
+#test
+
+# data_plot_long_mean[[1]] <- out[[1]]  %>% filter(!is.na(measurement)) %>%
+#   as_survey_design(weights = c(WEIGHTD)) %>%
+#   group_by(wavedate,variable) %>%
+#   summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[1])+((grouped_labels$max[1]-grouped_labels$min[1])*(-grouped_labels$rev[1]))),vartype = c("se"))) %>% 
+#   group_by(wavedate,variable) %>%
+#      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="none")
+
+#endtest
+
 for (val in unique(grouped_labels$ID)) {
 #mean general
 data_plot_long_mean[[val]] <- out[[val]]  %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable) %>%
-  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable) %>%
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>% 
+  group_by(wavedate,variable) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="none")
+
 
 #mean by Gender
 data_plot_long_mean_ge[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(gender)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,gender) %>%
-  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,gender) %>%
+ summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>%  
+  group_by(wavedate,variable,gender) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ge")
 
 #mean by Age
 data_plot_long_mean_ag[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(alter_g)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,alter_g) %>%
-  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,alter_g) %>%
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>%  
+  group_by(wavedate,variable,alter_g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ag")
 
 #mean by Education
 data_plot_long_mean_ed[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(edu4)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,edu4) %>%
-  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,edu4) %>%
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>%  
+  group_by(wavedate,variable,edu4) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ed")
 
 #mean by Region
 data_plot_long_mean_bl[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(bula)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,bula) %>%
-  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,bula) %>%
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>%  
+  group_by(wavedate,variable,bula) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="bl")
 
 #mean by Household Income
 data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(hh_inc_cur_quintile)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,hh_inc_cur_quintile) %>%
-  summarise(mean_measurement=survey_mean((as.numeric(as.factor(measurement)))-min(as.numeric(as.factor(measurement))),vartype = c("se"))) %>% group_by(wavedate,variable,hh_inc_cur_quintile) %>%
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>%  
+  group_by(wavedate,variable,hh_inc_cur_quintile) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="hi")
 }
 
