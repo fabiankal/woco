@@ -71,9 +71,9 @@ Aussage: Behauptungen ueber Corona uebertrieben,skept_behaup,1,5
 Aussage: Solange andere Verhalten nicht aendern keine Verhaltensaenderung,skept_andere,1,5
 Aussage: Massnahmen zur Eindaemmung des Coronavirus waren Fehler,skept_fehler,1,5
 Aussage: Regierung uebertreibt hinsichtlich gesundheitlicher Gefahr,skept_uebert,1,5
-Aussage: Das Coronavirus ist gefaehrlicher als eine normale Grippe.,skept_grippe,1,5
-Aussage: Alles in allem empfinde ich die Corona-Massnahmen als gerecht.,skept_gerech,1,5
-"Aussage: Die meisten in meinem Umfeld sind bereit, ihre Lebensweise zu aendern.",skept_lebumg,1,5
+Aussage: Das Coronavirus ist gefaehrlicher als eine normale Grippe,skept_grippe,1,5
+Aussage: Alles in allem empfinde ich die Corona-Massnahmen als gerecht,skept_gerech,1,5
+"Aussage: Die meisten in meinem Umfeld sind bereit, ihre Lebensweise zu aendern",skept_lebumg,1,5
 Politische Entscheidungen: Experten sollten entscheiden,mas_wissenschaft,1,5
 Politische Entscheidungen: Massnahmen obwohl Mehrheit dagegen,mas_gmehrheit,1,5
 Politische Entscheidungen: Entscheidungen Folge leisten,mas_compliance,1,5
@@ -295,7 +295,7 @@ Ansteckungsgefahr: Schulen und Kindergaerten,anst_schu,1,5
 Ansteckungsgefahr: Oeffentliche Parks und Spielplaetze,anst_park,1,5
 Ansteckungsgefahr: Arzt,anst_arzt,1,5
 Ansteckungsgefahr: Familienfeier,anst_fami,1,5
-Anstreckungsgefahr: Treffen von Freunden Zuhause,anst_freu,1,5
+Ansteckungsgefahr: Treffen von Freunden Zuhause,anst_freu,1,5
 Bereits gegen Corona geimpft,geimpft,1,2
 Geimpft: welcher Impfstoff,geim_impfs,1,6
 Geimpft: beide Impfungen,geim_beide,1,2
@@ -306,22 +306,22 @@ Impfen: Impfpflicht fuer Berufsgruppen mit hohem Risiko,impf_pfb,1,5
 "Impfen: Sollte Moeglichkeit haben, mich sofort impfen zu lassen",impf_sof,1,5
 "Impfen: Es ist unfair, dass bestimmte Gruppen die Impfung frueher erhalten",impf_unf,1,5
 Impfen: Meisten Personen in meinem Umfeld sind bereit sich impfen zu lassen,impf_soz,1,5
-Aussage: Ich mache mir Sorgen ueber unvorhergesehene Nebenwirkungen der Impfung.,impfe_sor,1,5
-Aussage: Ich verlasse mich lieber auf mein Immunsystem als auf eine Impfung.,impfe_imm,1,5
-Aussage: Ich fuehle mich ueber die Wirkweise der Impfstoffe informiert.,impfe_ini,1,5
+Aussage: Mache mir Sorgen ueber unvorhergesehene Nebenwirkungen der Impfung,impfe_sor,1,5
+Aussage: Verlasse mich lieber auf mein Immunsystem als auf eine Impfung,impfe_imm,1,5
+Aussage: Fuehle mich gut ueber die Wirkweise der Impfstoffe informiert,impfe_ini,1,5
 Aussage: Die Impfung erlaubt mir ein Leben wie vor der Pandemie.,impfe_leb,1,5
 Aussage: Mit einer Impfung kann ich andere schuetzen.,impfe_asc,1,5
-"Aussage: Ich lasse mich nur impfen, wenn andere sich zuerst impfen lassen.",impfe_aim,1,5
+"Aussage: Lasse mich impfen, wenn andere sich zuerst impfen lassen",impfe_aim,1,5
 Aussage: Mit einer Impfung kann ich mich selbst schuetzen.,impfe_ssc,1,5
 Aussage: Behoerdlich zugelassene Impfungen sind sicher.,impfe_sic,1,5
-Aussage: Behoerden informieren hinreichend ueber die Wirkweise der Impfstoffe.,impfe_inb,1,5
+Aussage: Behoerden informieren hinreichend ueber Wirkungsweise der Impfstoffe,impfe_inb,1,5
 "Aussage: Mein Alltag ist zu stressig, ich habe keine Zeit fuer eine Impfung.",impfe_str,1,5
 Impfbereitschaft: BioNTech-Pfizer,impfs_bnp,1,5
 Impfbereitschaft: AstraZeneca,impfs_asz,1,5
 Impfbereitschaft: Moderna,impfs_mod,1,5
 Impfbereitschaft: Johnson & Johnson,impfs_jaj,1,5
 Impfbereitschaft: Sputnik V,impfs_spv,1,5
-Aussage: FFP2-Schutzmasken sind effektive Massnahme zur Eindaemmung der Corona-K,ffp_eff,1,5
+Aussage: FFP2-Schutzmasken sind effektive Massnahme,ffp_eff,1,5
 Aussage: Mit einer FFP2-Schutzmaske kann ich andere schuetzen.,ffp_and,1,5
 Aussage: Mit einer FFP2-Schutzmaske kann ich mich selbst schuetzen.,ffp_slb,1,5
 Erwerbstaetigkeit aktuell,berufst,1,10

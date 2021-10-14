@@ -144,8 +144,8 @@ selectizeInput(
     multiple = TRUE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
-selectInput("groupby", label = "Gruppierung (der ersten Variable)",
-            choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Keine")
+#selectInput("groupby", label = "Gruppierung (der ersten Variable)",
+#            choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Keine")
 
 checkboxInput(inputId = 'confidence', label = "95% Konfidenzintervalle", value = FALSE)
 checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
@@ -159,7 +159,7 @@ checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value 
 Column
 -----------------------------------------------------------------------
 
-### Plot averages per wave {data-height=450}
+### Plot averages per wave {data-height=900}
 
 ```{r}
 
@@ -320,7 +320,32 @@ htmlOutput("selected_var")
 
 ```
 
-### Show averages by group {data-height=450}
+
+
+Group plots
+=======================================================================
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Choose your weapon
+```{r}
+selectizeInput(
+    inputId = 'variablesgr',
+    label = 'Variablen',
+    choices = my_autocomplete_list,
+    selected = my_autocomplete_list[2] ,
+    multiple = FALSE, # allow for multiple inputs
+    options = list(create = FALSE), # if TRUE, allows newly created inputs
+  )
+selectInput("groupby", label = "Gruppieren nach:",
+            choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Gender")
+
+```
+Column
+-----------------------------------------------------------------------
+
+### Show averages by group {data-height=900}
 
 ```{r}
 #output$out1 <- renderPrint(input$groupby)
@@ -333,7 +358,7 @@ htmlOutput("selected_var")
 
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variables]
+  inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variablesgr]
 
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
     filter(variable %in% inputvariables[1]) %>%
@@ -351,6 +376,85 @@ renderPlotly({
          legend = list(orientation = 'h'))
   p
 })
+
+```
+
+### {data-height=100}
+```{r}
+ #output$out1 <- renderPrint(input$variables)
+ #verbatimTextOutput('out1')
+ 
+ #get a reactive (text) variable
+ myval2 <- reactiveValues()
+ 
+  #Observe changes in variables (will run when variables change)
+   observeEvent(input$variablesgr, {
+     
+     inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variablesgr]
+     
+     data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
+     distinct(wavedate,variable, .keep_all = TRUE) %>%
+     filter(variable %in% inputvariables & groupby=="all") #%>%
+     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
+#   
+   variables=0
+   labels_st=0
+   labels_en=0
+   labels_ms=0
+   labeln_st=0
+   labeln_en=0
+   text=0
+   k=0
+  
+ data_labels$wn[is.na(data_labels$wn)]<-"nown"
+ data_labels$ka[is.na(data_labels$ka)]<-"noka"
+ data_labels$nown="no WN option"
+ data_labels$noka="no KA option"
+   
+
+  for(i in unique(data2$scales))
+      {
+      k=k+1
+       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
+       labeln_st[k]=paste(data_labels %>% filter(scales==i) %>%
+                            select(min) %>% distinct()-
+                          data_labels %>% filter(scales==i) %>%
+                            select(min) %>% distinct(),sep=", ",collapse=", ")
+       labels_st[k]=paste(data_labels %>% filter(scales==i) %>%
+                            select(V1) %>% distinct(),sep=", ",collapse=", ")
+       labeln_en[k]=paste(data_labels %>% filter(scales==i) %>%
+                            select(max) %>% distinct()-
+                          data_labels %>% filter(scales==i) %>%
+                            select(min) %>% distinct(),sep=", ",collapse=", ")
+       labels_en[k]=paste(data_labels %>% filter(scales==i) %>%
+                            select(paste('V',data_labels %>% filter(scales==i) %>% select(scalenumber) %>% distinct(),sep="")) %>%
+                            distinct(),sep=", ",collapse=", ")
+       labels_ms[k]=paste(data_labels %>% filter(scales==i)  %>%
+                            select(paste(data_labels %>% filter(scales==i) %>% select(wn) %>% distinct())) %>%
+                            distinct(),
+                          data_labels %>% filter(scales==i)  %>%
+                            select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>%
+                            distinct(),
+                          sep=", ",collapse=", ")
+       if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0")
+         {
+         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_st[k],'to',labeln_en[k],'=',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         }
+       else
+         {
+         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_en[k],'to',labeln_en[k],'=',labels_st[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         }
+  }
+
+     myval2$calc <- text #write text in dynamic variable
+
+  })
+ 
+ output$selected_var2 <- renderUI({
+    HTML(paste(myval2$calc, collapse="<br/>"))
+   })
+ 
+ htmlOutput("selected_var2")
 
 ```
 
