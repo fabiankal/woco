@@ -1,5 +1,5 @@
 ---
-title: "Work and Corona Dashboard"
+title: "Work & Corona Dashboard"
 output: flexdashboard::flex_dashboard
 runtime: shiny
 ---
@@ -10,18 +10,24 @@ library(tidyr)
 library(dplyr)
 library(rlang)
 library(stringr)
+library(forcats)
 # load data in 'global' chunk so it can be shared by all users of the dashboard
-data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv")
+data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv",show_col_types = FALSE)
 
-data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv")
+data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv",show_col_types = FALSE)
 
-data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv")
+data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv",show_col_types = FALSE)
 
-data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv")
+data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv",show_col_types = FALSE)
 
 
 #epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
-epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv")
+epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv",show_col_types = FALSE)
+
+data_varlab$labels<-gsub(pattern = 'ae', replacement = "ä",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'ue', replacement = "ü",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
+
 
 my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data$variable)]
 
@@ -84,7 +90,8 @@ hlinedata$x<-as.Date(hlinedata$x,"%d.%m.%Y")
 # Add vertical line(s) at position x to plotly plot p
 # Additional arguments: color, width (px), dash ('solid','dot', 'dash', etc)
 # See https://plotly.com/r/reference/#layout-shapes-items-shape-line
-add_vline = function(p, x, ...) {
+
+add_vline = function(p, x,...) {
 
   if(!is.null(p$x$layoutAttrs)){
       index <- unname(which(sapply(p$x$layoutAttrs, function(x) 
@@ -98,7 +105,7 @@ add_vline = function(p, x, ...) {
       y0 = 0, y1 = 1, yref = "paper", # i.e. y as a proportion of visible region
       x0 = x, x1 = x,
       line = list(
-        ...
+       ...
       ),
       layer = "below"
     )
@@ -124,21 +131,30 @@ epidf_rc$time = as.Date(str_split(string = epidf_rc$Time,
                         simplify = TRUE)[, 1],
                         "%d.%m.%Y")
 
+data$subgroup<-as.factor(data$subgroup)
+data$subgroup<-fct_relevel(data$subgroup,"<30","30-59",">60","1.Quintile","2.Quintile","3.Quintile","4.Quintile","5.Quintile","primary","Lehre","secondary","tertiary")
+levels(data$subgroup)<- c("<30","30-59",">60","1.Quintil","2.Quintil","3.Quintil","4.Quintil","5.Quintil", "primär","Lehre","sekundär","tertiär","BG","weiblich","KT","männlich","NÖ","keine","OÖ","SB","ST","TI","VB","WI" )
+
+data_shares$measurement<-gsub(pattern = 'ae', replacement = "ä",data_shares$measurement)
+data_shares$measurement<-gsub(pattern = 'ue', replacement = "ü",data_shares$measurement)
+data_shares$measurement<-gsub(pattern = 'oe', replacement = "ö",data_shares$measurement)
+data_shares$measurement<-as.factor(data_shares$measurement)
+data_shares$measurement<-fct_relevel(data_shares$measurement,"10 = äusserst zufrieden",after = Inf)
 
 ```
 
-Mean plots
+Mittelwerte
 =======================================================================
 
 Column {.sidebar}
 -----------------------------------------------------------------------
 
-Choose wisely.
+Wählen Sie hier die jeweiligen Variablen aus, die Sie anzeigen möchten.
 
 ```{r}
 selectizeInput(
     inputId = 'variables',
-    label = 'Variablen',
+    label = 'Variablen:',
     choices = my_autocomplete_list,
     selected = my_autocomplete_list[2],
     multiple = TRUE, # allow for multiple inputs
@@ -159,7 +175,7 @@ checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value 
 Column
 -----------------------------------------------------------------------
 
-### Plot averages per wave {data-height=900}
+### Mittelwerte nach Befragungswelle {data-height=800}
 
 ```{r}
 
@@ -188,61 +204,48 @@ renderPlotly({
     distinct(wavedate,variable, .keep_all = TRUE) %>%
     filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_varlab,by=c("variable"))
   
-  #%>%
-    #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
-  
+  if(input$confidence)
+  {
+  p <- data2 %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~labels,
+          error_y = ~list(array = ymax-mean_measurement))
+  p <- p %>% layout(title = "",
+         xaxis = list(title = ""),
+         yaxis = list (title = "",rangemode = "tozero"),
+         legend = list(orientation = 'h'))%>%config(locale = 'de')
+  }
+  else
+  {
   p <- data2 %>%
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~labels)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = ""),
-         legend = list(orientation = 'h')#,
-         #annotations = list(text = paste(text),
-         #                   font = list(size = 12,color='black'),
-         #                   showarrow = FALSE,
-         #                   xref = 'paper', x = 0,
-         #                   yref = 'paper', y = -0.1,
-         #                   xanchor='left', yanchor='auto', xshift=0, yshift=0)
-         )
-  
-  
-  
+         yaxis = list (title = "",rangemode = "tozero"),
+         legend = list(orientation = 'h'))%>%config(locale = 'de')
+  }
+ 
   if(input$relevantdates)
   {
     for(i in 1:length(hlinedata$x))
       {
-      p <- p %>% add_trace(x = hlinedata$x[i],y= ~mean_measurement, type = 'scatter', mode = 'lines',
-                        line = list(color = "red", dash = "dash"),
-                        text = hlinedata$label_de[i],showlegend = F,inherit = FALSE)
-      }
+      p <- p %>% add_vline(hlinedata$x[i],color = "pink", dash="dash") #%>% 
+        #add_text(showlegend = FALSE, x = hlinedata$x[i], y = max(data2$mean_measurement)+.05,
+           #text = hlinedata$label_de[i],
+           #textfont = list(color = c('black'), size = c(8)))
+    }
   }
   if(input$incidence)
   {
-    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~epidf_rc$daily_inf, type = 'scatter', mode = 'none', name = 'Incidence',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right"))
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=25))
   }
-  if(input$confidence)
-  {
-     p <- p %>% error_y = list(type = "data",
-                    symmetric = FALSE,
-                    array = c(~ymax),arrayminus = c(~ymin),
-                    orientation = "v",
-                    type = "bar")
-  }
+  
   p
-#   fig <- plot_ly(x = ~epidf_rc$time, y = ~epidf_rc$daily_inf, type = 'scatter', mode = 'lines', name = 'Fair cut',yaxis = "y2", fill = 'tozeroy')
-# fig
   
 })
 
-
-
-#tags$a("The scale of this variable goes from ",tags$strong("X")," to.",tags$strong("Y"))
-
-#p %>% layout(shapes = list(add_vline(hlinedata$x)))
-# geom_area(data = epidf_rc %>% filter(time<as.Date('2021-04-20')), aes(x = time, y = daily_inf/10000, fill="lightgrey"), 
 ```
 
-### {data-height=100}
+### {data-height=200}
 ```{r}
 #output$out1 <- renderPrint(input$variables)
 #verbatimTextOutput('out1')
@@ -271,8 +274,8 @@ myval <- reactiveValues()
   
 data_labels$wn[is.na(data_labels$wn)]<-"nown"
 data_labels$ka[is.na(data_labels$ka)]<-"noka"
-data_labels$nown="no WN option"
-data_labels$noka="no KA option"
+data_labels$nown=""
+data_labels$noka=""
   
   for(i in unique(data2$scales))
       {
@@ -300,11 +303,11 @@ data_labels$noka="no KA option"
                           sep=", ",collapse=", ")
        if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0") 
          {
-         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_st[k],'to',labeln_en[k],'=',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_st[k],'bis',labeln_en[k],'=',labels_en[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
          }
        else
          {
-         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_en[k],'to',labeln_en[k],'=',labels_st[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_en[k],'bis',labeln_en[k],'=',labels_st[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
          }
   }
     
@@ -322,30 +325,37 @@ htmlOutput("selected_var")
 
 
 
-Group plots
+Gruppierte Mittelwerte
 =======================================================================
 
 Column {.sidebar}
 -----------------------------------------------------------------------
 
-Choose your weapon
+
+Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
+
 ```{r}
 selectizeInput(
     inputId = 'variablesgr',
-    label = 'Variablen',
+    label = 'Variable:',
     choices = my_autocomplete_list,
     selected = my_autocomplete_list[2] ,
     multiple = FALSE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
 selectInput("groupby", label = "Gruppieren nach:",
-            choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Gender")
+            choices = c("Keine","Geschlecht", "Alter", "Bildungsgrad", "Region","Einkommen"), selected = "Geschlecht")
+
+checkboxInput(inputId = 'confidence2', label = "95% Konfidenzintervalle", value = FALSE)
+checkboxInput(inputId = 'incidence2', label = "7-Tages Inzidenz", value = FALSE)
+checkboxInput(inputId = 'relevantdates2', label = "Relevante Ergeignisse", value = FALSE)
+
 
 ```
 Column
 -----------------------------------------------------------------------
 
-### Show averages by group {data-height=900}
+### Mittelwerte nach Befragungswelle und Subgruppe {data-height=800}
 
 ```{r}
 #output$out1 <- renderPrint(input$groupby)
@@ -362,24 +372,55 @@ renderPlotly({
 
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
     filter(variable %in% inputvariables[1]) %>%
-    filter(case_when(input$groupby=="Gender"~ groupby=="ge",
-                     input$groupby=="Age"~ groupby=="ag",
-                     input$groupby=="Education"~ groupby=="ed",
+    filter(case_when(input$groupby=="Keine"~ groupby=="all",
+                     input$groupby=="Geschlecht"~ groupby=="ge",
+                     input$groupby=="Alter"~ groupby=="ag",
+                     input$groupby=="Bildungsgrad"~ groupby=="ed",
                      input$groupby=="Region"~ groupby=="bl",
-                     input$groupby=="Income"~ groupby=="hi"))
-
+                     input$groupby=="Einkommen"~ groupby=="hi"))
+  
+  if(input$confidence2)
+  {
   p <- data3 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~subgroup,
+          error_y = ~list(array = ymax-mean_measurement),
+          sort = FALSE)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = ""),
-         legend = list(orientation = 'h'))
+         yaxis = list (title = "",rangemode = "tozero"),
+         legend = list(orientation = 'h'))%>%config(locale = 'de')
+  }
+  else
+  {
+  p <- data3 %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup,
+          sort = FALSE)
+  p <- p %>% layout(title = "",
+         xaxis = list(title = ""),
+         yaxis = list (title = "",rangemode = "tozero"),
+         legend = list(orientation = 'h'))%>%config(locale = 'de')
+  }
+  if(input$relevantdates2)
+  {
+    for(i in 1:length(hlinedata$x))
+      {
+      p <- p %>% add_vline(hlinedata$x[i],color = "pink", dash="dash") #%>% 
+        #add_text(showlegend = FALSE, x = hlinedata$x[i], y = max(data2$mean_measurement)+.05,
+           #text = hlinedata$label_de[i],
+           #textfont = list(color = c('black'), size = c(8)))
+    }
+  }
+  if(input$incidence2)
+  {
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=25))
+  }
+
   p
 })
 
 ```
 
-### {data-height=100}
+### {data-height=200}
 ```{r}
  #output$out1 <- renderPrint(input$variables)
  #verbatimTextOutput('out1')
@@ -438,11 +479,11 @@ renderPlotly({
                           sep=", ",collapse=", ")
        if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0")
          {
-         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_st[k],'to',labeln_en[k],'=',labels_en[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_st[k],'bis',labeln_en[k],'=',labels_en[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
          }
        else
          {
-         text[k]=paste('The scale of variable(s)', variables[k], 'goes from',labeln_st[k],'=',labels_en[k],'to',labeln_en[k],'=',labels_st[k],'. Missing values:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_en[k],'bis',labeln_en[k],'=',labels_st[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
          }
   }
 
@@ -458,13 +499,14 @@ renderPlotly({
 
 ```
 
-Share plots
+Verteilung der Antwortkategorien
 =======================================================================
 
 Column {.sidebar}
 -----------------------------------------------------------------------
 
-Choose wisely.
+Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
+
 
 ```{r}
 selectInput(
@@ -481,7 +523,7 @@ selectInput(
 Column
 -----------------------------------------------------------------------
 
-### Plots with shares
+### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle
 
 ```{r}
 
@@ -491,19 +533,23 @@ renderPlotly({
   
   data3 = data_shares %>% select(wavedate,variable,measurement,prop) %>%
     filter(variable %in% inputvariable_shares) 
-  
+
   p <- ggplot(data3, aes(fill=measurement,x=wavedate, y=prop)) + 
     geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.8) + #geom_bar width=0.7
     geom_point(position=position_stack(),colour="white") +
     #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
     scale_fill_brewer(palette = "RdYlBu", direction=1) +  #alternative:Blues
-    labs(y = "Prozent", x= "",fill="") +
+    labs(y = "", x= "",fill="") +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-    scale_x_date(date_breaks = "2 month",date_labels = "%b-%y",guide = guide_axis(n.dodge = 2))
+    scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
+   
 
-  ggplotly(p)
+  ggplotly(p) %>%
+layout(legend = list(orientation = "h",sort = FALSE))%>%config(locale = 'de')
+  
+  
   # p <- data3 %>%
   # plot_ly(x = ~wavedate, y= ~prop,type = 'bar',color = ~measurement,barmode = 'stack')
   # p <- p %>% layout(title = "Shares",
