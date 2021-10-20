@@ -140,16 +140,14 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
                    "wochentag","kontakt","zeit" ,"konflikt","kinder",
                    "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
                    "zusammenhalt","umweundklima","onlinekommun",
-                   "demokratie","lebensz"
-                   
+                   "demokratie","lebensz",
+                   "zus_bestes","zus_einig","zus_schutzen",
+                   "blianz_reg",
+                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
+                   "mas_angemessen","mas_effektiv",
+                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf"
                    )
  
- # 
- #                   "zus_bestes","zus_einig","zus_schutzen",
- #                   "blianz_reg",
- #                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
- #                   "mas_angemessen","mas_effektiv",
- #                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
  #                   "dauer",
  #                   "fin_ausk_akt",
  #                   "sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
@@ -175,7 +173,7 @@ grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V
 grouped_labels<-grouped_labels%>% group_by(ID) %>% summarise(variable)
 
 #import reverse information (which variable scales to reverse)
-rev_labels<-readr::read_csv("./output/tables/varlabels_rev.csv")
+rev_labels<-readr::read_csv("./output/tables/varlabels_rev.csv",show_col_types = FALSE)
 grouped_labels<- grouped_labels %>% left_join(rev_labels, by = "variable")
 
 #select the data for analyses
