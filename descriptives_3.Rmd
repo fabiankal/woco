@@ -140,20 +140,23 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
                    "wochentag","kontakt","zeit" ,"konflikt","kinder",
                    "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
                    "zusammenhalt","umweundklima","onlinekommun",
-                   "demokratie","lebensz",
-                   "zus_bestes","zus_einig","zus_schutzen",
-                   "blianz_reg",
-                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
-                   "mas_angemessen","mas_effektiv",
-                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
-                   "dauer",
-                   "fin_ausk_akt",
-                   "sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
-                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
-                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
-                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
-                   "berufst"
+                   "demokratie","lebensz"
+                   
                    )
+ 
+ # 
+ #                   "zus_bestes","zus_einig","zus_schutzen",
+ #                   "blianz_reg",
+ #                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
+ #                   "mas_angemessen","mas_effektiv",
+ #                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
+ #                   "dauer",
+ #                   "fin_ausk_akt",
+ #                   "sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
+ #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
+ #                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
+ #                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
+ #                   "berufst"
 
 #variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
@@ -187,7 +190,7 @@ out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter
 #out[[count]]$rev=grouped_labels$rev[val] # add info whether to reverse the scale
 #out[[count]]$min=grouped_labels$rev[val] # add info whether on min of scale
 #out[[count]]$max=grouped_labels$rev[val] # add info whether on max of scale
-print(count)
+#print(count)
 }
 
 #calculate N and shares of variables by wave and variable within each specific scale specific dataframe 
@@ -270,7 +273,7 @@ data_plot_long_mean_ed[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
   group_by(wavedate,variable,edu4) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ed")
 
-#mean by Region
+#mean by size of home municipality
 data_plot_long_mean_bl[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(population_3g)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,population_3g) %>%
@@ -285,6 +288,7 @@ data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
   summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[val])+((grouped_labels$max[val]-grouped_labels$min[val])*(-grouped_labels$rev[val]))),vartype = c("se"))) %>%  
   group_by(wavedate,variable,hh_inc_cur_3g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="hi")
+print(val)
 }
 
 #append it and add new variable with levels of measurement as content indicating different scales

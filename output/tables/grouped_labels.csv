@@ -1,6 +1,24 @@
 V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,variable,scales,labels,min,max,rev,na,wn,ka,scalenumber,nown,noka
 sehr gross,gross,mittelmaessig,klein,sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_per_gefahr,2,Gesundheitliche Gefahr: Fuer mich persoenlich,1,5,1,6,nown,V6,5,no WN option,no KA option
 sehr gross,gross,mittelmaessig,klein,sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,ges_pub_gefahr,2,Gesundheitliche Gefahr: Fuer die oesterreichische Bevoelkerung,1,5,1,6,nown,V6,5,no WN option,no KA option
-Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,wochentag,3,Auswirkungen: Vergesse Wochentag,1,5,1,5,V6,V7,5,no WN option,no KA option
-Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kontakt,3,Auswirkungen: Fehlt Kontakt,1,5,1,5,V6,V7,5,no WN option,no KA option
+sehr gross,gross,mittelmaessig,klein,sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,wir_per_gefahr,2,Wirtschaftliche Gefahr: Fuer mich persoenlich,1,5,1,6,nown,V6,5,no WN option,no KA option
+sehr gross,gross,mittelmaessig,klein,sehr klein,keine Angabe,NA,NA,NA,NA,NA,NA,wir_pub_gefahr,2,Wirtschaftliche Gefahr: Fuer die oesterreichische Bevoelkerung,1,5,1,6,nown,V6,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,wochentag,4,Auswirkungen: Vergesse Wochentag,1,5,1,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kontakt,4,Auswirkungen: Fehlt Kontakt,1,5,1,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zeit,4,"Auswirkungen: Dinge tun, fuer die sonst keine Zeit",1,5,1,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,konflikt,4,Auswirkungen: Konflikte in Beziehung/Familie,1,5,1,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,kinder,4,Aussage: Kinderbetreuung stellt Problem dar,1,5,1,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A1,5,Depressivitaet: ruhig und gelassen,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A2,5,Depressivitaet: einsam,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A3,5,Depressivitaet: aergerlich,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A4,5,Depressivitaet: so niedergeschlagen,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A5,5,Depressivitaet: gluecklich,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A6,5,Depressivitaet: sehr nervoes,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A7,5,Depressivitaet: aengstlich,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A8,5,Depressivitaet: bedrueckt und traurig,1,5,0,5,V6,V7,5,no WN option,no KA option
+nie,an manchen Tagen,mehrmals die Woche,beinahe jeden Tag,taeglich,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,depress_A9,5,Depressivitaet: voller Energie,1,5,0,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,zusammenhalt,4,Chance: Zusammenhalt hat sich erhoeht,1,5,1,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,umweundklima,4,Chance: Gut fuer Umwelt und Klima,1,5,1,5,V6,V7,5,no WN option,no KA option
+Trifft voll und ganz zu,Trifft eher zu,Teils-teils,Trifft eher nicht zu,Trifft gar nicht zu,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,onlinekommun,4,Chance: Umstellung auf Online-Kommunikation,1,5,1,5,V6,V7,5,no WN option,no KA option
+Sehr zufrieden,Eher zufrieden,Teils-teils,Eher unzufrieden,Sehr unzufrieden,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,demokratie,3,Demokratiezufriedenheit: Oesterreich,1,5,1,5,V6,V7,5,no WN option,no KA option
 aeusserst unzufrieden,1,2,3,4,5,6,7,8,9,aeusserst zufrieden,Weiss nicht,lebensz,1,Lebenszufriedenheit,0,10,0,0,V12,noka,11,no WN option,no KA option
