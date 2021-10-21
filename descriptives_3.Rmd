@@ -138,25 +138,25 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 
 
 #What variables should be used for the dashboard
- # variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
- #                   "wochentag","kontakt","zeit" ,"konflikt","kinder",
- #                   "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
- #                   "zusammenhalt","umweundklima","onlinekommun",
- #                   "demokratie","lebensz",
- #                   "zus_bestes","zus_einig","zus_schutzen",
- #                   "blianz_reg",
- #                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
- #                   "mas_angemessen","mas_effektiv",
- #                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
- #                   "dauer",
- #                   "fin_ausk_akt")
+ variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
+                   "wochentag","kontakt","zeit" ,"konflikt","kinder",
+                   "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
+                   "zusammenhalt","umweundklima","onlinekommun",
+                   "demokratie","lebensz",
+                   "zus_bestes","zus_einig","zus_schutzen",
+                   "blianz_reg",
+                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
+                   "mas_angemessen","mas_effektiv",
+                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
+                   "dauer",
+                   "fin_ausk_akt")
                                      #"sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
  #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
  #                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
  #                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
  #                   "berufst"
 
-variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
+#variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
 #What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
 sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","population_3g","hh_inc_cur_3g")
@@ -393,7 +393,7 @@ grouped_labels2$wn <- apply(df=='Weiss nicht', 1, FUN= function(x) toString(name
 grouped_labels2$ka <- apply(df=='keine Angabe', 1, FUN= function(x) toString(names(na.omit(x))[na.omit(x)]))
 grouped_labels2$wn[grouped_labels2$wn==""]<-NA
 grouped_labels2$ka[grouped_labels2$ka==""]<-NA
-grouped_labels2 <- grouped_labels2 %>% mutate(scalenumber=12-na-(!is.na(wn))-(!is.na(ka))+1)
+grouped_labels2 <- grouped_labels2 %>% mutate(scalenumber=12-na-(!is.na(wn))-(!is.na(ka)))
 
 grouped_labels2$wn[is.na(grouped_labels2$wn)]<-"nown"
 grouped_labels2$ka[is.na(grouped_labels2$ka)]<-"noka"

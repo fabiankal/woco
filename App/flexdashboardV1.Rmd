@@ -278,7 +278,7 @@ data_labels$ka[is.na(data_labels$ka)]<-"noka"
 data_labels$nown=""
 data_labels$noka=""
 
-#data_labels$scalenumber=data_labels$scalenumber+1
+#data_labels$scalenumber=data_labels$scalenumber-1
 
   for(i in unique(data2$scales))
       {
