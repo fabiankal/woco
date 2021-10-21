@@ -170,7 +170,7 @@ rownames(df)<-names(labels)
 #grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12)) 
 grouped_labels<- df %>% 
   mutate(variable=rownames(.)) %>%
-  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12) %>% 
+  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,V13) %>% 
   mutate(ID = group_indices()) #%>% 
 
 
@@ -213,6 +213,9 @@ df2<-df2%>%mutate(V11 = ifelse(!is.na(df$V11) & df$V11!="Weiss nicht" & df$V11!=
 df2<-df2%>%mutate(V12 = ifelse(!is.na(df$V12) & df$V12!="Weiss nicht" & df$V12!="keine Angabe" & grepl("^[^0-9]",df$V12),
                                paste0("11 = ", df$V12),
                                ifelse(!is.na(df$V12),V12,NA)))
+df2<-df2%>%mutate(V13 = ifelse(!is.na(df$V13) & df$V13!="Weiss nicht" & df$V13!="keine Angabe" & grepl("^[^0-9]",df$V13),
+                               paste0("12 = ", df$V13),
+                               ifelse(!is.na(df$V13),V13,NA)))
 
 df2<-df2 %>% mutate(variable=rownames(.))
 
@@ -383,7 +386,7 @@ grouped_labels2$wn <- apply(df=='Weiss nicht', 1, FUN= function(x) toString(name
 grouped_labels2$ka <- apply(df=='keine Angabe', 1, FUN= function(x) toString(names(na.omit(x))[na.omit(x)]))
 grouped_labels2$wn[grouped_labels2$wn==""]<-NA
 grouped_labels2$ka[grouped_labels2$ka==""]<-NA
-grouped_labels2 <- grouped_labels2 %>% mutate(scalenumber=12-na-(!is.na(wn))-(!is.na(ka)))
+grouped_labels2 <- grouped_labels2 %>% mutate(scalenumber=12-na-(!is.na(wn))-(!is.na(ka))+1)
 
 grouped_labels2$wn[is.na(grouped_labels2$wn)]<-"nown"
 grouped_labels2$ka[is.na(grouped_labels2$ka)]<-"noka"

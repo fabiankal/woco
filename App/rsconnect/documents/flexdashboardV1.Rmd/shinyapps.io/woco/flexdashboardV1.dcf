@@ -5,9 +5,9 @@ account: woco
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4492973
-bundleId: 5159190
+bundleId: 5162301
 url: https://woco.shinyapps.io/flexdashboardV1/
-when: 1634747158.22593
-lastSyncTime: 1634747158.22593
+when: 1634820247.05711
+lastSyncTime: 1634820247.05711
 asMultiple: FALSE
 asStatic: FALSE

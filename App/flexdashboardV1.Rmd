@@ -276,7 +276,9 @@ data_labels$wn[is.na(data_labels$wn)]<-"nown"
 data_labels$ka[is.na(data_labels$ka)]<-"noka"
 data_labels$nown=""
 data_labels$noka=""
-  
+
+#data_labels$scalenumber=data_labels$scalenumber+1
+
   for(i in unique(data2$scales))
       {
       k=k+1
@@ -379,12 +381,15 @@ renderPlotly({
                      input$groupby=="Einwohnerzahl"~ groupby=="bl",
                      input$groupby=="Einkommen"~ groupby=="hi"))
   
+  data3$subgroup<-as.factor(data3$subgroup)
+  data3$subgroup<-droplevels(data3$subgroup)
+  
   if(input$confidence2)
   {
   p <- data3 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~subgroup,
-          error_y = ~list(array = ymax-mean_measurement),
-          sort = FALSE)
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~subgroup, 
+          error_y = ~list(array = ymax-mean_measurement))#,
+          #sort = FALSE)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
          yaxis = list (title = "",rangemode = "tozero"),
@@ -393,8 +398,8 @@ renderPlotly({
   else
   {
   p <- data3 %>%
-  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup,
-          sort = FALSE)
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)#,
+          #sort = FALSE)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
          yaxis = list (title = "",rangemode = "tozero"),
