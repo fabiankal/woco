@@ -135,6 +135,8 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 #names(lr_gen_w1)
 #paste(names(lr_gen_w1),collapse=",")
 
+
+
 #What variables should be used for the dashboard
  variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
                    "wochentag","kontakt","zeit" ,"konflikt","kinder",
@@ -145,12 +147,10 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
                    "blianz_reg",
                    "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
                    "mas_angemessen","mas_effektiv",
-                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf"
-                   )
- 
- #                   "dauer",
- #                   "fin_ausk_akt",
- #                   "sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
+                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
+                   "dauer",
+                   "fin_ausk_akt")
+                                     #"sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
  #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
  #                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
  #                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
@@ -167,8 +167,65 @@ labels <- lr_gen_w1 %>% ungroup() %>% select(variablelist) %>%  sapply(levels)
 df <- do.call(rbind, labels) %>% as.data.frame()
 df <-bind_rows(lapply(labels,function(y) as.data.frame(t(y),stringsAsFactors=FALSE,y.id = "column_label")))
 rownames(df)<-names(labels)
-grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12)) %>% mutate(variable=rownames(.))
-#df %>% mutate(ID = group_indices(.,noquote(paste(names(df), collapse=", "))))
+#grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12)) 
+grouped_labels<- df %>% 
+  mutate(variable=rownames(.)) %>%
+  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12) %>% 
+  mutate(ID = group_indices()) #%>% 
+
+
+#hinzufügen von nummerierung in labels ohne nummerierung
+df2<-df
+
+df2<-df2%>%mutate(V1 = ifelse(!is.na(df$V1) & df$V1!="Weiss nicht" & df$V1!="keine Angabe" & grepl("^[^0-9]",df$V1),
+                              paste0("0 = ", df$V1),
+                               ifelse(!is.na(df$V1),V1,NA)))
+df2<-df2%>%mutate(V2 = ifelse(!is.na(df$V2) & df$V2!="Weiss nicht" & df$V2!="keine Angabe" & grepl("^[^0-9]",df$V2),
+                              paste0("1 = ", df$V2),
+                               ifelse(!is.na(df$V2),V2,NA)))
+df2<-df2%>%mutate(V3 = ifelse(!is.na(df$V3) & df$V3!="Weiss nicht" & df$V3!="keine Angabe" & grepl("^[^0-9]",df$V3),
+                              paste0("2 = ", df$V3),
+                               ifelse(!is.na(df$V3),V3,NA)))
+df2<-df2%>%mutate(V4 = ifelse(!is.na(df$V4) & df$V4!="Weiss nicht" & df$V4!="keine Angabe" & grepl("^[^0-9]",df$V4),
+                              paste0("3 = ", df$V4),
+                               ifelse(!is.na(df$V4),V4,NA)))
+df2<-df2%>%mutate(V5 = ifelse(!is.na(df$V5) & df$V5!="Weiss nicht" & df$V5!="keine Angabe" & grepl("^[^0-9]",df$V5),
+                              paste0("4 = ", df$V5),
+                               ifelse(!is.na(df$V5),V5,NA)))
+df2<-df2%>%mutate(V6 = ifelse(!is.na(df$V6) & df$V6!="Weiss nicht" & df$V6!="keine Angabe" & grepl("^[^0-9]",df$V6),
+                              paste0("5 = ", df$V6),
+                               ifelse(!is.na(df$V6),V6,NA)))
+df2<-df2%>%mutate(V7 = ifelse(!is.na(df$V7) & df$V7!="Weiss nicht" & df$V7!="keine Angabe" & grepl("^[^0-9]",df$V7),
+                              paste0("6 = ", df$V7),
+                               ifelse(!is.na(df$V7),V7,NA)))
+df2<-df2%>%mutate(V8 = ifelse(!is.na(df$V8) & df$V8!="Weiss nicht" & df$V8!="keine Angabe" & grepl("^[^0-9]",df$V8),
+                              paste0("7 = ", df$V8),
+                               ifelse(!is.na(df$V8),V8,NA)))
+df2<-df2%>%mutate(V9 = ifelse(!is.na(df$V9) & df$V9!="Weiss nicht" & df$V9!="keine Angabe" & grepl("^[^0-9]",df$V9),
+                              paste0("8 = ", df$V9),
+                               ifelse(!is.na(df$V9),V9,NA)))
+df2<-df2%>%mutate(V10 = ifelse(!is.na(df$V10) & df$V10!="Weiss nicht" & df$V10!="keine Angabe" & grepl("^[^0-9]",df$V10),
+                               paste0("9 = ", df$V10),
+                               ifelse(!is.na(df$V10),V10,NA)))
+df2<-df2%>%mutate(V11 = ifelse(!is.na(df$V11) & df$V11!="Weiss nicht" & df$V11!="keine Angabe" & grepl("^[^0-9]",df$V11),
+                               paste0("10 = ", df$V11),
+                               ifelse(!is.na(df$V11),V11,NA)))
+df2<-df2%>%mutate(V12 = ifelse(!is.na(df$V12) & df$V12!="Weiss nicht" & df$V12!="keine Angabe" & grepl("^[^0-9]",df$V12),
+                               paste0("11 = ", df$V12),
+                               ifelse(!is.na(df$V12),V12,NA)))
+
+df2<-df2 %>% mutate(variable=rownames(.))
+
+df2$V5[df2$V5=="4 = Mehr als 6 Monate"]<-"7 = Mehr als 6 Monate"
+
+
+for (val in df2$variable) {
+  #print(val)
+  test<-df2%>%filter(variable==val)%>%select(starts_with("V", ignore.case=FALSE))
+  levels(lr_gen_w1[[val]])<-as.vector(t(test[colSums(!is.na(test)) > 0]))
+}
+
+ 
 
 grouped_labels<-grouped_labels%>% group_by(ID) %>% summarise(variable)
 
@@ -184,11 +241,9 @@ count=0
 out <- vector('list', max(unique(grouped_labels$ID)))
 for (val in unique(grouped_labels$ID)) {
 count = count+1
-out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), factor_key=TRUE)
-#out[[count]]$rev=grouped_labels$rev[val] # add info whether to reverse the scale
-#out[[count]]$min=grouped_labels$rev[val] # add info whether on min of scale
-#out[[count]]$max=grouped_labels$rev[val] # add info whether on max of scale
-#print(count)
+out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), factor_key=TRUE) %>%
+  select(id,wave,WEIGHTD,wavedate,gender,alter_g,edu4,population_3g,hh_inc_cur_3g,variable,measurement)
+print(count)
 }
 
 #calculate N and shares of variables by wave and variable within each specific scale specific dataframe 
@@ -239,6 +294,8 @@ data_plot_long_mean_hi<- vector('list', max(unique(grouped_labels$ID)))
 
 for (val in unique(grouped_labels$ID)) {
 #mean general
+  print("start")
+  print(val)
 data_plot_long_mean[[val]] <- out[[val]]  %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable) %>%
@@ -287,6 +344,7 @@ data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
   group_by(wavedate,variable,hh_inc_cur_3g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="hi")
 print(val)
+print("end")
 }
 
 #append it and add new variable with levels of measurement as content indicating different scales
