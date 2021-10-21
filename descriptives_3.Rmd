@@ -138,25 +138,25 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 
 
 #What variables should be used for the dashboard
- variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
-                   "wochentag","kontakt","zeit" ,"konflikt","kinder",
-                   "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
-                   "zusammenhalt","umweundklima","onlinekommun",
-                   "demokratie","lebensz",
-                   "zus_bestes","zus_einig","zus_schutzen",
-                   "blianz_reg",
-                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
-                   "mas_angemessen","mas_effektiv",
-                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
-                   "dauer",
-                   "fin_ausk_akt")
+ # variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
+ #                   "wochentag","kontakt","zeit" ,"konflikt","kinder",
+ #                   "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
+ #                   "zusammenhalt","umweundklima","onlinekommun",
+ #                   "demokratie","lebensz",
+ #                   "zus_bestes","zus_einig","zus_schutzen",
+ #                   "blianz_reg",
+ #                   "zuf_reg_al","zuf_reg_un","zuf_reg_wi",
+ #                   "mas_angemessen","mas_effektiv",
+ #                   "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
+ #                   "dauer",
+ #                   "fin_ausk_akt")
                                      #"sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
  #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
  #                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
  #                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
  #                   "berufst"
 
-#variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
+variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
 #What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
 sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","population_3g","hh_inc_cur_3g")
@@ -170,7 +170,7 @@ rownames(df)<-names(labels)
 #grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12)) 
 grouped_labels<- df %>% 
   mutate(variable=rownames(.)) %>%
-  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,V13) %>% 
+  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12) %>% #,V13
   mutate(ID = group_indices()) #%>% 
 
 
@@ -213,9 +213,9 @@ df2<-df2%>%mutate(V11 = ifelse(!is.na(df$V11) & df$V11!="Weiss nicht" & df$V11!=
 df2<-df2%>%mutate(V12 = ifelse(!is.na(df$V12) & df$V12!="Weiss nicht" & df$V12!="keine Angabe" & grepl("^[^0-9]",df$V12),
                                paste0("11 = ", df$V12),
                                ifelse(!is.na(df$V12),V12,NA)))
-df2<-df2%>%mutate(V13 = ifelse(!is.na(df$V13) & df$V13!="Weiss nicht" & df$V13!="keine Angabe" & grepl("^[^0-9]",df$V13),
-                               paste0("12 = ", df$V13),
-                               ifelse(!is.na(df$V13),V13,NA)))
+#df2<-df2%>%mutate(V13 = ifelse(!is.na(df$V13) & df$V13!="Weiss nicht" & df$V13!="keine Angabe" & grepl("^[^0-9]",df$V13),
+#                               paste0("12 = ", df$V13),
+#                               ifelse(!is.na(df$V13),V13,NA)))
 
 df2<-df2 %>% mutate(variable=rownames(.))
 
@@ -233,7 +233,7 @@ for (val in df2$variable) {
 grouped_labels<-grouped_labels%>% group_by(ID) %>% summarise(variable)
 
 #import reverse information (which variable scales to reverse)
-rev_labels<-readr::read_csv("./output/tables/varlabels_rev.csv",show_col_types = FALSE)
+rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
 grouped_labels<- grouped_labels %>% left_join(rev_labels, by = "variable")
 
 #select the data for analyses
@@ -246,6 +246,12 @@ for (val in unique(grouped_labels$ID)) {
 count = count+1
 out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), factor_key=TRUE) %>%
   select(id,wave,WEIGHTD,wavedate,gender,alter_g,edu4,population_3g,hh_inc_cur_3g,variable,measurement)
+out[[count]]$measurement<-as.factor(out[[count]]$measurement)
+out[[count]]$measurement=fct_relevel(out[[count]]$measurement,levels(lr_gen_w2[[(grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable))[1]]]))
+
+#out[[count]] <- pivot_longer(lr_gen_w2,grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), names_to = "variable", values_to = "measurement") 
+#out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), factor_key=FALSE) #%>%
+  #select(id,wave,WEIGHTD,wavedate,gender,alter_g,edu4,population_3g,hh_inc_cur_3g,variable,measurement)
 print(count)
 }
 
@@ -263,6 +269,7 @@ data_plot_long[[val]]<-out[[val]] %>% filter(!is.na(measurement)) %>%
 
 data_plot_long[[val]]<-data_plot_long[[val]] %>% group_by(wavedate,variable) %>%
      mutate(prop = n/sum(n),ymax=prop+1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n, ymin=prop-1.96*sqrt(n/sum(n))*(1-(n/sum(n)))/n,groupby="none")
+print(val)
 }
 
 #append it and add new variable with levels of measurement as content indicating different scales
@@ -286,10 +293,10 @@ data_plot_long_mean_hi<- vector('list', max(unique(grouped_labels$ID)))
 
 #test
 
-# data_plot_long_mean[[1]] <- out[[1]]  %>% filter(!is.na(measurement)) %>%
+# data_plot_long_mean[[2]] <- out[[2]]  %>% filter(!is.na(measurement)) %>%
 #   as_survey_design(weights = c(WEIGHTD)) %>%
 #   group_by(wavedate,variable) %>%
-#   summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels$min[1])+((grouped_labels$max[1]-grouped_labels$min[1])*(-grouped_labels$rev[1]))),vartype = c("se"))) %>% 
+#   summarise(mean_measurement=survey_mean(abs((as.numeric(measurement)-grouped_labels$min[2])+((grouped_labels$max[2]-grouped_labels$min[2])*(-grouped_labels$rev[2]))),vartype = c("se"))) %>%
 #   group_by(wavedate,variable) %>%
 #      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="none")
 

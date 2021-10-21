@@ -26,6 +26,7 @@ epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/
 
 data_varlab$labels<-gsub(pattern = 'ae', replacement = "ä",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'ue', replacement = "ü",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'vertraün', replacement = "vertrauen",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
 
 
