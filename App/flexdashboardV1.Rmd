@@ -1,8 +1,18 @@
 ---
 title: "Work & Corona Dashboard"
-output: flexdashboard::flex_dashboard
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    favicon: www/favicon-32x32.png
 runtime: shiny
 ---
+
+```{css, echo=FALSE}
+.js-plotly-plot .plotly .modebar {
+    left: 60%;
+    transform: translateX(-50%);
+}
+```
 
 ```{r global, include=FALSE}
 library(plotly)
@@ -11,13 +21,14 @@ library(dplyr)
 library(rlang)
 library(stringr)
 library(forcats)
+library(base64enc)
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv",show_col_types = FALSE)
 
 data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv",show_col_types = FALSE)
 
 data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv",show_col_types = FALSE)
-
+data_labels$scalenumber=data_labels$scalenumber+1
 data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv",show_col_types = FALSE)
 
 
@@ -25,12 +36,31 @@ data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/
 epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv",show_col_types = FALSE)
 
 data_varlab$labels<-gsub(pattern = 'ae', replacement = "ä",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Ae', replacement = "Ä",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'ue', replacement = "ü",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'vertraün', replacement = "vertrauen",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Ue', replacement = "ü",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Daür', replacement = "Dauer",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Aktülles', replacement = "Aktuelles",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_varlab$labels)
 
+
+#Seperate category labels from variable labels and put them in a list
+
+data_varlab<-data_varlab %>% separate(labels,c("catlabel","varlabel"), ":",remove = FALSE)
+data_varlab<-data_varlab %>% mutate(varlabel=ifelse(is.na(varlabel),catlabel,varlabel))#,
+                                    #catlabel=ifelse(varlabel==catlabel,NA,catlabel))
+
+
+xy.list <- split(data_varlab$catlabel,data_varlab$catlabel) 
+
+for (val in unique(data_varlab$catlabel)) {
+xy.list[[val]] <- data_varlab %>% filter(catlabel==val) %>% pull(labels, varlabel) 
+}
 
 my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data$variable)]
+#my_autocomplete_list <- xy.list
 
 hlinedata = data.frame(x = c("16.03.2020",
                              "14.04.2020",
@@ -167,6 +197,8 @@ selectizeInput(
 checkboxInput(inputId = 'confidence', label = "95% Konfidenzintervalle", value = FALSE)
 checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value = FALSE)
+checkboxInput(inputId = 'axis0', label = "Minimalwert der Y-Achse bei 0 fixieren", value = TRUE)
+
 
 # sliderInput("bw_adjust", label = "Bandwidth adjustment:",
 #             min = 0.2, max = 2, value = 1, step = 0.2)
@@ -212,8 +244,17 @@ renderPlotly({
           error_y = ~list(array = ymax-mean_measurement))
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = "",rangemode = "tozero"),
-         legend = list(orientation = 'h'))%>%config(locale = 'de')
+         yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.93,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
   }
   else
   {
@@ -221,8 +262,17 @@ renderPlotly({
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~labels)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = "",rangemode = "tozero"),
-         legend = list(orientation = 'h'))%>%config(locale = 'de')
+         yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.93,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
   }
  
   if(input$relevantdates)
@@ -278,7 +328,7 @@ data_labels$ka[is.na(data_labels$ka)]<-"noka"
 data_labels$nown=""
 data_labels$noka=""
 
-#data_labels$scalenumber=data_labels$scalenumber-1
+
 
   for(i in unique(data2$scales))
       {
@@ -303,7 +353,7 @@ data_labels$noka=""
                           data_labels %>% filter(scales==i)  %>% 
                             select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>% 
                             distinct(),
-                          sep=", ",collapse=", ")
+                          sep=" ")
        if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0") 
          {
          text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_st[k],'bis',labeln_en[k],'=',labels_en[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
@@ -352,6 +402,7 @@ selectInput("groupby", label = "Gruppieren nach:",
 checkboxInput(inputId = 'confidence2', label = "95% Konfidenzintervalle", value = FALSE)
 checkboxInput(inputId = 'incidence2', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates2', label = "Relevante Ergeignisse", value = FALSE)
+checkboxInput(inputId = 'axis02', label = "Minimalwert der Y-Achse bei 0 fixieren", value = TRUE)
 
 
 ```
@@ -393,8 +444,17 @@ renderPlotly({
           #sort = FALSE)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = "",rangemode = "tozero"),
-         legend = list(orientation = 'h'))%>%config(locale = 'de')
+         yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.93,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
   }
   else
   {
@@ -403,8 +463,17 @@ renderPlotly({
           #sort = FALSE)
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = "",rangemode = "tozero"),
-         legend = list(orientation = 'h'))%>%config(locale = 'de')
+         yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.93,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>%
+    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
   }
   if(input$relevantdates2)
   {
@@ -455,8 +524,8 @@ renderPlotly({
   
  data_labels$wn[is.na(data_labels$wn)]<-"nown"
  data_labels$ka[is.na(data_labels$ka)]<-"noka"
- data_labels$nown="no WN option"
- data_labels$noka="no KA option"
+ data_labels$nown=""
+ data_labels$noka=""
    
 
   for(i in unique(data2$scales))
@@ -482,7 +551,7 @@ renderPlotly({
                           data_labels %>% filter(scales==i)  %>%
                             select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>%
                             distinct(),
-                          sep=", ",collapse=", ")
+                          sep=" ",collapse=" ")
        if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0")
          {
          text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_st[k],'bis',labeln_en[k],'=',labels_en[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
@@ -524,6 +593,9 @@ selectInput(
     #options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
 
+checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
+
+
 ```
 
 Column
@@ -533,19 +605,26 @@ Column
 
 ```{r}
 
+#output$out1 <- renderPrint(as.numeric(input$colordirect))
+#verbatimTextOutput('out1')
+
 renderPlotly({
   
   inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares]
   
   data3 = data_shares %>% select(wavedate,variable,measurement,prop) %>%
     filter(variable %in% inputvariable_shares) 
+  data3 <- data3 %>% rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement) 
 
-  p <- ggplot(data3, aes(fill=measurement,x=wavedate, y=prop)) + 
-    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.8) + #geom_bar width=0.7
+  p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Anteil)) + 
+    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
     geom_point(position=position_stack(),colour="white") +
     #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=1) +  #alternative:Blues
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
     labs(y = "", x= "",fill="") +
+    theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
     theme(legend.position="bottom") + 
@@ -553,7 +632,15 @@ renderPlotly({
    
 
   ggplotly(p) %>%
-layout(legend = list(orientation = "h",sort = FALSE))%>%config(locale = 'de')
+layout(legend = list(orientation = "h",sort = FALSE),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.95,y=0.95,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>%config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
   
   
   # p <- data3 %>%
