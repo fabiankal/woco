@@ -1,11 +1,18 @@
 ---
 title: "Work & Corona Dashboard"
+runtime: shiny
 output: 
   flexdashboard::flex_dashboard:
+    theme: default
+    primary: orange
     orientation: columns
     favicon: www/favicon-32x32.png
-runtime: shiny
+    source_code: "https://github.com/fabiankal/woco"
 ---
+
+```{js}
+//$('.navbar-inverse').removeClass('navbar-inverse').addClass('navbar-default');
+```
 
 ```{css, echo=FALSE}
 .js-plotly-plot .plotly .modebar {
@@ -14,7 +21,13 @@ runtime: shiny
 }
 ```
 
-```{r global, include=FALSE}
+```{r setup, include=FALSE}
+#navbar-bg: "#00102E"
+#theme:
+#      version: 4
+#      bootswatch: flatly
+#
+#runtime: shiny_prerendered
 library(plotly)
 library(tidyr)
 library(dplyr)
@@ -22,6 +35,11 @@ library(rlang)
 library(stringr)
 library(forcats)
 library(base64enc)
+library(bslib)
+library(flexdashboard)
+```
+
+```{r data, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv",show_col_types = FALSE)
 
@@ -41,7 +59,7 @@ data_varlab$labels<-gsub(pattern = 'ue', replacement = "ü",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Ue', replacement = "ü",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Daür', replacement = "Dauer",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Aktülles', replacement = "Aktuelles",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Aktüll', replacement = "Aktuell",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_varlab$labels)
 
@@ -168,9 +186,133 @@ levels(data$subgroup)<- c("<30","30-59",">60","1.-3. Dezil","4.-7. Dezil","8.-10
 
 data_shares$measurement<-gsub(pattern = 'ae', replacement = "ä",data_shares$measurement)
 data_shares$measurement<-gsub(pattern = 'ue', replacement = "ü",data_shares$measurement)
+data_shares$measurement<-gsub(pattern = 'Ue', replacement = "Ü",data_shares$measurement)
 data_shares$measurement<-gsub(pattern = 'oe', replacement = "ö",data_shares$measurement)
+data_shares$measurement<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_shares$measurement)
+
 data_shares$measurement<-as.factor(data_shares$measurement)
 data_shares$measurement<-fct_relevel(data_shares$measurement,"10 = äusserst zufrieden",after = Inf)
+data_shares$measurement<-fct_relevel(data_shares$measurement,"10 = Sehr viel Vertrauen",after = Inf)
+
+```
+
+Verteilung der Antwortkategorien
+=======================================================================
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
+
+
+```{r}
+
+selectInput(
+    inputId = 'var_shares',
+    label = 'Variablen:',
+    choices = my_autocomplete_list,
+    selected = my_autocomplete_list[1],
+    multiple = FALSE, # allow for multiple inputs
+    #options = list(create = FALSE), # if TRUE, allows newly created inputs
+  )
+
+checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
+
+  radioButtons("inpercent", "Y-Achse:",
+               c("In Prozent" = "percent",
+                 "In Personen" = "persons"
+                 )
+               )
+version<-"V1.0"
+HTML(paste0(
+        "<div style='position: absolute; bottom: 5px;'>",
+        "WoCo-Dashboard ",version,"<br>",Sys.Date(),
+        "</div>"
+        ))
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle
+
+```{r,context="server"}
+
+#output$out1 <- renderPrint(as.numeric(input$colordirect))
+#verbatimTextOutput('out1')
+
+renderPlotly({
+  
+  inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares]
+  
+  data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>%
+    filter(variable %in% inputvariable_shares) 
+  data3 <- data3 %>% mutate(Personen = round(prop*N_total,0)) %>% rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement,
+                            N = N_total)
+  
+  Nrund<-round(mean(data3$N,na.rm=TRUE),0)
+  
+  if(input$inpercent=="percent")
+  {
+  p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Anteil)) + 
+    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
+    geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
+    labs(y = "", x= "",fill="") +
+    theme_minimal() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
+    theme(legend.position="bottom") + 
+    guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
+  }
+  
+  if(input$inpercent=="persons")
+  {
+   p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Personen)) + 
+    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
+    geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
+    labs(y = "", x= "",fill="") +
+    theme_minimal() +
+    #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
+    theme(legend.position="bottom") + 
+    guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
+  }
+  
+m <- list(l = 0,r = 0,b = 60,t = 40,pad = 4)  
+
+  ggplotly(p) %>%
+layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.95,y=0.955,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom"
+          )),
+       margin=m) %>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"),
+           toImageButtonOptions = list(format = "png",width = 1600,height = 1200
+        )) %>% 
+    layout(annotations = 
+            list(x = 1, y = -0.15, text = "Daten: ACPP + WoCo", 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=15, color="#707070"))) %>% 
+    layout(annotations = 
+            list(x = 1, y = -0.095, text = paste("N ~",Nrund,"pro Welle"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=12, color="#707070")))
+})
 
 ```
 
@@ -199,7 +341,12 @@ checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value = FALSE)
 checkboxInput(inputId = 'axis0', label = "Minimalwert der Y-Achse bei 0 fixieren", value = TRUE)
 
-
+version<-"V1.0"
+HTML(paste0(
+        "<div style='position: absolute; bottom: 5px;'>",
+        "WoCo-Dashboard ",version,"<br>",Sys.Date(),
+        "</div>"
+        ))
 # sliderInput("bw_adjust", label = "Bandwidth adjustment:",
 #             min = 0.2, max = 2, value = 1, step = 0.2)
 
@@ -210,7 +357,7 @@ Column
 
 ### Mittelwerte nach Befragungswelle {data-height=800}
 
-```{r}
+```{r,context="server"}
 
 #output$out1 <- renderPrint(input$relevantdates)
 #verbatimTextOutput('out1')
@@ -250,11 +397,14 @@ renderPlotly({
           source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
-          x=0.97,y=0.93,
+          x=0.97,y=0.94,
           sizex = 0.25,sizey = 0.25,  
           xanchor="right",yanchor="bottom" 
           ))) %>% 
-    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"),
+           toImageButtonOptions = list(format = "png",width = 1600,height = 1200))
   }
   else
   {
@@ -272,7 +422,10 @@ renderPlotly({
           sizex = 0.25,sizey = 0.25,  
           xanchor="right",yanchor="bottom" 
           ))) %>% 
-    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"),
+           toImageButtonOptions = list(format = "png",width = 1600,height = 1200))
   }
  
   if(input$relevantdates)
@@ -297,7 +450,7 @@ renderPlotly({
 ```
 
 ### {data-height=200}
-```{r}
+```{r,context="server"}
 #output$out1 <- renderPrint(input$variables)
 #verbatimTextOutput('out1')
 
@@ -404,14 +557,19 @@ checkboxInput(inputId = 'incidence2', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates2', label = "Relevante Ergeignisse", value = FALSE)
 checkboxInput(inputId = 'axis02', label = "Minimalwert der Y-Achse bei 0 fixieren", value = TRUE)
 
-
+version<-"V1.0"
+HTML(paste0(
+        "<div style='position: absolute; bottom: 5px;'>",
+        "WoCo-Dashboard ",version,"<br>",Sys.Date(),
+        "</div>"
+        ))
 ```
 Column
 -----------------------------------------------------------------------
 
 ### Mittelwerte nach Befragungswelle und Subgruppe {data-height=800}
 
-```{r}
+```{r,context="server"}
 #output$out1 <- renderPrint(input$groupby)
 #verbatimTextOutput('out1')
 
@@ -450,11 +608,14 @@ renderPlotly({
           source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
-          x=0.97,y=0.93,
+          x=0.97,y=0.94,
           sizex = 0.25,sizey = 0.25,  
           xanchor="right",yanchor="bottom" 
           ))) %>% 
-    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"),
+           toImageButtonOptions = list(format = "png",width = 1600,height = 1200))
   }
   else
   {
@@ -473,7 +634,10 @@ renderPlotly({
           sizex = 0.25,sizey = 0.25,  
           xanchor="right",yanchor="bottom" 
           ))) %>%
-    config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"),
+           toImageButtonOptions = list(format = "png",width = 1600,height = 1200))
   }
   if(input$relevantdates2)
   {
@@ -496,7 +660,7 @@ renderPlotly({
 ```
 
 ### {data-height=200}
-```{r}
+```{r,context="server"}
  #output$out1 <- renderPrint(input$variables)
  #verbatimTextOutput('out1')
  
@@ -574,83 +738,3 @@ renderPlotly({
 
 ```
 
-Verteilung der Antwortkategorien
-=======================================================================
-
-Column {.sidebar}
------------------------------------------------------------------------
-
-Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
-
-
-```{r}
-selectInput(
-    inputId = 'var_shares',
-    label = 'Variablen',
-    choices = my_autocomplete_list,
-    selected = my_autocomplete_list[1],
-    multiple = FALSE, # allow for multiple inputs
-    #options = list(create = FALSE), # if TRUE, allows newly created inputs
-  )
-
-checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
-
-
-```
-
-Column
------------------------------------------------------------------------
-
-### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle
-
-```{r}
-
-#output$out1 <- renderPrint(as.numeric(input$colordirect))
-#verbatimTextOutput('out1')
-
-renderPlotly({
-  
-  inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares]
-  
-  data3 = data_shares %>% select(wavedate,variable,measurement,prop) %>%
-    filter(variable %in% inputvariable_shares) 
-  data3 <- data3 %>% rename(Datum = wavedate,
-                            Anteil = prop,
-                            Kategorie = measurement) 
-
-  p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Anteil)) + 
-    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
-    geom_point(position=position_stack(),colour="white") +
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
-    labs(y = "", x= "",fill="") +
-    theme_minimal() +
-    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-    scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
-    theme(legend.position="bottom") + 
-    guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
-   
-
-  ggplotly(p) %>%
-layout(legend = list(orientation = "h",sort = FALSE),
-         images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
-          xref = "paper",  
-          yref = "paper",
-          x=0.95,y=0.95,
-          sizex = 0.25,sizey = 0.25,  
-          xanchor="right",yanchor="bottom" 
-          ))) %>%config(locale = 'de',displaylogo = FALSE,modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d"))
-  
-  
-  # p <- data3 %>%
-  # plot_ly(x = ~wavedate, y= ~prop,type = 'bar',color = ~measurement,barmode = 'stack')
-  # p <- p %>% layout(title = "Shares",
-  #        xaxis = list(title = ""),
-  #        yaxis = list (title = ""),
-  #        legend = list(orientation = 'h'))
-  
-  
-})
-
-```
