@@ -247,7 +247,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo.png"), 
+          source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -265,7 +265,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo.png"), 
+          source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -447,7 +447,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo.png"), 
+          source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -466,7 +466,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo.png"), 
+          source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -634,7 +634,7 @@ renderPlotly({
   ggplotly(p) %>%
 layout(legend = list(orientation = "h",sort = FALSE),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo.png"), 
+          source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.95,
