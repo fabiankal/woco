@@ -24,6 +24,7 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 1,2021-05-22,lebensz,6.7,0.07,6.84,6.57,all,none,1468
 1,2021-06-26,lebensz,6.68,0.07,6.82,6.54,all,none,1479
 1,2021-09-25,lebensz,6.62,0.07,6.77,6.48,all,none,1480
+1,2021-10-23,lebensz,6.68,0.07,6.82,6.55,all,none,1487
 2,2020-03-28,ver_gov,7.11,0.08,7.27,6.96,all,none,1513
 2,2020-03-28,ver_ges,7.45,0.07,7.59,7.31,all,none,1514
 2,2020-03-28,ver_par,6.47,0.08,6.62,6.31,all,none,1484
@@ -143,6 +144,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 2,2021-09-25,ver_par,4.24,0.09,4.42,4.06,all,none,1437
 2,2021-09-25,ver_pol,6.15,0.09,6.32,5.98,all,none,1446
 2,2021-09-25,ver_orf,4.48,0.1,4.67,4.29,all,none,1445
+2,2021-10-23,ver_gov,3.76,0.09,3.95,3.58,all,none,1444
+2,2021-10-23,ver_ges,6.42,0.08,6.59,6.25,all,none,1455
+2,2021-10-23,ver_par,4.15,0.09,4.32,3.97,all,none,1443
+2,2021-10-23,ver_pol,6.18,0.09,6.35,6.01,all,none,1453
+2,2021-10-23,ver_orf,4.36,0.1,4.55,4.18,all,none,1444
 3,2020-03-28,ges_per_gefahr,1.88,0.03,1.94,1.81,all,none,1534
 3,2020-03-28,ges_pub_gefahr,2.69,0.03,2.74,2.64,all,none,1534
 3,2020-03-28,wir_per_gefahr,2.15,0.03,2.21,2.08,all,none,1534
@@ -243,6 +249,10 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 3,2021-09-25,ges_pub_gefahr,2.02,0.03,2.07,1.96,all,none,1495
 3,2021-09-25,wir_per_gefahr,1.75,0.04,1.82,1.68,all,none,1491
 3,2021-09-25,wir_pub_gefahr,2.58,0.03,2.64,2.52,all,none,1493
+3,2021-10-23,ges_per_gefahr,1.36,0.03,1.42,1.29,all,none,1502
+3,2021-10-23,ges_pub_gefahr,2.11,0.03,2.17,2.05,all,none,1500
+3,2021-10-23,wir_per_gefahr,1.76,0.04,1.83,1.69,all,none,1499
+3,2021-10-23,wir_pub_gefahr,2.6,0.03,2.65,2.55,all,none,1500
 4,2020-03-28,demokratie,2.76,0.03,2.82,2.71,all,none,1516
 4,2020-03-28,blianz_reg,2.83,0.03,2.89,2.77,all,none,1510
 4,2020-04-04,demokratie,2.7,0.03,2.76,2.64,all,none,1526
@@ -317,6 +327,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 4,2021-06-26,blianz_reg,1.74,0.04,1.81,1.66,all,none,1442
 4,2021-09-25,demokratie,1.98,0.04,2.04,1.91,all,none,1462
 4,2021-09-25,blianz_reg,1.67,0.04,1.74,1.59,all,none,1451
+4,2021-10-23,demokratie,1.83,0.04,1.9,1.76,all,none,1468
+4,2021-10-23,blianz_reg,1.42,0.04,1.49,1.35,all,none,1444
+4,2021-10-23,zuf_reg_al,1.74,0.03,1.8,1.67,all,none,1372
+4,2021-10-23,zuf_reg_un,1.65,0.03,1.72,1.59,all,none,1327
+4,2021-10-23,zuf_reg_wi,1.94,0.03,2.01,1.88,all,none,1356
 5,2020-03-28,wochentag,1.68,0.04,1.76,1.59,all,none,1535
 5,2020-03-28,kontakt,2.54,0.04,2.62,2.47,all,none,1533
 5,2020-03-28,zeit,2.35,0.04,2.42,2.27,all,none,1526
@@ -551,6 +566,17 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 5,2021-09-25,zus_bestes,1.93,0.03,1.99,1.87,all,none,1447
 5,2021-09-25,zus_einig,2.06,0.03,2.12,1.99,all,none,1437
 5,2021-09-25,zus_schutzen,1.58,0.03,1.64,1.51,all,none,1440
+5,2021-10-23,wochentag,1.02,0.04,1.1,0.94,all,none,1482
+5,2021-10-23,kontakt,1.33,0.04,1.4,1.25,all,none,1477
+5,2021-10-23,zeit,1.4,0.04,1.47,1.33,all,none,1465
+5,2021-10-23,konflikt,0.78,0.03,0.85,0.71,all,none,1476
+5,2021-10-23,kinder,1.15,0.09,1.33,0.97,all,none,274
+5,2021-10-23,zusammenhalt,1.17,0.03,1.23,1.11,all,none,1435
+5,2021-10-23,umweundklima,2.32,0.04,2.39,2.25,all,none,1447
+5,2021-10-23,onlinekommun,2.24,0.03,2.3,2.18,all,none,1407
+5,2021-10-23,zus_bestes,1.86,0.03,1.92,1.79,all,none,1452
+5,2021-10-23,zus_einig,2.1,0.03,2.17,2.04,all,none,1437
+5,2021-10-23,zus_schutzen,1.5,0.03,1.57,1.44,all,none,1439
 6,2020-03-28,mas_angemessen,2.02,0.02,2.06,1.97,all,none,1516
 6,2020-04-04,mas_angemessen,1.91,0.02,1.95,1.87,all,none,1535
 6,2020-04-11,mas_angemessen,1.89,0.02,1.93,1.85,all,none,1469
@@ -576,6 +602,7 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 6,2021-05-22,mas_angemessen,1.62,0.03,1.68,1.56,all,none,1451
 6,2021-06-26,mas_angemessen,1.62,0.03,1.68,1.56,all,none,1451
 6,2021-09-25,mas_angemessen,1.77,0.04,1.84,1.7,all,none,1465
+6,2021-10-23,mas_angemessen,1.83,0.04,1.9,1.76,all,none,1470
 7,2020-03-28,mas_effektiv,2.84,0.03,2.89,2.79,all,none,1512
 7,2020-04-04,mas_effektiv,3,0.03,3.05,2.94,all,none,1526
 7,2020-04-11,mas_effektiv,2.98,0.03,3.03,2.92,all,none,1474
@@ -601,6 +628,7 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 7,2021-05-22,mas_effektiv,2.16,0.03,2.23,2.1,all,none,1430
 7,2021-06-26,mas_effektiv,2.17,0.03,2.24,2.11,all,none,1451
 7,2021-09-25,mas_effektiv,1.76,0.03,1.83,1.69,all,none,1448
+7,2021-10-23,mas_effektiv,1.7,0.03,1.76,1.63,all,none,1445
 8,2020-03-28,depress_A1,2.52,0.04,2.6,2.45,all,none,1513
 8,2020-03-28,depress_A2,0.71,0.03,0.77,0.64,all,none,1511
 8,2020-03-28,depress_A3,1.07,0.03,1.12,1.01,all,none,1498
@@ -826,6 +854,15 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 8,2021-09-25,depress_A7,0.51,0.03,0.57,0.46,all,none,1455
 8,2021-09-25,depress_A8,0.71,0.03,0.77,0.65,all,none,1451
 8,2021-09-25,depress_A9,1.96,0.04,2.03,1.88,all,none,1456
+8,2021-10-23,depress_A1,2.33,0.04,2.41,2.26,all,none,1458
+8,2021-10-23,depress_A2,0.54,0.03,0.59,0.48,all,none,1462
+8,2021-10-23,depress_A3,0.98,0.03,1.04,0.93,all,none,1457
+8,2021-10-23,depress_A4,0.52,0.03,0.58,0.46,all,none,1455
+8,2021-10-23,depress_A5,2.22,0.04,2.29,2.14,all,none,1448
+8,2021-10-23,depress_A6,0.64,0.03,0.7,0.58,all,none,1451
+8,2021-10-23,depress_A7,0.54,0.03,0.6,0.49,all,none,1455
+8,2021-10-23,depress_A8,0.7,0.03,0.76,0.65,all,none,1453
+8,2021-10-23,depress_A9,1.88,0.04,1.95,1.81,all,none,1455
 9,2020-05-03,fin_ausk_akt,2.58,0.03,2.64,2.52,all,none,1501
 9,2020-05-09,fin_ausk_akt,2.54,0.03,2.61,2.48,all,none,1470
 9,2020-05-16,fin_ausk_akt,2.43,0.03,2.49,2.37,all,none,1450
@@ -846,6 +883,7 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 9,2021-05-22,fin_ausk_akt,2.47,0.03,2.54,2.41,all,none,1454
 9,2021-06-26,fin_ausk_akt,2.51,0.03,2.57,2.45,all,none,1465
 9,2021-09-25,fin_ausk_akt,2.48,0.03,2.54,2.41,all,none,1464
+9,2021-10-23,fin_ausk_akt,2.45,0.03,2.51,2.39,all,none,1466
 10,2020-03-28,dauer,2.8,0.03,2.86,2.74,all,none,1489
 10,2020-04-04,dauer,2.92,0.03,2.99,2.86,all,none,1505
 10,2020-04-11,dauer,3.09,0.03,3.15,3.03,all,none,1449
@@ -871,6 +909,7 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 10,2021-05-22,dauer,3.65,0.03,3.7,3.59,all,none,1399
 10,2021-06-26,dauer,3.65,0.03,3.71,3.6,all,none,1393
 10,2021-09-25,dauer,3.81,0.02,3.84,3.77,all,none,1366
+10,2021-10-23,dauer,3.83,0.02,3.86,3.8,all,none,1383
 1,2020-03-28,lebensz,6.4,0.1,6.6,6.19,ge,female,1528
 1,2020-03-28,lebensz,6.51,0.1,6.72,6.31,ge,male,1528
 1,2020-04-04,lebensz,6.32,0.11,6.54,6.11,ge,female,1534
@@ -921,6 +960,8 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 1,2021-06-26,lebensz,6.76,0.1,6.95,6.57,ge,male,1479
 1,2021-09-25,lebensz,6.61,0.1,6.81,6.41,ge,female,1480
 1,2021-09-25,lebensz,6.65,0.11,6.86,6.44,ge,male,1480
+1,2021-10-23,lebensz,6.63,0.1,6.83,6.43,ge,female,1487
+1,2021-10-23,lebensz,6.75,0.1,6.94,6.56,ge,male,1487
 2,2020-03-28,ver_gov,7.32,0.11,7.54,7.11,ge,female,1513
 2,2020-03-28,ver_gov,6.91,0.12,7.14,6.68,ge,male,1513
 2,2020-03-28,ver_ges,7.45,0.1,7.65,7.25,ge,female,1514
@@ -1159,6 +1200,16 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 2,2021-09-25,ver_pol,6.18,0.12,6.43,5.94,ge,male,1446
 2,2021-09-25,ver_orf,4.49,0.13,4.75,4.24,ge,female,1445
 2,2021-09-25,ver_orf,4.47,0.15,4.76,4.19,ge,male,1445
+2,2021-10-23,ver_gov,3.78,0.13,4.04,3.53,ge,female,1444
+2,2021-10-23,ver_gov,3.76,0.13,4.02,3.51,ge,male,1444
+2,2021-10-23,ver_ges,6.3,0.12,6.55,6.06,ge,female,1455
+2,2021-10-23,ver_ges,6.53,0.12,6.76,6.3,ge,male,1455
+2,2021-10-23,ver_par,3.97,0.13,4.22,3.73,ge,female,1443
+2,2021-10-23,ver_par,4.31,0.13,4.57,4.06,ge,male,1443
+2,2021-10-23,ver_pol,6.12,0.12,6.37,5.88,ge,female,1453
+2,2021-10-23,ver_pol,6.25,0.12,6.49,6.02,ge,male,1453
+2,2021-10-23,ver_orf,4.26,0.13,4.52,4,ge,female,1444
+2,2021-10-23,ver_orf,4.46,0.14,4.73,4.19,ge,male,1444
 3,2020-03-28,ges_per_gefahr,1.97,0.05,2.07,1.88,ge,female,1534
 3,2020-03-28,ges_per_gefahr,1.78,0.05,1.87,1.69,ge,male,1534
 3,2020-03-28,ges_pub_gefahr,2.83,0.04,2.9,2.76,ge,female,1534
@@ -1359,6 +1410,14 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 3,2021-09-25,wir_per_gefahr,1.65,0.05,1.76,1.55,ge,male,1491
 3,2021-09-25,wir_pub_gefahr,2.68,0.03,2.75,2.61,ge,female,1493
 3,2021-09-25,wir_pub_gefahr,2.48,0.05,2.57,2.39,ge,male,1493
+3,2021-10-23,ges_per_gefahr,1.47,0.05,1.56,1.37,ge,female,1502
+3,2021-10-23,ges_per_gefahr,1.24,0.04,1.32,1.15,ge,male,1502
+3,2021-10-23,ges_pub_gefahr,2.22,0.05,2.3,2.13,ge,female,1500
+3,2021-10-23,ges_pub_gefahr,2,0.05,2.09,1.91,ge,male,1500
+3,2021-10-23,wir_per_gefahr,1.86,0.05,1.95,1.76,ge,female,1499
+3,2021-10-23,wir_per_gefahr,1.65,0.05,1.75,1.55,ge,male,1499
+3,2021-10-23,wir_pub_gefahr,2.71,0.04,2.79,2.64,ge,female,1500
+3,2021-10-23,wir_pub_gefahr,2.48,0.04,2.55,2.4,ge,male,1500
 4,2020-03-28,demokratie,2.84,0.04,2.91,2.76,ge,female,1516
 4,2020-03-28,demokratie,2.7,0.04,2.78,2.61,ge,male,1516
 4,2020-03-28,blianz_reg,2.91,0.04,3,2.83,ge,female,1510
@@ -1507,6 +1566,16 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 4,2021-09-25,demokratie,2.04,0.05,2.14,1.94,ge,male,1462
 4,2021-09-25,blianz_reg,1.73,0.05,1.83,1.63,ge,female,1451
 4,2021-09-25,blianz_reg,1.61,0.06,1.72,1.5,ge,male,1451
+4,2021-10-23,demokratie,1.8,0.05,1.89,1.7,ge,female,1468
+4,2021-10-23,demokratie,1.87,0.05,1.97,1.77,ge,male,1468
+4,2021-10-23,blianz_reg,1.47,0.05,1.57,1.37,ge,female,1444
+4,2021-10-23,blianz_reg,1.36,0.05,1.46,1.27,ge,male,1444
+4,2021-10-23,zuf_reg_al,1.69,0.05,1.78,1.6,ge,female,1372
+4,2021-10-23,zuf_reg_al,1.79,0.05,1.88,1.69,ge,male,1372
+4,2021-10-23,zuf_reg_un,1.65,0.05,1.74,1.56,ge,female,1327
+4,2021-10-23,zuf_reg_un,1.65,0.05,1.75,1.56,ge,male,1327
+4,2021-10-23,zuf_reg_wi,1.92,0.04,2,1.83,ge,female,1356
+4,2021-10-23,zuf_reg_wi,1.97,0.05,2.06,1.87,ge,male,1356
 5,2020-03-28,wochentag,1.9,0.06,2.02,1.78,ge,female,1535
 5,2020-03-28,wochentag,1.45,0.06,1.56,1.33,ge,male,1535
 5,2020-03-28,kontakt,2.68,0.05,2.79,2.58,ge,female,1533
@@ -1975,6 +2044,28 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 5,2021-09-25,zus_einig,2.08,0.04,2.16,1.99,ge,male,1437
 5,2021-09-25,zus_schutzen,1.58,0.05,1.67,1.48,ge,female,1440
 5,2021-09-25,zus_schutzen,1.58,0.04,1.66,1.49,ge,male,1440
+5,2021-10-23,wochentag,1.17,0.06,1.28,1.06,ge,female,1482
+5,2021-10-23,wochentag,0.86,0.05,0.97,0.75,ge,male,1482
+5,2021-10-23,kontakt,1.35,0.06,1.46,1.24,ge,female,1477
+5,2021-10-23,kontakt,1.31,0.05,1.41,1.2,ge,male,1477
+5,2021-10-23,zeit,1.39,0.05,1.5,1.29,ge,female,1465
+5,2021-10-23,zeit,1.4,0.05,1.5,1.3,ge,male,1465
+5,2021-10-23,konflikt,0.8,0.05,0.91,0.69,ge,female,1476
+5,2021-10-23,konflikt,0.76,0.04,0.85,0.68,ge,male,1476
+5,2021-10-23,kinder,1.11,0.13,1.36,0.86,ge,female,274
+5,2021-10-23,kinder,1.19,0.13,1.45,0.93,ge,male,274
+5,2021-10-23,zusammenhalt,1.18,0.04,1.27,1.1,ge,female,1435
+5,2021-10-23,zusammenhalt,1.16,0.04,1.24,1.08,ge,male,1435
+5,2021-10-23,umweundklima,2.38,0.05,2.48,2.28,ge,female,1447
+5,2021-10-23,umweundklima,2.26,0.05,2.36,2.16,ge,male,1447
+5,2021-10-23,onlinekommun,2.27,0.05,2.36,2.18,ge,female,1407
+5,2021-10-23,onlinekommun,2.21,0.04,2.3,2.12,ge,male,1407
+5,2021-10-23,zus_bestes,1.9,0.05,2,1.81,ge,female,1452
+5,2021-10-23,zus_bestes,1.81,0.04,1.89,1.72,ge,male,1452
+5,2021-10-23,zus_einig,2.11,0.05,2.2,2.02,ge,female,1437
+5,2021-10-23,zus_einig,2.1,0.04,2.19,2.02,ge,male,1437
+5,2021-10-23,zus_schutzen,1.48,0.05,1.58,1.39,ge,female,1439
+5,2021-10-23,zus_schutzen,1.53,0.05,1.62,1.44,ge,male,1439
 6,2020-03-28,mas_angemessen,2.04,0.03,2.1,1.98,ge,female,1516
 6,2020-03-28,mas_angemessen,1.98,0.03,2.04,1.92,ge,male,1516
 6,2020-04-04,mas_angemessen,1.97,0.03,2.02,1.91,ge,female,1535
@@ -2025,6 +2116,8 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 6,2021-06-26,mas_angemessen,1.57,0.04,1.66,1.49,ge,male,1451
 6,2021-09-25,mas_angemessen,1.8,0.05,1.89,1.7,ge,female,1465
 6,2021-09-25,mas_angemessen,1.74,0.05,1.84,1.63,ge,male,1465
+6,2021-10-23,mas_angemessen,1.86,0.05,1.96,1.77,ge,female,1470
+6,2021-10-23,mas_angemessen,1.79,0.05,1.89,1.68,ge,male,1470
 7,2020-03-28,mas_effektiv,2.89,0.04,2.96,2.82,ge,female,1512
 7,2020-03-28,mas_effektiv,2.79,0.04,2.86,2.71,ge,male,1512
 7,2020-04-04,mas_effektiv,3.01,0.04,3.08,2.93,ge,female,1526
@@ -2075,6 +2168,8 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 7,2021-06-26,mas_effektiv,2.11,0.05,2.21,2.02,ge,male,1451
 7,2021-09-25,mas_effektiv,1.8,0.05,1.9,1.7,ge,female,1448
 7,2021-09-25,mas_effektiv,1.72,0.05,1.82,1.63,ge,male,1448
+7,2021-10-23,mas_effektiv,1.72,0.05,1.81,1.63,ge,female,1445
+7,2021-10-23,mas_effektiv,1.67,0.05,1.77,1.58,ge,male,1445
 8,2020-03-28,depress_A1,2.39,0.05,2.5,2.29,ge,female,1513
 8,2020-03-28,depress_A1,2.66,0.05,2.77,2.56,ge,male,1513
 8,2020-03-28,depress_A2,0.74,0.05,0.83,0.65,ge,female,1511
@@ -2525,6 +2620,24 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 8,2021-09-25,depress_A8,0.63,0.04,0.71,0.55,ge,male,1451
 8,2021-09-25,depress_A9,1.87,0.05,1.97,1.77,ge,female,1456
 8,2021-09-25,depress_A9,2.05,0.05,2.15,1.95,ge,male,1456
+8,2021-10-23,depress_A1,2.17,0.05,2.27,2.06,ge,female,1458
+8,2021-10-23,depress_A1,2.52,0.05,2.62,2.42,ge,male,1458
+8,2021-10-23,depress_A2,0.57,0.04,0.66,0.49,ge,female,1462
+8,2021-10-23,depress_A2,0.49,0.04,0.57,0.42,ge,male,1462
+8,2021-10-23,depress_A3,1.01,0.04,1.09,0.92,ge,female,1457
+8,2021-10-23,depress_A3,0.96,0.04,1.04,0.88,ge,male,1457
+8,2021-10-23,depress_A4,0.54,0.04,0.62,0.46,ge,female,1455
+8,2021-10-23,depress_A4,0.5,0.04,0.58,0.42,ge,male,1455
+8,2021-10-23,depress_A5,2.15,0.05,2.26,2.05,ge,female,1448
+8,2021-10-23,depress_A5,2.29,0.05,2.39,2.19,ge,male,1448
+8,2021-10-23,depress_A6,0.69,0.04,0.77,0.6,ge,female,1451
+8,2021-10-23,depress_A6,0.59,0.04,0.68,0.51,ge,male,1451
+8,2021-10-23,depress_A7,0.62,0.04,0.7,0.53,ge,female,1455
+8,2021-10-23,depress_A7,0.46,0.04,0.54,0.38,ge,male,1455
+8,2021-10-23,depress_A8,0.75,0.04,0.83,0.67,ge,female,1453
+8,2021-10-23,depress_A8,0.65,0.04,0.73,0.57,ge,male,1453
+8,2021-10-23,depress_A9,1.76,0.05,1.87,1.66,ge,female,1455
+8,2021-10-23,depress_A9,2,0.05,2.1,1.9,ge,male,1455
 9,2020-05-03,fin_ausk_akt,2.53,0.05,2.62,2.44,ge,female,1501
 9,2020-05-03,fin_ausk_akt,2.64,0.04,2.72,2.55,ge,male,1501
 9,2020-05-09,fin_ausk_akt,2.51,0.05,2.6,2.41,ge,female,1470
@@ -2565,6 +2678,8 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 9,2021-06-26,fin_ausk_akt,2.57,0.04,2.65,2.49,ge,male,1465
 9,2021-09-25,fin_ausk_akt,2.42,0.05,2.51,2.33,ge,female,1464
 9,2021-09-25,fin_ausk_akt,2.54,0.05,2.63,2.45,ge,male,1464
+9,2021-10-23,fin_ausk_akt,2.39,0.05,2.48,2.3,ge,female,1466
+9,2021-10-23,fin_ausk_akt,2.52,0.05,2.61,2.43,ge,male,1466
 10,2020-03-28,dauer,2.9,0.05,2.99,2.81,ge,female,1489
 10,2020-03-28,dauer,2.69,0.04,2.78,2.6,ge,male,1489
 10,2020-04-04,dauer,3.03,0.04,3.11,2.94,ge,female,1505
@@ -2615,6 +2730,8 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 10,2021-06-26,dauer,3.56,0.04,3.65,3.48,ge,male,1393
 10,2021-09-25,dauer,3.85,0.02,3.89,3.81,ge,female,1366
 10,2021-09-25,dauer,3.76,0.03,3.82,3.71,ge,male,1366
+10,2021-10-23,dauer,3.87,0.02,3.91,3.83,ge,female,1383
+10,2021-10-23,dauer,3.8,0.02,3.84,3.75,ge,male,1383
 1,2020-03-28,lebensz,6.31,0.15,6.6,6.01,ag,<30,1528
 1,2020-03-28,lebensz,6.44,0.1,6.64,6.25,ag,30-59,1528
 1,2020-03-28,lebensz,6.58,0.15,6.88,6.29,ag,>60,1528
@@ -2690,6 +2807,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 1,2021-09-25,lebensz,6.45,0.16,6.75,6.14,ag,<30,1480
 1,2021-09-25,lebensz,6.65,0.1,6.84,6.46,ag,30-59,1480
 1,2021-09-25,lebensz,6.7,0.16,7.01,6.39,ag,>60,1480
+1,2021-10-23,lebensz,6.59,0.14,6.87,6.31,ag,<30,1487
+1,2021-10-23,lebensz,6.63,0.1,6.83,6.44,ag,30-59,1487
+1,2021-10-23,lebensz,6.84,0.14,7.11,6.57,ag,>60,1487
 2,2020-03-28,ver_gov,6.86,0.17,7.19,6.53,ag,<30,1513
 2,2020-03-28,ver_gov,6.99,0.11,7.2,6.78,ag,30-59,1513
 2,2020-03-28,ver_gov,7.5,0.16,7.82,7.18,ag,>60,1513
@@ -3047,6 +3167,21 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 2,2021-09-25,ver_orf,4.71,0.19,5.08,4.34,ag,<30,1445
 2,2021-09-25,ver_orf,4.13,0.14,4.39,3.86,ag,30-59,1445
 2,2021-09-25,ver_orf,4.95,0.19,5.32,4.58,ag,>60,1445
+2,2021-10-23,ver_gov,4.1,0.18,4.44,3.75,ag,<30,1444
+2,2021-10-23,ver_gov,3.53,0.12,3.77,3.29,ag,30-59,1444
+2,2021-10-23,ver_gov,3.94,0.2,4.32,3.56,ag,>60,1444
+2,2021-10-23,ver_ges,6.49,0.15,6.79,6.18,ag,<30,1455
+2,2021-10-23,ver_ges,6.28,0.12,6.52,6.04,ag,30-59,1455
+2,2021-10-23,ver_ges,6.62,0.16,6.94,6.3,ag,>60,1455
+2,2021-10-23,ver_par,4.56,0.17,4.9,4.23,ag,<30,1443
+2,2021-10-23,ver_par,3.92,0.12,4.16,3.68,ag,30-59,1443
+2,2021-10-23,ver_par,4.25,0.19,4.62,3.88,ag,>60,1443
+2,2021-10-23,ver_pol,5.79,0.17,6.13,5.46,ag,<30,1453
+2,2021-10-23,ver_pol,5.94,0.12,6.18,5.7,ag,30-59,1453
+2,2021-10-23,ver_pol,6.88,0.16,7.2,6.56,ag,>60,1453
+2,2021-10-23,ver_orf,4.87,0.17,5.2,4.54,ag,<30,1444
+2,2021-10-23,ver_orf,4.06,0.13,4.32,3.81,ag,30-59,1444
+2,2021-10-23,ver_orf,4.53,0.2,4.91,4.14,ag,>60,1444
 3,2020-03-28,ges_per_gefahr,1.36,0.07,1.49,1.23,ag,<30,1534
 3,2020-03-28,ges_per_gefahr,1.9,0.04,1.99,1.81,ag,30-59,1534
 3,2020-03-28,ges_per_gefahr,2.21,0.07,2.34,2.08,ag,>60,1534
@@ -3347,6 +3482,18 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 3,2021-09-25,wir_pub_gefahr,2.73,0.06,2.85,2.6,ag,<30,1493
 3,2021-09-25,wir_pub_gefahr,2.57,0.04,2.65,2.5,ag,30-59,1493
 3,2021-09-25,wir_pub_gefahr,2.49,0.05,2.59,2.38,ag,>60,1493
+3,2021-10-23,ges_per_gefahr,1.45,0.07,1.58,1.32,ag,<30,1502
+3,2021-10-23,ges_per_gefahr,1.4,0.05,1.49,1.31,ag,30-59,1502
+3,2021-10-23,ges_per_gefahr,1.21,0.06,1.33,1.09,ag,>60,1502
+3,2021-10-23,ges_pub_gefahr,2.08,0.07,2.21,1.95,ag,<30,1500
+3,2021-10-23,ges_pub_gefahr,2.05,0.05,2.14,1.96,ag,30-59,1500
+3,2021-10-23,ges_pub_gefahr,2.24,0.06,2.35,2.12,ag,>60,1500
+3,2021-10-23,wir_per_gefahr,1.79,0.07,1.93,1.65,ag,<30,1499
+3,2021-10-23,wir_per_gefahr,1.94,0.05,2.04,1.84,ag,30-59,1499
+3,2021-10-23,wir_per_gefahr,1.42,0.07,1.55,1.29,ag,>60,1499
+3,2021-10-23,wir_pub_gefahr,2.61,0.06,2.73,2.49,ag,<30,1500
+3,2021-10-23,wir_pub_gefahr,2.62,0.04,2.7,2.54,ag,30-59,1500
+3,2021-10-23,wir_pub_gefahr,2.57,0.04,2.65,2.48,ag,>60,1500
 4,2020-03-28,demokratie,2.63,0.06,2.75,2.52,ag,<30,1516
 4,2020-03-28,demokratie,2.72,0.04,2.8,2.64,ag,30-59,1516
 4,2020-03-28,demokratie,2.93,0.05,3.04,2.82,ag,>60,1516
@@ -3569,6 +3716,21 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 4,2021-09-25,blianz_reg,1.71,0.07,1.84,1.58,ag,<30,1451
 4,2021-09-25,blianz_reg,1.63,0.05,1.73,1.53,ag,30-59,1451
 4,2021-09-25,blianz_reg,1.71,0.08,1.86,1.55,ag,>60,1451
+4,2021-10-23,demokratie,1.98,0.06,2.1,1.85,ag,<30,1468
+4,2021-10-23,demokratie,1.79,0.05,1.88,1.69,ag,30-59,1468
+4,2021-10-23,demokratie,1.81,0.07,1.95,1.67,ag,>60,1468
+4,2021-10-23,blianz_reg,1.55,0.07,1.7,1.41,ag,<30,1444
+4,2021-10-23,blianz_reg,1.35,0.05,1.45,1.26,ag,30-59,1444
+4,2021-10-23,blianz_reg,1.43,0.07,1.57,1.29,ag,>60,1444
+4,2021-10-23,zuf_reg_al,1.74,0.07,1.88,1.6,ag,<30,1372
+4,2021-10-23,zuf_reg_al,1.71,0.04,1.79,1.62,ag,30-59,1372
+4,2021-10-23,zuf_reg_al,1.79,0.07,1.92,1.66,ag,>60,1372
+4,2021-10-23,zuf_reg_un,1.7,0.07,1.84,1.55,ag,<30,1327
+4,2021-10-23,zuf_reg_un,1.6,0.05,1.7,1.51,ag,30-59,1327
+4,2021-10-23,zuf_reg_un,1.71,0.06,1.83,1.59,ag,>60,1327
+4,2021-10-23,zuf_reg_wi,1.89,0.07,2.02,1.75,ag,<30,1356
+4,2021-10-23,zuf_reg_wi,1.89,0.05,1.98,1.8,ag,30-59,1356
+4,2021-10-23,zuf_reg_wi,2.07,0.06,2.19,1.95,ag,>60,1356
 5,2020-03-28,wochentag,2.23,0.09,2.41,2.05,ag,<30,1535
 5,2020-03-28,wochentag,1.65,0.06,1.76,1.54,ag,30-59,1535
 5,2020-03-28,wochentag,1.33,0.08,1.49,1.16,ag,>60,1535
@@ -4271,6 +4433,39 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 5,2021-09-25,zus_schutzen,1.63,0.07,1.76,1.51,ag,<30,1440
 5,2021-09-25,zus_schutzen,1.52,0.05,1.61,1.43,ag,30-59,1440
 5,2021-09-25,zus_schutzen,1.63,0.06,1.75,1.52,ag,>60,1440
+5,2021-10-23,wochentag,1.43,0.09,1.61,1.24,ag,<30,1482
+5,2021-10-23,wochentag,0.92,0.05,1.02,0.82,ag,30-59,1482
+5,2021-10-23,wochentag,0.91,0.08,1.06,0.76,ag,>60,1482
+5,2021-10-23,kontakt,1.3,0.08,1.45,1.15,ag,<30,1477
+5,2021-10-23,kontakt,1.28,0.05,1.39,1.17,ag,30-59,1477
+5,2021-10-23,kontakt,1.43,0.08,1.58,1.28,ag,>60,1477
+5,2021-10-23,zeit,1.48,0.08,1.63,1.32,ag,<30,1465
+5,2021-10-23,zeit,1.34,0.05,1.44,1.24,ag,30-59,1465
+5,2021-10-23,zeit,1.45,0.08,1.6,1.3,ag,>60,1465
+5,2021-10-23,konflikt,1.2,0.08,1.35,1.05,ag,<30,1476
+5,2021-10-23,konflikt,0.79,0.05,0.89,0.69,ag,30-59,1476
+5,2021-10-23,konflikt,0.46,0.05,0.56,0.36,ag,>60,1476
+5,2021-10-23,kinder,1.25,0.21,1.66,0.83,ag,<30,274
+5,2021-10-23,kinder,1.15,0.1,1.36,0.95,ag,30-59,274
+5,2021-10-23,kinder,0,0,0,0,ag,>60,274
+5,2021-10-23,zusammenhalt,1.39,0.07,1.53,1.25,ag,<30,1435
+5,2021-10-23,zusammenhalt,1.09,0.04,1.17,1,ag,30-59,1435
+5,2021-10-23,zusammenhalt,1.15,0.05,1.26,1.05,ag,>60,1435
+5,2021-10-23,umweundklima,2.43,0.08,2.58,2.28,ag,<30,1447
+5,2021-10-23,umweundklima,2.28,0.05,2.38,2.18,ag,30-59,1447
+5,2021-10-23,umweundklima,2.32,0.07,2.45,2.19,ag,>60,1447
+5,2021-10-23,onlinekommun,2.28,0.07,2.42,2.14,ag,<30,1407
+5,2021-10-23,onlinekommun,2.2,0.05,2.29,2.11,ag,30-59,1407
+5,2021-10-23,onlinekommun,2.28,0.05,2.39,2.18,ag,>60,1407
+5,2021-10-23,zus_bestes,1.9,0.07,2.03,1.77,ag,<30,1452
+5,2021-10-23,zus_bestes,1.77,0.04,1.85,1.68,ag,30-59,1452
+5,2021-10-23,zus_bestes,1.98,0.06,2.11,1.86,ag,>60,1452
+5,2021-10-23,zus_einig,2.12,0.06,2.25,2,ag,<30,1437
+5,2021-10-23,zus_einig,2.04,0.04,2.12,1.96,ag,30-59,1437
+5,2021-10-23,zus_einig,2.21,0.06,2.33,2.08,ag,>60,1437
+5,2021-10-23,zus_schutzen,1.61,0.07,1.75,1.47,ag,<30,1439
+5,2021-10-23,zus_schutzen,1.44,0.05,1.53,1.35,ag,30-59,1439
+5,2021-10-23,zus_schutzen,1.55,0.07,1.68,1.42,ag,>60,1439
 6,2020-03-28,mas_angemessen,2.03,0.04,2.11,1.95,ag,<30,1516
 6,2020-03-28,mas_angemessen,2.01,0.03,2.07,1.95,ag,30-59,1516
 6,2020-03-28,mas_angemessen,2.01,0.04,2.09,1.93,ag,>60,1516
@@ -4346,6 +4541,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 6,2021-09-25,mas_angemessen,1.72,0.07,1.85,1.58,ag,<30,1465
 6,2021-09-25,mas_angemessen,1.7,0.05,1.8,1.6,ag,30-59,1465
 6,2021-09-25,mas_angemessen,1.93,0.07,2.07,1.79,ag,>60,1465
+6,2021-10-23,mas_angemessen,1.81,0.07,1.93,1.68,ag,<30,1470
+6,2021-10-23,mas_angemessen,1.73,0.05,1.83,1.63,ag,30-59,1470
+6,2021-10-23,mas_angemessen,2.02,0.07,2.16,1.88,ag,>60,1470
 7,2020-03-28,mas_effektiv,2.75,0.05,2.85,2.65,ag,<30,1512
 7,2020-03-28,mas_effektiv,2.79,0.04,2.86,2.72,ag,30-59,1512
 7,2020-03-28,mas_effektiv,2.98,0.06,3.09,2.87,ag,>60,1512
@@ -4421,6 +4619,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 7,2021-09-25,mas_effektiv,1.98,0.06,2.09,1.86,ag,<30,1448
 7,2021-09-25,mas_effektiv,1.67,0.05,1.76,1.58,ag,30-59,1448
 7,2021-09-25,mas_effektiv,1.77,0.08,1.92,1.62,ag,>60,1448
+7,2021-10-23,mas_effektiv,1.94,0.06,2.06,1.81,ag,<30,1445
+7,2021-10-23,mas_effektiv,1.58,0.04,1.67,1.5,ag,30-59,1445
+7,2021-10-23,mas_effektiv,1.72,0.07,1.86,1.58,ag,>60,1445
 8,2020-03-28,depress_A1,2.38,0.08,2.53,2.23,ag,<30,1513
 8,2020-03-28,depress_A1,2.51,0.05,2.6,2.41,ag,30-59,1513
 8,2020-03-28,depress_A1,2.65,0.08,2.81,2.48,ag,>60,1513
@@ -5096,6 +5297,33 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 8,2021-09-25,depress_A9,1.94,0.07,2.08,1.8,ag,<30,1456
 8,2021-09-25,depress_A9,1.89,0.05,1.99,1.8,ag,30-59,1456
 8,2021-09-25,depress_A9,2.07,0.08,2.23,1.92,ag,>60,1456
+8,2021-10-23,depress_A1,2.22,0.07,2.36,2.08,ag,<30,1458
+8,2021-10-23,depress_A1,2.25,0.05,2.35,2.14,ag,30-59,1458
+8,2021-10-23,depress_A1,2.57,0.07,2.72,2.43,ag,>60,1458
+8,2021-10-23,depress_A2,0.95,0.08,1.1,0.8,ag,<30,1462
+8,2021-10-23,depress_A2,0.48,0.04,0.56,0.41,ag,30-59,1462
+8,2021-10-23,depress_A2,0.34,0.05,0.44,0.25,ag,>60,1462
+8,2021-10-23,depress_A3,1.31,0.07,1.45,1.18,ag,<30,1457
+8,2021-10-23,depress_A3,1.03,0.04,1.11,0.95,ag,30-59,1457
+8,2021-10-23,depress_A3,0.67,0.04,0.75,0.58,ag,>60,1457
+8,2021-10-23,depress_A4,0.9,0.08,1.05,0.75,ag,<30,1455
+8,2021-10-23,depress_A4,0.52,0.04,0.59,0.44,ag,30-59,1455
+8,2021-10-23,depress_A4,0.25,0.05,0.34,0.15,ag,>60,1455
+8,2021-10-23,depress_A5,2.25,0.08,2.4,2.09,ag,<30,1448
+8,2021-10-23,depress_A5,2.2,0.05,2.3,2.1,ag,30-59,1448
+8,2021-10-23,depress_A5,2.23,0.08,2.38,2.08,ag,>60,1448
+8,2021-10-23,depress_A6,1.03,0.08,1.18,0.88,ag,<30,1451
+8,2021-10-23,depress_A6,0.65,0.04,0.73,0.56,ag,30-59,1451
+8,2021-10-23,depress_A6,0.36,0.04,0.44,0.28,ag,>60,1451
+8,2021-10-23,depress_A7,0.95,0.08,1.1,0.8,ag,<30,1455
+8,2021-10-23,depress_A7,0.52,0.04,0.6,0.44,ag,30-59,1455
+8,2021-10-23,depress_A7,0.3,0.04,0.38,0.22,ag,>60,1455
+8,2021-10-23,depress_A8,1.11,0.07,1.24,0.97,ag,<30,1453
+8,2021-10-23,depress_A8,0.71,0.04,0.79,0.63,ag,30-59,1453
+8,2021-10-23,depress_A8,0.4,0.04,0.47,0.33,ag,>60,1453
+8,2021-10-23,depress_A9,1.76,0.07,1.9,1.62,ag,<30,1455
+8,2021-10-23,depress_A9,1.87,0.05,1.97,1.77,ag,30-59,1455
+8,2021-10-23,depress_A9,1.99,0.07,2.13,1.84,ag,>60,1455
 9,2020-05-03,fin_ausk_akt,2.64,0.07,2.78,2.5,ag,<30,1501
 9,2020-05-03,fin_ausk_akt,2.45,0.04,2.54,2.37,ag,30-59,1501
 9,2020-05-03,fin_ausk_akt,2.77,0.06,2.88,2.66,ag,>60,1501
@@ -5156,6 +5384,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 9,2021-09-25,fin_ausk_akt,2.53,0.07,2.66,2.4,ag,<30,1464
 9,2021-09-25,fin_ausk_akt,2.35,0.05,2.44,2.26,ag,30-59,1464
 9,2021-09-25,fin_ausk_akt,2.66,0.06,2.77,2.54,ag,>60,1464
+9,2021-10-23,fin_ausk_akt,2.49,0.07,2.61,2.36,ag,<30,1466
+9,2021-10-23,fin_ausk_akt,2.36,0.05,2.45,2.26,ag,30-59,1466
+9,2021-10-23,fin_ausk_akt,2.59,0.06,2.7,2.48,ag,>60,1466
 10,2020-03-28,dauer,2.54,0.07,2.67,2.41,ag,<30,1489
 10,2020-03-28,dauer,2.89,0.04,2.97,2.8,ag,30-59,1489
 10,2020-03-28,dauer,2.83,0.07,2.96,2.7,ag,>60,1489
@@ -5231,6 +5462,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 10,2021-09-25,dauer,3.53,0.05,3.63,3.42,ag,<30,1366
 10,2021-09-25,dauer,3.86,0.02,3.9,3.81,ag,30-59,1366
 10,2021-09-25,dauer,3.93,0.02,3.97,3.89,ag,>60,1366
+10,2021-10-23,dauer,3.6,0.05,3.7,3.5,ag,<30,1383
+10,2021-10-23,dauer,3.87,0.02,3.91,3.83,ag,30-59,1383
+10,2021-10-23,dauer,3.94,0.02,3.97,3.91,ag,>60,1383
 1,2020-03-28,lebensz,6.23,0.15,6.53,5.93,ed,primary,1528
 1,2020-03-28,lebensz,6.48,0.1,6.68,6.27,ed,Lehre,1528
 1,2020-03-28,lebensz,6.5,0.16,6.81,6.19,ed,secondary,1528
@@ -5331,6 +5565,10 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 1,2021-09-25,lebensz,6.59,0.1,6.79,6.38,ed,Lehre,1480
 1,2021-09-25,lebensz,6.59,0.15,6.88,6.3,ed,secondary,1480
 1,2021-09-25,lebensz,7.09,0.18,7.44,6.74,ed,tertiary,1480
+1,2021-10-23,lebensz,6.52,0.15,6.83,6.22,ed,primary,1487
+1,2021-10-23,lebensz,6.69,0.1,6.88,6.5,ed,Lehre,1487
+1,2021-10-23,lebensz,6.73,0.15,7.01,6.44,ed,secondary,1487
+1,2021-10-23,lebensz,7.14,0.17,7.47,6.82,ed,tertiary,1487
 2,2020-03-28,ver_gov,7.17,0.16,7.49,6.85,ed,primary,1513
 2,2020-03-28,ver_gov,6.96,0.12,7.19,6.73,ed,Lehre,1513
 2,2020-03-28,ver_gov,7.17,0.15,7.46,6.87,ed,secondary,1513
@@ -5807,6 +6045,26 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 2,2021-09-25,ver_orf,4.04,0.13,4.3,3.78,ed,Lehre,1445
 2,2021-09-25,ver_orf,4.7,0.19,5.08,4.31,ed,secondary,1445
 2,2021-09-25,ver_orf,5.38,0.24,5.86,4.91,ed,tertiary,1445
+2,2021-10-23,ver_gov,4.04,0.21,4.44,3.64,ed,primary,1444
+2,2021-10-23,ver_gov,3.34,0.13,3.59,3.1,ed,Lehre,1444
+2,2021-10-23,ver_gov,3.96,0.17,4.29,3.63,ed,secondary,1444
+2,2021-10-23,ver_gov,4.04,0.25,4.53,3.55,ed,tertiary,1444
+2,2021-10-23,ver_ges,6.52,0.19,6.89,6.15,ed,primary,1455
+2,2021-10-23,ver_ges,6.19,0.12,6.41,5.96,ed,Lehre,1455
+2,2021-10-23,ver_ges,6.46,0.16,6.78,6.13,ed,secondary,1455
+2,2021-10-23,ver_ges,7.08,0.2,7.46,6.69,ed,tertiary,1455
+2,2021-10-23,ver_par,4.22,0.2,4.62,3.82,ed,primary,1443
+2,2021-10-23,ver_par,3.68,0.12,3.91,3.45,ed,Lehre,1443
+2,2021-10-23,ver_par,4.38,0.17,4.71,4.06,ed,secondary,1443
+2,2021-10-23,ver_par,5.03,0.24,5.51,4.55,ed,tertiary,1443
+2,2021-10-23,ver_pol,6.26,0.19,6.64,5.88,ed,primary,1453
+2,2021-10-23,ver_pol,6.26,0.12,6.5,6.02,ed,Lehre,1453
+2,2021-10-23,ver_pol,5.91,0.16,6.23,5.58,ed,secondary,1453
+2,2021-10-23,ver_pol,6.5,0.22,6.93,6.08,ed,tertiary,1453
+2,2021-10-23,ver_orf,4.52,0.21,4.93,4.11,ed,primary,1444
+2,2021-10-23,ver_orf,3.65,0.13,3.9,3.4,ed,Lehre,1444
+2,2021-10-23,ver_orf,4.68,0.19,5.04,4.31,ed,secondary,1444
+2,2021-10-23,ver_orf,5.56,0.23,6.01,5.11,ed,tertiary,1444
 3,2020-03-28,ges_per_gefahr,1.89,0.07,2.03,1.75,ed,primary,1534
 3,2020-03-28,ges_per_gefahr,2.08,0.05,2.17,1.99,ed,Lehre,1534
 3,2020-03-28,ges_per_gefahr,1.68,0.06,1.8,1.55,ed,secondary,1534
@@ -6207,6 +6465,22 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 3,2021-09-25,wir_pub_gefahr,2.59,0.04,2.67,2.52,ed,Lehre,1493
 3,2021-09-25,wir_pub_gefahr,2.57,0.05,2.67,2.47,ed,secondary,1493
 3,2021-09-25,wir_pub_gefahr,2.6,0.07,2.74,2.46,ed,tertiary,1493
+3,2021-10-23,ges_per_gefahr,1.37,0.07,1.52,1.23,ed,primary,1502
+3,2021-10-23,ges_per_gefahr,1.32,0.04,1.4,1.23,ed,Lehre,1502
+3,2021-10-23,ges_per_gefahr,1.38,0.06,1.5,1.25,ed,secondary,1502
+3,2021-10-23,ges_per_gefahr,1.38,0.08,1.53,1.23,ed,tertiary,1502
+3,2021-10-23,ges_pub_gefahr,2.08,0.07,2.23,1.94,ed,primary,1500
+3,2021-10-23,ges_pub_gefahr,2.11,0.04,2.19,2.03,ed,Lehre,1500
+3,2021-10-23,ges_pub_gefahr,2.12,0.06,2.25,2,ed,secondary,1500
+3,2021-10-23,ges_pub_gefahr,2.17,0.07,2.31,2.03,ed,tertiary,1500
+3,2021-10-23,wir_per_gefahr,1.71,0.08,1.86,1.57,ed,primary,1499
+3,2021-10-23,wir_per_gefahr,1.81,0.05,1.9,1.71,ed,Lehre,1499
+3,2021-10-23,wir_per_gefahr,1.78,0.07,1.91,1.65,ed,secondary,1499
+3,2021-10-23,wir_per_gefahr,1.6,0.1,1.81,1.4,ed,tertiary,1499
+3,2021-10-23,wir_pub_gefahr,2.61,0.06,2.73,2.49,ed,primary,1500
+3,2021-10-23,wir_pub_gefahr,2.61,0.04,2.68,2.54,ed,Lehre,1500
+3,2021-10-23,wir_pub_gefahr,2.59,0.05,2.7,2.49,ed,secondary,1500
+3,2021-10-23,wir_pub_gefahr,2.51,0.07,2.66,2.37,ed,tertiary,1500
 4,2020-03-28,demokratie,2.71,0.06,2.83,2.6,ed,primary,1516
 4,2020-03-28,demokratie,2.72,0.04,2.8,2.65,ed,Lehre,1516
 4,2020-03-28,demokratie,2.82,0.06,2.93,2.7,ed,secondary,1516
@@ -6503,6 +6777,26 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 4,2021-09-25,blianz_reg,1.58,0.05,1.68,1.47,ed,Lehre,1451
 4,2021-09-25,blianz_reg,1.68,0.07,1.82,1.54,ed,secondary,1451
 4,2021-09-25,blianz_reg,1.73,0.1,1.93,1.54,ed,tertiary,1451
+4,2021-10-23,demokratie,1.92,0.07,2.07,1.77,ed,primary,1468
+4,2021-10-23,demokratie,1.7,0.05,1.8,1.6,ed,Lehre,1468
+4,2021-10-23,demokratie,1.89,0.07,2.02,1.75,ed,secondary,1468
+4,2021-10-23,demokratie,1.98,0.1,2.17,1.78,ed,tertiary,1468
+4,2021-10-23,blianz_reg,1.44,0.08,1.59,1.29,ed,primary,1444
+4,2021-10-23,blianz_reg,1.34,0.05,1.44,1.24,ed,Lehre,1444
+4,2021-10-23,blianz_reg,1.54,0.07,1.68,1.4,ed,secondary,1444
+4,2021-10-23,blianz_reg,1.45,0.09,1.63,1.27,ed,tertiary,1444
+4,2021-10-23,zuf_reg_al,1.76,0.07,1.9,1.62,ed,primary,1372
+4,2021-10-23,zuf_reg_al,1.64,0.05,1.73,1.55,ed,Lehre,1372
+4,2021-10-23,zuf_reg_al,1.82,0.06,1.94,1.69,ed,secondary,1372
+4,2021-10-23,zuf_reg_al,1.91,0.09,2.09,1.73,ed,tertiary,1372
+4,2021-10-23,zuf_reg_un,1.67,0.07,1.82,1.53,ed,primary,1327
+4,2021-10-23,zuf_reg_un,1.58,0.05,1.67,1.48,ed,Lehre,1327
+4,2021-10-23,zuf_reg_un,1.67,0.06,1.8,1.55,ed,secondary,1327
+4,2021-10-23,zuf_reg_un,1.81,0.09,1.99,1.62,ed,tertiary,1327
+4,2021-10-23,zuf_reg_wi,1.99,0.07,2.14,1.85,ed,primary,1356
+4,2021-10-23,zuf_reg_wi,1.88,0.04,1.96,1.79,ed,Lehre,1356
+4,2021-10-23,zuf_reg_wi,1.91,0.06,2.01,1.8,ed,secondary,1356
+4,2021-10-23,zuf_reg_wi,2.09,0.09,2.26,1.92,ed,tertiary,1356
 5,2020-03-28,wochentag,1.75,0.09,1.93,1.58,ed,primary,1535
 5,2020-03-28,wochentag,1.5,0.06,1.61,1.39,ed,Lehre,1535
 5,2020-03-28,wochentag,1.81,0.09,1.98,1.64,ed,secondary,1535
@@ -7439,6 +7733,50 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 5,2021-09-25,zus_schutzen,1.62,0.04,1.7,1.53,ed,Lehre,1440
 5,2021-09-25,zus_schutzen,1.44,0.06,1.55,1.33,ed,secondary,1440
 5,2021-09-25,zus_schutzen,1.51,0.09,1.68,1.34,ed,tertiary,1440
+5,2021-10-23,wochentag,1.17,0.09,1.34,0.99,ed,primary,1482
+5,2021-10-23,wochentag,0.99,0.05,1.09,0.89,ed,Lehre,1482
+5,2021-10-23,wochentag,0.96,0.07,1.1,0.81,ed,secondary,1482
+5,2021-10-23,wochentag,0.83,0.1,1.02,0.64,ed,tertiary,1482
+5,2021-10-23,kontakt,1.35,0.08,1.51,1.18,ed,primary,1477
+5,2021-10-23,kontakt,1.39,0.05,1.5,1.28,ed,Lehre,1477
+5,2021-10-23,kontakt,1.3,0.07,1.44,1.16,ed,secondary,1477
+5,2021-10-23,kontakt,1.13,0.11,1.34,0.91,ed,tertiary,1477
+5,2021-10-23,zeit,1.46,0.09,1.62,1.29,ed,primary,1465
+5,2021-10-23,zeit,1.41,0.05,1.5,1.31,ed,Lehre,1465
+5,2021-10-23,zeit,1.4,0.07,1.54,1.26,ed,secondary,1465
+5,2021-10-23,zeit,1.28,0.09,1.46,1.1,ed,tertiary,1465
+5,2021-10-23,konflikt,0.8,0.08,0.95,0.64,ed,primary,1476
+5,2021-10-23,konflikt,0.73,0.04,0.82,0.64,ed,Lehre,1476
+5,2021-10-23,konflikt,0.84,0.07,0.97,0.71,ed,secondary,1476
+5,2021-10-23,konflikt,0.81,0.1,1,0.62,ed,tertiary,1476
+5,2021-10-23,kinder,1.04,0.23,1.49,0.6,ed,primary,274
+5,2021-10-23,kinder,1.12,0.12,1.36,0.89,ed,Lehre,274
+5,2021-10-23,kinder,1.24,0.17,1.58,0.9,ed,secondary,274
+5,2021-10-23,kinder,1.37,0.22,1.8,0.94,ed,tertiary,274
+5,2021-10-23,zusammenhalt,1.21,0.07,1.34,1.08,ed,primary,1435
+5,2021-10-23,zusammenhalt,1.2,0.04,1.28,1.11,ed,Lehre,1435
+5,2021-10-23,zusammenhalt,1.16,0.06,1.28,1.04,ed,secondary,1435
+5,2021-10-23,zusammenhalt,1.09,0.08,1.25,0.93,ed,tertiary,1435
+5,2021-10-23,umweundklima,2.41,0.08,2.56,2.26,ed,primary,1447
+5,2021-10-23,umweundklima,2.24,0.05,2.34,2.15,ed,Lehre,1447
+5,2021-10-23,umweundklima,2.3,0.07,2.43,2.17,ed,secondary,1447
+5,2021-10-23,umweundklima,2.38,0.1,2.57,2.19,ed,tertiary,1447
+5,2021-10-23,onlinekommun,2.24,0.07,2.39,2.1,ed,primary,1407
+5,2021-10-23,onlinekommun,2.17,0.04,2.25,2.09,ed,Lehre,1407
+5,2021-10-23,onlinekommun,2.24,0.06,2.36,2.12,ed,secondary,1407
+5,2021-10-23,onlinekommun,2.49,0.09,2.66,2.32,ed,tertiary,1407
+5,2021-10-23,zus_bestes,1.97,0.07,2.11,1.84,ed,primary,1452
+5,2021-10-23,zus_bestes,1.87,0.05,1.96,1.78,ed,Lehre,1452
+5,2021-10-23,zus_bestes,1.73,0.06,1.86,1.61,ed,secondary,1452
+5,2021-10-23,zus_bestes,1.71,0.08,1.86,1.56,ed,tertiary,1452
+5,2021-10-23,zus_einig,2.18,0.07,2.31,2.04,ed,primary,1437
+5,2021-10-23,zus_einig,2.11,0.04,2.19,2.02,ed,Lehre,1437
+5,2021-10-23,zus_einig,2.01,0.06,2.14,1.89,ed,secondary,1437
+5,2021-10-23,zus_einig,2.1,0.09,2.26,1.93,ed,tertiary,1437
+5,2021-10-23,zus_schutzen,1.54,0.08,1.69,1.39,ed,primary,1439
+5,2021-10-23,zus_schutzen,1.55,0.05,1.64,1.46,ed,Lehre,1439
+5,2021-10-23,zus_schutzen,1.43,0.06,1.55,1.31,ed,secondary,1439
+5,2021-10-23,zus_schutzen,1.49,0.09,1.66,1.32,ed,tertiary,1439
 6,2020-03-28,mas_angemessen,2.06,0.05,2.15,1.97,ed,primary,1516
 6,2020-03-28,mas_angemessen,2.05,0.03,2.11,1.99,ed,Lehre,1516
 6,2020-03-28,mas_angemessen,1.96,0.04,2.04,1.88,ed,secondary,1516
@@ -7539,6 +7877,10 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 6,2021-09-25,mas_angemessen,1.67,0.05,1.77,1.57,ed,Lehre,1465
 6,2021-09-25,mas_angemessen,1.73,0.07,1.87,1.59,ed,secondary,1465
 6,2021-09-25,mas_angemessen,1.84,0.09,2.02,1.67,ed,tertiary,1465
+6,2021-10-23,mas_angemessen,1.87,0.08,2.03,1.72,ed,primary,1470
+6,2021-10-23,mas_angemessen,1.75,0.05,1.86,1.65,ed,Lehre,1470
+6,2021-10-23,mas_angemessen,1.87,0.07,2,1.73,ed,secondary,1470
+6,2021-10-23,mas_angemessen,1.89,0.09,2.07,1.7,ed,tertiary,1470
 7,2020-03-28,mas_effektiv,2.82,0.06,2.93,2.71,ed,primary,1512
 7,2020-03-28,mas_effektiv,2.81,0.04,2.88,2.73,ed,Lehre,1512
 7,2020-03-28,mas_effektiv,2.85,0.05,2.94,2.75,ed,secondary,1512
@@ -7639,6 +7981,10 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 7,2021-09-25,mas_effektiv,1.72,0.05,1.81,1.63,ed,Lehre,1448
 7,2021-09-25,mas_effektiv,1.8,0.06,1.92,1.68,ed,secondary,1448
 7,2021-09-25,mas_effektiv,1.79,0.08,1.94,1.65,ed,tertiary,1448
+7,2021-10-23,mas_effektiv,1.73,0.08,1.88,1.58,ed,primary,1445
+7,2021-10-23,mas_effektiv,1.62,0.04,1.71,1.54,ed,Lehre,1445
+7,2021-10-23,mas_effektiv,1.75,0.06,1.87,1.63,ed,secondary,1445
+7,2021-10-23,mas_effektiv,1.75,0.08,1.9,1.6,ed,tertiary,1445
 8,2020-03-28,depress_A1,2.42,0.08,2.59,2.26,ed,primary,1513
 8,2020-03-28,depress_A1,2.54,0.05,2.64,2.43,ed,Lehre,1513
 8,2020-03-28,depress_A1,2.55,0.08,2.69,2.4,ed,secondary,1513
@@ -8539,6 +8885,42 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 8,2021-09-25,depress_A9,2.02,0.05,2.12,1.93,ed,Lehre,1456
 8,2021-09-25,depress_A9,2.04,0.07,2.18,1.9,ed,secondary,1456
 8,2021-09-25,depress_A9,1.98,0.09,2.15,1.8,ed,tertiary,1456
+8,2021-10-23,depress_A1,2.21,0.08,2.37,2.05,ed,primary,1458
+8,2021-10-23,depress_A1,2.42,0.05,2.52,2.31,ed,Lehre,1458
+8,2021-10-23,depress_A1,2.37,0.07,2.51,2.23,ed,secondary,1458
+8,2021-10-23,depress_A1,2.42,0.1,2.61,2.24,ed,tertiary,1458
+8,2021-10-23,depress_A2,0.64,0.06,0.77,0.52,ed,primary,1462
+8,2021-10-23,depress_A2,0.42,0.03,0.48,0.35,ed,Lehre,1462
+8,2021-10-23,depress_A2,0.63,0.06,0.75,0.5,ed,secondary,1462
+8,2021-10-23,depress_A2,0.43,0.07,0.57,0.28,ed,tertiary,1462
+8,2021-10-23,depress_A3,1.01,0.06,1.13,0.89,ed,primary,1457
+8,2021-10-23,depress_A3,0.9,0.04,0.97,0.83,ed,Lehre,1457
+8,2021-10-23,depress_A3,1.03,0.06,1.16,0.91,ed,secondary,1457
+8,2021-10-23,depress_A3,1.04,0.09,1.21,0.87,ed,tertiary,1457
+8,2021-10-23,depress_A4,0.59,0.07,0.72,0.46,ed,primary,1455
+8,2021-10-23,depress_A4,0.44,0.04,0.51,0.37,ed,Lehre,1455
+8,2021-10-23,depress_A4,0.59,0.06,0.71,0.46,ed,secondary,1455
+8,2021-10-23,depress_A4,0.39,0.07,0.53,0.25,ed,tertiary,1455
+8,2021-10-23,depress_A5,2.18,0.09,2.35,2.02,ed,primary,1448
+8,2021-10-23,depress_A5,2.22,0.05,2.32,2.12,ed,Lehre,1448
+8,2021-10-23,depress_A5,2.25,0.07,2.39,2.12,ed,secondary,1448
+8,2021-10-23,depress_A5,2.23,0.1,2.42,2.04,ed,tertiary,1448
+8,2021-10-23,depress_A6,0.73,0.07,0.87,0.6,ed,primary,1451
+8,2021-10-23,depress_A6,0.56,0.04,0.63,0.48,ed,Lehre,1451
+8,2021-10-23,depress_A6,0.66,0.06,0.78,0.54,ed,secondary,1451
+8,2021-10-23,depress_A6,0.58,0.08,0.74,0.42,ed,tertiary,1451
+8,2021-10-23,depress_A7,0.6,0.06,0.72,0.47,ed,primary,1455
+8,2021-10-23,depress_A7,0.47,0.04,0.54,0.4,ed,Lehre,1455
+8,2021-10-23,depress_A7,0.63,0.07,0.76,0.5,ed,secondary,1455
+8,2021-10-23,depress_A7,0.43,0.07,0.56,0.29,ed,tertiary,1455
+8,2021-10-23,depress_A8,0.72,0.06,0.84,0.61,ed,primary,1453
+8,2021-10-23,depress_A8,0.6,0.04,0.67,0.53,ed,Lehre,1453
+8,2021-10-23,depress_A8,0.83,0.07,0.96,0.69,ed,secondary,1453
+8,2021-10-23,depress_A8,0.67,0.08,0.82,0.52,ed,tertiary,1453
+8,2021-10-23,depress_A9,1.84,0.08,2,1.68,ed,primary,1455
+8,2021-10-23,depress_A9,1.95,0.05,2.04,1.85,ed,Lehre,1455
+8,2021-10-23,depress_A9,1.91,0.06,2.03,1.78,ed,secondary,1455
+8,2021-10-23,depress_A9,1.82,0.09,2,1.63,ed,tertiary,1455
 9,2020-05-03,fin_ausk_akt,2.44,0.07,2.58,2.31,ed,primary,1501
 9,2020-05-03,fin_ausk_akt,2.48,0.04,2.57,2.4,ed,Lehre,1501
 9,2020-05-03,fin_ausk_akt,2.78,0.06,2.89,2.67,ed,secondary,1501
@@ -8619,6 +9001,10 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 9,2021-09-25,fin_ausk_akt,2.35,0.04,2.44,2.26,ed,Lehre,1464
 9,2021-09-25,fin_ausk_akt,2.61,0.06,2.72,2.49,ed,secondary,1464
 9,2021-09-25,fin_ausk_akt,2.81,0.07,2.95,2.66,ed,tertiary,1464
+9,2021-10-23,fin_ausk_akt,2.32,0.07,2.46,2.18,ed,primary,1466
+9,2021-10-23,fin_ausk_akt,2.38,0.04,2.46,2.29,ed,Lehre,1466
+9,2021-10-23,fin_ausk_akt,2.64,0.06,2.76,2.53,ed,secondary,1466
+9,2021-10-23,fin_ausk_akt,2.73,0.08,2.89,2.57,ed,tertiary,1466
 10,2020-03-28,dauer,2.8,0.07,2.93,2.66,ed,primary,1489
 10,2020-03-28,dauer,2.8,0.05,2.89,2.71,ed,Lehre,1489
 10,2020-03-28,dauer,2.78,0.06,2.91,2.65,ed,secondary,1489
@@ -8719,6 +9105,10 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 10,2021-09-25,dauer,3.84,0.02,3.89,3.8,ed,Lehre,1366
 10,2021-09-25,dauer,3.77,0.04,3.84,3.7,ed,secondary,1366
 10,2021-09-25,dauer,3.83,0.05,3.92,3.74,ed,tertiary,1366
+10,2021-10-23,dauer,3.8,0.04,3.87,3.73,ed,primary,1383
+10,2021-10-23,dauer,3.87,0.02,3.91,3.83,ed,Lehre,1383
+10,2021-10-23,dauer,3.81,0.03,3.87,3.74,ed,secondary,1383
+10,2021-10-23,dauer,3.84,0.04,3.93,3.76,ed,tertiary,1383
 1,2020-03-28,lebensz,6.48,0.11,6.71,6.26,bl,<10.000,1528
 1,2020-03-28,lebensz,6.36,0.12,6.61,6.12,bl,10.000–1 Million,1528
 1,2020-03-28,lebensz,6.57,0.16,6.88,6.26,bl,>1 Million,1528
@@ -8791,9 +9181,12 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 1,2021-06-26,lebensz,6.69,0.11,6.91,6.48,bl,<10.000,1479
 1,2021-06-26,lebensz,6.78,0.12,7.01,6.54,bl,10.000–1 Million,1479
 1,2021-06-26,lebensz,6.51,0.15,6.8,6.21,bl,>1 Million,1479
-1,2021-09-25,lebensz,6.7,0.11,6.92,6.49,bl,<10.000,1480
-1,2021-09-25,lebensz,6.69,0.14,6.97,6.41,bl,10.000–1 Million,1480
-1,2021-09-25,lebensz,6.5,0.17,6.84,6.17,bl,>1 Million,1480
+1,2021-09-25,lebensz,6.68,0.11,6.89,6.47,bl,<10.000,1480
+1,2021-09-25,lebensz,6.64,0.13,6.91,6.38,bl,10.000–1 Million,1480
+1,2021-09-25,lebensz,6.53,0.17,6.87,6.2,bl,>1 Million,1480
+1,2021-10-23,lebensz,6.74,0.11,6.96,6.53,bl,<10.000,1487
+1,2021-10-23,lebensz,6.61,0.12,6.84,6.38,bl,10.000–1 Million,1487
+1,2021-10-23,lebensz,6.71,0.15,7,6.42,bl,>1 Million,1487
 2,2020-03-28,ver_gov,7.28,0.11,7.5,7.06,bl,<10.000,1513
 2,2020-03-28,ver_gov,6.78,0.15,7.07,6.49,bl,10.000–1 Million,1513
 2,2020-03-28,ver_gov,7.35,0.16,7.67,7.03,bl,>1 Million,1513
@@ -9136,21 +9529,36 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 2,2021-06-26,ver_orf,4.78,0.15,5.06,4.49,bl,<10.000,1456
 2,2021-06-26,ver_orf,4.5,0.17,4.83,4.17,bl,10.000–1 Million,1456
 2,2021-06-26,ver_orf,5.06,0.2,5.45,4.67,bl,>1 Million,1456
-2,2021-09-25,ver_gov,4.32,0.14,4.6,4.04,bl,<10.000,1446
-2,2021-09-25,ver_gov,3.65,0.19,4.02,3.28,bl,10.000–1 Million,1446
-2,2021-09-25,ver_gov,4.45,0.22,4.88,4.01,bl,>1 Million,1446
-2,2021-09-25,ver_ges,6.46,0.13,6.72,6.2,bl,<10.000,1453
-2,2021-09-25,ver_ges,6.13,0.18,6.48,5.78,bl,10.000–1 Million,1453
-2,2021-09-25,ver_ges,6.68,0.2,7.07,6.28,bl,>1 Million,1453
-2,2021-09-25,ver_par,4.34,0.14,4.6,4.07,bl,<10.000,1437
-2,2021-09-25,ver_par,3.92,0.18,4.27,3.57,bl,10.000–1 Million,1437
-2,2021-09-25,ver_par,4.51,0.21,4.91,4.1,bl,>1 Million,1437
-2,2021-09-25,ver_pol,6.25,0.13,6.51,5.99,bl,<10.000,1446
-2,2021-09-25,ver_pol,5.83,0.18,6.18,5.48,bl,10.000–1 Million,1446
-2,2021-09-25,ver_pol,6.6,0.17,6.92,6.27,bl,>1 Million,1446
-2,2021-09-25,ver_orf,4.5,0.15,4.79,4.2,bl,<10.000,1445
-2,2021-09-25,ver_orf,4.33,0.19,4.7,3.96,bl,10.000–1 Million,1445
-2,2021-09-25,ver_orf,4.77,0.21,5.19,4.36,bl,>1 Million,1445
+2,2021-09-25,ver_gov,4.31,0.14,4.58,4.03,bl,<10.000,1446
+2,2021-09-25,ver_gov,3.71,0.18,4.06,3.36,bl,10.000–1 Million,1446
+2,2021-09-25,ver_gov,4.45,0.22,4.88,4.03,bl,>1 Million,1446
+2,2021-09-25,ver_ges,6.46,0.12,6.7,6.22,bl,<10.000,1453
+2,2021-09-25,ver_ges,6.15,0.16,6.47,5.82,bl,10.000–1 Million,1453
+2,2021-09-25,ver_ges,6.66,0.2,7.05,6.27,bl,>1 Million,1453
+2,2021-09-25,ver_par,4.34,0.13,4.6,4.08,bl,<10.000,1437
+2,2021-09-25,ver_par,4.01,0.17,4.33,3.68,bl,10.000–1 Million,1437
+2,2021-09-25,ver_par,4.52,0.2,4.92,4.12,bl,>1 Million,1437
+2,2021-09-25,ver_pol,6.25,0.13,6.5,6.01,bl,<10.000,1446
+2,2021-09-25,ver_pol,5.81,0.17,6.14,5.48,bl,10.000–1 Million,1446
+2,2021-09-25,ver_pol,6.61,0.16,6.93,6.29,bl,>1 Million,1446
+2,2021-09-25,ver_orf,4.48,0.14,4.76,4.2,bl,<10.000,1445
+2,2021-09-25,ver_orf,4.4,0.18,4.75,4.05,bl,10.000–1 Million,1445
+2,2021-09-25,ver_orf,4.77,0.21,5.18,4.36,bl,>1 Million,1445
+2,2021-10-23,ver_gov,3.79,0.14,4.05,3.52,bl,<10.000,1444
+2,2021-10-23,ver_gov,3.49,0.16,3.8,3.18,bl,10.000–1 Million,1444
+2,2021-10-23,ver_gov,4.22,0.21,4.64,3.8,bl,>1 Million,1444
+2,2021-10-23,ver_ges,6.41,0.12,6.65,6.18,bl,<10.000,1455
+2,2021-10-23,ver_ges,6.21,0.16,6.52,5.89,bl,10.000–1 Million,1455
+2,2021-10-23,ver_ges,6.93,0.17,7.27,6.59,bl,>1 Million,1455
+2,2021-10-23,ver_par,4.19,0.13,4.44,3.94,bl,<10.000,1443
+2,2021-10-23,ver_par,4.02,0.16,4.33,3.71,bl,10.000–1 Million,1443
+2,2021-10-23,ver_par,4.39,0.21,4.81,3.97,bl,>1 Million,1443
+2,2021-10-23,ver_pol,6.2,0.13,6.45,5.95,bl,<10.000,1453
+2,2021-10-23,ver_pol,6.07,0.15,6.37,5.76,bl,10.000–1 Million,1453
+2,2021-10-23,ver_pol,6.57,0.18,6.91,6.22,bl,>1 Million,1453
+2,2021-10-23,ver_orf,4.25,0.14,4.52,3.98,bl,<10.000,1444
+2,2021-10-23,ver_orf,4.48,0.17,4.8,4.15,bl,10.000–1 Million,1444
+2,2021-10-23,ver_orf,4.49,0.22,4.93,4.05,bl,>1 Million,1444
 3,2020-03-28,ges_per_gefahr,1.82,0.05,1.92,1.72,bl,<10.000,1534
 3,2020-03-28,ges_per_gefahr,1.89,0.06,2,1.78,bl,10.000–1 Million,1534
 3,2020-03-28,ges_per_gefahr,1.98,0.08,2.13,1.84,bl,>1 Million,1534
@@ -9439,18 +9847,30 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 3,2021-06-26,wir_pub_gefahr,2.53,0.04,2.61,2.44,bl,<10.000,1495
 3,2021-06-26,wir_pub_gefahr,2.58,0.05,2.67,2.49,bl,10.000–1 Million,1495
 3,2021-06-26,wir_pub_gefahr,2.49,0.06,2.61,2.37,bl,>1 Million,1495
-3,2021-09-25,ges_per_gefahr,1.21,0.05,1.3,1.12,bl,<10.000,1496
-3,2021-09-25,ges_per_gefahr,1.26,0.06,1.38,1.15,bl,10.000–1 Million,1496
-3,2021-09-25,ges_per_gefahr,1.25,0.07,1.38,1.12,bl,>1 Million,1496
-3,2021-09-25,ges_pub_gefahr,1.93,0.04,2.02,1.84,bl,<10.000,1495
-3,2021-09-25,ges_pub_gefahr,1.99,0.05,2.09,1.88,bl,10.000–1 Million,1495
-3,2021-09-25,ges_pub_gefahr,2.18,0.06,2.31,2.06,bl,>1 Million,1495
-3,2021-09-25,wir_per_gefahr,1.68,0.06,1.79,1.57,bl,<10.000,1491
-3,2021-09-25,wir_per_gefahr,1.76,0.07,1.9,1.63,bl,10.000–1 Million,1491
-3,2021-09-25,wir_per_gefahr,1.7,0.06,1.83,1.58,bl,>1 Million,1491
-3,2021-09-25,wir_pub_gefahr,2.5,0.04,2.59,2.41,bl,<10.000,1493
-3,2021-09-25,wir_pub_gefahr,2.61,0.05,2.72,2.51,bl,10.000–1 Million,1493
-3,2021-09-25,wir_pub_gefahr,2.59,0.05,2.69,2.49,bl,>1 Million,1493
+3,2021-09-25,ges_per_gefahr,1.25,0.05,1.34,1.16,bl,<10.000,1496
+3,2021-09-25,ges_per_gefahr,1.32,0.05,1.42,1.21,bl,10.000–1 Million,1496
+3,2021-09-25,ges_per_gefahr,1.26,0.07,1.38,1.13,bl,>1 Million,1496
+3,2021-09-25,ges_pub_gefahr,1.94,0.04,2.02,1.86,bl,<10.000,1495
+3,2021-09-25,ges_pub_gefahr,2.02,0.05,2.12,1.92,bl,10.000–1 Million,1495
+3,2021-09-25,ges_pub_gefahr,2.19,0.06,2.31,2.07,bl,>1 Million,1495
+3,2021-09-25,wir_per_gefahr,1.72,0.05,1.82,1.61,bl,<10.000,1491
+3,2021-09-25,wir_per_gefahr,1.8,0.06,1.92,1.67,bl,10.000–1 Million,1491
+3,2021-09-25,wir_per_gefahr,1.71,0.06,1.84,1.59,bl,>1 Million,1491
+3,2021-09-25,wir_pub_gefahr,2.52,0.04,2.61,2.43,bl,<10.000,1493
+3,2021-09-25,wir_pub_gefahr,2.62,0.05,2.72,2.53,bl,10.000–1 Million,1493
+3,2021-09-25,wir_pub_gefahr,2.6,0.05,2.7,2.5,bl,>1 Million,1493
+3,2021-10-23,ges_per_gefahr,1.35,0.05,1.44,1.26,bl,<10.000,1502
+3,2021-10-23,ges_per_gefahr,1.31,0.05,1.42,1.21,bl,10.000–1 Million,1502
+3,2021-10-23,ges_per_gefahr,1.43,0.08,1.59,1.26,bl,>1 Million,1502
+3,2021-10-23,ges_pub_gefahr,2.06,0.05,2.15,1.97,bl,<10.000,1500
+3,2021-10-23,ges_pub_gefahr,2.06,0.05,2.16,1.95,bl,10.000–1 Million,1500
+3,2021-10-23,ges_pub_gefahr,2.34,0.07,2.49,2.19,bl,>1 Million,1500
+3,2021-10-23,wir_per_gefahr,1.78,0.05,1.89,1.68,bl,<10.000,1499
+3,2021-10-23,wir_per_gefahr,1.72,0.06,1.84,1.61,bl,10.000–1 Million,1499
+3,2021-10-23,wir_per_gefahr,1.76,0.08,1.91,1.6,bl,>1 Million,1499
+3,2021-10-23,wir_pub_gefahr,2.65,0.04,2.73,2.57,bl,<10.000,1500
+3,2021-10-23,wir_pub_gefahr,2.52,0.05,2.62,2.42,bl,10.000–1 Million,1500
+3,2021-10-23,wir_pub_gefahr,2.62,0.05,2.72,2.51,bl,>1 Million,1500
 4,2020-03-28,demokratie,2.79,0.04,2.87,2.71,bl,<10.000,1516
 4,2020-03-28,demokratie,2.72,0.05,2.81,2.62,bl,10.000–1 Million,1516
 4,2020-03-28,demokratie,2.82,0.07,2.95,2.69,bl,>1 Million,1516
@@ -9667,12 +10087,27 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 4,2021-06-26,blianz_reg,1.76,0.06,1.87,1.64,bl,<10.000,1442
 4,2021-06-26,blianz_reg,1.61,0.07,1.75,1.48,bl,10.000–1 Million,1442
 4,2021-06-26,blianz_reg,1.94,0.08,2.09,1.79,bl,>1 Million,1442
-4,2021-09-25,demokratie,2.06,0.05,2.16,1.96,bl,<10.000,1462
-4,2021-09-25,demokratie,1.85,0.08,2,1.7,bl,10.000–1 Million,1462
-4,2021-09-25,demokratie,2.05,0.08,2.2,1.89,bl,>1 Million,1462
-4,2021-09-25,blianz_reg,1.77,0.06,1.88,1.66,bl,<10.000,1451
-4,2021-09-25,blianz_reg,1.46,0.07,1.6,1.31,bl,10.000–1 Million,1451
-4,2021-09-25,blianz_reg,1.77,0.08,1.92,1.62,bl,>1 Million,1451
+4,2021-09-25,demokratie,2.05,0.05,2.14,1.96,bl,<10.000,1462
+4,2021-09-25,demokratie,1.88,0.07,2.02,1.74,bl,10.000–1 Million,1462
+4,2021-09-25,demokratie,2.04,0.08,2.19,1.89,bl,>1 Million,1462
+4,2021-09-25,blianz_reg,1.77,0.05,1.87,1.66,bl,<10.000,1451
+4,2021-09-25,blianz_reg,1.49,0.07,1.63,1.36,bl,10.000–1 Million,1451
+4,2021-09-25,blianz_reg,1.78,0.08,1.93,1.63,bl,>1 Million,1451
+4,2021-10-23,demokratie,1.87,0.05,1.96,1.77,bl,<10.000,1468
+4,2021-10-23,demokratie,1.78,0.06,1.9,1.65,bl,10.000–1 Million,1468
+4,2021-10-23,demokratie,1.92,0.08,2.08,1.77,bl,>1 Million,1468
+4,2021-10-23,blianz_reg,1.48,0.05,1.58,1.37,bl,<10.000,1444
+4,2021-10-23,blianz_reg,1.29,0.06,1.4,1.17,bl,10.000–1 Million,1444
+4,2021-10-23,blianz_reg,1.55,0.08,1.7,1.4,bl,>1 Million,1444
+4,2021-10-23,zuf_reg_al,1.75,0.05,1.85,1.65,bl,<10.000,1372
+4,2021-10-23,zuf_reg_al,1.74,0.06,1.85,1.63,bl,10.000–1 Million,1372
+4,2021-10-23,zuf_reg_al,1.76,0.08,1.91,1.61,bl,>1 Million,1372
+4,2021-10-23,zuf_reg_un,1.67,0.05,1.77,1.57,bl,<10.000,1327
+4,2021-10-23,zuf_reg_un,1.62,0.06,1.73,1.51,bl,10.000–1 Million,1327
+4,2021-10-23,zuf_reg_un,1.7,0.07,1.84,1.56,bl,>1 Million,1327
+4,2021-10-23,zuf_reg_wi,1.97,0.05,2.06,1.88,bl,<10.000,1356
+4,2021-10-23,zuf_reg_wi,1.87,0.06,1.98,1.75,bl,10.000–1 Million,1356
+4,2021-10-23,zuf_reg_wi,2.07,0.08,2.22,1.92,bl,>1 Million,1356
 5,2020-03-28,wochentag,1.63,0.06,1.75,1.5,bl,<10.000,1535
 5,2020-03-28,wochentag,1.68,0.07,1.82,1.53,bl,10.000–1 Million,1535
 5,2020-03-28,wochentag,1.77,0.09,1.95,1.59,bl,>1 Million,1535
@@ -10342,39 +10777,72 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 5,2021-06-26,zus_schutzen,1.85,0.05,1.94,1.76,bl,<10.000,1443
 5,2021-06-26,zus_schutzen,1.78,0.06,1.88,1.67,bl,10.000–1 Million,1443
 5,2021-06-26,zus_schutzen,1.84,0.06,1.97,1.72,bl,>1 Million,1443
-5,2021-09-25,wochentag,0.87,0.05,0.97,0.76,bl,<10.000,1482
-5,2021-09-25,wochentag,0.94,0.07,1.07,0.81,bl,10.000–1 Million,1482
+5,2021-09-25,wochentag,0.9,0.05,1,0.8,bl,<10.000,1482
+5,2021-09-25,wochentag,1,0.06,1.12,0.87,bl,10.000–1 Million,1482
 5,2021-09-25,wochentag,0.93,0.08,1.08,0.78,bl,>1 Million,1482
-5,2021-09-25,kontakt,1.22,0.06,1.34,1.11,bl,<10.000,1476
-5,2021-09-25,kontakt,1.36,0.07,1.5,1.21,bl,10.000–1 Million,1476
-5,2021-09-25,kontakt,1.36,0.09,1.52,1.19,bl,>1 Million,1476
-5,2021-09-25,zeit,1.38,0.06,1.49,1.27,bl,<10.000,1448
-5,2021-09-25,zeit,1.49,0.07,1.63,1.36,bl,10.000–1 Million,1448
-5,2021-09-25,zeit,1.64,0.09,1.82,1.46,bl,>1 Million,1448
-5,2021-09-25,konflikt,0.65,0.05,0.73,0.56,bl,<10.000,1477
-5,2021-09-25,konflikt,0.78,0.06,0.9,0.66,bl,10.000–1 Million,1477
-5,2021-09-25,konflikt,0.79,0.08,0.95,0.63,bl,>1 Million,1477
-5,2021-09-25,kinder,0.99,0.12,1.21,0.76,bl,<10.000,293
-5,2021-09-25,kinder,1.33,0.17,1.67,1,bl,10.000–1 Million,293
-5,2021-09-25,kinder,0.74,0.16,1.06,0.43,bl,>1 Million,293
-5,2021-09-25,zusammenhalt,1.18,0.05,1.27,1.08,bl,<10.000,1418
-5,2021-09-25,zusammenhalt,1.1,0.06,1.22,0.97,bl,10.000–1 Million,1418
-5,2021-09-25,zusammenhalt,1.22,0.07,1.36,1.08,bl,>1 Million,1418
-5,2021-09-25,umweundklima,2.19,0.05,2.3,2.09,bl,<10.000,1434
-5,2021-09-25,umweundklima,2.21,0.06,2.33,2.08,bl,10.000–1 Million,1434
-5,2021-09-25,umweundklima,2.24,0.08,2.4,2.08,bl,>1 Million,1434
-5,2021-09-25,onlinekommun,2.18,0.04,2.26,2.09,bl,<10.000,1397
-5,2021-09-25,onlinekommun,2.12,0.06,2.23,2,bl,10.000–1 Million,1397
-5,2021-09-25,onlinekommun,2.28,0.07,2.42,2.14,bl,>1 Million,1397
-5,2021-09-25,zus_bestes,1.98,0.04,2.07,1.9,bl,<10.000,1447
-5,2021-09-25,zus_bestes,1.88,0.06,2,1.75,bl,10.000–1 Million,1447
-5,2021-09-25,zus_bestes,1.97,0.07,2.1,1.83,bl,>1 Million,1447
-5,2021-09-25,zus_einig,2.08,0.04,2.17,1.99,bl,<10.000,1437
-5,2021-09-25,zus_einig,1.95,0.06,2.07,1.84,bl,10.000–1 Million,1437
+5,2021-09-25,kontakt,1.24,0.06,1.36,1.13,bl,<10.000,1476
+5,2021-09-25,kontakt,1.37,0.07,1.5,1.23,bl,10.000–1 Million,1476
+5,2021-09-25,kontakt,1.35,0.08,1.51,1.19,bl,>1 Million,1476
+5,2021-09-25,zeit,1.41,0.05,1.52,1.3,bl,<10.000,1448
+5,2021-09-25,zeit,1.51,0.06,1.64,1.39,bl,10.000–1 Million,1448
+5,2021-09-25,zeit,1.64,0.09,1.81,1.46,bl,>1 Million,1448
+5,2021-09-25,konflikt,0.72,0.05,0.82,0.63,bl,<10.000,1477
+5,2021-09-25,konflikt,0.82,0.06,0.94,0.71,bl,10.000–1 Million,1477
+5,2021-09-25,konflikt,0.78,0.08,0.94,0.62,bl,>1 Million,1477
+5,2021-09-25,kinder,0.98,0.11,1.2,0.77,bl,<10.000,293
+5,2021-09-25,kinder,1.26,0.15,1.55,0.96,bl,10.000–1 Million,293
+5,2021-09-25,kinder,0.73,0.16,1.03,0.42,bl,>1 Million,293
+5,2021-09-25,zusammenhalt,1.21,0.05,1.3,1.12,bl,<10.000,1418
+5,2021-09-25,zusammenhalt,1.13,0.06,1.25,1.02,bl,10.000–1 Million,1418
+5,2021-09-25,zusammenhalt,1.23,0.07,1.37,1.09,bl,>1 Million,1418
+5,2021-09-25,umweundklima,2.21,0.05,2.31,2.11,bl,<10.000,1434
+5,2021-09-25,umweundklima,2.22,0.06,2.34,2.1,bl,10.000–1 Million,1434
+5,2021-09-25,umweundklima,2.24,0.08,2.4,2.09,bl,>1 Million,1434
+5,2021-09-25,onlinekommun,2.17,0.04,2.25,2.09,bl,<10.000,1397
+5,2021-09-25,onlinekommun,2.09,0.06,2.2,1.98,bl,10.000–1 Million,1397
+5,2021-09-25,onlinekommun,2.28,0.07,2.42,2.15,bl,>1 Million,1397
+5,2021-09-25,zus_bestes,1.99,0.04,2.07,1.9,bl,<10.000,1447
+5,2021-09-25,zus_bestes,1.88,0.06,2,1.77,bl,10.000–1 Million,1447
+5,2021-09-25,zus_bestes,1.97,0.07,2.1,1.84,bl,>1 Million,1447
+5,2021-09-25,zus_einig,2.1,0.04,2.19,2.02,bl,<10.000,1437
+5,2021-09-25,zus_einig,1.99,0.06,2.1,1.88,bl,10.000–1 Million,1437
 5,2021-09-25,zus_einig,2.12,0.07,2.27,1.98,bl,>1 Million,1437
-5,2021-09-25,zus_schutzen,1.64,0.05,1.73,1.54,bl,<10.000,1440
-5,2021-09-25,zus_schutzen,1.46,0.06,1.59,1.34,bl,10.000–1 Million,1440
+5,2021-09-25,zus_schutzen,1.64,0.05,1.73,1.55,bl,<10.000,1440
+5,2021-09-25,zus_schutzen,1.49,0.06,1.6,1.37,bl,10.000–1 Million,1440
 5,2021-09-25,zus_schutzen,1.65,0.07,1.79,1.51,bl,>1 Million,1440
+5,2021-10-23,wochentag,1.01,0.06,1.12,0.89,bl,<10.000,1482
+5,2021-10-23,wochentag,1.02,0.07,1.16,0.89,bl,10.000–1 Million,1482
+5,2021-10-23,wochentag,1.01,0.09,1.18,0.84,bl,>1 Million,1482
+5,2021-10-23,kontakt,1.31,0.06,1.43,1.19,bl,<10.000,1477
+5,2021-10-23,kontakt,1.31,0.07,1.44,1.18,bl,10.000–1 Million,1477
+5,2021-10-23,kontakt,1.41,0.08,1.57,1.24,bl,>1 Million,1477
+5,2021-10-23,zeit,1.4,0.06,1.51,1.28,bl,<10.000,1465
+5,2021-10-23,zeit,1.39,0.06,1.5,1.27,bl,10.000–1 Million,1465
+5,2021-10-23,zeit,1.46,0.09,1.63,1.29,bl,>1 Million,1465
+5,2021-10-23,konflikt,0.82,0.06,0.93,0.71,bl,<10.000,1476
+5,2021-10-23,konflikt,0.75,0.05,0.85,0.64,bl,10.000–1 Million,1476
+5,2021-10-23,konflikt,0.77,0.08,0.92,0.61,bl,>1 Million,1476
+5,2021-10-23,kinder,1.12,0.14,1.38,0.85,bl,<10.000,274
+5,2021-10-23,kinder,1.33,0.16,1.63,1.02,bl,10.000–1 Million,274
+5,2021-10-23,kinder,0.94,0.22,1.38,0.5,bl,>1 Million,274
+5,2021-10-23,zusammenhalt,1.2,0.05,1.29,1.11,bl,<10.000,1435
+5,2021-10-23,zusammenhalt,1.12,0.05,1.22,1.01,bl,10.000–1 Million,1435
+5,2021-10-23,zusammenhalt,1.24,0.07,1.37,1.1,bl,>1 Million,1435
+5,2021-10-23,umweundklima,2.29,0.05,2.39,2.18,bl,<10.000,1447
+5,2021-10-23,umweundklima,2.33,0.07,2.45,2.2,bl,10.000–1 Million,1447
+5,2021-10-23,umweundklima,2.46,0.07,2.59,2.32,bl,>1 Million,1447
+5,2021-10-23,onlinekommun,2.25,0.05,2.34,2.16,bl,<10.000,1407
+5,2021-10-23,onlinekommun,2.16,0.06,2.27,2.04,bl,10.000–1 Million,1407
+5,2021-10-23,onlinekommun,2.39,0.07,2.53,2.26,bl,>1 Million,1407
+5,2021-10-23,zus_bestes,1.92,0.05,2.01,1.83,bl,<10.000,1452
+5,2021-10-23,zus_bestes,1.8,0.06,1.92,1.69,bl,10.000–1 Million,1452
+5,2021-10-23,zus_bestes,1.86,0.07,1.99,1.72,bl,>1 Million,1452
+5,2021-10-23,zus_einig,2.15,0.05,2.25,2.06,bl,<10.000,1437
+5,2021-10-23,zus_einig,2.08,0.05,2.18,1.97,bl,10.000–1 Million,1437
+5,2021-10-23,zus_einig,2.08,0.07,2.22,1.95,bl,>1 Million,1437
+5,2021-10-23,zus_schutzen,1.56,0.05,1.66,1.46,bl,<10.000,1439
+5,2021-10-23,zus_schutzen,1.47,0.06,1.59,1.35,bl,10.000–1 Million,1439
+5,2021-10-23,zus_schutzen,1.49,0.07,1.64,1.35,bl,>1 Million,1439
 6,2020-03-28,mas_angemessen,2.03,0.03,2.1,1.97,bl,<10.000,1516
 6,2020-03-28,mas_angemessen,1.94,0.04,2.01,1.86,bl,10.000–1 Million,1516
 6,2020-03-28,mas_angemessen,2.11,0.05,2.2,2.01,bl,>1 Million,1516
@@ -10448,8 +10916,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 6,2021-06-26,mas_angemessen,1.52,0.06,1.63,1.41,bl,10.000–1 Million,1451
 6,2021-06-26,mas_angemessen,1.92,0.06,2.03,1.8,bl,>1 Million,1451
 6,2021-09-25,mas_angemessen,1.71,0.05,1.81,1.61,bl,<10.000,1465
-6,2021-09-25,mas_angemessen,1.64,0.07,1.78,1.5,bl,10.000–1 Million,1465
-6,2021-09-25,mas_angemessen,2.09,0.08,2.24,1.94,bl,>1 Million,1465
+6,2021-09-25,mas_angemessen,1.67,0.07,1.8,1.54,bl,10.000–1 Million,1465
+6,2021-09-25,mas_angemessen,2.08,0.08,2.23,1.93,bl,>1 Million,1465
+6,2021-10-23,mas_angemessen,1.8,0.05,1.9,1.7,bl,<10.000,1470
+6,2021-10-23,mas_angemessen,1.73,0.07,1.86,1.61,bl,10.000–1 Million,1470
+6,2021-10-23,mas_angemessen,2.08,0.07,2.22,1.94,bl,>1 Million,1470
 7,2020-03-28,mas_effektiv,2.83,0.04,2.91,2.76,bl,<10.000,1512
 7,2020-03-28,mas_effektiv,2.84,0.05,2.93,2.75,bl,10.000–1 Million,1512
 7,2020-03-28,mas_effektiv,2.85,0.06,2.96,2.73,bl,>1 Million,1512
@@ -10522,9 +10993,12 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 7,2021-06-26,mas_effektiv,2.18,0.05,2.28,2.08,bl,<10.000,1451
 7,2021-06-26,mas_effektiv,2.16,0.06,2.27,2.06,bl,10.000–1 Million,1451
 7,2021-06-26,mas_effektiv,2.24,0.07,2.38,2.1,bl,>1 Million,1451
-7,2021-09-25,mas_effektiv,1.77,0.05,1.88,1.67,bl,<10.000,1448
-7,2021-09-25,mas_effektiv,1.64,0.06,1.76,1.52,bl,10.000–1 Million,1448
-7,2021-09-25,mas_effektiv,1.79,0.09,1.96,1.62,bl,>1 Million,1448
+7,2021-09-25,mas_effektiv,1.78,0.05,1.88,1.69,bl,<10.000,1448
+7,2021-09-25,mas_effektiv,1.69,0.06,1.8,1.58,bl,10.000–1 Million,1448
+7,2021-09-25,mas_effektiv,1.8,0.09,1.97,1.63,bl,>1 Million,1448
+7,2021-10-23,mas_effektiv,1.66,0.05,1.75,1.56,bl,<10.000,1445
+7,2021-10-23,mas_effektiv,1.69,0.06,1.8,1.57,bl,10.000–1 Million,1445
+7,2021-10-23,mas_effektiv,1.78,0.07,1.92,1.64,bl,>1 Million,1445
 8,2020-03-28,depress_A1,2.63,0.05,2.73,2.52,bl,<10.000,1513
 8,2020-03-28,depress_A1,2.51,0.07,2.64,2.38,bl,10.000–1 Million,1513
 8,2020-03-28,depress_A1,2.32,0.09,2.5,2.15,bl,>1 Million,1513
@@ -11173,33 +11647,60 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 8,2021-06-26,depress_A9,1.98,0.06,2.1,1.86,bl,<10.000,1455
 8,2021-06-26,depress_A9,1.9,0.07,2.03,1.77,bl,10.000–1 Million,1455
 8,2021-06-26,depress_A9,1.78,0.07,1.92,1.64,bl,>1 Million,1455
-8,2021-09-25,depress_A1,2.43,0.06,2.55,2.32,bl,<10.000,1460
-8,2021-09-25,depress_A1,2.33,0.07,2.48,2.19,bl,10.000–1 Million,1460
-8,2021-09-25,depress_A1,2.19,0.08,2.35,2.04,bl,>1 Million,1460
-8,2021-09-25,depress_A2,0.51,0.04,0.6,0.43,bl,<10.000,1449
-8,2021-09-25,depress_A2,0.61,0.06,0.72,0.5,bl,10.000–1 Million,1449
-8,2021-09-25,depress_A2,0.57,0.07,0.71,0.43,bl,>1 Million,1449
-8,2021-09-25,depress_A3,0.95,0.04,1.04,0.87,bl,<10.000,1457
-8,2021-09-25,depress_A3,1.05,0.06,1.17,0.94,bl,10.000–1 Million,1457
-8,2021-09-25,depress_A3,1,0.06,1.12,0.88,bl,>1 Million,1457
-8,2021-09-25,depress_A4,0.4,0.04,0.47,0.34,bl,<10.000,1451
-8,2021-09-25,depress_A4,0.61,0.06,0.73,0.5,bl,10.000–1 Million,1451
-8,2021-09-25,depress_A4,0.44,0.05,0.54,0.34,bl,>1 Million,1451
-8,2021-09-25,depress_A5,2.25,0.06,2.37,2.14,bl,<10.000,1444
-8,2021-09-25,depress_A5,2.24,0.07,2.38,2.1,bl,10.000–1 Million,1444
-8,2021-09-25,depress_A5,2.07,0.08,2.22,1.92,bl,>1 Million,1444
-8,2021-09-25,depress_A6,0.54,0.04,0.63,0.46,bl,<10.000,1452
-8,2021-09-25,depress_A6,0.68,0.06,0.79,0.56,bl,10.000–1 Million,1452
-8,2021-09-25,depress_A6,0.54,0.05,0.64,0.44,bl,>1 Million,1452
-8,2021-09-25,depress_A7,0.43,0.04,0.5,0.36,bl,<10.000,1455
-8,2021-09-25,depress_A7,0.56,0.06,0.67,0.45,bl,10.000–1 Million,1455
+8,2021-09-25,depress_A1,2.44,0.06,2.55,2.33,bl,<10.000,1460
+8,2021-09-25,depress_A1,2.3,0.07,2.44,2.17,bl,10.000–1 Million,1460
+8,2021-09-25,depress_A1,2.21,0.08,2.36,2.06,bl,>1 Million,1460
+8,2021-09-25,depress_A2,0.54,0.04,0.62,0.46,bl,<10.000,1449
+8,2021-09-25,depress_A2,0.65,0.06,0.76,0.54,bl,10.000–1 Million,1449
+8,2021-09-25,depress_A2,0.58,0.07,0.71,0.44,bl,>1 Million,1449
+8,2021-09-25,depress_A3,0.99,0.04,1.07,0.91,bl,<10.000,1457
+8,2021-09-25,depress_A3,1.1,0.06,1.21,0.99,bl,10.000–1 Million,1457
+8,2021-09-25,depress_A3,1.01,0.06,1.14,0.89,bl,>1 Million,1457
+8,2021-09-25,depress_A4,0.43,0.04,0.51,0.36,bl,<10.000,1451
+8,2021-09-25,depress_A4,0.63,0.06,0.74,0.52,bl,10.000–1 Million,1451
+8,2021-09-25,depress_A4,0.45,0.05,0.55,0.35,bl,>1 Million,1451
+8,2021-09-25,depress_A5,2.27,0.06,2.39,2.16,bl,<10.000,1444
+8,2021-09-25,depress_A5,2.26,0.07,2.39,2.12,bl,10.000–1 Million,1444
+8,2021-09-25,depress_A5,2.09,0.08,2.24,1.94,bl,>1 Million,1444
+8,2021-09-25,depress_A6,0.57,0.04,0.65,0.49,bl,<10.000,1452
+8,2021-09-25,depress_A6,0.71,0.06,0.82,0.6,bl,10.000–1 Million,1452
+8,2021-09-25,depress_A6,0.55,0.05,0.65,0.45,bl,>1 Million,1452
+8,2021-09-25,depress_A7,0.46,0.04,0.54,0.39,bl,<10.000,1455
+8,2021-09-25,depress_A7,0.61,0.05,0.72,0.5,bl,10.000–1 Million,1455
 8,2021-09-25,depress_A7,0.42,0.05,0.52,0.33,bl,>1 Million,1455
-8,2021-09-25,depress_A8,0.65,0.04,0.73,0.57,bl,<10.000,1451
-8,2021-09-25,depress_A8,0.76,0.06,0.87,0.64,bl,10.000–1 Million,1451
+8,2021-09-25,depress_A8,0.69,0.04,0.77,0.61,bl,<10.000,1451
+8,2021-09-25,depress_A8,0.79,0.06,0.91,0.68,bl,10.000–1 Million,1451
 8,2021-09-25,depress_A8,0.6,0.05,0.71,0.5,bl,>1 Million,1451
-8,2021-09-25,depress_A9,2.04,0.06,2.15,1.92,bl,<10.000,1456
-8,2021-09-25,depress_A9,1.98,0.07,2.12,1.83,bl,10.000–1 Million,1456
-8,2021-09-25,depress_A9,1.78,0.07,1.91,1.64,bl,>1 Million,1456
+8,2021-09-25,depress_A9,2.02,0.06,2.13,1.92,bl,<10.000,1456
+8,2021-09-25,depress_A9,1.97,0.07,2.11,1.84,bl,10.000–1 Million,1456
+8,2021-09-25,depress_A9,1.8,0.07,1.93,1.66,bl,>1 Million,1456
+8,2021-10-23,depress_A1,2.38,0.06,2.49,2.27,bl,<10.000,1458
+8,2021-10-23,depress_A1,2.26,0.07,2.39,2.13,bl,10.000–1 Million,1458
+8,2021-10-23,depress_A1,2.33,0.09,2.49,2.16,bl,>1 Million,1458
+8,2021-10-23,depress_A2,0.5,0.04,0.58,0.42,bl,<10.000,1462
+8,2021-10-23,depress_A2,0.59,0.05,0.69,0.48,bl,10.000–1 Million,1462
+8,2021-10-23,depress_A2,0.53,0.07,0.66,0.4,bl,>1 Million,1462
+8,2021-10-23,depress_A3,0.95,0.04,1.03,0.86,bl,<10.000,1457
+8,2021-10-23,depress_A3,0.99,0.05,1.09,0.89,bl,10.000–1 Million,1457
+8,2021-10-23,depress_A3,1.03,0.07,1.17,0.9,bl,>1 Million,1457
+8,2021-10-23,depress_A4,0.46,0.04,0.55,0.38,bl,<10.000,1455
+8,2021-10-23,depress_A4,0.56,0.05,0.66,0.46,bl,10.000–1 Million,1455
+8,2021-10-23,depress_A4,0.54,0.06,0.66,0.42,bl,>1 Million,1455
+8,2021-10-23,depress_A5,2.25,0.06,2.37,2.14,bl,<10.000,1448
+8,2021-10-23,depress_A5,2.2,0.07,2.34,2.06,bl,10.000–1 Million,1448
+8,2021-10-23,depress_A5,2.14,0.08,2.29,2,bl,>1 Million,1448
+8,2021-10-23,depress_A6,0.6,0.04,0.68,0.51,bl,<10.000,1451
+8,2021-10-23,depress_A6,0.67,0.05,0.78,0.57,bl,10.000–1 Million,1451
+8,2021-10-23,depress_A6,0.68,0.07,0.82,0.54,bl,>1 Million,1451
+8,2021-10-23,depress_A7,0.53,0.04,0.62,0.45,bl,<10.000,1455
+8,2021-10-23,depress_A7,0.57,0.05,0.67,0.47,bl,10.000–1 Million,1455
+8,2021-10-23,depress_A7,0.5,0.07,0.62,0.37,bl,>1 Million,1455
+8,2021-10-23,depress_A8,0.64,0.04,0.72,0.56,bl,<10.000,1453
+8,2021-10-23,depress_A8,0.76,0.05,0.86,0.66,bl,10.000–1 Million,1453
+8,2021-10-23,depress_A8,0.73,0.06,0.85,0.61,bl,>1 Million,1453
+8,2021-10-23,depress_A9,1.94,0.06,2.05,1.83,bl,<10.000,1455
+8,2021-10-23,depress_A9,1.83,0.06,1.96,1.71,bl,10.000–1 Million,1455
+8,2021-10-23,depress_A9,1.83,0.07,1.97,1.69,bl,>1 Million,1455
 9,2020-05-03,fin_ausk_akt,2.59,0.05,2.69,2.5,bl,<10.000,1501
 9,2020-05-03,fin_ausk_akt,2.59,0.06,2.7,2.48,bl,10.000–1 Million,1501
 9,2020-05-03,fin_ausk_akt,2.53,0.07,2.67,2.38,bl,>1 Million,1501
@@ -11257,9 +11758,12 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 9,2021-06-26,fin_ausk_akt,2.45,0.05,2.54,2.36,bl,<10.000,1465
 9,2021-06-26,fin_ausk_akt,2.55,0.06,2.66,2.44,bl,10.000–1 Million,1465
 9,2021-06-26,fin_ausk_akt,2.61,0.06,2.73,2.48,bl,>1 Million,1465
-9,2021-09-25,fin_ausk_akt,2.47,0.05,2.56,2.38,bl,<10.000,1464
-9,2021-09-25,fin_ausk_akt,2.46,0.07,2.58,2.33,bl,10.000–1 Million,1464
-9,2021-09-25,fin_ausk_akt,2.5,0.07,2.65,2.36,bl,>1 Million,1464
+9,2021-09-25,fin_ausk_akt,2.48,0.05,2.57,2.39,bl,<10.000,1464
+9,2021-09-25,fin_ausk_akt,2.47,0.06,2.59,2.35,bl,10.000–1 Million,1464
+9,2021-09-25,fin_ausk_akt,2.5,0.07,2.64,2.36,bl,>1 Million,1464
+9,2021-10-23,fin_ausk_akt,2.45,0.05,2.54,2.36,bl,<10.000,1466
+9,2021-10-23,fin_ausk_akt,2.43,0.06,2.55,2.32,bl,10.000–1 Million,1466
+9,2021-10-23,fin_ausk_akt,2.51,0.07,2.65,2.37,bl,>1 Million,1466
 10,2020-03-28,dauer,2.84,0.05,2.94,2.75,bl,<10.000,1489
 10,2020-03-28,dauer,2.83,0.06,2.94,2.72,bl,10.000–1 Million,1489
 10,2020-03-28,dauer,2.66,0.07,2.79,2.52,bl,>1 Million,1489
@@ -11332,9 +11836,12 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 10,2021-06-26,dauer,3.68,0.04,3.76,3.6,bl,<10.000,1393
 10,2021-06-26,dauer,3.63,0.05,3.73,3.53,bl,10.000–1 Million,1393
 10,2021-06-26,dauer,3.64,0.05,3.73,3.54,bl,>1 Million,1393
-10,2021-09-25,dauer,3.82,0.03,3.87,3.77,bl,<10.000,1366
-10,2021-09-25,dauer,3.82,0.03,3.88,3.76,bl,10.000–1 Million,1366
-10,2021-09-25,dauer,3.84,0.04,3.91,3.77,bl,>1 Million,1366
+10,2021-09-25,dauer,3.81,0.03,3.86,3.76,bl,<10.000,1366
+10,2021-09-25,dauer,3.8,0.03,3.86,3.74,bl,10.000–1 Million,1366
+10,2021-09-25,dauer,3.84,0.04,3.91,3.76,bl,>1 Million,1366
+10,2021-10-23,dauer,3.83,0.02,3.88,3.79,bl,<10.000,1383
+10,2021-10-23,dauer,3.86,0.03,3.91,3.81,bl,10.000–1 Million,1383
+10,2021-10-23,dauer,3.81,0.04,3.89,3.73,bl,>1 Million,1383
 1,2020-03-28,lebensz,5.75,0.15,6.04,5.45,hi,1-3.Decile,1528
 1,2020-03-28,lebensz,6.63,0.11,6.85,6.41,hi,4-7.Decile,1528
 1,2020-03-28,lebensz,7.05,0.18,7.4,6.7,hi,8-10.Decile,1528
@@ -11410,6 +11917,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 1,2021-09-25,lebensz,5.6,0.17,5.93,5.27,hi,1-3.Decile,1480
 1,2021-09-25,lebensz,6.67,0.12,6.91,6.43,hi,4-7.Decile,1480
 1,2021-09-25,lebensz,7.31,0.15,7.61,7.02,hi,8-10.Decile,1480
+1,2021-10-23,lebensz,5.98,0.15,6.28,5.68,hi,1-3.Decile,1487
+1,2021-10-23,lebensz,6.66,0.11,6.87,6.44,hi,4-7.Decile,1487
+1,2021-10-23,lebensz,7.2,0.15,7.5,6.9,hi,8-10.Decile,1487
 2,2020-03-28,ver_gov,6.39,0.18,6.75,6.03,hi,1-3.Decile,1513
 2,2020-03-28,ver_gov,7.38,0.12,7.62,7.14,hi,4-7.Decile,1513
 2,2020-03-28,ver_gov,7.55,0.18,7.9,7.2,hi,8-10.Decile,1513
@@ -11767,6 +12277,21 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 2,2021-09-25,ver_orf,4.06,0.23,4.5,3.62,hi,1-3.Decile,1445
 2,2021-09-25,ver_orf,4.38,0.16,4.69,4.06,hi,4-7.Decile,1445
 2,2021-09-25,ver_orf,5.38,0.18,5.74,5.02,hi,8-10.Decile,1445
+2,2021-10-23,ver_gov,3.85,0.2,4.24,3.45,hi,1-3.Decile,1444
+2,2021-10-23,ver_gov,3.57,0.15,3.87,3.27,hi,4-7.Decile,1444
+2,2021-10-23,ver_gov,4.16,0.2,4.56,3.77,hi,8-10.Decile,1444
+2,2021-10-23,ver_ges,6.28,0.19,6.65,5.91,hi,1-3.Decile,1455
+2,2021-10-23,ver_ges,6.28,0.15,6.56,5.99,hi,4-7.Decile,1455
+2,2021-10-23,ver_ges,7.16,0.15,7.45,6.87,hi,8-10.Decile,1455
+2,2021-10-23,ver_par,3.92,0.19,4.29,3.55,hi,1-3.Decile,1443
+2,2021-10-23,ver_par,4.07,0.15,4.36,3.78,hi,4-7.Decile,1443
+2,2021-10-23,ver_par,4.75,0.21,5.17,4.33,hi,8-10.Decile,1443
+2,2021-10-23,ver_pol,5.89,0.2,6.29,5.49,hi,1-3.Decile,1453
+2,2021-10-23,ver_pol,6.08,0.14,6.36,5.8,hi,4-7.Decile,1453
+2,2021-10-23,ver_pol,6.61,0.18,6.96,6.26,hi,8-10.Decile,1453
+2,2021-10-23,ver_orf,4.04,0.21,4.45,3.63,hi,1-3.Decile,1444
+2,2021-10-23,ver_orf,4.26,0.16,4.57,3.95,hi,4-7.Decile,1444
+2,2021-10-23,ver_orf,5.18,0.19,5.56,4.8,hi,8-10.Decile,1444
 3,2020-03-28,ges_per_gefahr,2,0.07,2.13,1.87,hi,1-3.Decile,1534
 3,2020-03-28,ges_per_gefahr,1.89,0.06,2,1.78,hi,4-7.Decile,1534
 3,2020-03-28,ges_per_gefahr,1.77,0.07,1.92,1.63,hi,8-10.Decile,1534
@@ -12067,6 +12592,18 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 3,2021-09-25,wir_pub_gefahr,2.65,0.06,2.77,2.53,hi,1-3.Decile,1493
 3,2021-09-25,wir_pub_gefahr,2.59,0.04,2.68,2.51,hi,4-7.Decile,1493
 3,2021-09-25,wir_pub_gefahr,2.55,0.07,2.68,2.42,hi,8-10.Decile,1493
+3,2021-10-23,ges_per_gefahr,1.51,0.07,1.66,1.36,hi,1-3.Decile,1502
+3,2021-10-23,ges_per_gefahr,1.3,0.05,1.4,1.2,hi,4-7.Decile,1502
+3,2021-10-23,ges_per_gefahr,1.34,0.07,1.48,1.2,hi,8-10.Decile,1502
+3,2021-10-23,ges_pub_gefahr,2.2,0.07,2.35,2.06,hi,1-3.Decile,1500
+3,2021-10-23,ges_pub_gefahr,2.07,0.05,2.18,1.97,hi,4-7.Decile,1500
+3,2021-10-23,ges_pub_gefahr,2.08,0.06,2.21,1.96,hi,8-10.Decile,1500
+3,2021-10-23,wir_per_gefahr,2.02,0.08,2.18,1.87,hi,1-3.Decile,1499
+3,2021-10-23,wir_per_gefahr,1.72,0.06,1.83,1.6,hi,4-7.Decile,1499
+3,2021-10-23,wir_per_gefahr,1.49,0.08,1.64,1.33,hi,8-10.Decile,1499
+3,2021-10-23,wir_pub_gefahr,2.65,0.06,2.76,2.54,hi,1-3.Decile,1500
+3,2021-10-23,wir_pub_gefahr,2.61,0.05,2.7,2.52,hi,4-7.Decile,1500
+3,2021-10-23,wir_pub_gefahr,2.5,0.05,2.6,2.4,hi,8-10.Decile,1500
 4,2020-03-28,demokratie,2.56,0.06,2.68,2.43,hi,1-3.Decile,1516
 4,2020-03-28,demokratie,2.79,0.05,2.88,2.7,hi,4-7.Decile,1516
 4,2020-03-28,demokratie,3.01,0.06,3.12,2.89,hi,8-10.Decile,1516
@@ -12289,6 +12826,21 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 4,2021-09-25,blianz_reg,1.62,0.08,1.79,1.46,hi,1-3.Decile,1451
 4,2021-09-25,blianz_reg,1.59,0.06,1.71,1.47,hi,4-7.Decile,1451
 4,2021-09-25,blianz_reg,1.81,0.08,1.96,1.65,hi,8-10.Decile,1451
+4,2021-10-23,demokratie,1.82,0.08,1.97,1.67,hi,1-3.Decile,1468
+4,2021-10-23,demokratie,1.74,0.06,1.85,1.63,hi,4-7.Decile,1468
+4,2021-10-23,demokratie,2.01,0.07,2.15,1.86,hi,8-10.Decile,1468
+4,2021-10-23,blianz_reg,1.4,0.08,1.55,1.25,hi,1-3.Decile,1444
+4,2021-10-23,blianz_reg,1.31,0.06,1.43,1.2,hi,4-7.Decile,1444
+4,2021-10-23,blianz_reg,1.61,0.08,1.77,1.46,hi,8-10.Decile,1444
+4,2021-10-23,zuf_reg_al,1.58,0.07,1.72,1.43,hi,1-3.Decile,1372
+4,2021-10-23,zuf_reg_al,1.67,0.05,1.78,1.56,hi,4-7.Decile,1372
+4,2021-10-23,zuf_reg_al,1.9,0.07,2.04,1.76,hi,8-10.Decile,1372
+4,2021-10-23,zuf_reg_un,1.52,0.07,1.66,1.38,hi,1-3.Decile,1327
+4,2021-10-23,zuf_reg_un,1.57,0.06,1.68,1.46,hi,4-7.Decile,1327
+4,2021-10-23,zuf_reg_un,1.88,0.07,2.02,1.74,hi,8-10.Decile,1327
+4,2021-10-23,zuf_reg_wi,1.81,0.07,1.96,1.67,hi,1-3.Decile,1356
+4,2021-10-23,zuf_reg_wi,1.88,0.06,1.99,1.77,hi,4-7.Decile,1356
+4,2021-10-23,zuf_reg_wi,2.18,0.06,2.3,2.06,hi,8-10.Decile,1356
 5,2020-03-28,wochentag,1.77,0.08,1.93,1.6,hi,1-3.Decile,1535
 5,2020-03-28,wochentag,1.7,0.07,1.84,1.56,hi,4-7.Decile,1535
 5,2020-03-28,wochentag,1.54,0.1,1.73,1.35,hi,8-10.Decile,1535
@@ -12991,6 +13543,39 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 5,2021-09-25,zus_schutzen,1.63,0.08,1.79,1.46,hi,1-3.Decile,1440
 5,2021-09-25,zus_schutzen,1.59,0.05,1.68,1.49,hi,4-7.Decile,1440
 5,2021-09-25,zus_schutzen,1.56,0.06,1.68,1.44,hi,8-10.Decile,1440
+5,2021-10-23,wochentag,1.29,0.1,1.48,1.1,hi,1-3.Decile,1482
+5,2021-10-23,wochentag,1,0.06,1.12,0.88,hi,4-7.Decile,1482
+5,2021-10-23,wochentag,0.84,0.09,1.01,0.67,hi,8-10.Decile,1482
+5,2021-10-23,kontakt,1.6,0.09,1.77,1.43,hi,1-3.Decile,1477
+5,2021-10-23,kontakt,1.23,0.06,1.35,1.12,hi,4-7.Decile,1477
+5,2021-10-23,kontakt,1.21,0.09,1.38,1.04,hi,8-10.Decile,1477
+5,2021-10-23,zeit,1.7,0.09,1.88,1.53,hi,1-3.Decile,1465
+5,2021-10-23,zeit,1.29,0.06,1.4,1.18,hi,4-7.Decile,1465
+5,2021-10-23,zeit,1.34,0.08,1.5,1.19,hi,8-10.Decile,1465
+5,2021-10-23,konflikt,0.86,0.07,1,0.71,hi,1-3.Decile,1476
+5,2021-10-23,konflikt,0.81,0.05,0.92,0.7,hi,4-7.Decile,1476
+5,2021-10-23,konflikt,0.73,0.08,0.89,0.57,hi,8-10.Decile,1476
+5,2021-10-23,kinder,1.2,0.28,1.75,0.65,hi,1-3.Decile,274
+5,2021-10-23,kinder,1.14,0.15,1.43,0.85,hi,4-7.Decile,274
+5,2021-10-23,kinder,1.24,0.16,1.55,0.92,hi,8-10.Decile,274
+5,2021-10-23,zusammenhalt,1.26,0.07,1.39,1.12,hi,1-3.Decile,1435
+5,2021-10-23,zusammenhalt,1.18,0.05,1.28,1.08,hi,4-7.Decile,1435
+5,2021-10-23,zusammenhalt,1.14,0.07,1.27,1.01,hi,8-10.Decile,1435
+5,2021-10-23,umweundklima,2.39,0.08,2.55,2.23,hi,1-3.Decile,1447
+5,2021-10-23,umweundklima,2.26,0.06,2.37,2.15,hi,4-7.Decile,1447
+5,2021-10-23,umweundklima,2.39,0.07,2.54,2.25,hi,8-10.Decile,1447
+5,2021-10-23,onlinekommun,2.17,0.08,2.33,2.02,hi,1-3.Decile,1407
+5,2021-10-23,onlinekommun,2.23,0.05,2.33,2.13,hi,4-7.Decile,1407
+5,2021-10-23,onlinekommun,2.37,0.06,2.49,2.24,hi,8-10.Decile,1407
+5,2021-10-23,zus_bestes,1.95,0.07,2.1,1.8,hi,1-3.Decile,1452
+5,2021-10-23,zus_bestes,1.86,0.06,1.97,1.75,hi,4-7.Decile,1452
+5,2021-10-23,zus_bestes,1.82,0.06,1.94,1.7,hi,8-10.Decile,1452
+5,2021-10-23,zus_einig,2.18,0.07,2.32,2.05,hi,1-3.Decile,1437
+5,2021-10-23,zus_einig,2.08,0.06,2.19,1.97,hi,4-7.Decile,1437
+5,2021-10-23,zus_einig,2.09,0.06,2.21,1.98,hi,8-10.Decile,1437
+5,2021-10-23,zus_schutzen,1.64,0.08,1.8,1.49,hi,1-3.Decile,1439
+5,2021-10-23,zus_schutzen,1.5,0.06,1.61,1.39,hi,4-7.Decile,1439
+5,2021-10-23,zus_schutzen,1.45,0.06,1.57,1.33,hi,8-10.Decile,1439
 6,2020-03-28,mas_angemessen,2.02,0.05,2.12,1.93,hi,1-3.Decile,1516
 6,2020-03-28,mas_angemessen,2.05,0.04,2.12,1.98,hi,4-7.Decile,1516
 6,2020-03-28,mas_angemessen,2.01,0.04,2.09,1.92,hi,8-10.Decile,1516
@@ -13066,6 +13651,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 6,2021-09-25,mas_angemessen,1.84,0.08,2.01,1.68,hi,1-3.Decile,1465
 6,2021-09-25,mas_angemessen,1.73,0.06,1.85,1.61,hi,4-7.Decile,1465
 6,2021-09-25,mas_angemessen,1.86,0.07,1.99,1.72,hi,8-10.Decile,1465
+6,2021-10-23,mas_angemessen,1.86,0.07,2.01,1.72,hi,1-3.Decile,1470
+6,2021-10-23,mas_angemessen,1.73,0.06,1.85,1.62,hi,4-7.Decile,1470
+6,2021-10-23,mas_angemessen,2.02,0.07,2.16,1.88,hi,8-10.Decile,1470
 7,2020-03-28,mas_effektiv,2.73,0.06,2.85,2.62,hi,1-3.Decile,1512
 7,2020-03-28,mas_effektiv,2.82,0.04,2.91,2.74,hi,4-7.Decile,1512
 7,2020-03-28,mas_effektiv,2.95,0.06,3.06,2.83,hi,8-10.Decile,1512
@@ -13141,6 +13729,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 7,2021-09-25,mas_effektiv,1.72,0.08,1.88,1.55,hi,1-3.Decile,1448
 7,2021-09-25,mas_effektiv,1.7,0.06,1.81,1.59,hi,4-7.Decile,1448
 7,2021-09-25,mas_effektiv,1.77,0.06,1.89,1.64,hi,8-10.Decile,1448
+7,2021-10-23,mas_effektiv,1.81,0.07,1.96,1.67,hi,1-3.Decile,1445
+7,2021-10-23,mas_effektiv,1.62,0.06,1.73,1.51,hi,4-7.Decile,1445
+7,2021-10-23,mas_effektiv,1.74,0.06,1.86,1.62,hi,8-10.Decile,1445
 8,2020-03-28,depress_A1,2.42,0.08,2.58,2.27,hi,1-3.Decile,1513
 8,2020-03-28,depress_A1,2.49,0.07,2.62,2.36,hi,4-7.Decile,1513
 8,2020-03-28,depress_A1,2.68,0.08,2.83,2.53,hi,8-10.Decile,1513
@@ -13816,6 +14407,33 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 8,2021-09-25,depress_A9,1.65,0.08,1.81,1.49,hi,1-3.Decile,1456
 8,2021-09-25,depress_A9,1.98,0.06,2.1,1.86,hi,4-7.Decile,1456
 8,2021-09-25,depress_A9,2.13,0.08,2.28,1.98,hi,8-10.Decile,1456
+8,2021-10-23,depress_A1,2.24,0.09,2.41,2.07,hi,1-3.Decile,1458
+8,2021-10-23,depress_A1,2.27,0.06,2.39,2.15,hi,4-7.Decile,1458
+8,2021-10-23,depress_A1,2.51,0.08,2.68,2.35,hi,8-10.Decile,1458
+8,2021-10-23,depress_A2,0.84,0.08,0.99,0.7,hi,1-3.Decile,1462
+8,2021-10-23,depress_A2,0.52,0.05,0.61,0.43,hi,4-7.Decile,1462
+8,2021-10-23,depress_A2,0.31,0.05,0.41,0.21,hi,8-10.Decile,1462
+8,2021-10-23,depress_A3,1.05,0.07,1.19,0.91,hi,1-3.Decile,1457
+8,2021-10-23,depress_A3,0.99,0.05,1.08,0.9,hi,4-7.Decile,1457
+8,2021-10-23,depress_A3,0.91,0.06,1.03,0.79,hi,8-10.Decile,1457
+8,2021-10-23,depress_A4,0.77,0.08,0.91,0.62,hi,1-3.Decile,1455
+8,2021-10-23,depress_A4,0.54,0.05,0.64,0.43,hi,4-7.Decile,1455
+8,2021-10-23,depress_A4,0.31,0.04,0.39,0.22,hi,8-10.Decile,1455
+8,2021-10-23,depress_A5,2.04,0.09,2.21,1.87,hi,1-3.Decile,1448
+8,2021-10-23,depress_A5,2.15,0.06,2.27,2.02,hi,4-7.Decile,1448
+8,2021-10-23,depress_A5,2.39,0.08,2.55,2.23,hi,8-10.Decile,1448
+8,2021-10-23,depress_A6,0.9,0.08,1.06,0.74,hi,1-3.Decile,1451
+8,2021-10-23,depress_A6,0.63,0.05,0.72,0.53,hi,4-7.Decile,1451
+8,2021-10-23,depress_A6,0.45,0.05,0.55,0.34,hi,8-10.Decile,1451
+8,2021-10-23,depress_A7,0.68,0.07,0.82,0.55,hi,1-3.Decile,1455
+8,2021-10-23,depress_A7,0.55,0.05,0.65,0.46,hi,4-7.Decile,1455
+8,2021-10-23,depress_A7,0.38,0.06,0.5,0.27,hi,8-10.Decile,1455
+8,2021-10-23,depress_A8,0.93,0.07,1.08,0.79,hi,1-3.Decile,1453
+8,2021-10-23,depress_A8,0.67,0.04,0.76,0.58,hi,4-7.Decile,1453
+8,2021-10-23,depress_A8,0.54,0.05,0.65,0.44,hi,8-10.Decile,1453
+8,2021-10-23,depress_A9,1.7,0.08,1.86,1.55,hi,1-3.Decile,1455
+8,2021-10-23,depress_A9,1.82,0.06,1.94,1.7,hi,4-7.Decile,1455
+8,2021-10-23,depress_A9,2.07,0.08,2.22,1.92,hi,8-10.Decile,1455
 9,2020-05-03,fin_ausk_akt,1.92,0.07,2.05,1.79,hi,1-3.Decile,1501
 9,2020-05-03,fin_ausk_akt,2.65,0.05,2.74,2.55,hi,4-7.Decile,1501
 9,2020-05-03,fin_ausk_akt,3.24,0.05,3.34,3.13,hi,8-10.Decile,1501
@@ -13876,6 +14494,9 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 9,2021-09-25,fin_ausk_akt,1.78,0.08,1.93,1.63,hi,1-3.Decile,1464
 9,2021-09-25,fin_ausk_akt,2.53,0.05,2.63,2.43,hi,4-7.Decile,1464
 9,2021-09-25,fin_ausk_akt,2.99,0.05,3.1,2.89,hi,8-10.Decile,1464
+9,2021-10-23,fin_ausk_akt,1.84,0.07,1.98,1.69,hi,1-3.Decile,1466
+9,2021-10-23,fin_ausk_akt,2.44,0.05,2.54,2.34,hi,4-7.Decile,1466
+9,2021-10-23,fin_ausk_akt,3.04,0.05,3.13,2.95,hi,8-10.Decile,1466
 10,2020-03-28,dauer,2.76,0.07,2.89,2.63,hi,1-3.Decile,1489
 10,2020-03-28,dauer,2.86,0.05,2.97,2.76,hi,4-7.Decile,1489
 10,2020-03-28,dauer,2.69,0.07,2.84,2.55,hi,8-10.Decile,1489
@@ -13951,3 +14572,6 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,ymax,ymin,groupby,
 10,2021-09-25,dauer,3.77,0.04,3.86,3.68,hi,1-3.Decile,1366
 10,2021-09-25,dauer,3.84,0.02,3.89,3.79,hi,4-7.Decile,1366
 10,2021-09-25,dauer,3.81,0.04,3.88,3.73,hi,8-10.Decile,1366
+10,2021-10-23,dauer,3.79,0.04,3.88,3.71,hi,1-3.Decile,1383
+10,2021-10-23,dauer,3.84,0.02,3.89,3.79,hi,4-7.Decile,1383
+10,2021-10-23,dauer,3.86,0.03,3.92,3.8,hi,8-10.Decile,1383
