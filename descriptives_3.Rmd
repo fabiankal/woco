@@ -52,7 +52,7 @@ Dieses Dokument zeigt verschiedene Graphentypen der zentralen Variablen des Aust
 
 ```{r data import and sociodem, include = FALSE}
 #setwd("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse")
-bern_data_long2_factored = readRDS("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/processed/W1-25_CORONAPANEL_recoded.rds")
+bern_data_long2_factored = readRDS("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/processed/W1-26_CORONAPANEL_recoded.rds")
 
 #variable_doc = read_excel("Y:/Wirtschaftssoziologie/Corona/Daten downloaded/Daten Welle 25/ACPP_Documentation/W1-25_ACPP_Variablelist_V20211002.xlsx",sheet = "Variablenübersicht")
 
@@ -65,7 +65,7 @@ bern_data_long2_factored$wavedate <- as_factor(as.character(bern_data_long2_fact
 
 #median(as.Date(bern_data_long2_factored$START_DATE[bern_data_long2_factored$wave==24],"%y-%m-%d"),na.rm=TRUE)
 
-levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020","03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020","13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020","17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021","13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021")
+levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020","03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020","13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020","17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021","13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021","23.10.2021")
 bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
 
 ##############################
