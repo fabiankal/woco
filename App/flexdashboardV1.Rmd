@@ -205,7 +205,7 @@ data_shares$measurement<-fct_relevel(data_shares$measurement,"10 = Sehr viel Ver
 Verteilung der Antworten {data-icon="fa-area-chart"}
 =======================================================================
 
-Column {.sidebar}
+{.sidebar}
 -----------------------------------------------------------------------
 
 <i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
@@ -233,7 +233,7 @@ checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FA
   
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;'>",
+        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),
         "</div>"
         ))
@@ -242,7 +242,7 @@ HTML(paste0(
 Column
 -----------------------------------------------------------------------
 
-### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle
+### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle {data-height=1000}
 
 ```{r,context="server"}
 
@@ -333,7 +333,7 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
 Mittelwerte {data-icon="fa-line-chart"}
 =======================================================================
 
-Column {.sidebar}
+{.sidebar}
 -----------------------------------------------------------------------
 
 <i class="fa fa-info-circle"></i> Wählen Sie hier die jeweiligen Variablen aus, die Sie anzeigen möchten.
@@ -357,7 +357,7 @@ checkboxInput(inputId = 'axis0', label = "Minimalwert der Y-Achse bei 0 fixieren
 
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;'>",
+        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),
         "</div>"
         ))
@@ -419,12 +419,12 @@ renderPlotly({
           xanchor="right",yanchor="bottom" 
           ))) %>% 
     layout(margin=m,annotations = 
-            list(x = 1, y = -0.17, text = "Daten: ACPP + WoCo", 
+            list(x = 1, y = -0.19, text = "Daten: ACPP + WoCo", 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
     layout(annotations = 
-            list(x = 1, y = -0.12, text = paste("N ~",Nrund,"pro Welle"), 
+            list(x = 1, y = -0.14, text = paste("N ~",Nrund,"pro Welle"), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=12, color="#707070")))%>% 
@@ -571,7 +571,7 @@ htmlOutput("selected_var")
 Gruppierte Mittelwerte {data-icon="fa-users"}
 =======================================================================
 
-Column {.sidebar}
+{.sidebar}
 -----------------------------------------------------------------------
 
 
@@ -596,7 +596,7 @@ checkboxInput(inputId = 'axis02', label = "Minimalwert der Y-Achse bei 0 fixiere
 
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;'>",
+        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),
         "</div>"
         ))
@@ -804,7 +804,7 @@ renderPlotly({
 Querschnitte {data-icon="fa-bar-chart"}
 =======================================================================
 
-Column {.sidebar}
+{.sidebar}
 -----------------------------------------------------------------------
 
 
@@ -840,7 +840,7 @@ checkboxInput(inputId = 'colordirect2', label = "Farbschema umkehren", value = F
                )
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;'>",
+        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),
         "</div>"
         ))
@@ -850,26 +850,14 @@ HTML(paste0(
 Column
 -----------------------------------------------------------------------
 
-### Anteile der Antwortkategorien in % aller gültigen Antworten
+### Anteile der Antwortkategorien in % aller gültigen Antworten {data-height=1000}
 
 ```{r,context="server"}
 #output$out1 <- renderPrint(as.numeric(input$colordirect))
 #verbatimTextOutput('out1')
 
  #Observe changes in variables (will run when variables change)
-   observeEvent(input$var_shares2, {
-  
-      inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares2]
-  
-  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
-     mutate(wave = cur_group_id()) %>% ungroup() %>%
-    filter(variable %in% inputvariable_shares)
-  
-  myval3<-paste(names(table(data4$wave))," (",names(table(format(data4$wavedate, "%Y-%m-%d"))),")",sep = "")
-  
-  updateSelectInput(session, "waves", choices = myval3)
  
-   })
 
 renderPlotly({
   
@@ -878,10 +866,12 @@ renderPlotly({
   data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
      mutate(wave = cur_group_id()) %>% ungroup() %>%
     filter(variable %in% inputvariable_shares & wave %in% str_split(input$waves,pattern=" ",simplify = TRUE)[1])
-  data3 <- data3 %>% mutate(Personen = round(prop*N_total,0)) %>% rename(Datum = wavedate,
+  data3 <- data3 %>% mutate(Personen = round(prop*N_total,0)) %>% 
+                     rename(Datum = wavedate,
                             Anteil = prop,
                             Kategorie = measurement,
-                            N = N_total)
+                            N = N_total) %>% 
+    mutate(Kategoriex = if_else(row_number() %% 2 == 0, paste0("\n",Kategorie), as.character(Kategorie)))
   
   Nrund<-round(mean(data3$N,na.rm=TRUE),0)
   
@@ -913,10 +903,12 @@ renderPlotly({
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
   }
   
-m <- list(l = 0,r = 40,b = 80,t = 40,pad = 4)  
+m <- list(l = 40,r = 40,b = 80,t = 40,pad = 4)  
 
-  g <- ggplotly(p,tooltip = c("x","y","text")) %>%
-layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
+  g <- ggplotly(p,tooltip = c("fill","y","text")) %>%
+layout(showlegend = FALSE,
+         xaxis = list(ticktext=~Kategoriex),
+         legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
           source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
@@ -932,13 +924,13 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
     layout(annotations = 
-            list(x = 1, y = -0.12, text = paste("N ~",Nrund,""), 
+            list(x = 1, y = -0.12, text = paste("N =",Nrund,""), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=12, color="#707070")))%>% 
     config(locale = 'de',
            displaylogo = FALSE,
-           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d"),
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","hoverCompareCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
         ))
   #g$x$data[[1]]$hoverinfo <- "none"
@@ -946,7 +938,22 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
   #g$x$data[[3]]$hoverinfo <- "none"
   #g$x$data[[4]]$hoverinfo <- "none"
   #g$x$data[[5]]$hoverinfo <- "none"
-  g
+  g 
+ 
 })
+
+  observeEvent(input$var_shares2, {
+  
+      inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares2]
+  
+  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
+     mutate(wave = cur_group_id()) %>% ungroup() %>%
+    filter(variable %in% inputvariable_shares)
+  
+  myval3<-paste(names(table(data4$wave))," (",names(table(format(data4$wavedate, "%Y-%m-%d"))),")",sep = "")
+  
+  updateSelectInput(session, "waves", choices = myval3)
+ 
+   })
 
 ```
