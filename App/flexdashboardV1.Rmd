@@ -89,7 +89,7 @@ my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data
 hlinedata = data.frame(x = c("16.03.2020",
                              "14.04.2020",
                              "15.05.2020",
-                             "15.05.2020",
+                             "15.06.2020",
                              "24.07.2020",
                              "21.09.2020",
                              "03.11.2020",
@@ -124,7 +124,7 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "Lockerung\nMasken",
                              "Maskenpflicht\nneu",
                              "Sperrstunde",
-                             "Ausgangs-\nbeschränkungen",
+                             "Ausgangs-\nbeschr.",
                              "Lockdown",
                              "Öffnung\nHandel",
                              "Lockdown",
@@ -217,7 +217,7 @@ selectInput(
     inputId = 'var_shares',
     label = 'Variable:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[1],
+    selected = my_autocomplete_list[3],
     multiple = FALSE, # allow for multiple inputs
     #options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -343,7 +343,7 @@ selectizeInput(
     inputId = 'variables',
     label = 'Variablen:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[1],
+    selected = my_autocomplete_list[3:4],
     multiple = TRUE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -469,13 +469,40 @@ renderPlotly({
  
   if(input$relevantdates)
   {
+    vline_list <- list()
+    vanno_list <- list()
     for(i in 1:length(hlinedata$x))
       {
-      p <- p %>% add_vline(hlinedata$x[i],color = "pink", dash="dash") #%>% 
-        #add_text(showlegend = FALSE, x = hlinedata$x[i], y = max(data2$mean_measurement)+.05,
-           #text = hlinedata$label_de[i],
-           #textfont = list(color = c('black'), size = c(8)))
+        vline_list[[i]] <-list(type      = "line",
+                               line      = list(color="black",dash="dash"),
+                               opacity   = 0.3,
+                               x0        = hlinedata$x[i],
+                               x1        = hlinedata$x[i],
+                               xref      = "x",
+                               y0        = ifelse(input$axis0,0,min(data2$mean_measurement))*0.96,
+                               y1        = max(data2$mean_measurement)*1+(((i+1)%%2)*-0.11),
+                               yref      = "y")
+  
+        vanno_list[[i]] <- list(x = hlinedata$x[i],
+                                y = max(data2$mean_measurement)*1.02+(((i+1)%%2)*-0.11),
+                                text = hlinedata$label_de[i],
+                                xref = "x",
+                                yref = "y",
+                                showarrow = FALSE,
+                                arrowhead = 7,
+                                ax = 0,
+                                ay = 10,
+                                font=list(size=9))
     }
+    p <- p %>%  layout(shapes  = vline_list,annotations = vanno_list)
+    
+     #for(i in 1:length(hlinedata$x))
+    #  {
+    #  p <- p %>% add_vline(hlinedata$x[i],color = "pink", dash="dash",annotation_text=hlinedata$label_de[i]) #%>% 
+    #    #add_text(showlegend = FALSE, x = hlinedata$x[i], y = max(data2$mean_measurement)+.05,
+    #       #text = hlinedata$label_de[i],
+    #       #textfont = list(color = c('black'), size = c(8)))
+    #}
   }
   if(input$incidence)
   {
@@ -517,15 +544,15 @@ myval <- reactiveValues()
   
 data_labels$wn[is.na(data_labels$wn)]<-"nown"
 data_labels$ka[is.na(data_labels$ka)]<-"noka"
-data_labels$nown=""
-data_labels$noka=""
+data_labels$nown=NA
+data_labels$noka=NA
 
 
 
   for(i in unique(data2$scales))
       {
       k=k+1
-       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
+       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],collapse='", "')
        labeln_st[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct()-
                           data_labels %>% filter(scales==i) %>% 
@@ -539,22 +566,23 @@ data_labels$noka=""
        labels_en[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(paste('V',data_labels %>% filter(scales==i) %>% select(scalenumber) %>% distinct(),sep="")) %>%
                             distinct(),sep=", ",collapse=", ")
-       labels_ms[k]=paste(data_labels %>% filter(scales==i)  %>% 
-                            select(paste(data_labels %>% filter(scales==i) %>% select(wn) %>% distinct())) %>% 
+       labels_ms[k]=gsub('NA", "',"",paste(data_labels %>% filter(scales==i)  %>% 
+                            select(paste0(data_labels %>% filter(scales==i) %>% select(wn) %>% distinct())) %>% 
                             distinct(),
                           data_labels %>% filter(scales==i)  %>% 
-                            select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>% 
+                            select(paste0(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>% 
                             distinct(),
-                          sep=" ")
+                          sep='", "'))
        if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0") 
          {
-         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_st[k],'bis',labeln_en[k],'=',labels_en[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('&bull; Die Skala der Variable(n)', paste0('"',variables[k],'"'), 'geht von',paste0('"',labeln_st[k]),'=',paste0(labels_st[k],'"'),'bis',paste0('"',labeln_en[k]),'=',paste0(labels_en[k],'"'),'. Ausweichoption(en):',paste0('"',labels_ms[k],'"'), sep=" ", collapse=" ")
          }
        else
          {
-         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_en[k],'bis',labeln_en[k],'=',labels_st[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('&bull; Die Skala der Variable(n)', paste0('"',variables[k],'"'), 'geht von',paste0('"',labeln_st[k]),'=',paste0(labels_en[k],'"'),'bis',paste0('"',labeln_en[k]),'=',paste0(labels_st[k],'"'),'. Ausweichoption(en):',paste0('"',labels_ms[k],'"'), sep=" ", collapse=" ")
          }
   }
+   if(k>1) text[1] = paste('<i class="fa fa-exclamation-triangle"></i> Achtung: Variablen mit unterschiedlichen Skalen ausgewählt.<br/>',text[1])
     
      myval$calc <- text #write text in dynamic variable
 
@@ -582,7 +610,7 @@ selectizeInput(
     inputId = 'variablesgr',
     label = 'Variable:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[1] ,
+    selected = my_autocomplete_list[3] ,
     multiple = FALSE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -704,13 +732,32 @@ renderPlotly({
   }
   if(input$relevantdates2)
   {
+    vline_list <- list()
+    vanno_list <- list()
     for(i in 1:length(hlinedata$x))
       {
-      p <- p %>% add_vline(hlinedata$x[i],color = "pink", dash="dash") #%>% 
-        #add_text(showlegend = FALSE, x = hlinedata$x[i], y = max(data2$mean_measurement)+.05,
-           #text = hlinedata$label_de[i],
-           #textfont = list(color = c('black'), size = c(8)))
+        vline_list[[i]] <-list(type      = "line",
+                               line      = list(color="black",dash="dash"),
+                               opacity   = 0.3,
+                               x0        = hlinedata$x[i],
+                               x1        = hlinedata$x[i],
+                               xref      = "x",
+                               y0        = ifelse(input$axis02,0,min(data3$mean_measurement))*0.96,
+                               y1        = max(data3$mean_measurement)*1+(((i+1)%%2)*-0.11),
+                               yref      = "y")
+  
+        vanno_list[[i]] <- list(x = hlinedata$x[i],
+                                y = max(data3$mean_measurement)*1.02+(((i+1)%%2)*-0.11),
+                                text = hlinedata$label_de[i],
+                                xref = "x",
+                                yref = "y",
+                                showarrow = FALSE,
+                                arrowhead = 7,
+                                ax = 0,
+                                ay = 10,
+                                font=list(size=9))
     }
+    p <- p %>%  layout(shapes  = vline_list,annotations = vanno_list)
   }
   if(input$incidence2)
   {
@@ -751,44 +798,45 @@ renderPlotly({
   
  data_labels$wn[is.na(data_labels$wn)]<-"nown"
  data_labels$ka[is.na(data_labels$ka)]<-"noka"
- data_labels$nown=""
- data_labels$noka=""
+ data_labels$nown=NA
+ data_labels$noka=NA
    
 
   for(i in unique(data2$scales))
       {
       k=k+1
-       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],sep=", ",collapse=", ")
-       labeln_st[k]=paste(data_labels %>% filter(scales==i) %>%
+       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],collapse='", "')
+       labeln_st[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct()-
-                          data_labels %>% filter(scales==i) %>%
+                          data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct(),sep=", ",collapse=", ")
-       labels_st[k]=paste(data_labels %>% filter(scales==i) %>%
+       labels_st[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(V1) %>% distinct(),sep=", ",collapse=", ")
-       labeln_en[k]=paste(data_labels %>% filter(scales==i) %>%
+       labeln_en[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(max) %>% distinct()-
-                          data_labels %>% filter(scales==i) %>%
+                          data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct(),sep=", ",collapse=", ")
-       labels_en[k]=paste(data_labels %>% filter(scales==i) %>%
+       labels_en[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(paste('V',data_labels %>% filter(scales==i) %>% select(scalenumber) %>% distinct(),sep="")) %>%
                             distinct(),sep=", ",collapse=", ")
-       labels_ms[k]=paste(data_labels %>% filter(scales==i)  %>%
-                            select(paste(data_labels %>% filter(scales==i) %>% select(wn) %>% distinct())) %>%
+       labels_ms[k]=gsub('NA", "',"",paste(data_labels %>% filter(scales==i)  %>% 
+                            select(paste0(data_labels %>% filter(scales==i) %>% select(wn) %>% distinct())) %>% 
                             distinct(),
-                          data_labels %>% filter(scales==i)  %>%
-                            select(paste(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>%
+                          data_labels %>% filter(scales==i)  %>% 
+                            select(paste0(data_labels %>% filter(scales==i) %>% select(ka) %>% distinct())) %>% 
                             distinct(),
-                          sep=" ",collapse=" ")
-       if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0")
+                          sep='", "'))
+       if(data_labels %>% filter(scales==i) %>% select(rev) %>% distinct()=="0") 
          {
-         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_st[k],'bis',labeln_en[k],'=',labels_en[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('&bull; Die Skala der Variable', paste0('"',variables[k],'"'), 'geht von',paste0('"',labeln_st[k]),'=',paste0(labels_st[k],'"'),'bis',paste0('"',labeln_en[k]),'=',paste0(labels_en[k],'"'),'. Ausweichoption(en):',paste0('"',labels_ms[k],'"'), sep=" ", collapse=" ")
          }
        else
          {
-         text[k]=paste('Die Skala der Variable(n)', variables[k], 'geht von',labeln_st[k],'=',labels_en[k],'bis',labeln_en[k],'=',labels_st[k],'. Ausweichoptionen:',labels_ms[k], sep=" ", collapse=" ")
+         text[k]=paste('&bull; Die Skala der Variable', paste0('"',variables[k],'"'), 'geht von',paste0('"',labeln_st[k]),'=',paste0(labels_en[k],'"'),'bis',paste0('"',labeln_en[k]),'=',paste0(labels_st[k],'"'),'. Ausweichoption(en):',paste0('"',labels_ms[k],'"'), sep=" ", collapse=" ")
          }
   }
-
+   if(k>1) text[1] = paste('<i class="fa fa-exclamation-triangle"></i> Achtung: Variablen mit unterschiedlichen Skalen ausgewählt.<br/>',text[1])
+    
      myval2$calc <- text #write text in dynamic variable
 
   })
@@ -817,7 +865,7 @@ selectInput(
     inputId = 'var_shares2',
     label = 'Variable:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[1],
+    selected = my_autocomplete_list[3],
     multiple = FALSE, # allow for multiple inputs
     #options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
