@@ -5324,133 +5324,293 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 9,2021-10-23,fin_ausk_akt,2 = teils-teils,0.27,0.272,0.268,none,1466
 9,2021-10-23,fin_ausk_akt,3 = nur schwer zurechtkommen,0.109,0.113,0.105,none,1466
 9,2021-10-23,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.06,0.066,0.055,none,1466
-10,2020-03-28,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.006,none,1489
-10,2020-03-28,dauer,1-2 Monate,0.105,0.109,0.102,none,1489
-10,2020-03-28,dauer,3-4 Monate,0.312,0.314,0.31,none,1489
-10,2020-03-28,dauer,5-6 Monate,0.228,0.23,0.226,none,1489
-10,2020-03-28,dauer,7 = Mehr als 6 Monate,0.346,0.348,0.345,none,1489
-10,2020-04-04,dauer,0 = Weniger als 1 Monat,0.008,0.022,-0.007,none,1505
-10,2020-04-04,dauer,1-2 Monate,0.091,0.095,0.087,none,1505
-10,2020-04-04,dauer,3-4 Monate,0.277,0.279,0.275,none,1505
-10,2020-04-04,dauer,5-6 Monate,0.217,0.219,0.215,none,1505
-10,2020-04-04,dauer,7 = Mehr als 6 Monate,0.407,0.408,0.406,none,1505
-10,2020-04-11,dauer,0 = Weniger als 1 Monat,0.002,0.031,-0.027,none,1449
-10,2020-04-11,dauer,1-2 Monate,0.073,0.078,0.068,none,1449
-10,2020-04-11,dauer,3-4 Monate,0.24,0.242,0.238,none,1449
-10,2020-04-11,dauer,5-6 Monate,0.205,0.207,0.202,none,1449
-10,2020-04-11,dauer,7 = Mehr als 6 Monate,0.48,0.481,0.479,none,1449
-10,2020-04-17,dauer,0 = Weniger als 1 Monat,0.005,0.023,-0.013,none,1478
-10,2020-04-17,dauer,1-2 Monate,0.061,0.066,0.056,none,1478
-10,2020-04-17,dauer,3-4 Monate,0.172,0.175,0.17,none,1478
-10,2020-04-17,dauer,5-6 Monate,0.202,0.205,0.2,none,1478
-10,2020-04-17,dauer,7 = Mehr als 6 Monate,0.559,0.56,0.558,none,1478
-10,2020-04-25,dauer,0 = Weniger als 1 Monat,0.007,0.023,-0.009,none,1457
-10,2020-04-25,dauer,1-2 Monate,0.067,0.072,0.062,none,1457
-10,2020-04-25,dauer,3-4 Monate,0.128,0.132,0.125,none,1457
-10,2020-04-25,dauer,5-6 Monate,0.181,0.184,0.179,none,1457
-10,2020-04-25,dauer,7 = Mehr als 6 Monate,0.616,0.617,0.616,none,1457
-10,2020-05-03,dauer,0 = Weniger als 1 Monat,0.009,0.023,-0.004,none,1496
-10,2020-05-03,dauer,1-2 Monate,0.053,0.059,0.048,none,1496
-10,2020-05-03,dauer,3-4 Monate,0.139,0.142,0.136,none,1496
-10,2020-05-03,dauer,5-6 Monate,0.181,0.183,0.178,none,1496
-10,2020-05-03,dauer,7 = Mehr als 6 Monate,0.618,0.618,0.617,none,1496
-10,2020-05-09,dauer,0 = Weniger als 1 Monat,0.011,0.024,-0.001,none,1457
-10,2020-05-09,dauer,1-2 Monate,0.05,0.056,0.044,none,1457
-10,2020-05-09,dauer,3-4 Monate,0.132,0.136,0.129,none,1457
-10,2020-05-09,dauer,5-6 Monate,0.163,0.165,0.16,none,1457
-10,2020-05-09,dauer,7 = Mehr als 6 Monate,0.644,0.644,0.643,none,1457
-10,2020-05-16,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.006,none,1441
-10,2020-05-16,dauer,1-2 Monate,0.075,0.079,0.07,none,1441
-10,2020-05-16,dauer,3-4 Monate,0.15,0.153,0.147,none,1441
-10,2020-05-16,dauer,5-6 Monate,0.148,0.151,0.145,none,1441
-10,2020-05-16,dauer,7 = Mehr als 6 Monate,0.619,0.62,0.619,none,1441
-10,2020-05-24,dauer,0 = Weniger als 1 Monat,0.012,0.024,0,none,1444
-10,2020-05-24,dauer,1-2 Monate,0.069,0.073,0.064,none,1444
-10,2020-05-24,dauer,3-4 Monate,0.123,0.127,0.12,none,1444
-10,2020-05-24,dauer,5-6 Monate,0.165,0.168,0.163,none,1444
-10,2020-05-24,dauer,7 = Mehr als 6 Monate,0.63,0.631,0.63,none,1444
-10,2020-05-29,dauer,0 = Weniger als 1 Monat,0.022,0.031,0.013,none,1450
-10,2020-05-29,dauer,1-2 Monate,0.079,0.083,0.074,none,1450
-10,2020-05-29,dauer,3-4 Monate,0.144,0.148,0.141,none,1450
-10,2020-05-29,dauer,5-6 Monate,0.154,0.157,0.151,none,1450
-10,2020-05-29,dauer,7 = Mehr als 6 Monate,0.601,0.601,0.6,none,1450
-10,2020-06-13,dauer,0 = Weniger als 1 Monat,0.023,0.032,0.015,none,1444
-10,2020-06-13,dauer,1-2 Monate,0.086,0.09,0.082,none,1444
-10,2020-06-13,dauer,3-4 Monate,0.126,0.13,0.123,none,1444
-10,2020-06-13,dauer,5-6 Monate,0.137,0.141,0.134,none,1444
-10,2020-06-13,dauer,7 = Mehr als 6 Monate,0.627,0.628,0.627,none,1444
-10,2020-06-27,dauer,0 = Weniger als 1 Monat,0.019,0.028,0.009,none,1450
-10,2020-06-27,dauer,1-2 Monate,0.066,0.071,0.061,none,1450
-10,2020-06-27,dauer,3-4 Monate,0.105,0.109,0.102,none,1450
-10,2020-06-27,dauer,5-6 Monate,0.118,0.122,0.115,none,1450
-10,2020-06-27,dauer,7 = Mehr als 6 Monate,0.692,0.692,0.691,none,1450
-10,2020-07-11,dauer,0 = Weniger als 1 Monat,0.009,0.023,-0.005,none,1450
-10,2020-07-11,dauer,1-2 Monate,0.034,0.041,0.027,none,1450
-10,2020-07-11,dauer,3-4 Monate,0.093,0.097,0.089,none,1450
-10,2020-07-11,dauer,5-6 Monate,0.094,0.098,0.09,none,1450
-10,2020-07-11,dauer,7 = Mehr als 6 Monate,0.77,0.77,0.769,none,1450
-10,2020-08-15,dauer,0 = Weniger als 1 Monat,0.005,0.024,-0.015,none,1442
-10,2020-08-15,dauer,1-2 Monate,0.019,0.029,0.009,none,1442
-10,2020-08-15,dauer,3-4 Monate,0.062,0.067,0.057,none,1442
-10,2020-08-15,dauer,5-6 Monate,0.08,0.085,0.076,none,1442
-10,2020-08-15,dauer,7 = Mehr als 6 Monate,0.834,0.834,0.834,none,1442
-10,2020-09-12,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.008,none,1478
-10,2020-09-12,dauer,1-2 Monate,0.016,0.026,0.005,none,1478
-10,2020-09-12,dauer,3-4 Monate,0.05,0.056,0.044,none,1478
-10,2020-09-12,dauer,5-6 Monate,0.075,0.079,0.07,none,1478
-10,2020-09-12,dauer,7 = Mehr als 6 Monate,0.852,0.852,0.852,none,1478
-10,2020-10-17,dauer,0 = Weniger als 1 Monat,0.004,0.023,-0.014,none,1564
-10,2020-10-17,dauer,1-2 Monate,0.011,0.023,-0.002,none,1564
-10,2020-10-17,dauer,3-4 Monate,0.031,0.038,0.024,none,1564
-10,2020-10-17,dauer,5-6 Monate,0.071,0.075,0.067,none,1564
-10,2020-10-17,dauer,7 = Mehr als 6 Monate,0.883,0.883,0.883,none,1564
-10,2020-11-14,dauer,0 = Weniger als 1 Monat,0.005,0.023,-0.012,none,1509
-10,2020-11-14,dauer,1-2 Monate,0.017,0.027,0.007,none,1509
-10,2020-11-14,dauer,3-4 Monate,0.043,0.049,0.037,none,1509
-10,2020-11-14,dauer,5-6 Monate,0.082,0.086,0.078,none,1509
-10,2020-11-14,dauer,7 = Mehr als 6 Monate,0.853,0.853,0.853,none,1509
-10,2020-12-13,dauer,0 = Weniger als 1 Monat,0.006,0.023,-0.012,none,1501
-10,2020-12-13,dauer,1-2 Monate,0.013,0.024,0.001,none,1501
-10,2020-12-13,dauer,3-4 Monate,0.053,0.059,0.048,none,1501
-10,2020-12-13,dauer,5-6 Monate,0.099,0.102,0.095,none,1501
-10,2020-12-13,dauer,7 = Mehr als 6 Monate,0.83,0.83,0.829,none,1501
-10,2021-01-16,dauer,0 = Weniger als 1 Monat,0.003,0.027,-0.021,none,1526
-10,2021-01-16,dauer,1-2 Monate,0.008,0.022,-0.007,none,1526
-10,2021-01-16,dauer,3-4 Monate,0.045,0.05,0.039,none,1526
-10,2021-01-16,dauer,5-6 Monate,0.102,0.106,0.099,none,1526
-10,2021-01-16,dauer,7 = Mehr als 6 Monate,0.843,0.843,0.842,none,1526
-10,2021-02-13,dauer,0 = Weniger als 1 Monat,0.002,0.029,-0.024,none,1479
-10,2021-02-13,dauer,1-2 Monate,0.01,0.023,-0.003,none,1479
-10,2021-02-13,dauer,3-4 Monate,0.045,0.051,0.039,none,1479
-10,2021-02-13,dauer,5-6 Monate,0.066,0.071,0.061,none,1479
-10,2021-02-13,dauer,7 = Mehr als 6 Monate,0.877,0.877,0.876,none,1479
-10,2021-03-13,dauer,0 = Weniger als 1 Monat,0.001,0.05,-0.049,none,1486
-10,2021-03-13,dauer,1-2 Monate,0.013,0.025,0.002,none,1486
-10,2021-03-13,dauer,3-4 Monate,0.041,0.048,0.035,none,1486
-10,2021-03-13,dauer,5-6 Monate,0.074,0.079,0.07,none,1486
-10,2021-03-13,dauer,7 = Mehr als 6 Monate,0.87,0.87,0.87,none,1486
-10,2021-04-16,dauer,0 = Weniger als 1 Monat,0.002,0.032,-0.028,none,1445
-10,2021-04-16,dauer,1-2 Monate,0.013,0.025,0.002,none,1445
-10,2021-04-16,dauer,3-4 Monate,0.052,0.058,0.046,none,1445
-10,2021-04-16,dauer,5-6 Monate,0.087,0.091,0.082,none,1445
-10,2021-04-16,dauer,7 = Mehr als 6 Monate,0.846,0.846,0.846,none,1445
-10,2021-05-22,dauer,0 = Weniger als 1 Monat,0.006,0.024,-0.011,none,1399
-10,2021-05-22,dauer,1-2 Monate,0.033,0.04,0.025,none,1399
-10,2021-05-22,dauer,3-4 Monate,0.073,0.078,0.068,none,1399
-10,2021-05-22,dauer,5-6 Monate,0.085,0.09,0.081,none,1399
-10,2021-05-22,dauer,7 = Mehr als 6 Monate,0.803,0.803,0.803,none,1399
-10,2021-06-26,dauer,0 = Weniger als 1 Monat,0.011,0.025,-0.002,none,1393
-10,2021-06-26,dauer,1-2 Monate,0.025,0.034,0.016,none,1393
-10,2021-06-26,dauer,3-4 Monate,0.07,0.075,0.065,none,1393
-10,2021-06-26,dauer,5-6 Monate,0.089,0.093,0.084,none,1393
-10,2021-06-26,dauer,7 = Mehr als 6 Monate,0.805,0.806,0.805,none,1393
-10,2021-09-25,dauer,0 = Weniger als 1 Monat,0.004,0.027,-0.019,none,1366
-10,2021-09-25,dauer,1-2 Monate,0.008,0.024,-0.008,none,1366
-10,2021-09-25,dauer,3-4 Monate,0.04,0.047,0.033,none,1366
-10,2021-09-25,dauer,5-6 Monate,0.074,0.079,0.069,none,1366
-10,2021-09-25,dauer,7 = Mehr als 6 Monate,0.874,0.874,0.874,none,1366
-10,2021-10-23,dauer,0 = Weniger als 1 Monat,0.003,0.03,-0.024,none,1383
-10,2021-10-23,dauer,1-2 Monate,0.008,0.024,-0.008,none,1383
-10,2021-10-23,dauer,3-4 Monate,0.029,0.037,0.02,none,1383
-10,2021-10-23,dauer,5-6 Monate,0.076,0.081,0.072,none,1383
-10,2021-10-23,dauer,7 = Mehr als 6 Monate,0.884,0.884,0.884,none,1383
+10,2020-04-25,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.046,0.051,0.04,none,1515
+10,2020-04-25,zuf_fam,1 = sehr zufrieden,0.398,0.399,0.397,none,1515
+10,2020-04-25,zuf_fam,2 = eher zufrieden,0.401,0.402,0.399,none,1515
+10,2020-04-25,zuf_fam,3 = weniger zufrieden,0.122,0.125,0.119,none,1515
+10,2020-04-25,zuf_fam,4 = nicht zufrieden,0.034,0.04,0.027,none,1515
+10,2020-04-25,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.229,0.231,0.227,none,1515
+10,2020-04-25,zuf_par,1 = sehr zufrieden,0.379,0.381,0.378,none,1515
+10,2020-04-25,zuf_par,2 = eher zufrieden,0.275,0.277,0.273,none,1515
+10,2020-04-25,zuf_par,3 = weniger zufrieden,0.083,0.087,0.079,none,1515
+10,2020-04-25,zuf_par,4 = nicht zufrieden,0.034,0.041,0.027,none,1515
+10,2020-04-25,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.317,0.319,0.316,none,1515
+10,2020-04-25,zuf_ber,1 = sehr zufrieden,0.211,0.214,0.209,none,1515
+10,2020-04-25,zuf_ber,2 = eher zufrieden,0.289,0.29,0.287,none,1515
+10,2020-04-25,zuf_ber,3 = weniger zufrieden,0.118,0.121,0.115,none,1515
+10,2020-04-25,zuf_ber,4 = nicht zufrieden,0.065,0.069,0.06,none,1515
+10,2020-04-25,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.012,0.024,0,none,1515
+10,2020-04-25,zuf_frz,1 = sehr zufrieden,0.198,0.201,0.196,none,1515
+10,2020-04-25,zuf_frz,2 = eher zufrieden,0.414,0.415,0.412,none,1515
+10,2020-04-25,zuf_frz,3 = weniger zufrieden,0.273,0.275,0.271,none,1515
+10,2020-04-25,zuf_frz,4 = nicht zufrieden,0.103,0.107,0.099,none,1515
+10,2020-05-29,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.064,0.069,0.059,none,1504
+10,2020-05-29,zuf_fam,1 = sehr zufrieden,0.403,0.405,0.402,none,1504
+10,2020-05-29,zuf_fam,2 = eher zufrieden,0.409,0.41,0.408,none,1504
+10,2020-05-29,zuf_fam,3 = weniger zufrieden,0.099,0.103,0.095,none,1504
+10,2020-05-29,zuf_fam,4 = nicht zufrieden,0.025,0.033,0.017,none,1504
+10,2020-05-29,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.249,0.251,0.247,none,1504
+10,2020-05-29,zuf_par,1 = sehr zufrieden,0.367,0.368,0.365,none,1504
+10,2020-05-29,zuf_par,2 = eher zufrieden,0.265,0.267,0.263,none,1504
+10,2020-05-29,zuf_par,3 = weniger zufrieden,0.083,0.087,0.079,none,1504
+10,2020-05-29,zuf_par,4 = nicht zufrieden,0.036,0.042,0.029,none,1504
+10,2020-05-29,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.32,0.322,0.319,none,1504
+10,2020-05-29,zuf_ber,1 = sehr zufrieden,0.218,0.221,0.216,none,1504
+10,2020-05-29,zuf_ber,2 = eher zufrieden,0.305,0.307,0.304,none,1504
+10,2020-05-29,zuf_ber,3 = weniger zufrieden,0.117,0.12,0.113,none,1504
+10,2020-05-29,zuf_ber,4 = nicht zufrieden,0.04,0.046,0.033,none,1504
+10,2020-05-29,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.021,0.03,0.013,none,1504
+10,2020-05-29,zuf_frz,1 = sehr zufrieden,0.259,0.261,0.257,none,1504
+10,2020-05-29,zuf_frz,2 = eher zufrieden,0.46,0.461,0.459,none,1504
+10,2020-05-29,zuf_frz,3 = weniger zufrieden,0.209,0.211,0.207,none,1504
+10,2020-05-29,zuf_frz,4 = nicht zufrieden,0.05,0.056,0.045,none,1504
+10,2020-07-11,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.058,0.063,0.053,none,1532
+10,2020-07-11,zuf_fam,1 = sehr zufrieden,0.461,0.462,0.46,none,1532
+10,2020-07-11,zuf_fam,2 = eher zufrieden,0.378,0.38,0.377,none,1532
+10,2020-07-11,zuf_fam,3 = weniger zufrieden,0.078,0.082,0.074,none,1532
+10,2020-07-11,zuf_fam,4 = nicht zufrieden,0.025,0.033,0.017,none,1532
+10,2020-07-11,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.232,0.234,0.23,none,1532
+10,2020-07-11,zuf_par,1 = sehr zufrieden,0.409,0.41,0.408,none,1532
+10,2020-07-11,zuf_par,2 = eher zufrieden,0.252,0.254,0.25,none,1532
+10,2020-07-11,zuf_par,3 = weniger zufrieden,0.08,0.084,0.076,none,1532
+10,2020-07-11,zuf_par,4 = nicht zufrieden,0.027,0.035,0.02,none,1532
+10,2020-07-11,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.312,0.314,0.311,none,1532
+10,2020-07-11,zuf_ber,1 = sehr zufrieden,0.221,0.223,0.219,none,1532
+10,2020-07-11,zuf_ber,2 = eher zufrieden,0.326,0.327,0.324,none,1532
+10,2020-07-11,zuf_ber,3 = weniger zufrieden,0.103,0.106,0.099,none,1532
+10,2020-07-11,zuf_ber,4 = nicht zufrieden,0.038,0.044,0.032,none,1532
+10,2020-07-11,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.016,0.026,0.007,none,1532
+10,2020-07-11,zuf_frz,1 = sehr zufrieden,0.311,0.313,0.31,none,1532
+10,2020-07-11,zuf_frz,2 = eher zufrieden,0.473,0.474,0.472,none,1532
+10,2020-07-11,zuf_frz,3 = weniger zufrieden,0.168,0.17,0.165,none,1532
+10,2020-07-11,zuf_frz,4 = nicht zufrieden,0.032,0.039,0.025,none,1532
+10,2020-10-17,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.062,0.066,0.058,none,1670
+10,2020-10-17,zuf_fam,1 = sehr zufrieden,0.436,0.437,0.435,none,1670
+10,2020-10-17,zuf_fam,2 = eher zufrieden,0.376,0.377,0.375,none,1670
+10,2020-10-17,zuf_fam,3 = weniger zufrieden,0.097,0.101,0.094,none,1670
+10,2020-10-17,zuf_fam,4 = nicht zufrieden,0.029,0.036,0.022,none,1670
+10,2020-10-17,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.229,0.231,0.227,none,1670
+10,2020-10-17,zuf_par,1 = sehr zufrieden,0.388,0.389,0.387,none,1670
+10,2020-10-17,zuf_par,2 = eher zufrieden,0.277,0.279,0.276,none,1670
+10,2020-10-17,zuf_par,3 = weniger zufrieden,0.071,0.075,0.067,none,1670
+10,2020-10-17,zuf_par,4 = nicht zufrieden,0.035,0.041,0.028,none,1670
+10,2020-10-17,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.307,0.309,0.306,none,1670
+10,2020-10-17,zuf_ber,1 = sehr zufrieden,0.228,0.229,0.226,none,1670
+10,2020-10-17,zuf_ber,2 = eher zufrieden,0.32,0.321,0.319,none,1670
+10,2020-10-17,zuf_ber,3 = weniger zufrieden,0.104,0.107,0.101,none,1670
+10,2020-10-17,zuf_ber,4 = nicht zufrieden,0.041,0.046,0.035,none,1670
+10,2020-10-17,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.019,0.028,0.011,none,1670
+10,2020-10-17,zuf_frz,1 = sehr zufrieden,0.272,0.274,0.271,none,1670
+10,2020-10-17,zuf_frz,2 = eher zufrieden,0.446,0.447,0.445,none,1670
+10,2020-10-17,zuf_frz,3 = weniger zufrieden,0.208,0.21,0.206,none,1670
+10,2020-10-17,zuf_frz,4 = nicht zufrieden,0.055,0.06,0.05,none,1670
+10,2021-01-16,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.066,0.071,0.062,none,1612
+10,2021-01-16,zuf_fam,1 = sehr zufrieden,0.403,0.404,0.402,none,1612
+10,2021-01-16,zuf_fam,2 = eher zufrieden,0.381,0.383,0.38,none,1612
+10,2021-01-16,zuf_fam,3 = weniger zufrieden,0.113,0.116,0.11,none,1612
+10,2021-01-16,zuf_fam,4 = nicht zufrieden,0.037,0.043,0.031,none,1612
+10,2021-01-16,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.24,0.242,0.238,none,1612
+10,2021-01-16,zuf_par,1 = sehr zufrieden,0.38,0.382,0.379,none,1612
+10,2021-01-16,zuf_par,2 = eher zufrieden,0.268,0.27,0.267,none,1612
+10,2021-01-16,zuf_par,3 = weniger zufrieden,0.071,0.075,0.067,none,1612
+10,2021-01-16,zuf_par,4 = nicht zufrieden,0.04,0.046,0.035,none,1612
+10,2021-01-16,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.311,0.312,0.309,none,1612
+10,2021-01-16,zuf_ber,1 = sehr zufrieden,0.22,0.222,0.218,none,1612
+10,2021-01-16,zuf_ber,2 = eher zufrieden,0.3,0.302,0.299,none,1612
+10,2021-01-16,zuf_ber,3 = weniger zufrieden,0.098,0.102,0.095,none,1612
+10,2021-01-16,zuf_ber,4 = nicht zufrieden,0.07,0.075,0.066,none,1612
+10,2021-01-16,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.014,0.024,0.003,none,1612
+10,2021-01-16,zuf_frz,1 = sehr zufrieden,0.176,0.179,0.174,none,1612
+10,2021-01-16,zuf_frz,2 = eher zufrieden,0.378,0.379,0.377,none,1612
+10,2021-01-16,zuf_frz,3 = weniger zufrieden,0.289,0.291,0.288,none,1612
+10,2021-01-16,zuf_frz,4 = nicht zufrieden,0.143,0.146,0.14,none,1612
+10,2021-04-16,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.055,0.061,0.05,none,1533
+10,2021-04-16,zuf_fam,1 = sehr zufrieden,0.397,0.398,0.396,none,1533
+10,2021-04-16,zuf_fam,2 = eher zufrieden,0.404,0.405,0.402,none,1533
+10,2021-04-16,zuf_fam,3 = weniger zufrieden,0.107,0.11,0.103,none,1533
+10,2021-04-16,zuf_fam,4 = nicht zufrieden,0.037,0.043,0.031,none,1533
+10,2021-04-16,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.228,0.23,0.226,none,1533
+10,2021-04-16,zuf_par,1 = sehr zufrieden,0.379,0.38,0.377,none,1533
+10,2021-04-16,zuf_par,2 = eher zufrieden,0.271,0.273,0.269,none,1533
+10,2021-04-16,zuf_par,3 = weniger zufrieden,0.083,0.087,0.079,none,1533
+10,2021-04-16,zuf_par,4 = nicht zufrieden,0.039,0.045,0.032,none,1533
+10,2021-04-16,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.305,0.306,0.303,none,1533
+10,2021-04-16,zuf_ber,1 = sehr zufrieden,0.213,0.215,0.211,none,1533
+10,2021-04-16,zuf_ber,2 = eher zufrieden,0.323,0.325,0.322,none,1533
+10,2021-04-16,zuf_ber,3 = weniger zufrieden,0.107,0.11,0.103,none,1533
+10,2021-04-16,zuf_ber,4 = nicht zufrieden,0.052,0.058,0.047,none,1533
+10,2021-04-16,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.021,0.03,0.013,none,1533
+10,2021-04-16,zuf_frz,1 = sehr zufrieden,0.193,0.195,0.191,none,1533
+10,2021-04-16,zuf_frz,2 = eher zufrieden,0.375,0.376,0.374,none,1533
+10,2021-04-16,zuf_frz,3 = weniger zufrieden,0.3,0.301,0.298,none,1533
+10,2021-04-16,zuf_frz,4 = nicht zufrieden,0.111,0.114,0.108,none,1533
+10,2021-06-26,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.06,0.065,0.055,none,1513
+10,2021-06-26,zuf_fam,1 = sehr zufrieden,0.42,0.421,0.419,none,1513
+10,2021-06-26,zuf_fam,2 = eher zufrieden,0.384,0.385,0.383,none,1513
+10,2021-06-26,zuf_fam,3 = weniger zufrieden,0.099,0.103,0.096,none,1513
+10,2021-06-26,zuf_fam,4 = nicht zufrieden,0.037,0.043,0.03,none,1513
+10,2021-06-26,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.216,0.218,0.214,none,1513
+10,2021-06-26,zuf_par,1 = sehr zufrieden,0.394,0.396,0.393,none,1513
+10,2021-06-26,zuf_par,2 = eher zufrieden,0.265,0.266,0.263,none,1513
+10,2021-06-26,zuf_par,3 = weniger zufrieden,0.078,0.082,0.074,none,1513
+10,2021-06-26,zuf_par,4 = nicht zufrieden,0.047,0.053,0.042,none,1513
+10,2021-06-26,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.304,0.305,0.302,none,1513
+10,2021-06-26,zuf_ber,1 = sehr zufrieden,0.236,0.238,0.234,none,1513
+10,2021-06-26,zuf_ber,2 = eher zufrieden,0.307,0.308,0.305,none,1513
+10,2021-06-26,zuf_ber,3 = weniger zufrieden,0.112,0.115,0.108,none,1513
+10,2021-06-26,zuf_ber,4 = nicht zufrieden,0.042,0.048,0.036,none,1513
+10,2021-06-26,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.021,0.03,0.012,none,1513
+10,2021-06-26,zuf_frz,1 = sehr zufrieden,0.286,0.288,0.284,none,1513
+10,2021-06-26,zuf_frz,2 = eher zufrieden,0.466,0.467,0.465,none,1513
+10,2021-06-26,zuf_frz,3 = weniger zufrieden,0.173,0.175,0.17,none,1513
+10,2021-06-26,zuf_frz,4 = nicht zufrieden,0.054,0.059,0.048,none,1513
+10,2021-10-23,zuf_fam,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.057,0.062,0.052,none,1514
+10,2021-10-23,zuf_fam,1 = sehr zufrieden,0.44,0.441,0.439,none,1514
+10,2021-10-23,zuf_fam,2 = eher zufrieden,0.375,0.376,0.374,none,1514
+10,2021-10-23,zuf_fam,3 = weniger zufrieden,0.084,0.088,0.08,none,1514
+10,2021-10-23,zuf_fam,4 = nicht zufrieden,0.043,0.049,0.037,none,1514
+10,2021-10-23,zuf_par,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.212,0.215,0.21,none,1514
+10,2021-10-23,zuf_par,1 = sehr zufrieden,0.393,0.395,0.392,none,1514
+10,2021-10-23,zuf_par,2 = eher zufrieden,0.251,0.253,0.249,none,1514
+10,2021-10-23,zuf_par,3 = weniger zufrieden,0.093,0.097,0.09,none,1514
+10,2021-10-23,zuf_par,4 = nicht zufrieden,0.05,0.055,0.044,none,1514
+10,2021-10-23,zuf_ber,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.289,0.291,0.287,none,1514
+10,2021-10-23,zuf_ber,1 = sehr zufrieden,0.232,0.234,0.23,none,1514
+10,2021-10-23,zuf_ber,2 = eher zufrieden,0.339,0.341,0.338,none,1514
+10,2021-10-23,zuf_ber,3 = weniger zufrieden,0.099,0.103,0.095,none,1514
+10,2021-10-23,zuf_ber,4 = nicht zufrieden,0.041,0.047,0.035,none,1514
+10,2021-10-23,zuf_frz,0 = trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),0.015,0.025,0.004,none,1514
+10,2021-10-23,zuf_frz,1 = sehr zufrieden,0.31,0.312,0.309,none,1514
+10,2021-10-23,zuf_frz,2 = eher zufrieden,0.443,0.444,0.441,none,1514
+10,2021-10-23,zuf_frz,3 = weniger zufrieden,0.188,0.19,0.185,none,1514
+10,2021-10-23,zuf_frz,4 = nicht zufrieden,0.045,0.051,0.039,none,1514
+11,2020-03-28,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.006,none,1489
+11,2020-03-28,dauer,1-2 Monate,0.105,0.109,0.102,none,1489
+11,2020-03-28,dauer,3-4 Monate,0.312,0.314,0.31,none,1489
+11,2020-03-28,dauer,5-6 Monate,0.228,0.23,0.226,none,1489
+11,2020-03-28,dauer,7 = Mehr als 6 Monate,0.346,0.348,0.345,none,1489
+11,2020-04-04,dauer,0 = Weniger als 1 Monat,0.008,0.022,-0.007,none,1505
+11,2020-04-04,dauer,1-2 Monate,0.091,0.095,0.087,none,1505
+11,2020-04-04,dauer,3-4 Monate,0.277,0.279,0.275,none,1505
+11,2020-04-04,dauer,5-6 Monate,0.217,0.219,0.215,none,1505
+11,2020-04-04,dauer,7 = Mehr als 6 Monate,0.407,0.408,0.406,none,1505
+11,2020-04-11,dauer,0 = Weniger als 1 Monat,0.002,0.031,-0.027,none,1449
+11,2020-04-11,dauer,1-2 Monate,0.073,0.078,0.068,none,1449
+11,2020-04-11,dauer,3-4 Monate,0.24,0.242,0.238,none,1449
+11,2020-04-11,dauer,5-6 Monate,0.205,0.207,0.202,none,1449
+11,2020-04-11,dauer,7 = Mehr als 6 Monate,0.48,0.481,0.479,none,1449
+11,2020-04-17,dauer,0 = Weniger als 1 Monat,0.005,0.023,-0.013,none,1478
+11,2020-04-17,dauer,1-2 Monate,0.061,0.066,0.056,none,1478
+11,2020-04-17,dauer,3-4 Monate,0.172,0.175,0.17,none,1478
+11,2020-04-17,dauer,5-6 Monate,0.202,0.205,0.2,none,1478
+11,2020-04-17,dauer,7 = Mehr als 6 Monate,0.559,0.56,0.558,none,1478
+11,2020-04-25,dauer,0 = Weniger als 1 Monat,0.007,0.023,-0.009,none,1457
+11,2020-04-25,dauer,1-2 Monate,0.067,0.072,0.062,none,1457
+11,2020-04-25,dauer,3-4 Monate,0.128,0.132,0.125,none,1457
+11,2020-04-25,dauer,5-6 Monate,0.181,0.184,0.179,none,1457
+11,2020-04-25,dauer,7 = Mehr als 6 Monate,0.616,0.617,0.616,none,1457
+11,2020-05-03,dauer,0 = Weniger als 1 Monat,0.009,0.023,-0.004,none,1496
+11,2020-05-03,dauer,1-2 Monate,0.053,0.059,0.048,none,1496
+11,2020-05-03,dauer,3-4 Monate,0.139,0.142,0.136,none,1496
+11,2020-05-03,dauer,5-6 Monate,0.181,0.183,0.178,none,1496
+11,2020-05-03,dauer,7 = Mehr als 6 Monate,0.618,0.618,0.617,none,1496
+11,2020-05-09,dauer,0 = Weniger als 1 Monat,0.011,0.024,-0.001,none,1457
+11,2020-05-09,dauer,1-2 Monate,0.05,0.056,0.044,none,1457
+11,2020-05-09,dauer,3-4 Monate,0.132,0.136,0.129,none,1457
+11,2020-05-09,dauer,5-6 Monate,0.163,0.165,0.16,none,1457
+11,2020-05-09,dauer,7 = Mehr als 6 Monate,0.644,0.644,0.643,none,1457
+11,2020-05-16,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.006,none,1441
+11,2020-05-16,dauer,1-2 Monate,0.075,0.079,0.07,none,1441
+11,2020-05-16,dauer,3-4 Monate,0.15,0.153,0.147,none,1441
+11,2020-05-16,dauer,5-6 Monate,0.148,0.151,0.145,none,1441
+11,2020-05-16,dauer,7 = Mehr als 6 Monate,0.619,0.62,0.619,none,1441
+11,2020-05-24,dauer,0 = Weniger als 1 Monat,0.012,0.024,0,none,1444
+11,2020-05-24,dauer,1-2 Monate,0.069,0.073,0.064,none,1444
+11,2020-05-24,dauer,3-4 Monate,0.123,0.127,0.12,none,1444
+11,2020-05-24,dauer,5-6 Monate,0.165,0.168,0.163,none,1444
+11,2020-05-24,dauer,7 = Mehr als 6 Monate,0.63,0.631,0.63,none,1444
+11,2020-05-29,dauer,0 = Weniger als 1 Monat,0.022,0.031,0.013,none,1450
+11,2020-05-29,dauer,1-2 Monate,0.079,0.083,0.074,none,1450
+11,2020-05-29,dauer,3-4 Monate,0.144,0.148,0.141,none,1450
+11,2020-05-29,dauer,5-6 Monate,0.154,0.157,0.151,none,1450
+11,2020-05-29,dauer,7 = Mehr als 6 Monate,0.601,0.601,0.6,none,1450
+11,2020-06-13,dauer,0 = Weniger als 1 Monat,0.023,0.032,0.015,none,1444
+11,2020-06-13,dauer,1-2 Monate,0.086,0.09,0.082,none,1444
+11,2020-06-13,dauer,3-4 Monate,0.126,0.13,0.123,none,1444
+11,2020-06-13,dauer,5-6 Monate,0.137,0.141,0.134,none,1444
+11,2020-06-13,dauer,7 = Mehr als 6 Monate,0.627,0.628,0.627,none,1444
+11,2020-06-27,dauer,0 = Weniger als 1 Monat,0.019,0.028,0.009,none,1450
+11,2020-06-27,dauer,1-2 Monate,0.066,0.071,0.061,none,1450
+11,2020-06-27,dauer,3-4 Monate,0.105,0.109,0.102,none,1450
+11,2020-06-27,dauer,5-6 Monate,0.118,0.122,0.115,none,1450
+11,2020-06-27,dauer,7 = Mehr als 6 Monate,0.692,0.692,0.691,none,1450
+11,2020-07-11,dauer,0 = Weniger als 1 Monat,0.009,0.023,-0.005,none,1450
+11,2020-07-11,dauer,1-2 Monate,0.034,0.041,0.027,none,1450
+11,2020-07-11,dauer,3-4 Monate,0.093,0.097,0.089,none,1450
+11,2020-07-11,dauer,5-6 Monate,0.094,0.098,0.09,none,1450
+11,2020-07-11,dauer,7 = Mehr als 6 Monate,0.77,0.77,0.769,none,1450
+11,2020-08-15,dauer,0 = Weniger als 1 Monat,0.005,0.024,-0.015,none,1442
+11,2020-08-15,dauer,1-2 Monate,0.019,0.029,0.009,none,1442
+11,2020-08-15,dauer,3-4 Monate,0.062,0.067,0.057,none,1442
+11,2020-08-15,dauer,5-6 Monate,0.08,0.085,0.076,none,1442
+11,2020-08-15,dauer,7 = Mehr als 6 Monate,0.834,0.834,0.834,none,1442
+11,2020-09-12,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.008,none,1478
+11,2020-09-12,dauer,1-2 Monate,0.016,0.026,0.005,none,1478
+11,2020-09-12,dauer,3-4 Monate,0.05,0.056,0.044,none,1478
+11,2020-09-12,dauer,5-6 Monate,0.075,0.079,0.07,none,1478
+11,2020-09-12,dauer,7 = Mehr als 6 Monate,0.852,0.852,0.852,none,1478
+11,2020-10-17,dauer,0 = Weniger als 1 Monat,0.004,0.023,-0.014,none,1564
+11,2020-10-17,dauer,1-2 Monate,0.011,0.023,-0.002,none,1564
+11,2020-10-17,dauer,3-4 Monate,0.031,0.038,0.024,none,1564
+11,2020-10-17,dauer,5-6 Monate,0.071,0.075,0.067,none,1564
+11,2020-10-17,dauer,7 = Mehr als 6 Monate,0.883,0.883,0.883,none,1564
+11,2020-11-14,dauer,0 = Weniger als 1 Monat,0.005,0.023,-0.012,none,1509
+11,2020-11-14,dauer,1-2 Monate,0.017,0.027,0.007,none,1509
+11,2020-11-14,dauer,3-4 Monate,0.043,0.049,0.037,none,1509
+11,2020-11-14,dauer,5-6 Monate,0.082,0.086,0.078,none,1509
+11,2020-11-14,dauer,7 = Mehr als 6 Monate,0.853,0.853,0.853,none,1509
+11,2020-12-13,dauer,0 = Weniger als 1 Monat,0.006,0.023,-0.012,none,1501
+11,2020-12-13,dauer,1-2 Monate,0.013,0.024,0.001,none,1501
+11,2020-12-13,dauer,3-4 Monate,0.053,0.059,0.048,none,1501
+11,2020-12-13,dauer,5-6 Monate,0.099,0.102,0.095,none,1501
+11,2020-12-13,dauer,7 = Mehr als 6 Monate,0.83,0.83,0.829,none,1501
+11,2021-01-16,dauer,0 = Weniger als 1 Monat,0.003,0.027,-0.021,none,1526
+11,2021-01-16,dauer,1-2 Monate,0.008,0.022,-0.007,none,1526
+11,2021-01-16,dauer,3-4 Monate,0.045,0.05,0.039,none,1526
+11,2021-01-16,dauer,5-6 Monate,0.102,0.106,0.099,none,1526
+11,2021-01-16,dauer,7 = Mehr als 6 Monate,0.843,0.843,0.842,none,1526
+11,2021-02-13,dauer,0 = Weniger als 1 Monat,0.002,0.029,-0.024,none,1479
+11,2021-02-13,dauer,1-2 Monate,0.01,0.023,-0.003,none,1479
+11,2021-02-13,dauer,3-4 Monate,0.045,0.051,0.039,none,1479
+11,2021-02-13,dauer,5-6 Monate,0.066,0.071,0.061,none,1479
+11,2021-02-13,dauer,7 = Mehr als 6 Monate,0.877,0.877,0.876,none,1479
+11,2021-03-13,dauer,0 = Weniger als 1 Monat,0.001,0.05,-0.049,none,1486
+11,2021-03-13,dauer,1-2 Monate,0.013,0.025,0.002,none,1486
+11,2021-03-13,dauer,3-4 Monate,0.041,0.048,0.035,none,1486
+11,2021-03-13,dauer,5-6 Monate,0.074,0.079,0.07,none,1486
+11,2021-03-13,dauer,7 = Mehr als 6 Monate,0.87,0.87,0.87,none,1486
+11,2021-04-16,dauer,0 = Weniger als 1 Monat,0.002,0.032,-0.028,none,1445
+11,2021-04-16,dauer,1-2 Monate,0.013,0.025,0.002,none,1445
+11,2021-04-16,dauer,3-4 Monate,0.052,0.058,0.046,none,1445
+11,2021-04-16,dauer,5-6 Monate,0.087,0.091,0.082,none,1445
+11,2021-04-16,dauer,7 = Mehr als 6 Monate,0.846,0.846,0.846,none,1445
+11,2021-05-22,dauer,0 = Weniger als 1 Monat,0.006,0.024,-0.011,none,1399
+11,2021-05-22,dauer,1-2 Monate,0.033,0.04,0.025,none,1399
+11,2021-05-22,dauer,3-4 Monate,0.073,0.078,0.068,none,1399
+11,2021-05-22,dauer,5-6 Monate,0.085,0.09,0.081,none,1399
+11,2021-05-22,dauer,7 = Mehr als 6 Monate,0.803,0.803,0.803,none,1399
+11,2021-06-26,dauer,0 = Weniger als 1 Monat,0.011,0.025,-0.002,none,1393
+11,2021-06-26,dauer,1-2 Monate,0.025,0.034,0.016,none,1393
+11,2021-06-26,dauer,3-4 Monate,0.07,0.075,0.065,none,1393
+11,2021-06-26,dauer,5-6 Monate,0.089,0.093,0.084,none,1393
+11,2021-06-26,dauer,7 = Mehr als 6 Monate,0.805,0.806,0.805,none,1393
+11,2021-09-25,dauer,0 = Weniger als 1 Monat,0.004,0.027,-0.019,none,1366
+11,2021-09-25,dauer,1-2 Monate,0.008,0.024,-0.008,none,1366
+11,2021-09-25,dauer,3-4 Monate,0.04,0.047,0.033,none,1366
+11,2021-09-25,dauer,5-6 Monate,0.074,0.079,0.069,none,1366
+11,2021-09-25,dauer,7 = Mehr als 6 Monate,0.874,0.874,0.874,none,1366
+11,2021-10-23,dauer,0 = Weniger als 1 Monat,0.003,0.03,-0.024,none,1383
+11,2021-10-23,dauer,1-2 Monate,0.008,0.024,-0.008,none,1383
+11,2021-10-23,dauer,3-4 Monate,0.029,0.037,0.02,none,1383
+11,2021-10-23,dauer,5-6 Monate,0.076,0.081,0.072,none,1383
+11,2021-10-23,dauer,7 = Mehr als 6 Monate,0.884,0.884,0.884,none,1383

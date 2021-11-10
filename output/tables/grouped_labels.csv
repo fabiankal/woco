@@ -36,5 +36,9 @@ Ueberhaupt kein Vertrauen,1,2,3,4,5,6,7,8,9,Sehr viel Vertrauen,Weiss nicht,kein
 Ueberhaupt kein Vertrauen,1,2,3,4,5,6,7,8,9,Sehr viel Vertrauen,Weiss nicht,keine Angabe,ver_par,2,Vertrauen: Parlament,1,11,0,0,V12,V13,10,no WN option,no KA option
 Ueberhaupt kein Vertrauen,1,2,3,4,5,6,7,8,9,Sehr viel Vertrauen,Weiss nicht,keine Angabe,ver_pol,2,Vertrauen: Polizei,1,11,0,0,V12,V13,10,no WN option,no KA option
 Ueberhaupt kein Vertrauen,1,2,3,4,5,6,7,8,9,Sehr viel Vertrauen,Weiss nicht,keine Angabe,ver_orf,2,Vertrauen: ORF,1,11,0,0,V12,V13,10,no WN option,no KA option
-Weniger als 1 Monat,1-2 Monate,3-4 Monate,5-6 Monate,Mehr als 6 Monate,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,NA,dauer,10,Geschaetzte Dauer der Krise,1,5,0,6,V6,V7,4,no WN option,no KA option
+Weniger als 1 Monat,1-2 Monate,3-4 Monate,5-6 Monate,Mehr als 6 Monate,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,NA,dauer,11,Geschaetzte Dauer der Krise,1,5,0,6,V6,V7,4,no WN option,no KA option
 sehr gut zurechtkommen,gut zurechtkommen,teils-teils,nur schwer zurechtkommen,nur sehr schwer zurechtkommen,Weiss nicht,keine Angabe,NA,NA,NA,NA,NA,NA,fin_ausk_akt,9,Finanzielles Auskommen: Aktuell,1,5,1,6,V6,V7,4,no WN option,no KA option
+trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),sehr zufrieden,eher zufrieden,weniger zufrieden,nicht zufrieden,NA,NA,NA,NA,NA,NA,NA,NA,zuf_fam,10,Zufriedenheit: Familienleben,1,5,0,8,nown,noka,4,no WN option,no KA option
+trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),sehr zufrieden,eher zufrieden,weniger zufrieden,nicht zufrieden,NA,NA,NA,NA,NA,NA,NA,NA,zuf_par,10,Zufriedenheit: Partnerschaft,1,5,0,8,nown,noka,4,no WN option,no KA option
+trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),sehr zufrieden,eher zufrieden,weniger zufrieden,nicht zufrieden,NA,NA,NA,NA,NA,NA,NA,NA,zuf_ber,10,Zufriedenheit: Beruf,1,5,0,8,nown,noka,4,no WN option,no KA option
+trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig),sehr zufrieden,eher zufrieden,weniger zufrieden,nicht zufrieden,NA,NA,NA,NA,NA,NA,NA,NA,zuf_frz,10,Zufriedenheit: Freizeit,1,5,0,8,nown,noka,4,no WN option,no KA option

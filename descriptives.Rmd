@@ -120,6 +120,69 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(
 bern_data_long2_factored$population_3g <- as.factor(bern_data_long2_factored$population_3g)
 bern_data_long2_factored$population_3g <- fct_relevel(bern_data_long2_factored$population_3g, "<10.000","10.000–1 Million",">1 Million")
 
+# Recode control variables
+#Employment status
+# *(self) employed as usal
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & (as.numeric(berufa_kaen) == 2 | as.numeric(berufa_kang) == 2) & (Paneli_W1 == 1	& wave == 1),"(self) employed as usual",NA))
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & (as.numeric(berufa_urla) == 2 | as.numeric(berufa_aufs) == 2) & (Paneli_W1 == 1	& wave == 1),"(self) employed as usual",empl))
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & (as.numeric(berufa_awsk) == 2 | as.numeric(berufa_hafo) == 2) & (Paneli_W1 == 1	& wave == 1),"(self) employed as usual",empl))
+
+#	*furlough
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & as.numeric(berufa_kurz) == 2 & (Paneli_W1 == 1	& wave == 1),"furlough",empl))
+
+#	*home office
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & as.numeric(berufa_home) == 2 & (Paneli_W1 == 1	& wave == 1),"home office",empl))
+
+#	*unemployed
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) == 4 & (Paneli_W1 == 1 & wave == 1),"unemployed",empl))
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse((as.numeric(berufa_kuen) %in% 2 | as.numeric(berufa_arbu) %in% 2 | as.numeric(berufa_sozh) %in% 2 | as.numeric(berufa_kasa) %in% 2) & (Paneli_W1 %in% 1 & wave %in% 1),"unemployed",empl))
+
+# *not in labour market
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) > 4 & as.numeric(SD_EMPLSTATUS_FEB2020) < 11 & (Paneli_W1 == 1	& wave == 1),"not in labour market",empl))
+
+
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(panelist2=ifelse(Paneli_W1 == 1 & wave==1,1,
+                                                ifelse(Paneli_W2 == 1 & wave==2,2,
+                                                ifelse(Paneli_W3 == 1 & wave==3,3,
+                                                ifelse(Paneli_W4 == 1 & wave==4,4,
+                                                ifelse(Paneli_W5 == 1 & wave==5,5,
+                                                ifelse(Paneli_W6 == 1 & wave==6,6,
+                                                ifelse(Paneli_W7 == 1 & wave==7,7,
+                                                ifelse(Paneli_W8 == 1 & wave==8,8,
+                                                ifelse(Paneli_W9 == 1 & wave==9,9,
+                                                ifelse(Paneli_W10 == 1 & wave==10,10,
+                                                ifelse(Paneli_W11 == 1 & wave==11,11,
+                                                ifelse(Paneli_W12 == 1 & wave==12,12,
+                                                ifelse(Paneli_W13 == 1 & wave==13,13,
+                                                ifelse(Paneli_W14 == 1 & wave==14,14,
+                                                ifelse(Paneli_W15 == 1 & wave==15,15,
+                                                ifelse(Paneli_W16 == 1 & wave==16,16,
+                                                ifelse(Paneli_W17 == 1 & wave==17,17,
+                                                ifelse(Paneli_W18 == 1 & wave==18,18,
+                                                ifelse(Paneli_W19 == 1 & wave==19,19,
+                                                ifelse(Paneli_W20 == 1 & wave==20,20,
+                                                ifelse(Paneli_W21 == 1 & wave==21,21,
+                                                ifelse(Paneli_W22 == 1 & wave==22,22,
+                                                ifelse(Paneli_W23 == 1 & wave==23,23,
+                                                ifelse(Paneli_W24 == 1 & wave==24,24,
+                                                ifelse(Paneli_W25 == 1 & wave==25,25,NA))))))))))))))))))))))))))
+
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(berufst) < 4 & (panelist2>1),"(self) employed as usual",empl))
+
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse((as.numeric(berufa_kurz) %in% 2) & (panelist2>1),"furlough",empl))
+
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse((as.numeric(berufa_home) %in% 2) & (panelist2>1),"home office",empl))
+
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse((as.numeric(berufst) == 4|as.numeric(berufa_kasa) %in% 2 | as.numeric(berufa_sozh) %in% 2 | as.numeric(berufa_arbu) %in% 2 | as.numeric(berufa_kuen) %in% 2) & (panelist2>1),"unemployed",empl))
+
+bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(((as.numeric(berufst) > 4)&(as.numeric(berufst) < 11)) & (panelist2>1),"not in labour market",empl))
+
+table(bern_data_long2_factored$empl)
+
+bern_data_long2_factored$empl<-as.factor(bern_data_long2_factored$empl)
+levels(bern_data_long2_factored$empl)<-c("Arbeitend","in Kurzarbeit","in Home-office","Nicht-Arbeitend","Arbeitslos")
+bern_data_long2_factored$empl <- fct_relevel(bern_data_long2_factored$empl, "Arbeitend","in Kurzarbeit","in Home-office","Arbeitslos","Nicht-Arbeitend")
+
 
 ```
 
@@ -144,17 +207,17 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
                    "mas_angemessen","mas_effektiv",
                    "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
                    "dauer",
-                   "fin_ausk_akt")
+                   "fin_ausk_akt",
+                   "zuf_fam","zuf_par","zuf_ber","zuf_frz")
                                      #"sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
  #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
  #                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
- #                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
  #                   "berufst"
 
 #variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
 #What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
-sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","population_3g","hh_inc_cur_3g")
+sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","population_3g","hh_inc_cur_3g","empl")
 
 #Get the different factor scales in the data and generate a dataframe indicating which variables use different answer scales
 labels <- lr_gen_w1 %>% ungroup() %>% select(variablelist) %>%  sapply(levels)
@@ -240,7 +303,7 @@ out <- vector('list', max(unique(grouped_labels$ID)))
 for (val in unique(grouped_labels$ID)) {
 count = count+1
 out[[count]] <- gather(lr_gen_w2, variable, measurement, grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable), factor_key=TRUE) %>%
-  select(id,wave,WEIGHTD,wavedate,gender,alter_g,edu4,population_3g,hh_inc_cur_3g,variable,measurement)
+  select(id,wave,WEIGHTD,wavedate,gender,alter_g,edu4,population_3g,hh_inc_cur_3g,empl,variable,measurement)
 out[[count]]$measurement<-as.factor(out[[count]]$measurement)
 out[[count]]$measurement=fct_relevel(out[[count]]$measurement,levels(lr_gen_w2[[(grouped_labels%>%filter(ID==count)%>%ungroup()%>%pull(variable))[1]]]))
 
@@ -285,6 +348,7 @@ data_plot_long_mean_ag<- vector('list', max(unique(grouped_labels$ID)))
 data_plot_long_mean_ed<- vector('list', max(unique(grouped_labels$ID)))
 data_plot_long_mean_bl<- vector('list', max(unique(grouped_labels$ID)))
 data_plot_long_mean_hi<- vector('list', max(unique(grouped_labels$ID)))
+data_plot_long_mean_es<- vector('list', max(unique(grouped_labels$ID)))
 
 grouped_labels_sum <- grouped_labels %>% group_by(ID) %>% filter(row_number()==1)
 
@@ -350,6 +414,15 @@ data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
   summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
   group_by(wavedate,variable,hh_inc_cur_3g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="hi")
+
+#mean by employment status
+data_plot_long_mean_es[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(empl)) %>%
+  as_survey_design(weights = c(WEIGHTD)) %>%
+  group_by(wavedate,variable,empl) %>%
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+  group_by(wavedate,variable,empl) %>%
+     mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="es")
+
 print(val)
 print("end")
 }
@@ -361,9 +434,16 @@ data_plot_long_mean_ag_new<-bind_rows(data_plot_long_mean_ag, .id = 'scales')%>%
 data_plot_long_mean_ed_new<-bind_rows(data_plot_long_mean_ed, .id = 'scales')%>%rename("subgroup" = edu4)
 data_plot_long_mean_bl_new<-bind_rows(data_plot_long_mean_bl, .id = 'scales')%>%rename("subgroup" = population_3g)
 data_plot_long_mean_hi_new<-bind_rows(data_plot_long_mean_hi, .id = 'scales')%>%rename("subgroup" = hh_inc_cur_3g)
+data_plot_long_mean_es_new<-bind_rows(data_plot_long_mean_es, .id = 'scales')%>%rename("subgroup" = empl)
 
 
-export_shiny_data <- bind_rows(data_plot_long_mean_new, data_plot_long_mean_ge_new,data_plot_long_mean_ag_new,data_plot_long_mean_ed_new,data_plot_long_mean_bl_new,data_plot_long_mean_hi_new)
+export_shiny_data <- bind_rows(data_plot_long_mean_new,
+                               data_plot_long_mean_ge_new,
+                               data_plot_long_mean_ag_new,
+                               data_plot_long_mean_ed_new,
+                               data_plot_long_mean_bl_new,
+                               data_plot_long_mean_hi_new,
+                               data_plot_long_mean_es_new)
 
 
 #combine shares and N to one dataframe
