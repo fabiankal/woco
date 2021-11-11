@@ -902,6 +902,8 @@ checkboxInput(inputId = 'colordirect2', label = "Farbschema umkehren", value = F
                  "In Personen" = "persons"
                  )
                )
+checkboxInput(inputId = 'play', label = "Wellen dynamisch abspielen (BETA)", value = FALSE)
+
 version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
@@ -926,7 +928,9 @@ Column
 renderPlotly({
   
    inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares2]
-  
+ 
+   if(input$play==FALSE) 
+   {
   data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
      mutate(wave = cur_group_id()) %>% ungroup() %>%
     filter(variable %in% inputvariable_shares & wave %in% str_split(input$waves,pattern=" ",simplify = TRUE)[2])
@@ -966,10 +970,46 @@ renderPlotly({
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
   }
+  }
+ if(input$play==TRUE)
+  {
+  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% 
+    filter(variable %in% inputvariable_shares) %>% filter(!is.na(measurement))
+  data4 <- data4 %>% mutate(Personen = round(prop*N_total,0)) %>% 
+                     rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement,
+                            N = N_total) %>% 
+    mutate(Kategoriex = if_else(row_number() %% 2 == 0, paste0("\n",Kategorie), as.character(Kategorie)),
+           Kategorie2 = as.factor(Kategorie),
+           Kategorie3 = as.numeric(Kategorie))
   
-m <- list(l = 40,r = 40,b = 80,t = 40,pad = 4)  
+  Nrund<-round(mean(data4$N,na.rm=TRUE),0)
+  
+   p <- ggplot(data4, aes(x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
+    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE) + #fill=Kategorie,colour="white",alpha=.75
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    #scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
+    #scale_fill_manual(values = c("red", "blue", "green","yellow","orange")) +
+    labs(y = "", x= "") +#,fill=""
+    theme_minimal() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_discrete(guide = guide_axis(n.dodge = 2)) #+
+    #theme(legend.position="bottom") + 
+    #guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
+   
+   # fig = data4 %>% plot_ly(x=~Kategorie,
+   #           y=~Anteil,
+   #           frame=~Kategorie,
+   #           color = ~Kategorie,
+   #           type = 'scatter',
+   #           mode = 'markers',
+   # )
+   # fig
+ } 
+   m <- list(l = 40,r = 40,b = 80,t = 40,pad = 4)  
 
-  g <- ggplotly(p,tooltip = c("fill","y","text")) %>%
+  g <- ggplotly(p,tooltip = c("fill","y","text"))  %>%
 layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
@@ -997,27 +1037,29 @@ layout(showlegend = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","hoverCompareCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
         ))
+  g
+
   #g$x$data[[1]]$hoverinfo <- "none"
   #g$x$data[[2]]$hoverinfo <- "none"
   #g$x$data[[3]]$hoverinfo <- "none"
   #g$x$data[[4]]$hoverinfo <- "none"
   #g$x$data[[5]]$hoverinfo <- "none"
-  g 
+  
  
 })
 
   observeEvent(input$var_shares2, {
-  
+
       inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares2]
-  
+
   data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
      mutate(wave = cur_group_id()) %>% ungroup() %>%
     filter(variable %in% inputvariable_shares)
-  
+
   myval3<-paste("Welle ",names(table(data4$wave))," (",names(table(format(data4$wavedate, "%Y-%m-%d"))),")",sep = "")
-  
+
   updateSelectInput(session, "waves", choices = myval3)
- 
+
    })
 
 ```
