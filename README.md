@@ -3,6 +3,10 @@ Work and Corona (WoCo) dashboard for plotting data from the Austrian Panel Proje
 
 This is the R code package for replicating the dashboard provided @ https://woco.ac.at/dashboard
 
+You can also access the dashboard via binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fabiankal/woco/master?urlpath=shiny)
+
+And even change the code within an online R studio environment: https://mybinder.org/v2/gh/fabiankal/woco/master?urlpath=rstudio
+
 The package includes:
 1) *descriptives.Rmd*: for creating aggregated data of time-trends from micro data provided @AUSSDA [previous recoding to long required]
 2) *flexdashboard.Rmd*: for creating the R-shiny app
