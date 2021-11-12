@@ -46,7 +46,7 @@ library(rlang)
 library(stringr)
 library(forcats)
 library(base64enc)
-#library(bslib)
+library(bslib)
 library(flexdashboard)
 library(readr)
 library(shiny)
@@ -311,7 +311,7 @@ m <- list(l = 0,r = 0,b = 80,t = 40,pad = 4)
   g <- ggplotly(p,tooltip = c("x","y","fill","text")) %>%
 layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = "App/logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
@@ -426,7 +426,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = "App/logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.94,
@@ -458,7 +458,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = "App/logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -691,7 +691,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = "App/logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.94,
@@ -724,7 +724,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = "App/logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -1016,7 +1016,7 @@ layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = "App/logo2.png"), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
