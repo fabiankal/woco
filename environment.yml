@@ -13,4 +13,5 @@ dependencies:
   - r-flexdashboard
   - r-rmarkdown
   - r-httr
+  - readr
   
