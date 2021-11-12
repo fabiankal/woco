@@ -1,0 +1,16 @@
+channels:
+  - conda-forge
+dependencies:
+  - r-base=3.6
+  - r-tidyr
+  - r-plotly
+  - r-dplyr
+  - r-rlang
+  - r-stringr
+  - r-forcats
+  - r-base64enc
+  - r-bslib
+  - r-flexdashboard
+  - r-rmarkdown
+  - r-httr
+  
