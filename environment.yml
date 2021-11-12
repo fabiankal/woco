@@ -9,9 +9,9 @@ dependencies:
   - r-stringr
   - r-forcats
   - r-base64enc
-  - r-bslib
-  - r-flexdashboard
   - r-rmarkdown
   - r-httr
   - r-readr
-  
+  - r-shiny
+  - r-bslib
+  - r-flexdashboard

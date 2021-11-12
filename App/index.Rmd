@@ -48,6 +48,8 @@ library(forcats)
 library(base64enc)
 library(bslib)
 library(flexdashboard)
+library(readr)
+library(shiny)
 
 #get a reactive (text) variable
  myval3 <- reactiveValues()
