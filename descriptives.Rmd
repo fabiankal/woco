@@ -64,6 +64,10 @@ bern_data_long2_factored$wavedate <- as_factor(as.character(bern_data_long2_fact
 levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020","03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020","13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020","17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021","13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021","23.10.2021")
 bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
 
+
+#import reverse information (which variable scales to reverse)
+rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
+
 ##############################
 #RECODING
 ##############################
@@ -198,7 +202,8 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 #What variables should be used for the dashboard
  variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
                    "wochentag","kontakt","zeit" ,"konflikt","kinder",
-                   "depress_A1","depress_A2","depress_A3","depress_A4","depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
+                   "depress_A1","depress_A2","depress_A3","depress_A4",
+                   "depress_A5","depress_A6","depress_A7","depress_A8","depress_A9",
                    "zusammenhalt","umweundklima","onlinekommun",
                    "demokratie","lebensz",
                    "zus_bestes","zus_einig","zus_schutzen",
@@ -207,11 +212,27 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
                    "mas_angemessen","mas_effektiv",
                    "ver_gov","ver_ges","ver_par","ver_pol","ver_orf",
                    "dauer",
-                   "fin_ausk_akt",
-                   "zuf_fam","zuf_par","zuf_ber","zuf_frz")
+                   "fin_ausk_akt","fin_ausk_yea","eco_ausk_yea",
+                   "zuf_fam","zuf_par","zuf_ber","zuf_frz",
+                   "skept_lebens","skept_wichti","skept_behaup","skept_andere",
+                   "skept_fehler","skept_uebert","skept_grippe","skept_gerech",
+                   "tax_gleich","tax_ineq","tax_hurt","tax_quarant",
+                   "kaufen_haus",
+                   "zeitp_spar","zeitp_inve","zeitp_lieg","zeitp_ausg","zeitp_kred",
+                   "anst_rest","anst_oeff","anst_arbe","anst_schu","anst_park",
+                   "anst_arzt","anst_fami","anst_freu",
+                   "mastest_eff","mastest_zuv","mastest_tre","mastest_str","mastest_mot",
+                   "impf_pfl","impf_gra","impf_pfb","impf_kin","impf_soz", 
+                   "issue_ungl","issue_faul","issue_albe","issue_wirt",
+                   "issue_frau","issue_poli","issue_zuwa","issue_umwe",
+                   "issue_eink","issue_gena","issue_redu",
+                   "welfshov_such","welfshov_zust","welfshov_sozl",
+                   "sozkont",
+                   "sozialn_verh_eig_abs","sozialn_verh_eig_hau",
+                   "sozialn_verh_eig_sch","sozialn_verh_eig_ver"
+)
                                      #"sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
  #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
- #                   "sozialn_verh_eig_abs", "sozialn_verh_eig_hau","sozialn_verh_eig_sch","sozialn_verh_eig_ver",
  #                   "berufst"
 
 #variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
@@ -290,8 +311,6 @@ for (val in df2$variable) {
 
 grouped_labels<-grouped_labels%>% group_by(ID) %>% summarise(variable)
 
-#import reverse information (which variable scales to reverse)
-rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
 grouped_labels<- grouped_labels %>% left_join(rev_labels, by = "variable")
 
 #select the data for analyses
