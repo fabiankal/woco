@@ -434,15 +434,15 @@ renderPlotly({
           xanchor="right",yanchor="bottom" 
           ))) %>% 
     layout(margin=m,annotations = 
-            list(x = 1, y = -0.22, text = "Daten: ACPP + WoCo", 
+            list(x = 1, y = -0.13, text = paste("Daten: ACPP + WoCo.","N ~",Nrund,"pro Welle"), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
-    layout(annotations = 
-            list(x = 1, y = -0.16, text = paste("N ~",Nrund,"pro Welle"), 
-            showarrow = F, xref='paper', yref='paper', 
-            xanchor='right', yanchor='auto', xshift=0, yshift=0,
-            font=list(size=12, color="#707070")))%>% 
+    # layout(annotations = 
+    #         list(x = 1, y = -0.16, text = paste("N ~",Nrund,"pro Welle"), 
+    #         showarrow = F, xref='paper', yref='paper', 
+    #         xanchor='right', yanchor='auto', xshift=0, yshift=0,
+    #         font=list(size=12, color="#707070")))%>% 
     config(locale = 'de',
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d"),
@@ -521,7 +521,8 @@ renderPlotly({
   }
   if(input$incidence)
   {
-    p <- p ### ### trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=25))
+    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+  
   }
   
   p
@@ -778,7 +779,7 @@ renderPlotly({
   }
   if(input$incidence2)
   {
-    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=25))
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
   }
 
   p
@@ -972,46 +973,10 @@ renderPlotly({
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
   }
-  }
- if(input$play==TRUE)
-  {
-  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% 
-    filter(variable %in% inputvariable_shares) %>% filter(!is.na(measurement))
-  data4 <- data4 %>% mutate(Personen = round(prop*N_total,0)) %>% 
-                     rename(Datum = wavedate,
-                            Anteil = prop,
-                            Kategorie = measurement,
-                            N = N_total) %>% 
-    mutate(Kategoriex = if_else(row_number() %% 2 == 0, paste0("\n",Kategorie), as.character(Kategorie)),
-           Kategorie2 = as.factor(Kategorie),
-           Kategorie3 = as.numeric(Kategorie))
   
-  Nrund<-round(mean(data4$N,na.rm=TRUE),0)
+  m <- list(l = 40,r = 40,b = 80,t = 40,pad = 4)
   
-   p <- ggplot(data4, aes(x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
-    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE) + #fill=Kategorie,colour="white",alpha=.75
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    #scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
-    #scale_fill_manual(values = c("red", "blue", "green","yellow","orange")) +
-    labs(y = "", x= "") +#,fill=""
-    theme_minimal() +
-    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-    scale_x_discrete(guide = guide_axis(n.dodge = 2)) #+
-    #theme(legend.position="bottom") + 
-    #guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
-   
-   # fig = data4 %>% plot_ly(x=~Kategorie,
-   #           y=~Anteil,
-   #           frame=~Kategorie,
-   #           color = ~Kategorie,
-   #           type = 'scatter',
-   #           mode = 'markers',
-   # )
-   # fig
- } 
-   m <- list(l = 40,r = 40,b = 80,t = 40,pad = 4)  
-
-  g <- ggplotly(p,tooltip = c("fill","y","text"))  %>%
+  g <- ggplotly(p,tooltip = c("frame","x","y","text"))  %>% layout(barmode = "dodge") %>%
 layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
@@ -1039,15 +1004,64 @@ layout(showlegend = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","hoverCompareCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
         ))
-  g
-
-  #g$x$data[[1]]$hoverinfo <- "none"
-  #g$x$data[[2]]$hoverinfo <- "none"
-  #g$x$data[[3]]$hoverinfo <- "none"
-  #g$x$data[[4]]$hoverinfo <- "none"
-  #g$x$data[[5]]$hoverinfo <- "none"
+   }
+ if(input$play==TRUE)
+  {
+  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% 
+    filter(variable %in% inputvariable_shares) %>% filter(!is.na(measurement))
+  data4 <- data4 %>% mutate(Personen = round(prop*N_total,0)) %>% 
+                     rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement,
+                            N = N_total) %>% 
+    mutate(Kategoriex = if_else(row_number() %% 2 == 0, paste0("\n",Kategorie), as.character(Kategorie)),
+           Kategorie2 = as.factor(Kategorie),
+           Kategorie3 = as.numeric(Kategorie),
+           dummy = "a")
   
- 
+  Nrund<-round(mean(data4$N,na.rm=TRUE),0)
+  
+   p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
+    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + #identity
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
+    #scale_fill_manual(values = c("blue", "blue", "green","yellow","orange")) +
+    labs(y = "", x= "") +
+    theme_minimal() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_discrete(guide = guide_axis(n.dodge = 2)) 
+   
+   m <- list(l = 40,r = 40,b = 130,t = 40,pad = 4)  
+
+  g <- ggplotly(p,tooltip = c("frame","x","y","text"))  %>% layout(barmode = "dodge") %>%
+layout(showlegend = FALSE,
+         xaxis = list(ticktext=~Kategoriex),
+         legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.95,y=0.955,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom"
+          )),
+       margin=m)  %>% 
+    layout(annotations = 
+            list(x = 0, y = -0.06, text = paste("N ~",Nrund," pro Welle", "Daten: ACPP + WoCo"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='left', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","hoverCompareCartesian"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        )) 
+  g <- g %>% animation_slider(currentvalue = list(prefix = "Befragungsdatum: ", font = list(color="red")))
+   } 
+   
+  if(input$play==TRUE) g %>% animation_slider(currentvalue = list(prefix = "Befragungsdatum: ", font = list(color="red")))
+   else g
+  
 })
 
   observeEvent(input$var_shares2, {
