@@ -306,6 +306,7 @@ Impfen: Impfpflicht fuer Berufsgruppen mit hohem Risiko,impf_pfb,1,5,1
 "Impfen: Sollte Moeglichkeit haben, mich sofort impfen zu lassen",impf_sof,1,5,1
 "Impfen: Es ist unfair, dass bestimmte Gruppen die Impfung frueher erhalten",impf_unf,1,5,1
 Impfen: Meisten Personen in meinem Umfeld sind bereit sich impfen zu lassen,impf_soz,1,5,1
+Impfen: Ich werde mein(e) Kind(er) ehestmöglich impfen lassen,1,5,1
 Aussage: Ich mache mir Sorgen ueber unvorhergesehene Nebenwirkungen der Impfung.,impfe_sor,1,5,1
 Aussage: Ich verlasse mich lieber auf mein Immunsystem als auf eine Impfung.,impfe_imm,1,5,1
 Aussage: Ich fuehle mich ueber die Wirkweise der Impfstoffe informiert.,impfe_ini,1,5,1

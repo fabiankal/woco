@@ -1,0 +1,47 @@
+---
+title: "ACPP - Variablenübersicht"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+install.packages("readr")
+install.packages("tidyverse")
+library(readr)
+library(tidyverse)
+```
+
+
+```{r}
+data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv") 
+#, show_col_types = FALSE)
+
+```
+
+# example
+```{r pressure, echo=FALSE}
+text <- 0
+text <- ifelse(data_labels$variable=="ges_per_gefahr" , " 'Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für Sie persönlich ausgeht?' ",
+              ifelse(data_labels$variable=="ges_pub_gefahr"  , " 'Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für die österreichische Bevölkerung ausgeht?' ", NA))
+
+
+#"schönere' Alternative
+data_labels$q_text=NA
+data_labels$q_cate=NA
+
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ges_per_gefahr","Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für Sie persönlich ausgeht?",q_text),
+                                      q_text=ifelse(variable=="ges_pub_gefahr","Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für die österreichische Bevölkerung ausgeht?",q_text),
+                                      
+                                      q_cate=ifelse(variable=="ges_per_gefahr","Gefahrenwahrnehmung",q_cate),
+                                      q_cate=ifelse(variable=="ges_pub_gefahr","Gefahrenwahrnehmung",q_cate)
+                                      )
+
+```
+
+```{r pressure, echo=FALSE}
+text1 <- text    
+data <- cbind(data_labels, text_questionnaire = text)
+```
+

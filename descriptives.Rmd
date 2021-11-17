@@ -578,5 +578,333 @@ write_csv(data_plot_long_mean_export_rn, "./output/tables/figure1_mean.csv", na 
 write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA")
 ```
 
+# add q_text and q_cate to each variable
+```{r pressure, echo=FALSE}
 
+data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv",show_col_types = FALSE)
+
+data_labels$q_text=NA
+data_labels$q_cate=NA
+
+# Gefahrenwahrnehmung
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ges_per_gefahr","Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für Sie persönlich ausgeht?",q_text),
+                                      q_text=ifelse(variable=="ges_pub_gefahr","Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für die österreichische Bevölkerung ausgeht?",q_text),
+                                      q_text=ifelse(variable=="wir_per_gefahr","Wie groß schätzen Sie die wirtschaftliche Gefahr ein, welche von dem Coronavirus für die österreichische Bevölkerung ausgeht?",q_text),
+                                      q_text=ifelse(variable=="wir_pub_gefahr","Wie groß schätzen Sie die wirtschaftliche Gefahr ein, welche von dem Coronavirus für die österreichische Bevölkerung ausgeht?",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="ges_per_gefahr","Gefahrenwahrnehmung",q_cate),
+                                      q_cate=ifelse(variable=="ges_pub_gefahr","Gefahrenwahrnehmung",q_cate),
+                                      q_cate=ifelse(variable=="wir_per_gefahr","Gefahrenwahrnehmung",q_cate),
+                                      q_cate=ifelse(variable=="wir_pub_gefahr","Gefahrenwahrnehmung",q_cate)
+                                      )
+
+
+
+
+# Auswirkungen
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="wochentag","Wie stark trifft folgende Aussage auf Ihre Erfahrungen in der letzten Woche zu?	Ich vergesse manchmal, welcher Wochentag ist.",q_text),
+                                      q_text=ifelse(variable=="kontakt","Wie stark trifft folgende Aussage auf Ihre Erfahrungen in der letzten Woche zu? Mir fehlt der Kontakt zu anderen Menschen.",q_text),
+                                      q_text=ifelse(variable=="zeit","Wie stark trifft folgende Aussage auf Ihre Erfahrungen in der letzten Woche zu? Ich kann Dinge tun, für die ich sonst keine Zeit habe.",q_text),
+                                      q_text=ifelse(variable=="konflikt","Wie stark trifft folgende Aussage auf Ihre Erfahrungen in der letzten Woche zu? Ich habe mehr Konflikte in meiner Beziehung / Familie. ",q_text),
+                                      q_text=ifelse(variable=="kinder","Wie stark trifft folgende Aussage auf Ihre Erfahrungen in der letzten Woche zu? Die Kinderbetreuung stellt ein Problem für mich dar.",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="wochentag","Auswirkungen",q_cate),
+                                      q_cate=ifelse(variable=="kontakt","Auswirkungen",q_cate),
+                                      q_cate=ifelse(variable=="zeit","Auswirkungen",q_cate),
+                                      q_cate=ifelse(variable=="konflikt","Auswirkungen",q_cate),
+                                      q_cate=ifelse(variable=="kinder","Auswirkungen",q_cate)
+                                      )
+
+
+
+# Emotionen
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="depress_A1","Wie oft waren Sie in der letzten Woche ruhig und gelassen?",q_text),
+                                      q_text=ifelse(variable=="depress_A2","Wie oft waren Sie in der letzten Woche einsam?",q_text),
+                                      q_text=ifelse(variable=="depress_A3","Wie oft waren Sie in der letzten Woche ärgerlich?",q_text),
+                                      q_text=ifelse(variable=="depress_A4","Wie oft waren Sie in der letzten Woche so niedergeschlagen, dass Sie nichts aufheitern konnte?",q_text),
+                                      q_text=ifelse(variable=="depress_A5","Wie oft waren Sie in der letzten Woche glücklich?",q_text),
+                                      q_text=ifelse(variable=="depress_A6","Wie oft waren Sie in der letzten Woche nervös?",q_text),
+                                      q_text=ifelse(variable=="depress_A7","Wie oft waren Sie in der letzten Woche ängstlich?",q_text),
+                                      q_text=ifelse(variable=="depress_A8","Wie oft waren Sie in der letzten Woche bedrückt und traurig?",q_text),
+                                      q_text=ifelse(variable=="depress_A9","Wie oft waren Sie in der letzten Woche voller Energie?",q_text),
+                        
+                                                                            
+                                      q_cate=ifelse(variable=="depress_A1","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A2","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A3","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A4","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A5","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A6","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A7","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A8","Emotionen",q_cate),
+                                      q_cate=ifelse(variable=="depress_A9","Emotionen",q_cate)
+                                      )
+
+
+
+# Chancenwahrnehmung
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="zusammenhalt","Wie sehr trifft die folgende Aussage aus Ihrer Sicht zu? Der Zusammenhalt in der Gesellschaft hat sich in der letzten Woche erhöht.",q_text),
+                                      q_text=ifelse(variable=="umweundklima","Wie sehr trifft die folgende Aussage aus Ihrer Sicht zu? ie Corona-Krise birgt auch Chancen - z.B. für Umwelt und Klima.",q_text),
+                                      q_text=ifelse(variable=="onlinekommun","Wie sehr trifft die folgende Aussage aus Ihrer Sicht zu? Die rasche Umstellung auf Online-Kommunikation bringt die Wirtschaft voran.",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="zusammenhalt","Chancenwahrnehmung",q_cate),
+                                      q_cate=ifelse(variable=="umweundklima","Chancenwahrnehmung",q_cate),
+                                      q_cate=ifelse(variable=="onlinekommun","Chancenwahrnehmung",q_cate)
+                                      )
+
+
+
+
+# Zufriedenheit
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="demokratie","Wie zufrieden oder unzufrieden sind Sie alles in allem mit der Demokratie, so wie sie derzeit in Österreich funktioniert? Sind Sie sehr zufrieden, eher zufrieden, teils-teils, eher unzufrieden oder sehr unzufrieden?",q_text),
+                                      q_text=ifelse(variable=="lebensz","Alles in allem betrachtet, wie zufrieden sind Sie derzeit mit Ihrem Leben? Bitte antworten Sie auf einer Skala von 0=äußerst unzufrieden bis 10-=äußerst zufrieden.",q_text),
+                                      q_text=ifelse(variable=="blianz_reg","Sind Sie nach heutigem Stand mit der Bilanz, d.h. mit der Arbeit und Leistung, der aktuellen Bundesregierung (also der Koalition aus ÖVP und Grünen) sehr zufrieden, eher zufrieden, teils-teils, eher unzufrieden oder sehr unzufrieden?",q_text),
+                                      q_text=ifelse(variable=="zuf_reg_al","Wie zufrieden oder unzufrieden sind Sie nach heutigem Stand mit der Arbeit der Bundesregierung in den folgenden Bereichen? Sind Sie sehr zufrieden, eher zufrieden, teils-teils, eher unzufrieden oder sehr unzufrieden? Bekämpfung der Arbeitslosigkeit. ",q_text),
+                                      q_text=ifelse(variable=="zuf_reg_un","Wie zufrieden oder unzufrieden sind Sie nach heutigem Stand mit der Arbeit der Bundesregierung in den folgenden Bereichen? Sind Sie sehr zufrieden, eher zufrieden, teils-teils, eher unzufrieden oder sehr unzufrieden? tützung der kleinen und mittleren Unternehmen",q_text),
+                                      q_text=ifelse(variable=="zuf_reg_wi","Wie zufrieden oder unzufrieden sind Sie nach heutigem Stand mit der Arbeit der Bundesregierung in den folgenden Bereichen? Sind Sie sehr zufrieden, eher zufrieden, teils-teils, eher unzufrieden oder sehr unzufrieden? Stützung der Wirtschaft allgemein.",q_text),
+                                      
+                                      q_text=ifelse(variable=="zuf_fam","Wenn Sie an Ihre gegenwärtige Situation denken, wie zufrieden sind Sie alles in allem mit Ihrem Familienleben? Sehr zufrieden, eher zufrieden, weniger zufrieden, nicht zufrieden oder trifft die Frage nicht zu (keine Familie)?",q_text),
+                                      q_text=ifelse(variable=="zuf_par","Wenn Sie an Ihre gegenwärtige Situation denken, wie zufrieden sind Sie alles in allem mit Ihrer Partnerschaft? Sehr zufrieden, eher zufrieden, weniger zufrieden, nicht zufrieden oder trifft die Frage nicht zu (keine Partner/in)?",q_text),
+                                      q_text=ifelse(variable=="zuf_ber","Wenn Sie an Ihre gegenwärtige Situation denken, wie zufrieden sind Sie alles in allem mit Ihrem Beruf? Sehr zufrieden, eher zufrieden, weniger zufrieden, nicht zufrieden oder trifft die Frage nicht zu (nicht berufstätig)?",q_text),
+                                      q_text=ifelse(variable=="zuf_frz","Wenn Sie an Ihre gegenwärtige Situation denken, wie zufrieden sind Sie alles in allem mit Ihrer Freizeitgestaltung?? Sehr zufrieden, eher zufrieden, weniger zufrieden oder nicht zufrieden?",q_text),
+                                      
+                                      
+                                      
+                                      q_cate=ifelse(variable=="demokratie","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="lebensz","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="blianz_reg","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_reg_al","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_reg_un","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_reg_wi","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_reg_un","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_fam","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_par","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_ber","Zufriedenheit",q_cate),
+                                      q_cate=ifelse(variable=="zuf_frz","Zufriedenheit",q_cate)
+                                      )
+
+
+
+
+# Zusammenhalt
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="zus_bestes","Ganz allgemein, wie sehr trifft die folgende Aussage auf die Stimmung in unserer Gesellschaft zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Wir geben alle unser Bestes, um die Krisensituation zu überwinden.",q_text),
+                                      q_text=ifelse(variable=="zus_einig","Ganz allgemein, wie sehr trifft die folgende Aussage auf die Stimmung in unserer Gesellschaft zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Die meisten sind sich einig, dass Zusammenhalt in der aktuellen Krisensituation wichtig ist.",q_text),
+                                      q_text=ifelse(variable=="zus_schutzen","Ganz allgemein, wie sehr trifft die folgende Aussage auf die Stimmung in unserer Gesellschaft zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Wir rücken in der aktuellen Situation zusammen, um die Schwachen zu schützen.",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="zus_bestes","Zusammenhalt",q_cate),
+                                      q_cate=ifelse(variable=="zus_einig","Zusammenhalt",q_cate),
+                                      q_cate=ifelse(variable=="zus_schutzen","Zusammenhalt",q_cate)
+                                      )
+
+
+
+
+# Coronamaßnahmen
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="mas_angemessen","Halten Sie die Reaktion der österreichischen Regierung in Zusammenhang mit dem Coronavirus für nicht ausreichend, angemessen oder zu extrem? Überhaupt nicht ausreichend, eher nicht ausreichend, angemessen, eher zu stark oder zu extrem?",q_text),
+                                      q_text=ifelse(variable=="mas_effektiv","Wie effektiv, denken Sie, sind die gesetzten Maßnahmen der österreichischen Regierung bis jetzt, um die Ausbreitung der Krankheit zu verlangsamen? Überhaupt nicht effektiv, eher nicht effektiv, teils effektiv, eher effektiv oder sehr effektiv?",q_text),
+                                      q_text=ifelse(variable=="dauer","Und wie lang genau, schätzen Sie, dauert es, bis das Leben in Österreich wieder normal ist? 6 bis 12Monate, 1 bis 1.5 Jahre, 1.5 bis 2 Jahre, 2 bis 3 Jahre, 3 bis 5 Jahre oder mehr als 5 Jahre?",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="mas_angemessen","Coronamaßnahmen",q_cate),
+                                      q_cate=ifelse(variable=="mas_effektiv","Coronamaßnahmen",q_cate),
+                                      q_cate=ifelse(variable=="dauer","Coronamaßnahmen",q_cate)
+                                      )
+
+
+
+
+
+# Vertrauen
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ver_gov","Wenn Sie auf die folgende Liste sehen: Haben Sie sehr viel, ziemlich viel, wenig oder überhaupt kein Vertrauen in die jeweils genannten Institutionen im Rahmen der Coronakrise? Bitte antworten Sie auf einer Skala von 0=Überhaupt kein Vertrauen bis 10=sehr viel vertrauen: Die Bundesregierung",q_text),
+                                      q_text=ifelse(variable=="ver_ges","Wenn Sie auf die folgende Liste sehen: Haben Sie sehr viel, ziemlich viel, wenig oder überhaupt kein Vertrauen in die jeweils genannten Institutionen im Rahmen der Coronakrise? Bitte antworten Sie auf einer Skala von 0=Überhaupt kein Vertrauen bis 10=sehr viel vertrauen: Das Gesundheitswesen",q_text),
+                                      q_text=ifelse(variable=="ver_par","Wenn Sie auf die folgende Liste sehen: Haben Sie sehr viel, ziemlich viel, wenig oder überhaupt kein Vertrauen in die jeweils genannten Institutionen im Rahmen der Coronakrise? Bitte antworten Sie auf einer Skala von 0=Überhaupt kein Vertrauen bis 10=sehr viel vertrauen: Das Parlament",q_text),
+                                      q_text=ifelse(variable=="ver_pol","Wenn Sie auf die folgende Liste sehen: Haben Sie sehr viel, ziemlich viel, wenig oder überhaupt kein Vertrauen in die jeweils genannten Institutionen im Rahmen der Coronakrise? Bitte antworten Sie auf einer Skala von 0=Überhaupt kein Vertrauen bis 10=sehr viel vertrauen: Die Polizei",q_text),
+                                      q_text=ifelse(variable=="ver_orf","Wenn Sie auf die folgende Liste sehen: Haben Sie sehr viel, ziemlich viel, wenig oder überhaupt kein Vertrauen in die jeweils genannten Institutionen im Rahmen der Coronakrise? Bitte antworten Sie auf einer Skala von 0=Überhaupt kein Vertrauen bis 10=sehr viel vertrauen: Das öffentlich-rechtliche Fernsehen (ORF)",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="ver_gov","Vertrauen",q_cate),
+                                      q_cate=ifelse(variable=="ver_ges","Vertrauen",q_cate),
+                                      q_cate=ifelse(variable=="ver_par","Vertrauen",q_cate),
+                                      q_cate=ifelse(variable=="ver_pol","Vertrauen",q_cate),
+                                      q_cate=ifelse(variable=="ver_orf","Vertrauen",q_cate)
+                                      )
+
+
+
+
+# finanzielle Situation
+data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="fin_ausk_akt", "Wie beurteilen Sie die aktuelle finanzielle Situation Ihres Haushalts? Können Sie mit den Haushaltseinkünften sehr gut zurechtkommen, gut zurechtkommen, teils-teils, nur schwer zurechtkommen, nur sehr schwer zurechtkommen?",q_text),
+                                      q_text=ifelse(variable=="fin_ausk_yea","Wie wird die finanzielle Situation Ihres Haushalts in Zukunft (in 12 Monaten) im Vergleich zu Ihrer aktuellen Situation sein? Viel besser, etwas besser, gleich bleibend, etwas schlechter, viel schlechter?",q_text),
+                                      q_text=ifelse(variable=="eco_ausk_yea","Wie wird die allgemeine Wirtschaftslage in Österreich in Zukunft (in 12 Monaten) im Vergleich zu der aktuellen Situation sein? Viel besser, etwas besser, gleich bleibend, etwas schlechter, viel schlechter?",q_text),
+                                                                            
+                                      q_cate=ifelse(variable=="fin_ausk_akt","finanzielle Situation",q_cate),
+                                      q_cate=ifelse(variable=="fin_ausk_yea","finanzielle Situation",q_cate),
+                                      q_cate=ifelse(variable=="eco_ausk_yea","finanzielle Situation",q_cate)
+                                      )
+
+
+# Einstellungen zur Coronakrise
+data_labels <- data_labels %>% mutate(
+                                      q_text=ifelse(variable=="skept_lebens","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Um die Corona-Krise einzudämmen, sind die meisten in meinem persönlichen Umfeld bereit, ihre Lebensweise zu ändern.",q_text),
+                                      q_text=ifelse(variable=="skept_wichti","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Es gibt Wichtigeres im Leben als die Corona-Krise.",q_text),
+                                      q_text=ifelse(variable=="skept_behaup" , "Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Viele Behauptungen bezüglich der Corona-Krise, die man von anderen so hört, sind übertrieben. " , q_text),
+                                      q_text=ifelse(variable=="skept_andere", "Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: olange andere ihr Verhalten nicht ändern, muss ich mein Verhalten bezüglich der Corona-Krise auch nicht ändern.",q_text),
+                                      q_text=ifelse(variable=="skept_fehler","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: s war ein Fehler, all diese Maßnahmen zur Eindämmung des Coronavirus zu erlassen.",q_text),
+                                      
+                                      q_text=ifelse(variable=="skept_uebert","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Was die Regierung über die gesundheitliche Gefahr des Coronavirus sagt, ist übertrieben.",q_text),
+                                      q_text=ifelse(variable=="skept_grippe","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Das Coronavirus ist gefährlicher als eine normale Grippe.",q_text),
+                                      q_text=ifelse(variable=="skept_gerech","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Alles in allem empfinde ich die Corona-Maßnahmen als gerecht.",q_text),
+                                      
+                                      
+                                      q_text=ifelse(variable=="tax_gleich","Bitte geben Sie an, wie stark die folgende Aussage Ihrer Meinung nach zutrifft oder nicht zutrifft Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Alle Personen sollten im gleichen Ausmaß zur Finanzierung der Krise beitragen.",q_text),
+                                      q_text=ifelse(variable=="tax_ineq","Bitte geben Sie an, wie stark die folgende Aussage Ihrer Meinung nach zutrifft oder nicht zutrifft Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Die Kluft zwischen Arm und Reich in Österreich wird sich in Zukunft durch die Krise verstärken.",q_text),
+                                      q_text=ifelse(variable=="tax_hurt","Bitte geben Sie an, wie stark die folgende Aussage Ihrer Meinung nach zutrifft oder nicht zutrifft Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Die Einführung von neuen Steuern ist schädlich für den Wirtschaftsstandort Österreich.",q_text),
+                                      q_text=ifelse(variable=="tax_quarant","Bitte geben Sie an, wie stark die folgende Aussage Ihrer Meinung nach zutrifft oder nicht zutrifft Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Die Ausgangsbeschränkungen treffen Personen mit niedrigem Einkommen härter als Personen mit hohem Einkommen.",q_text),
+   
+                                      q_text=ifelse(variable=="kaufen_haus","Glauben Sie, dass jetzt ein guter oder schlechter Zeitpunkt ist, um größere Haushaltsgegenstände wie Möbel, einen Kühlschrank, einen Herd, einen Fernseher und solche Dinge zu kaufen?",q_text),
+                                                                         
+                                      
+                                      q_cate=ifelse(variable=="skept_lebens","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_wichti","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_behaup","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_andere","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_fehler","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_uebert","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_grippe","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="skept_gerech","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="tax_gleich","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="tax_ineq","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="tax_hurt","Einstellungen zur Coronakrise",q_cate),
+                                      q_cate=ifelse(variable=="tax_quarant","Einstellungen zur Coronakrise",q_cate)
+                                      )
+
+
+
+# Finanzentscheidungen
+data_labels <- data_labels %>% mutate(
+                                      q_text=ifelse(variable=="zeitp_spar","Glauben Sie, dass für Sie persönlich jetzt ein guter oder schlechter Zeitpunkt ist,	um Geld zu sparen oder auf dem Konto zu belassen?",q_text),
+                                      q_text=ifelse(variable=="zeitp_inve","Glauben Sie, dass für Sie persönlich jetzt ein guter oder schlechter Zeitpunkt ist,	um Geld zu investieren (in Aktien, Anleihen, Fonds, etc.)?",q_text),
+                                      q_text=ifelse(variable=="zeitp_lieg","Glauben Sie, dass für Sie persönlich jetzt ein guter oder schlechter Zeitpunkt ist,	um Liegenschaften zu erwerben (Wohnungen, Häuser, Grundstücke, etc.)?",q_text),
+                                      q_text=ifelse(variable=="zeitp_ausg","Glauben Sie, dass für Sie persönlich jetzt ein guter oder schlechter Zeitpunkt ist,	um Geld auszugeben?
+",q_text),
+                                      q_text=ifelse(variable=="zeitp_kred","Glauben Sie, dass für Sie persönlich jetzt ein guter oder schlechter Zeitpunkt ist,	um einen Kredit aufzunehmen?
+ ",q_text),
+                                      q_text=ifelse(variable=="kaufen_haus","Glauben Sie, dass jetzt ein guter oder schlechter Zeitpunkt ist, um größere Haushaltsgegenstände wie Möbel, einen Kühlschrank, einen Herd, einen Fernseher und solche Dinge zu kaufen?",q_text),
+                                           
+                                    
+                                      q_cate=ifelse(variable=="zeitp_spar","Finanzentscheidungen",q_cate),
+                                      q_cate=ifelse(variable=="zeitp_inve","Finanzentscheidungen",q_cate),
+                                      q_cate=ifelse(variable=="zeitp_lieg","Finanzentscheidungen",q_cate),
+                                      q_cate=ifelse(variable=="zeitp_ausg","Finanzentscheidungen",q_cate),
+                                      q_cate=ifelse(variable=="zeitp_kred","Finanzentscheidungen",q_cate),
+                                      q_cate=ifelse(variable=="kaufen_haus","Finanzentscheidungen",q_cate)
+                                      )
+
+
+
+
+
+# Ansteckungsgefahr
+data_labels <- data_labels %>% mutate(
+                                      q_text=ifelse(variable=="anst_rest","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Restaurants, Cafés und Bars.",q_text),
+                                      q_text=ifelse(variable=="anst_oeff","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Öffentliche Verkehrsmittel.",q_text),
+                                      q_text=ifelse(variable=="anst_arbe","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Ihrer Arbeitsstätte.",q_text),
+                                      q_text=ifelse(variable=="anst_schu","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Schulen und Kindergärten.",q_text),
+                                      q_text=ifelse(variable=="anst_park","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Öffentliche Parks und Spielplätze.",q_text),
+                                      q_text=ifelse(variable=="anst_arzt","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Arzt.",q_text),
+                                      q_text=ifelse(variable=="anst_fami","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein? Familienfeier.",q_text),
+                                      q_text=ifelse(variable=="anst_freu","Wie hoch schätzen Sie derzeit die Gefahr der Ansteckung mit dem Coronavirus an den folgenden Orten ein? Ist die Gefahr sehr groß, groß, mittelmäßig, klein oder sehr klein?  Treffen von Freunden Zuhause.",q_text),
+                                    
+                                      q_cate=ifelse(variable=="anst_rest","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_oeff","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_arbe","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_schu","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_park","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_arzt","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_fami","Ansteckungsgefahr",q_cate),
+                                      q_cate=ifelse(variable=="anst_freu","Ansteckungsgefahr",q_cate)
+                                      )
+
+
+# Einstellungen zum Testen und Impfen
+data_labels <- data_labels %>% mutate(
+                                      q_text=ifelse(variable=="mastest_eff","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Die Tests sind eine effektive Maßnahme zur Eindämmung der Corona-Krise.",q_text),
+                                      q_text=ifelse(variable=="mastest_zuv","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Das Ergebnis der Tests ist zuverlässig.",q_text),
+                                      q_text=ifelse(variable=="mastest_tre","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Ein negatives Testergebnis bedeutet, dass ich wieder mehrere Personen treffen kann.",q_text),
+                                      q_text=ifelse(variable=="mastest_str","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Für Personen, die sich nicht testen lassen, sollten strengere Maßnahmen gelten.",q_text),
+                                      q_text=ifelse(variable=="mastest_mot","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Es ist für alle möglich, sich schnell testen zu lassen.",q_text),
+                                      q_text=ifelse(variable=="impf_pfb","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft:	Es sollte eine Impfpflicht für Berufsgruppen mit hohem Ansteckungsrisiko geben.",q_text),
+                                      q_text=ifelse(variable=="impf_gra","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft:	Der Impfstoff sollte gratis zur Verfügung gestellt werden.",q_text),
+                                      q_text=ifelse(variable=="impf_pfl","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft:	Es sollte eine Impfpflicht für alle geben.",q_text),
+                                      q_text=ifelse(variable=="impf_kin","XXXXX???????",q_text),
+                                      q_text=ifelse(variable=="impf_soz","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft:	Die meisten Personen in meinem näheren Umfeld sind bereit, sich impfen zu lassen.",q_text),
+                                    
+                                      q_cate=ifelse(variable=="mastest_eff","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_zuv","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_tre","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_str","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_mot","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="impf_pfb","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="impf_gra","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="impf_pfl","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="impf_kin","Einstellungen zum Testen und Impfen",q_cate),
+                                      q_cate=ifelse(variable=="impf_soz","Einstellungen zum Testen und Impfen",q_cate)
+                                      )
+
+
+
+# eigenes Verhalten
+data_labels <- data_labels %>% mutate(
+                                      q_text=ifelse(variable=="sozialn_verh_eig_abs","Denken Sie im Folgenden an Ihr persönliches Verhalten in der letzten Woche. Bitte geben Sie an, wie oft Sie sich wie folgt verhalten haben. Haben Sie sich nahezu immer, meistens, manchmal, selten oder nahezu nie daran gehalten? Sie halten im öffentlichen Raum immer mindestens 1m Abstand von Menschen, die nicht mit Ihnen im Haushalt leben.",q_text),
+                                      q_text=ifelse(variable=="sozialn_verh_eig_hau","Denken Sie im Folgenden an Ihr persönliches Verhalten in der letzten Woche. Bitte geben Sie an, wie oft Sie sich wie folgt verhalten haben. Haben Sie sich nahezu immer, meistens, manchmal, selten oder nahezu nie daran gehalten? Sie bleiben zu Hause, außer für Notwendigkeiten.",q_text),
+                                      q_text=ifelse(variable=="sozialn_verh_eig_sch","Denken Sie im Folgenden an Ihr persönliches Verhalten in der letzten Woche. Bitte geben Sie an, wie oft Sie sich wie folgt verhalten haben. Haben Sie sich nahezu immer, meistens, manchmal, selten oder nahezu nie daran gehalten? Sie tragen immer Schutzmasken, wenn Sie sich im öffentlichen Raum bewegen.",q_text),
+                                      q_text=ifelse(variable=="sozialn_verh_eig_ver","Denken Sie im Folgenden an Ihr persönliches Verhalten in der letzten Woche. Bitte geben Sie an, wie oft Sie sich wie folgt verhalten haben. Haben Sie sich nahezu immer, meistens, manchmal, selten oder nahezu nie daran gehalten? Sie vermeiden Aktivitäten im Haushalt und in der Freizeit, die zu Verletzungen oder Krankheiten führen könnten, um das Gesundheitssystem nicht zu belasten.",q_text),
+                                      q_text=ifelse(variable=="sozkont","Wie häufig haben Sie sich mit Menschen, die Ihnen nahestehen, in der letzten Woche ausgetauscht (oder Kontakt gehalten)? Mehrmals täglich, einmal täglich, mehrmals in der Woche, einmal in der Woche oder gar nicht/ nie?
+",q_text),
+                                           
+                                    
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_abs","eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_hau","eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_sch","eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_ver","eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozkont","eigenes Verhalten",q_cate)
+                                      )
+
+
+
+# gesellschaftspolitische Einstellungen
+data_labels <- data_labels %>% mutate(
+                                      q_text=ifelse(variable=="issue_ungl","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Politik muss die soziale Ungleichheit bekämpfen.",q_text),
+                                      q_text=ifelse(variable=="issue_faul","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Der Sozialstaat macht Menschen träge und faul.",q_text),
+                                      q_text=ifelse(variable=="issue_albe","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Arbeitslosigkeit muss bekämpft werden, auch wenn das hohe Staatsschulden bedeutet.",q_text),
+                                      q_text=ifelse(variable=="issue_wirt","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Politik soll sich aus der Wirtschaft heraushalten.",q_text),
+                                      q_text=ifelse(variable=="issue_frau","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Frauen sollen bei Bewerbungen und Beförderungen bei gleicher Qualifikation bevorzugt werden.",q_text),
+                                      q_text=ifelse(variable=="issue_poli","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Befugnisse der Polizei müssen ausgeweitet werden, um für Recht und Ordnung zu sorgen.",q_text),
+                                      q_text=ifelse(variable=="issue_zuwa","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Zuwanderung nach Österreich sollte nur in absoluten Ausnahmefällen möglich sein.",q_text),
+                                      q_text=ifelse(variable=="issue_umwe","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Umwelt muss um jeden Preis geschützt werden, auch wenn das für den Einzelnen teuer wird.",q_text),
+                                      q_text=ifelse(variable=="issue_eink","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Einkommensunterschiede in Österreich sind zu groß.",q_text),
+                                      q_text=ifelse(variable=="issue_gena","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Jungen von heute werden alles in allem ein besseres Leben haben als ihre Eltern.",q_text),
+                                      q_text=ifelse(variable=="issue_redu","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Der Staat sollte Maßnahmen ergreifen, um Einkommensunterschiede zu reduzieren.",q_text),
+                                      q_text=ifelse(variable=="welfshov_such","Bitte geben Sie an, wie sehr Sie den folgenden Aussagen über Leute in Österreich zustimmen oder wie sehr Sie diese ablehnen: Die meisten Arbeitslosen suchen nicht wirklich nach einer Arbeitsstelle.",q_text),
+                                      q_text=ifelse(variable=="welfshov_sozl","Es gelingt vielen Leuten, Sozialleistungen zu erhalten, die keinen Anspruch darauf haben.",q_text),
+                                      q_text=ifelse(variable=="welfshov_zust","Viele Leute mit geringem Einkommen erhalten weniger Sozialleistungen, als ihnen gesetzlich zustehen.",q_text),
+                              
+                                    
+                                      q_cate=ifelse(variable=="issue_ungl","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_faul","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_albe","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_wirt","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_frau","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_poli","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_zuwa","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_umwe","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_eink","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_gena","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_redu","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="welfshov_such","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="welfshov_zust","gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="welfshov_sozl","gesellschaftspolitische Einstellungen",q_cate)
+                                      )
+
+write_csv(data_labels, "./output/tables/data_labels_cq.csv", na = "NA")
+
+```
 
