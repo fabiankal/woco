@@ -104,7 +104,7 @@ data_labels$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",d
 data_labels$labels<-gsub(pattern = 'CafÃ©s', replacement = "Cafés",data_labels$labels)
 
 
-
+data_labels <- data_labels %>% filter(!is.na(labels))
 
 
 #Seperate category labels from variable labels and put them in a list

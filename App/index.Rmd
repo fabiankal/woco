@@ -104,7 +104,7 @@ data_labels$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",d
 data_labels$labels<-gsub(pattern = 'CafÃ©s', replacement = "Cafés",data_labels$labels)
 
 
-
+data_labels <- data_labels %>% filter(!is.na(labels))
 
 
 #Seperate category labels from variable labels and put them in a list
@@ -223,14 +223,17 @@ Verteilung der Antworten {data-icon="fa-area-chart"}
 
 ```{r}
 
-selectInput(
+selectizeInput(
     inputId = 'var_shares',
     label = 'Variable:',
     choices = my_autocomplete_list,
     selected = my_autocomplete_list[[11]][3],
-    multiple = FALSE, # allow for multiple inputs
-    #options = list(create = FALSE), # if TRUE, allows newly created inputs
+    multiple = TRUE, # allow for multiple inputs
+    options = list(create = FALSE,maxItems = 1)
   )
+
+#,onDropdownOpen = I("function () {this.clear();}")
+#,onDropdownOpen = I("function() {value = this.getValue();this.clear(false)},onBlur: function() {if(this.getValue() == '') { this.setValue(value);}}")
 
 checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
 
