@@ -61,7 +61,7 @@ data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/
 
 data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv",show_col_types = FALSE)
 
-data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv",show_col_types = FALSE)
+data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/data_labels_cq.csv",show_col_types = FALSE)
 data_labels$scalenumber=data_labels$scalenumber+1
 data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv",show_col_types = FALSE)
 
@@ -80,22 +80,55 @@ data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_varlab$labels)
 
+data_labels$q_cate<-gsub(pattern = 'ae', replacement = "ä",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Ae', replacement = "Ä",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'ue', replacement = "ü",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Ue', replacement = "ü",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Daür', replacement = "Dauer",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Aktüll', replacement = "Aktuell",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'oe', replacement = "ö",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Oe', replacement = "Ö",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_labels$q_cate)
+
+data_labels$labels<-gsub(pattern = 'ae', replacement = "ä",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Ae', replacement = "Ä",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'ue', replacement = "ü",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Ue', replacement = "ü",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Daür', replacement = "Dauer",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Aktüll', replacement = "Aktuell",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'oe', replacement = "ö",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'CafÃ©s', replacement = "Cafés",data_labels$labels)
+
+
+
+
 
 #Seperate category labels from variable labels and put them in a list
 
-data_varlab<-data_varlab %>% separate(labels,c("catlabel","varlabel"), ":",remove = FALSE)
-data_varlab<-data_varlab %>% mutate(varlabel=ifelse(is.na(varlabel),catlabel,varlabel))#,
-                                    #catlabel=ifelse(varlabel==catlabel,NA,catlabel))
+# data_varlab<-data_varlab %>% separate(labels,c("catlabel","varlabel"), ":",remove = FALSE)
+# data_varlab<-data_varlab %>% mutate(varlabel=ifelse(is.na(varlabel),catlabel,varlabel))#,
+#                                     #catlabel=ifelse(varlabel==catlabel,NA,catlabel))
 
 
-xy.list <- split(data_varlab$catlabel,data_varlab$catlabel) 
+# xy.list <- split(data_varlab$catlabel,data_varlab$catlabel)
+# 
+# for (val in unique(data_varlab$catlabel)) {
+# xy.list[[val]] <- data_varlab %>% filter(catlabel==val) %>% pull(labels, varlabel)
+# }
 
-for (val in unique(data_varlab$catlabel)) {
-xy.list[[val]] <- data_varlab %>% filter(catlabel==val) %>% pull(labels, varlabel) 
-}
+#Transform variables to list to add categorization
+xy.list <- split(data_labels$q_cate,data_labels$q_cate) 
+ 
+ for (val in unique(data_labels$q_cate)) {
+ xy.list[[val]] <- data_labels %>% filter(q_cate==val) %>% pull(variable,labels) 
+ }
 
-my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data$variable)]
-#my_autocomplete_list <- xy.list
+#my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data$variable)]
+my_autocomplete_list <- xy.list
 
 hlinedata = data.frame(x = c("16.03.2020",
                              "14.04.2020",
@@ -152,43 +185,6 @@ hlinedata = data.frame(x = c("16.03.2020",
 
 hlinedata$x<-as.Date(hlinedata$x,"%d.%m.%Y")
 
-
-# Add vertical line(s) at position x to plotly plot p
-# Additional arguments: color, width (px), dash ('solid','dot', 'dash', etc)
-# See https://plotly.com/r/reference/#layout-shapes-items-shape-line
-
-add_vline = function(p, x,...) {
-
-  if(!is.null(p$x$layoutAttrs)){
-      index <- unname(which(sapply(p$x$layoutAttrs, function(x) 
-  !is.null(x$shapes))))
-    } else {
-      index <- integer()
-    }
-
-    l_shape = list(
-      type = "line",
-      y0 = 0, y1 = 1, yref = "paper", # i.e. y as a proportion of visible region
-      x0 = x, x1 = x,
-      line = list(
-       ...
-      ),
-      layer = "below"
-    )
-
-    if(length(index) > 0){
-      shapes <- p$x$layoutAttrs[[index]]$shapes
-      shapes[[length(shapes) + 1]] <- l_shape
-      p$x$layoutAttrs[[index]]$shapes <- shapes
-    } else {
-      p <- plotly::layout(
-        p = p,
-        shapes = list(l_shape)
-      )
-    }
-   p
-}
-
 epidf_rc = epidf %>% filter(BundeslandID==10) %>% rename(daily_inf = names(epidf)[5],
                                                          daily_inf_7T = names(epidf)[7])
 
@@ -231,7 +227,7 @@ selectInput(
     inputId = 'var_shares',
     label = 'Variable:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[3],
+    selected = my_autocomplete_list[[11]][3],
     multiple = FALSE, # allow for multiple inputs
     #options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -265,7 +261,7 @@ Column
 
 renderPlotly({
   
-  inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares]
+  inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares]
   
   data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>%
     filter(variable %in% inputvariable_shares) 
@@ -357,7 +353,7 @@ selectizeInput(
     inputId = 'variables',
     label = 'Variablen:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[3:4],
+    selected = my_autocomplete_list[[11]][3:4],
     multiple = TRUE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -390,23 +386,9 @@ Column
 #output$out1 <- renderPrint(input$relevantdates)
 #verbatimTextOutput('out1')
 
-# output$out1 <- renderPrint({data %>% select(wavedate,variable,mean_measurement,ymax_mean,ymin_mean) %>% 
-#     distinct(wavedate,variable, .keep_all = TRUE) %>% 
-#     filter(variable %in% input$variables) %>%  
-#     pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")})
-# verbatimTextOutput('out1')
-
-#eventReactive(input$groupby, { })
-
-# renderPlotly({
-# dt <- data.frame(x = 1:10, y = rnorm(10))    
-# annotation <- list(yref = 'paper', xref = "x", y = 0, x = 2, text = "annotation")
-# plot_ly(type = "scatter", mode = "lines") %>% add_trace(x = dt$x, y = dt$y, mode = "lines") %>% layout(annotations= list(annotation))%>% add_vline(hlinedata$x)
-# })
-
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variables]
+  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variables]
   
   data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales,N_total) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
@@ -510,14 +492,6 @@ renderPlotly({
                                 font=list(size=9))
     }
     p <- p %>%  layout(shapes  = vline_list,annotations = vanno_list)
-    
-     #for(i in 1:length(hlinedata$x))
-    #  {
-    #  p <- p %>% add_vline(hlinedata$x[i],color = "pink", dash="dash",annotation_text=hlinedata$label_de[i]) #%>% 
-    #    #add_text(showlegend = FALSE, x = hlinedata$x[i], y = max(data2$mean_measurement)+.05,
-    #       #text = hlinedata$label_de[i],
-    #       #textfont = list(color = c('black'), size = c(8)))
-    #}
   }
   if(input$incidence)
   {
@@ -542,7 +516,7 @@ myval <- reactiveValues()
  #Observe changes in variables (will run when variables change)
   observeEvent(input$variables, {
     
-    inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variables]
+    inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variables]
     
     data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
@@ -626,7 +600,7 @@ selectizeInput(
     inputId = 'variablesgr',
     label = 'Variable:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[3] ,
+    selected = my_autocomplete_list[[11]][3] ,
     multiple = FALSE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -662,7 +636,7 @@ Column
 
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variablesgr]
+  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
 
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,N_total) %>%
     filter(variable %in% inputvariables[1]) %>%
@@ -799,7 +773,7 @@ renderPlotly({
   #Observe changes in variables (will run when variables change)
    observeEvent(input$variablesgr, {
      
-     inputvariables <- data_varlab$variable[data_varlab$labels %in% input$variablesgr]
+     inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
      
      data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
      distinct(wavedate,variable, .keep_all = TRUE) %>%
@@ -884,7 +858,7 @@ selectInput(
     inputId = 'var_shares2',
     label = 'Variable:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[3],
+    selected = my_autocomplete_list[[11]][3],
     multiple = FALSE, # allow for multiple inputs
     #options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
@@ -922,7 +896,7 @@ Column
 ### Anteile der Antwortkategorien in % aller gültigen Antworten {data-height=1000}
 
 ```{r,context="server"}
-#output$out1 <- renderPrint(as.numeric(input$colordirect))
+#output$out1 <- renderPrint(input$var_shares2)
 #verbatimTextOutput('out1')
 
  #Observe changes in variables (will run when variables change)
@@ -930,7 +904,7 @@ Column
 
 renderPlotly({
   
-   inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares2]
+   inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
  
    if(input$play==FALSE) 
    {
@@ -1066,7 +1040,7 @@ layout(showlegend = FALSE,
 
   observeEvent(input$var_shares2, {
 
-      inputvariable_shares <- data_varlab$variable[data_varlab$labels %in% input$var_shares2]
+      inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
 
   data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
      mutate(wave = cur_group_id()) %>% ungroup() %>%
