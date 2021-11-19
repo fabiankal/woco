@@ -699,14 +699,14 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="zus_bestes","Ganz
 
 
 
-# Coronamaßnahmen
+# Corona-Maßnahmen
 data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="mas_angemessen","Halten Sie die Reaktion der österreichischen Regierung in Zusammenhang mit dem Coronavirus für nicht ausreichend, angemessen oder zu extrem? Überhaupt nicht ausreichend, eher nicht ausreichend, angemessen, eher zu stark oder zu extrem?",q_text),
                                       q_text=ifelse(variable=="mas_effektiv","Wie effektiv, denken Sie, sind die gesetzten Maßnahmen der österreichischen Regierung bis jetzt, um die Ausbreitung der Krankheit zu verlangsamen? Überhaupt nicht effektiv, eher nicht effektiv, teils effektiv, eher effektiv oder sehr effektiv?",q_text),
                                       q_text=ifelse(variable=="dauer","Und wie lang genau, schätzen Sie, dauert es, bis das Leben in Österreich wieder normal ist? 6 bis 12Monate, 1 bis 1.5 Jahre, 1.5 bis 2 Jahre, 2 bis 3 Jahre, 3 bis 5 Jahre oder mehr als 5 Jahre?",q_text),
                                                                             
-                                      q_cate=ifelse(variable=="mas_angemessen","Coronamaßnahmen",q_cate),
-                                      q_cate=ifelse(variable=="mas_effektiv","Coronamaßnahmen",q_cate),
-                                      q_cate=ifelse(variable=="dauer","Coronamaßnahmen",q_cate)
+                                      q_cate=ifelse(variable=="mas_angemessen","Corona-Maßnahmen",q_cate),
+                                      q_cate=ifelse(variable=="mas_effektiv","Corona-Maßnahmen",q_cate),
+                                      q_cate=ifelse(variable=="dauer","Corona-Maßnahmen",q_cate)
                                       )
 
 
@@ -730,18 +730,18 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ver_gov","Wenn Si
 
 
 
-# finanzielle Situation
+# Finanzielle Situation
 data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="fin_ausk_akt", "Wie beurteilen Sie die aktuelle finanzielle Situation Ihres Haushalts? Können Sie mit den Haushaltseinkünften sehr gut zurechtkommen, gut zurechtkommen, teils-teils, nur schwer zurechtkommen, nur sehr schwer zurechtkommen?",q_text),
                                       q_text=ifelse(variable=="fin_ausk_yea","Wie wird die finanzielle Situation Ihres Haushalts in Zukunft (in 12 Monaten) im Vergleich zu Ihrer aktuellen Situation sein? Viel besser, etwas besser, gleich bleibend, etwas schlechter, viel schlechter?",q_text),
                                       q_text=ifelse(variable=="eco_ausk_yea","Wie wird die allgemeine Wirtschaftslage in Österreich in Zukunft (in 12 Monaten) im Vergleich zu der aktuellen Situation sein? Viel besser, etwas besser, gleich bleibend, etwas schlechter, viel schlechter?",q_text),
                                                                             
-                                      q_cate=ifelse(variable=="fin_ausk_akt","finanzielle Situation",q_cate),
-                                      q_cate=ifelse(variable=="fin_ausk_yea","finanzielle Situation",q_cate),
-                                      q_cate=ifelse(variable=="eco_ausk_yea","finanzielle Situation",q_cate)
+                                      q_cate=ifelse(variable=="fin_ausk_akt","Finanzielle Situation",q_cate),
+                                      q_cate=ifelse(variable=="fin_ausk_yea","Finanzielle Situation",q_cate),
+                                      q_cate=ifelse(variable=="eco_ausk_yea","Finanzielle Situation",q_cate)
                                       )
 
 
-# Einstellungen zur Coronakrise
+# Coronakrise: Einstellungen
 data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="skept_lebens","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Um die Corona-Krise einzudämmen, sind die meisten in meinem persönlichen Umfeld bereit, ihre Lebensweise zu ändern.",q_text),
                                       q_text=ifelse(variable=="skept_wichti","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft: Es gibt Wichtigeres im Leben als die Corona-Krise.",q_text),
@@ -762,18 +762,18 @@ data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="kaufen_haus","Glauben Sie, dass jetzt ein guter oder schlechter Zeitpunkt ist, um größere Haushaltsgegenstände wie Möbel, einen Kühlschrank, einen Herd, einen Fernseher und solche Dinge zu kaufen?",q_text),
                                                                          
                                       
-                                      q_cate=ifelse(variable=="skept_lebens","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_wichti","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_behaup","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_andere","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_fehler","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_uebert","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_grippe","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="skept_gerech","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="tax_gleich","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="tax_ineq","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="tax_hurt","Einstellungen zur Coronakrise",q_cate),
-                                      q_cate=ifelse(variable=="tax_quarant","Einstellungen zur Coronakrise",q_cate)
+                                      q_cate=ifelse(variable=="skept_lebens","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_wichti","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_behaup","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_andere","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_fehler","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_uebert","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_grippe","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="skept_gerech","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="tax_gleich","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="tax_ineq","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="tax_hurt","Coronakrise: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="tax_quarant","Coronakrise: Einstellungen",q_cate)
                                       )
 
 
@@ -824,7 +824,7 @@ data_labels <- data_labels %>% mutate(
                                       )
 
 
-# Einstellungen zum Testen und Impfen
+# Testen und Impfen: Einstellungen
 data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="mastest_eff","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Die Tests sind eine effektive Maßnahme zur Eindämmung der Corona-Krise.",q_text),
                                       q_text=ifelse(variable=="mastest_zuv","Was denken Sie, inwiefern trifft die folgende Aussage in Zusammenhang mit den Coronavirus-Tests zu? Trifft sie voll und ganz zu, eher zu, teils-teils, eher nicht zu oder gar nicht zu? Das Ergebnis der Tests ist zuverlässig.",q_text),
@@ -837,21 +837,21 @@ data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="impf_kin","XXXXX???????",q_text),
                                       q_text=ifelse(variable=="impf_soz","Bitte geben Sie an, ob die jeweilige Aussage Ihrer Meinung nach sehr zutrifft, eher zutrifft, teils-teils zutrifft, eher nicht zutrifft oder gar nicht zutrifft:	Die meisten Personen in meinem näheren Umfeld sind bereit, sich impfen zu lassen.",q_text),
                                     
-                                      q_cate=ifelse(variable=="mastest_eff","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="mastest_zuv","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="mastest_tre","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="mastest_str","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="mastest_mot","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="impf_pfb","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="impf_gra","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="impf_pfl","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="impf_kin","Einstellungen zum Testen und Impfen",q_cate),
-                                      q_cate=ifelse(variable=="impf_soz","Einstellungen zum Testen und Impfen",q_cate)
+                                      q_cate=ifelse(variable=="mastest_eff","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_zuv","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_tre","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_str","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="mastest_mot","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="impf_pfb","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="impf_gra","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="impf_pfl","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="impf_kin","Testen und Impfen: Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="impf_soz","Testen und Impfen: Einstellungen",q_cate)
                                       )
 
 
 
-# eigenes Verhalten
+# Eigenes Verhalten
 data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="sozialn_verh_eig_abs","Denken Sie im Folgenden an Ihr persönliches Verhalten in der letzten Woche. Bitte geben Sie an, wie oft Sie sich wie folgt verhalten haben. Haben Sie sich nahezu immer, meistens, manchmal, selten oder nahezu nie daran gehalten? Sie halten im öffentlichen Raum immer mindestens 1m Abstand von Menschen, die nicht mit Ihnen im Haushalt leben.",q_text),
                                       q_text=ifelse(variable=="sozialn_verh_eig_hau","Denken Sie im Folgenden an Ihr persönliches Verhalten in der letzten Woche. Bitte geben Sie an, wie oft Sie sich wie folgt verhalten haben. Haben Sie sich nahezu immer, meistens, manchmal, selten oder nahezu nie daran gehalten? Sie bleiben zu Hause, außer für Notwendigkeiten.",q_text),
@@ -861,16 +861,16 @@ data_labels <- data_labels %>% mutate(
 ",q_text),
                                            
                                     
-                                      q_cate=ifelse(variable=="sozialn_verh_eig_abs","eigenes Verhalten",q_cate),
-                                      q_cate=ifelse(variable=="sozialn_verh_eig_hau","eigenes Verhalten",q_cate),
-                                      q_cate=ifelse(variable=="sozialn_verh_eig_sch","eigenes Verhalten",q_cate),
-                                      q_cate=ifelse(variable=="sozialn_verh_eig_ver","eigenes Verhalten",q_cate),
-                                      q_cate=ifelse(variable=="sozkont","eigenes Verhalten",q_cate)
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_abs","Eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_hau","Eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_sch","Eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozialn_verh_eig_ver","Eigenes Verhalten",q_cate),
+                                      q_cate=ifelse(variable=="sozkont","Eigenes Verhalten",q_cate)
                                       )
 
 
 
-# gesellschaftspolitische Einstellungen
+# Gesellschaftspolitische Einstellungen
 data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="issue_ungl","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Die Politik muss die soziale Ungleichheit bekämpfen.",q_text),
                                       q_text=ifelse(variable=="issue_faul","Man kann zu verschiedenen politischen Themen unterschiedliche Meinungen haben. Treffen die folgenden Aussagen Ihrer Meinung nach sehr zu, eher zu, teils-teils zu, treffen sie eher nicht zu oder treffen sie überhaupt nicht zu? Der Sozialstaat macht Menschen träge und faul.",q_text),
@@ -888,20 +888,20 @@ data_labels <- data_labels %>% mutate(
                                       q_text=ifelse(variable=="welfshov_zust","Viele Leute mit geringem Einkommen erhalten weniger Sozialleistungen, als ihnen gesetzlich zustehen.",q_text),
                               
                                     
-                                      q_cate=ifelse(variable=="issue_ungl","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_faul","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_albe","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_wirt","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_frau","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_poli","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_zuwa","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_umwe","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_eink","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_gena","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="issue_redu","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="welfshov_such","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="welfshov_zust","gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="welfshov_sozl","gesellschaftspolitische Einstellungen",q_cate)
+                                      q_cate=ifelse(variable=="issue_ungl","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_faul","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_albe","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_wirt","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_frau","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_poli","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_zuwa","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_umwe","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_eink","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_gena","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="issue_redu","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="welfshov_such","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="welfshov_zust","Gesellschaftspolitische Einstellungen",q_cate),
+                                      q_cate=ifelse(variable=="welfshov_sozl","Gesellschaftspolitische Einstellungen",q_cate)
                                       )
 
 write_csv(data_labels, "./output/tables/data_labels_cq.csv", na = "NA")
