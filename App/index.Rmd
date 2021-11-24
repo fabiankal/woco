@@ -3,10 +3,11 @@ title: "Work & Corona Dashboard"
 runtime: shiny
 output: 
   flexdashboard::flex_dashboard:
+    vertical_layout: fill
     theme: bootstrap
     orientation: columns
     favicon: www/favicon-32x32.png
-    social: ["menu"]
+    social: ["twitter"]
     navbar:
       - {title: "Source Code", icon: "fa-github", href: "https://github.com/fabiankal/woco", target: "_blank",align: "right"}
 ---
@@ -145,7 +146,9 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "01.04.2021",
                              "03.05.2021",
                              "19.05.2021",
-                             "01.07.2021"),
+                             "01.07.2021",
+                             "15.09.2021",
+                             "22.11.2021"),
                      label_en=c("Lockdown",
                              "Easing of\nmeasurments",
                              "Reopening\nrestaurants",
@@ -161,7 +164,9 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "Lockdown\neast",
                              "Reopening\neast",
                              "Reopening",
-                             "Easing of mask rules"),
+                             "Easing of mask rules",
+                             "FFP2-\nmasks",
+                             "Lockdown"),
                       label_de=c("Lockdown",
                              "Erste\nÖffnungen",
                              "Gastro-\nöffnung",
@@ -177,11 +182,13 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "Lockdown\nOst",
                              "Öffnung\nOst",
                              "Öffnung",
-                             "Lockerung\nMasken"),
+                             "Lockerung\nMasken",
+                             "FFP2-\nMasken",
+                             "Lockdown"),
                        y = c(1.1,1.1,1.1,1.1,1.1,
                              1.1,1.1,1.1,1.1,1.1,
                              1.1,1.1,1.1,1.1,1.1,
-                             1.1))
+                             1.1,1.1,1.1))
 
 hlinedata$x<-as.Date(hlinedata$x,"%d.%m.%Y")
 
@@ -218,16 +225,25 @@ Verteilung der Antworten {data-icon="fa-area-chart"}
 {.sidebar}
 -----------------------------------------------------------------------
 
-<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
 
 
 ```{r}
 
+#Dynamic link creation
+output$link <- renderUI({
+       icons <-HTML(paste0('<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten. (Infos zu den Variablen finden Sie <a href="https://woco.univie.ac.at/dashboard/variablen/?',page(),'" target="_blank">hier</a>)'))
+       #url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page()),target="_blank")
+       tagList(tags$br(),icons)
+    })
+
+#Dynamic link display
+uiOutput("link",inline=TRUE)
+
 selectizeInput(
     inputId = 'var_shares',
-    label = 'Variable:',
+    label = 'Variable auswählen:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[[11]][3],
+    selected = my_autocomplete_list[[10]][3],
     multiple = TRUE, # allow for multiple inputs
     options = list(create = FALSE,maxItems = 1)
   )
@@ -235,18 +251,7 @@ selectizeInput(
 #Choose Page
 page <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$var_shares]," ",simplify = TRUE)[1])
 
-#Dynamic link creation
-output$link <- renderUI({
-       url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page()),target="_blank")
-       tagList("Für Frageformulierung siehe ",url)
-    })
 
-#Dynamic link display
-uiOutput("link")
-
-
-#,onDropdownOpen = I("function () {this.clear();}")
-#,onDropdownOpen = I("function() {value = this.getValue();this.clear(false)},onBlur: function() {if(this.getValue() == '') { this.setValue(value);}}")
 
 checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
 
@@ -259,7 +264,7 @@ checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FA
   
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
+        "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>
         </div>'
         ))
@@ -268,7 +273,7 @@ HTML(paste0(
 Column
 -----------------------------------------------------------------------
 
-### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle {data-height=1000}
+### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle {.no-mobile data-height=1000}
 
 ```{r,context="server"}
 
@@ -320,7 +325,7 @@ renderPlotly({
   
 m <- list(l = 0,r = 0,b = 80,t = 40,pad = 4)  
 
-  g <- ggplotly(p,tooltip = c("x","y","fill","text")) %>%
+  g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
 layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
           source =  base64enc::dataURI(file = "logo2.png"), 
@@ -345,7 +350,8 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        ))
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
   #g$x$data[[1]]$hoverinfo <- "none"
   #g$x$data[[2]]$hoverinfo <- "none"
   #g$x$data[[3]]$hoverinfo <- "none"
@@ -356,37 +362,108 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
 
 ```
 
+### Anteile der Antwortkategorien in % aller gültigen Antworten nach Befragungswelle {.mobile}
+
+```{r,context="server"}
+
+#output$out1 <- renderPrint(as.numeric(input$colordirect))
+#verbatimTextOutput('out1')
+
+renderPlotly({
+  
+  inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares]
+  
+  data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>%
+    filter(variable %in% inputvariable_shares) 
+  data3 <- data3 %>% mutate(Personen = round(prop*N_total,0)) %>% rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement,
+                            N = N_total)
+  
+  Nrund<-round(mean(data3$N,na.rm=TRUE),0)
+  
+  p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Anteil)) + 
+    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
+    geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
+    labs(y = "", x= "",fill="") +
+    theme_minimal() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_date(date_breaks = "3 month",date_labels = "%b\n%y",guide = guide_axis(n.dodge = 2))
+    theme(legend.position="bottom") + 
+    guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
+
+  
+m <- list(l = 0,r = 0,b = 90,t = 20,pad = 4)  
+
+  g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
+layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.095),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.95,y=0.955,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom"
+          )),
+       margin=m)  %>% 
+    layout(annotations = 
+            list(x = 1, y = -0.27, text = "Daten: ACPP + WoCo", 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    layout(annotations = 
+            list(x = 1, y = -0.22, text = paste("N ~",Nrund,"pro Welle"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=12, color="#707070")))%>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+  #g$x$data[[1]]$hoverinfo <- "none"
+  #g$x$data[[2]]$hoverinfo <- "none"
+  #g$x$data[[3]]$hoverinfo <- "none"
+  #g$x$data[[4]]$hoverinfo <- "none"
+  #g$x$data[[5]]$hoverinfo <- "none"
+  g
+})
+
+```
+
+
 Mittelwerte {data-icon="fa-line-chart"}
 =======================================================================
 
 {.sidebar}
 -----------------------------------------------------------------------
 
-<i class="fa fa-info-circle"></i> Wählen Sie hier die Variablen aus, die Sie anzeigen möchten.
-
 ```{r}
-selectizeInput(
-    inputId = 'variables',
-    label = 'Variablen:',
-    choices = my_autocomplete_list,
-    selected = my_autocomplete_list[[11]][3:4],
-    multiple = TRUE, # allow for multiple inputs
-    options = list(create = FALSE), # if TRUE, allows newly created inputs
-  )
-#selectInput("groupby", label = "Gruppierung (der ersten Variable)",
-#            choices = c("Keine","Gender", "Age", "Education", "Region","Income"), selected = "Keine")
-
-#Choose Page
-page2 <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$variables]," ",simplify = TRUE)[1])
 
 #Dynamic link creation
 output$link2 <- renderUI({
-       url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page2()),target="_blank")
-       tagList("Für Frageformulierung siehe ",url)
+       icons <-HTML(paste0('<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable(n) aus, die Sie anzeigen möchten. (Infos zu den Variablen finden Sie <a href="https://woco.univie.ac.at/dashboard/variablen/?',page2(),'" target="_blank">hier</a>)'))
+       #url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page()),target="_blank")
+       tagList(tags$br(),icons)
     })
 
 #Dynamic link display
-uiOutput("link2")
+uiOutput("link2",inline=TRUE)
+
+selectizeInput(
+    inputId = 'variables',
+    label = 'Variable(n) auswählen:',
+    choices = my_autocomplete_list,
+    selected = my_autocomplete_list[[10]][3:4],
+    multiple = TRUE, # allow for multiple inputs
+    options = list(create = FALSE), # if TRUE, allows newly created inputs
+  )
+
+#Choose Page
+page2 <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$variables]," ",simplify = TRUE)[1])
 
 checkboxInput(inputId = 'confidence', label = "95% Konfidenzintervalle", value = FALSE)
 checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
@@ -395,7 +472,7 @@ checkboxInput(inputId = 'axis0', label = "Minimalwert der Y-Achse bei 0 fixieren
 
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
+        "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>
         </div>'
         ))
@@ -457,7 +534,8 @@ renderPlotly({
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        ))
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
   }
   else
   {
@@ -489,7 +567,8 @@ renderPlotly({
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        ))
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
   }
  
   if(input$relevantdates)
@@ -621,31 +700,32 @@ Gruppierte Mittelwerte {data-icon="fa-users"}
 -----------------------------------------------------------------------
 
 
-<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
-
 ```{r}
+
+#Dynamic link creation
+output$link3 <- renderUI({
+       icons <-HTML(paste0('<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten. (Infos zu den Variablen finden Sie <a href="https://woco.univie.ac.at/dashboard/variablen/?',page3(),'" target="_blank">hier</a>)'))
+       #url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page()),target="_blank")
+       tagList(tags$br(),icons)
+    })
+
+#Dynamic link display
+uiOutput("link3",inline=TRUE)
+
 selectizeInput(
     inputId = 'variablesgr',
-    label = 'Variable:',
+    label = 'Variable auswählen:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[[11]][3] ,
+    selected = my_autocomplete_list[[10]][3] ,
     multiple = FALSE, # allow for multiple inputs
     options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
-selectInput("groupby", label = "Gruppieren nach:",
-            choices = c("Keine","Geschlecht", "Alter", "Bildungsgrad", "Einwohnerzahl","Einkommen","Arbeitsmarktstatus"), selected = "Geschlecht")
 
 #Choose Page
 page3 <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$variablesgr]," ",simplify = TRUE)[1])
 
-#Dynamic link creation
-output$link3 <- renderUI({
-       url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page3()),target="_blank")
-       tagList("Für Frageformulierung siehe ",url)
-    })
-
-#Dynamic link display
-uiOutput("link3")
+selectInput("groupby", label = "Gruppieren nach:",
+            choices = c("Keine","Geschlecht", "Alter", "Bildungsgrad", "Einwohnerzahl","Einkommen","Arbeitsmarktstatus"), selected = "Geschlecht")
 
 checkboxInput(inputId = 'confidence2', label = "95% Konfidenzintervalle", value = FALSE)
 checkboxInput(inputId = 'incidence2', label = "7-Tages Inzidenz", value = FALSE)
@@ -654,7 +734,7 @@ checkboxInput(inputId = 'axis02', label = "Minimalwert der Y-Achse bei 0 fixiere
 
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
+        "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>
         </div>'
         ))
@@ -727,7 +807,8 @@ renderPlotly({
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        ))
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
   }
   else
   {
@@ -760,7 +841,8 @@ renderPlotly({
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        ))
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
   }
   if(input$relevantdates2)
   {
@@ -888,32 +970,29 @@ Querschnitte {data-icon="fa-bar-chart"}
 {.sidebar}
 -----------------------------------------------------------------------
 
-
-<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten.
-
-
 ```{r}
+
+#Dynamic link creation
+output$link4 <- renderUI({
+       icons <-HTML(paste0('<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten. (Infos zu den Variablen finden Sie <a href="https://woco.univie.ac.at/dashboard/variablen/?',page4(),'" target="_blank">hier</a>)'))
+       #url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page()),target="_blank")
+       tagList(tags$br(),icons)
+    })
+
+#Dynamic link display
+uiOutput("link4",inline=TRUE)
 
 selectInput(
     inputId = 'var_shares2',
-    label = 'Variable:',
+    label = 'Variable auswählen:',
     choices = my_autocomplete_list,
-    selected = my_autocomplete_list[[11]][3],
+    selected = my_autocomplete_list[[10]][3],
     multiple = FALSE, # allow for multiple inputs
     #options = list(create = FALSE), # if TRUE, allows newly created inputs
   )
 
 #Choose Page
 page4 <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$var_shares2]," ",simplify = TRUE)[1])
-
-#Dynamic link creation
-output$link4 <- renderUI({
-       url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page4()),target="_blank")
-       tagList("Für Frageformulierung siehe ",url)
-    })
-
-#Dynamic link display
-uiOutput("link4")
 
 selectInput(
     inputId = 'waves',
@@ -935,7 +1014,7 @@ checkboxInput(inputId = 'play', label = "Wellen dynamisch abspielen (BETA)", val
 
 version<-"V1.0"
 HTML(paste0(
-        "<div style='position: absolute; bottom: 5px;right:10px;text-align: right'>",
+        "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>
         </div>'
         ))
@@ -1029,7 +1108,8 @@ layout(showlegend = FALSE,
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        ))
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
    }
  if(input$play==TRUE)
   {
@@ -1081,7 +1161,8 @@ layout(showlegend = FALSE,
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
-        )) 
+        )) %>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
   g <- g %>% animation_slider(currentvalue = list(prefix = "Befragungsdatum: ", font = list(color="red")))
    } 
    

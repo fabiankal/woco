@@ -1,0 +1,108 @@
+---
+title: "Work & Corona Dashboard"
+runtime: shiny
+output: 
+  flexdashboard::flex_dashboard:
+    #vertical_layout: fill
+    #theme: bootstrap
+    #orientation: columns
+    #favicon: www/favicon-32x32.png
+    #social: ["menu"]
+    #navbar:
+    #  - {title: "Source Code", icon: "fa-github", href: "https://github.com/fabiankal/woco", target: "_blank",align: "right"}
+---
+
+```{js}
+//$('.navbar-inverse').removeClass('navbar-inverse').addClass('navbar-default');
+//source_code: "https://github.com/fabiankal/woco"
+//fa-area-chart
+```
+
+```{r setup, include=FALSE}
+#navbar-bg: "#00102E"
+#theme:
+#      version: 4
+#      bootswatch: flatly
+#
+#runtime: shiny_prerendered
+library(plotly)
+library(tidyr)
+library(dplyr)
+library(rlang)
+library(stringr)
+library(forcats)
+library(base64enc)
+#library(bslib)
+library(flexdashboard)
+library(readr)
+library(shiny)
+
+#get a reactive (text) variable
+ myval3 <- reactiveValues()
+```
+
+```{r data, include=FALSE}
+
+```
+
+Verteilung der Antworten {data-icon="fa-area-chart"}
+=======================================================================
+
+{.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+
+
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Test
+
+```{r}
+
+output$out1 <- renderPrint(paste("Faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 adsf"))
+verbatimTextOutput('out1')
+
+
+```
+
+### Test {.mobile}
+
+```{r}
+
+output$out2 <- renderPrint(paste("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 adsf"))
+verbatimTextOutput('out2')
+
+
+```
+

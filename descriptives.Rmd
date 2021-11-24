@@ -583,8 +583,9 @@ write_csv(data_plot_long_N, "./output/tables/figure1_observations.csv", na = "NA
 
 data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/grouped_labels.csv",show_col_types = FALSE)
 
-data_labels$q_text=NA
-data_labels$q_cate=NA
+data_labels$q_text=NA #Question wording
+data_labels$q_cate=NA #Question category
+data_labels$q_filt=NA #Question filter
 
 # Gefahrenwahrnehmung
 data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ges_per_gefahr","Wie groß schätzen Sie die gesundheitliche Gefahr ein, welche von dem Coronavirus für Sie persönlich ausgeht?",q_text),
@@ -595,7 +596,12 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ges_per_gefahr","
                                       q_cate=ifelse(variable=="ges_per_gefahr","Gefahrenwahrnehmung",q_cate),
                                       q_cate=ifelse(variable=="ges_pub_gefahr","Gefahrenwahrnehmung",q_cate),
                                       q_cate=ifelse(variable=="wir_per_gefahr","Gefahrenwahrnehmung",q_cate),
-                                      q_cate=ifelse(variable=="wir_pub_gefahr","Gefahrenwahrnehmung",q_cate)
+                                      q_cate=ifelse(variable=="wir_pub_gefahr","Gefahrenwahrnehmung",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="ges_per_gefahr","no",q_filt),
+                                      q_filt=ifelse(variable=="ges_pub_gefahr","no",q_filt),
+                                      q_filt=ifelse(variable=="wir_per_gefahr","no",q_filt),
+                                      q_filt=ifelse(variable=="wir_pub_gefahr","no",q_filt)
                                       )
 
 
@@ -612,7 +618,13 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="wochentag","Wie s
                                       q_cate=ifelse(variable=="kontakt","Auswirkungen",q_cate),
                                       q_cate=ifelse(variable=="zeit","Auswirkungen",q_cate),
                                       q_cate=ifelse(variable=="konflikt","Auswirkungen",q_cate),
-                                      q_cate=ifelse(variable=="kinder","Auswirkungen",q_cate)
+                                      q_cate=ifelse(variable=="kinder","Auswirkungen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="wochentag","no",q_filt),
+                                      q_filt=ifelse(variable=="kontakt","no",q_filt),
+                                      q_filt=ifelse(variable=="zeit","no",q_filt),
+                                      q_filt=ifelse(variable=="konflikt","no",q_filt),
+                                      q_filt=ifelse(variable=="kinder","Kinder <=14j.=ja",q_filt)
                                       )
 
 
@@ -637,7 +649,17 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="depress_A1","Wie 
                                       q_cate=ifelse(variable=="depress_A6","Emotionen",q_cate),
                                       q_cate=ifelse(variable=="depress_A7","Emotionen",q_cate),
                                       q_cate=ifelse(variable=="depress_A8","Emotionen",q_cate),
-                                      q_cate=ifelse(variable=="depress_A9","Emotionen",q_cate)
+                                      q_cate=ifelse(variable=="depress_A9","Emotionen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="depress_A1","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A2","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A3","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A4","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A5","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A6","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A7","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A8","no",q_filt),
+                                      q_filt=ifelse(variable=="depress_A9","no",q_filt)
                                       )
 
 
@@ -649,7 +671,11 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="zusammenhalt","Wi
                                                                             
                                       q_cate=ifelse(variable=="zusammenhalt","Chancenwahrnehmung",q_cate),
                                       q_cate=ifelse(variable=="umweundklima","Chancenwahrnehmung",q_cate),
-                                      q_cate=ifelse(variable=="onlinekommun","Chancenwahrnehmung",q_cate)
+                                      q_cate=ifelse(variable=="onlinekommun","Chancenwahrnehmung",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="zusammenhalt","no",q_filt),
+                                      q_filt=ifelse(variable=="umweundklima","no",q_filt),
+                                      q_filt=ifelse(variable=="onlinekommun","no",q_filt)
                                       )
 
 
@@ -680,7 +706,19 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="demokratie","Wie 
                                       q_cate=ifelse(variable=="zuf_fam","Zufriedenheit",q_cate),
                                       q_cate=ifelse(variable=="zuf_par","Zufriedenheit",q_cate),
                                       q_cate=ifelse(variable=="zuf_ber","Zufriedenheit",q_cate),
-                                      q_cate=ifelse(variable=="zuf_frz","Zufriedenheit",q_cate)
+                                      q_cate=ifelse(variable=="zuf_frz","Zufriedenheit",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="demokratie","no",q_filt),
+                                      q_filt=ifelse(variable=="lebensz","no",q_filt),
+                                      q_filt=ifelse(variable=="blianz_reg","no",q_filt),
+                                      q_filt=ifelse(variable=="zuf_reg_al","no",q_filt),
+                                      q_filt=ifelse(variable=="zuf_reg_un","no",q_filt),
+                                      q_filt=ifelse(variable=="zuf_reg_wi","no",q_filt),
+                                      q_filt=ifelse(variable=="zuf_reg_un","no",q_filt),
+                                      q_filt=ifelse(variable=="zuf_fam","kein Filter aber zusätzliche Ausweichkategorie: Trifft nicht zu (keine Familie/ Partner/in/ nicht berufstätig)",q_filt),
+                                      q_filt=ifelse(variable=="zuf_par","kein Filter aber zusätzliche Ausweichkategorie: Trifft nicht zu (keine Familie/ Partner/in/ nicht berufstätig)",q_filt),
+                                      q_filt=ifelse(variable=="zuf_ber","kein Filter aber zusätzliche Ausweichkategorie: Trifft nicht zu (keine Familie/ Partner/in/ nicht berufstätig)",q_filt),
+                                      q_filt=ifelse(variable=="zuf_frz","no",q_filt)
                                       )
 
 
@@ -693,7 +731,11 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="zus_bestes","Ganz
                                                                             
                                       q_cate=ifelse(variable=="zus_bestes","Zusammenhalt",q_cate),
                                       q_cate=ifelse(variable=="zus_einig","Zusammenhalt",q_cate),
-                                      q_cate=ifelse(variable=="zus_schutzen","Zusammenhalt",q_cate)
+                                      q_cate=ifelse(variable=="zus_schutzen","Zusammenhalt",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="zus_bestes","no",q_filt),
+                                      q_filt=ifelse(variable=="zus_einig","no",q_filt),
+                                      q_filt=ifelse(variable=="zus_schutzen","no",q_filt)
                                       )
 
 
@@ -706,7 +748,11 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="mas_angemessen","
                                                                             
                                       q_cate=ifelse(variable=="mas_angemessen","Corona-Maßnahmen",q_cate),
                                       q_cate=ifelse(variable=="mas_effektiv","Corona-Maßnahmen",q_cate),
-                                      q_cate=ifelse(variable=="dauer","Corona-Maßnahmen",q_cate)
+                                      q_cate=ifelse(variable=="dauer","Corona-Maßnahmen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="mas_angemessen","no",q_filt),
+                                      q_filt=ifelse(variable=="mas_effektiv","no",q_filt),
+                                      q_filt=ifelse(variable=="dauer","no",q_filt)
                                       )
 
 
@@ -724,7 +770,13 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="ver_gov","Wenn Si
                                       q_cate=ifelse(variable=="ver_ges","Vertrauen",q_cate),
                                       q_cate=ifelse(variable=="ver_par","Vertrauen",q_cate),
                                       q_cate=ifelse(variable=="ver_pol","Vertrauen",q_cate),
-                                      q_cate=ifelse(variable=="ver_orf","Vertrauen",q_cate)
+                                      q_cate=ifelse(variable=="ver_orf","Vertrauen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="ver_gov","no",q_filt),
+                                      q_filt=ifelse(variable=="ver_ges","no",q_filt),
+                                      q_filt=ifelse(variable=="ver_par","no",q_filt),
+                                      q_filt=ifelse(variable=="ver_pol","no",q_filt),
+                                      q_filt=ifelse(variable=="ver_orf","no",q_filt)
                                       )
 
 
@@ -737,7 +789,11 @@ data_labels <- data_labels %>% mutate(q_text=ifelse(variable=="fin_ausk_akt", "W
                                                                             
                                       q_cate=ifelse(variable=="fin_ausk_akt","Finanzielle Situation",q_cate),
                                       q_cate=ifelse(variable=="fin_ausk_yea","Finanzielle Situation",q_cate),
-                                      q_cate=ifelse(variable=="eco_ausk_yea","Finanzielle Situation",q_cate)
+                                      q_cate=ifelse(variable=="eco_ausk_yea","Finanzielle Situation",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="fin_ausk_akt","no",q_filt),
+                                      q_filt=ifelse(variable=="fin_ausk_yea","no",q_filt),
+                                      q_filt=ifelse(variable=="eco_ausk_yea","no",q_filt)
                                       )
 
 
@@ -773,7 +829,20 @@ data_labels <- data_labels %>% mutate(
                                       q_cate=ifelse(variable=="tax_gleich","Coronakrise: Einstellungen",q_cate),
                                       q_cate=ifelse(variable=="tax_ineq","Coronakrise: Einstellungen",q_cate),
                                       q_cate=ifelse(variable=="tax_hurt","Coronakrise: Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="tax_quarant","Coronakrise: Einstellungen",q_cate)
+                                      q_cate=ifelse(variable=="tax_quarant","Coronakrise: Einstellungen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="skept_lebens","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_wichti","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_behaup","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_andere","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_fehler","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_uebert","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_grippe","no",q_filt),
+                                      q_filt=ifelse(variable=="skept_gerech","no",q_filt),
+                                      q_filt=ifelse(variable=="tax_gleich","no",q_filt),
+                                      q_filt=ifelse(variable=="tax_ineq","no",q_filt),
+                                      q_filt=ifelse(variable=="tax_hurt","no",q_filt),
+                                      q_filt=ifelse(variable=="tax_quarant","no",q_filt)
                                       )
 
 
@@ -795,7 +864,14 @@ data_labels <- data_labels %>% mutate(
                                       q_cate=ifelse(variable=="zeitp_lieg","Finanzentscheidungen",q_cate),
                                       q_cate=ifelse(variable=="zeitp_ausg","Finanzentscheidungen",q_cate),
                                       q_cate=ifelse(variable=="zeitp_kred","Finanzentscheidungen",q_cate),
-                                      q_cate=ifelse(variable=="kaufen_haus","Finanzentscheidungen",q_cate)
+                                      q_cate=ifelse(variable=="kaufen_haus","Finanzentscheidungen",q_cate),
+
+                                      q_filt=ifelse(variable=="zeitp_spar","no",q_filt),
+                                      q_filt=ifelse(variable=="zeitp_inve","no",q_filt),
+                                      q_filt=ifelse(variable=="zeitp_lieg","no",q_filt),
+                                      q_filt=ifelse(variable=="zeitp_ausg","no",q_filt),
+                                      q_filt=ifelse(variable=="zeitp_kred","no",q_filt),
+                                      q_filt=ifelse(variable=="kaufen_haus","no",q_filt)
                                       )
 
 
@@ -820,7 +896,16 @@ data_labels <- data_labels %>% mutate(
                                       q_cate=ifelse(variable=="anst_park","Ansteckungsgefahr",q_cate),
                                       q_cate=ifelse(variable=="anst_arzt","Ansteckungsgefahr",q_cate),
                                       q_cate=ifelse(variable=="anst_fami","Ansteckungsgefahr",q_cate),
-                                      q_cate=ifelse(variable=="anst_freu","Ansteckungsgefahr",q_cate)
+                                      q_cate=ifelse(variable=="anst_freu","Ansteckungsgefahr",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="anst_rest","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_oeff","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_arbe","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_schu","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_park","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_arzt","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_fami","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_freu","no",q_filt)
                                       )
 
 
@@ -846,7 +931,18 @@ data_labels <- data_labels %>% mutate(
                                       q_cate=ifelse(variable=="impf_gra","Testen und Impfen: Einstellungen",q_cate),
                                       q_cate=ifelse(variable=="impf_pfl","Testen und Impfen: Einstellungen",q_cate),
                                       q_cate=ifelse(variable=="impf_kin","Testen und Impfen: Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="impf_soz","Testen und Impfen: Einstellungen",q_cate)
+                                      q_cate=ifelse(variable=="impf_soz","Testen und Impfen: Einstellungen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="mastest_eff","no",q_filt),
+                                      q_filt=ifelse(variable=="mastest_zuv","no",q_filt),
+                                      q_filt=ifelse(variable=="mastest_tre","no",q_filt),
+                                      q_filt=ifelse(variable=="mastest_str","no",q_filt),
+                                      q_filt=ifelse(variable=="mastest_mot","no",q_filt),
+                                      q_filt=ifelse(variable=="impf_pfb","no",q_filt),
+                                      q_filt=ifelse(variable=="impf_gra","no",q_filt),
+                                      q_filt=ifelse(variable=="impf_pfl","no",q_filt),
+                                      q_filt=ifelse(variable=="impf_kin","Kinder <=14j.=ja",q_filt),
+                                      q_filt=ifelse(variable=="impf_soz","no",q_filt)
                                       )
 
 
@@ -865,7 +961,13 @@ data_labels <- data_labels %>% mutate(
                                       q_cate=ifelse(variable=="sozialn_verh_eig_hau","Eigenes Verhalten",q_cate),
                                       q_cate=ifelse(variable=="sozialn_verh_eig_sch","Eigenes Verhalten",q_cate),
                                       q_cate=ifelse(variable=="sozialn_verh_eig_ver","Eigenes Verhalten",q_cate),
-                                      q_cate=ifelse(variable=="sozkont","Eigenes Verhalten",q_cate)
+                                      q_cate=ifelse(variable=="sozkont","Eigenes Verhalten",q_cate),
+
+                                      q_filt=ifelse(variable=="sozialn_verh_eig_abs","no",q_filt),
+                                      q_filt=ifelse(variable=="sozialn_verh_eig_hau","no",q_filt),
+                                      q_filt=ifelse(variable=="sozialn_verh_eig_sch","no",q_filt),
+                                      q_filt=ifelse(variable=="sozialn_verh_eig_ver","no",q_filt),
+                                      q_filt=ifelse(variable=="sozkont","no",q_filt)
                                       )
 
 
@@ -901,7 +1003,22 @@ data_labels <- data_labels %>% mutate(
                                       q_cate=ifelse(variable=="issue_redu","Gesellschaftspolitische Einstellungen",q_cate),
                                       q_cate=ifelse(variable=="welfshov_such","Gesellschaftspolitische Einstellungen",q_cate),
                                       q_cate=ifelse(variable=="welfshov_zust","Gesellschaftspolitische Einstellungen",q_cate),
-                                      q_cate=ifelse(variable=="welfshov_sozl","Gesellschaftspolitische Einstellungen",q_cate)
+                                      q_cate=ifelse(variable=="welfshov_sozl","Gesellschaftspolitische Einstellungen",q_cate),
+                                      
+                                      q_filt=ifelse(variable=="issue_ungl","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_faul","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_albe","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_wirt","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_frau","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_poli","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_zuwa","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_umwe","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_eink","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_gena","no",q_filt),
+                                      q_filt=ifelse(variable=="issue_redu","no",q_filt),
+                                      q_filt=ifelse(variable=="welfshov_such","no",q_filt),
+                                      q_filt=ifelse(variable=="welfshov_zust","no",q_filt),
+                                      q_filt=ifelse(variable=="welfshov_sozl","no",q_filt)
                                       )
 
 write_csv(data_labels, "./output/tables/data_labels_cq.csv", na = "NA")

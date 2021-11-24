@@ -1,7 +1,7 @@
 # WoCo
 Work and Corona (WoCo) dashboard for plotting data from the Austrian Panel Project (ACPP) and the WoCo project over time.
 
-This is the R code package for replicating the dashboard provided @ https://woco.ac.at/dashboard
+This is the R code package for replicating the dashboard provided @ https://woco.univie.ac.at/dashboard
 
 You can also access the dashboard via binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fabiankal/woco/master?urlpath=shiny)
 
