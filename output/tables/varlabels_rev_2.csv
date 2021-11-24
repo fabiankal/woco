@@ -468,7 +468,7 @@ Psychologie: habe Leben selbst in der Hand,psy_leb,1,4,1
 Psychologie: Belohnung durch Anstrengung,psy_bel,1,4,1
 Psychologie: Fremdbestimmung,psy_fbe,1,4,1
 Psychologie: Schicksal,psy_sci,1,4,1
-Zufriedenheit: Familienleben,zuf_fam,1,5,0
-Zufriedenheit: Partnerschaft,zuf_par,1,5,0
-Zufriedenheit: Beruf,zuf_ber,1,5,0
-Zufriedenheit: Freizeit,zuf_frz,1,5,0
+Zufriedenheit: Familienleben,zuf_fam,1,4,1
+Zufriedenheit: Partnerschaft,zuf_par,1,4,1
+Zufriedenheit: Beruf,zuf_ber,1,4,1
+Zufriedenheit: Freizeit,zuf_frz,1,4,1
