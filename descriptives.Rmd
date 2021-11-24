@@ -191,13 +191,23 @@ bern_data_long2_factored$empl <- fct_relevel(bern_data_long2_factored$empl, "Arb
 ```
 
 ```{r recoding and export, echo=FALSE, fig.width=8, fig.height=5, results='asis'}
+
+#change avoiding answer in satisfaction question to NA
+bern_data_long2_factored$zuf_fam[bern_data_long2_factored$zuf_fam=="trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig)"]<-NA
+bern_data_long2_factored$zuf_par[bern_data_long2_factored$zuf_par=="trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig)"]<-NA
+bern_data_long2_factored$zuf_ber[bern_data_long2_factored$zuf_ber=="trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig)"]<-NA
+bern_data_long2_factored$zuf_frz[bern_data_long2_factored$zuf_frz=="trifft nicht zu (keine Familie/ Partner/in/ nicht berufstaetig)"]<-NA
+
+bern_data_long2_factored$zuf_fam<-droplevels(bern_data_long2_factored$zuf_fam)
+bern_data_long2_factored$zuf_par<-droplevels(bern_data_long2_factored$zuf_par)
+bern_data_long2_factored$zuf_ber<-droplevels(bern_data_long2_factored$zuf_ber)
+bern_data_long2_factored$zuf_frz<-droplevels(bern_data_long2_factored$zuf_frz)
+
 lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 
 #List of all variables in the data
 #names(lr_gen_w1)
 #paste(names(lr_gen_w1),collapse=",")
-
-
 
 #What variables should be used for the dashboard
  variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
@@ -900,7 +910,7 @@ data_labels <- data_labels %>% mutate(
                                       
                                       q_filt=ifelse(variable=="anst_rest","no",q_filt),
                                       q_filt=ifelse(variable=="anst_oeff","no",q_filt),
-                                      q_filt=ifelse(variable=="anst_arbe","no",q_filt),
+                                      q_filt=ifelse(variable=="anst_arbe","erwerbstätig = ja",q_filt),
                                       q_filt=ifelse(variable=="anst_schu","no",q_filt),
                                       q_filt=ifelse(variable=="anst_park","no",q_filt),
                                       q_filt=ifelse(variable=="anst_arzt","no",q_filt),

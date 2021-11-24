@@ -21,7 +21,6 @@ output:
 ```{css, echo=FALSE}
 .js-plotly-plot .plotly .modebar {
     left: 60%;
-    transform: translateX(-50%);
 }
 #section-anmerkungen
   .chart-shim {
@@ -51,6 +50,7 @@ library(base64enc)
 library(flexdashboard)
 library(readr)
 library(shiny)
+#library(htmlwidgets)
 
 #get a reactive (text) variable
  myval3 <- reactiveValues()
@@ -80,6 +80,9 @@ data_varlab$labels<-gsub(pattern = 'Aktüll', replacement = "Aktuell",data_varla
 data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Neü', replacement = "Neue",data_varlab$labels)
+data_varlab$labels<-gsub(pattern = 'Steürn', replacement = "Steürn",data_varlab$labels)
+
 
 data_labels$q_cate<-gsub(pattern = 'ae', replacement = "ä",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Ae', replacement = "Ä",data_labels$q_cate)
@@ -103,23 +106,11 @@ data_labels$labels<-gsub(pattern = 'oe', replacement = "ö",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'CafÃ©s', replacement = "Cafés",data_labels$labels)
-
+data_labels$labels<-gsub(pattern = 'Neü', replacement = "Neue",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Steürn', replacement = "Steuern",data_labels$labels)
 
 data_labels <- data_labels %>% filter(!is.na(labels))
 
-
-#Seperate category labels from variable labels and put them in a list
-
-# data_varlab<-data_varlab %>% separate(labels,c("catlabel","varlabel"), ":",remove = FALSE)
-# data_varlab<-data_varlab %>% mutate(varlabel=ifelse(is.na(varlabel),catlabel,varlabel))#,
-#                                     #catlabel=ifelse(varlabel==catlabel,NA,catlabel))
-
-
-# xy.list <- split(data_varlab$catlabel,data_varlab$catlabel)
-# 
-# for (val in unique(data_varlab$catlabel)) {
-# xy.list[[val]] <- data_varlab %>% filter(catlabel==val) %>% pull(labels, varlabel)
-# }
 
 #Transform variables to list to add categorization
 xy.list <- split(data_labels$q_cate,data_labels$q_cate) 
@@ -225,14 +216,11 @@ Verteilung der Antworten {data-icon="fa-area-chart"}
 {.sidebar}
 -----------------------------------------------------------------------
 
-
-
 ```{r}
 
 #Dynamic link creation
 output$link <- renderUI({
        icons <-HTML(paste0('<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten. (Infos zu den Variablen finden Sie <a href="https://woco.univie.ac.at/dashboard/variablen/?',page(),'" target="_blank">hier</a>)'))
-       #url <- a("hier", href=paste0("https://woco.univie.ac.at/dashboard/variablen/?",page()),target="_blank")
        tagList(tags$br(),icons)
     })
 
@@ -255,13 +243,23 @@ page <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$va
 
 checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
 
-#  radioButtons("inpercent", "Y-Achse:",
-#               c("In Prozent" = "percent",
-#                 "In Personen" = "persons"
-#                 ),
-#               selected = "percent",
-#               )
-  
+filterinfo <- reactive(data_labels$q_filt[data_labels$variable %in% input$var_shares])
+
+output$info <- renderUI({
+       if(filterinfo()=="no") {
+         infotext2 <- HTML(paste0(''))
+         tagList(infotext2,tags$br(),tags$br())
+       }
+       else {
+         infotext1 <- HTML(paste0('<i class="fa fa-exclamation-triangle"></i> Diese Frage wurde nur an Personen gestellt wo:<br>',filterinfo(),'.'))
+         tagList(infotext1,tags$br(),tags$br())
+        }
+    })
+
+uiOutput("info",inline=TRUE)
+
+#uiOutput("downloadUI")
+
 version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
@@ -280,6 +278,8 @@ Column
 #output$out1 <- renderPrint(as.numeric(input$colordirect))
 #verbatimTextOutput('out1')
 
+session_store <- reactiveValues()
+
 renderPlotly({
   
   inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares]
@@ -293,8 +293,6 @@ renderPlotly({
   
   Nrund<-round(mean(data3$N,na.rm=TRUE),0)
   
-  #if(input$inpercent=="percent")
-  #{
   p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Anteil)) + 
     geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
     geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
@@ -306,27 +304,11 @@ renderPlotly({
     scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
-  #}
   
-  # if(input$inpercent=="persons")
-  # {
-  #  p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Personen)) + 
-  #   geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
-  #   geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
-  #   #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-  #   scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
-  #   labs(y = "", x= "",fill="") +
-  #   theme_minimal() +
-  #   #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-  #   scale_x_date(date_breaks = "2 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
-  #   theme(legend.position="bottom") + 
-  #   guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
-  # }
-  
-m <- list(l = 0,r = 0,b = 80,t = 40,pad = 4)  
+m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)  
 
   g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
-layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
+layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045,tracegroupgap = 0),
          images = list(list(  
           source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
@@ -342,12 +324,13 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
     layout(annotations = 
-            list(x = 1, y = -0.12, text = paste("N ~",Nrund,"pro Welle"), 
+            list(x = 1, y = -0.13, text = paste("N ~",Nrund,"pro Welle"), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=12, color="#707070")))%>% 
     config(locale = 'de',
            displaylogo = FALSE,
+           displayModeBar = TRUE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
         ))%>%
@@ -357,8 +340,25 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
   #g$x$data[[3]]$hoverinfo <- "none"
   #g$x$data[[4]]$hoverinfo <- "none"
   #g$x$data[[5]]$hoverinfo <- "none"
+  session_store$plt<-g
   g
+  
 })
+
+# output$downBtn  <- downloadHandler(
+#         filename = function() {
+#             paste("data-", Sys.Date(), ".html", sep = "")
+#         },
+#         content = function(file) {
+#             # export plotly html widget as a temp file to download.
+#             saveWidget(as_widget(session_store$plt), file, selfcontained = TRUE)
+#         }
+#     )
+# 
+# # Create the actual downloadButton
+# output$downloadUI <- renderUI( {
+#   downloadButton("downBtn", "Download Graph as html", style = "width:100%;")
+# })
 
 ```
 
@@ -395,10 +395,10 @@ renderPlotly({
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
 
   
-m <- list(l = 0,r = 0,b = 90,t = 20,pad = 4)  
+m <- list(l = 0,r = 0,b = 110,t = 20,pad = 4)  
 
   g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
-layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.095),
+layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.11,tracegroupgap = 0),
          images = list(list(  
           source =  base64enc::dataURI(file = "logo2.png"), 
           xref = "paper",  
@@ -409,12 +409,12 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.095),
           )),
        margin=m)  %>% 
     layout(annotations = 
-            list(x = 1, y = -0.27, text = "Daten: ACPP + WoCo", 
+            list(x = 1, y = -0.34, text = "Daten: ACPP + WoCo", 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
     layout(annotations = 
-            list(x = 1, y = -0.22, text = paste("N ~",Nrund,"pro Welle"), 
+            list(x = 1, y = -0.30, text = paste("N ~",Nrund,"pro Welle"), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=12, color="#707070")))%>% 
@@ -470,21 +470,33 @@ checkboxInput(inputId = 'incidence', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates', label = "Relevante Ergeignisse", value = FALSE)
 checkboxInput(inputId = 'axis0', label = "Minimalwert der Y-Achse bei 0 fixieren", value = TRUE)
 
+filterinfo2 <- reactive(data_labels$q_filt[data_labels$variable %in% input$variables[1]])
+
+output$info2 <- renderUI({
+       if(filterinfo2()=="no") {
+         infotext2 <- HTML(paste0(''))
+         tagList(infotext2,tags$br(),tags$br())
+       }
+       else {
+         infotext1 <- HTML(paste0('<i class="fa fa-exclamation-triangle"></i> Die Frage der 1. Variable wurde nur an Personen gestellt wo:<br>',filterinfo2(),'.'))
+         tagList(infotext1,tags$br(),tags$br())
+        }
+    })
+
+uiOutput("info2",inline=TRUE)
+
 version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>
         </div>'
         ))
-# sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-#             min = 0.2, max = 2, value = 1, step = 0.2)
-
 ```
 
 Column
 -----------------------------------------------------------------------
 
-### Mittelwerte nach Befragungswelle {data-height=800}
+### Mittelwerte nach Befragungswelle {.no-mobile data-height=800}
 
 ```{r,context="server"}
 
@@ -501,7 +513,137 @@ renderPlotly({
     mutate(y_err=ymax-mean_measurement)
   
   Nrund<-round(mean(data2$N_total,na.rm=TRUE),0)
-  m <- list(l = 0,r = 0,b = 80,t = 40,pad = 4)  
+  m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)  
+
+  if(input$confidence)
+  {
+  p <- data2[order(data2$labels),] %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~labels,
+          error_y = ~list(array = y_err))
+  p <- p %>% layout(title = "",
+         xaxis = list(title = ""),
+         yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.94,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    layout(margin=m,annotations = 
+            list(x = 1, y = -0.13, text = paste("Daten: ACPP + WoCo.","N ~",Nrund,"pro Welle"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    # layout(annotations = 
+    #         list(x = 1, y = -0.16, text = paste("N ~",Nrund,"pro Welle"), 
+    #         showarrow = F, xref='paper', yref='paper', 
+    #         xanchor='right', yanchor='auto', xshift=0, yshift=0,
+    #         font=list(size=12, color="#707070")))%>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           displayModeBar = TRUE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+  }
+  else
+  {
+  p <- data2[order(data2$labels),] %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~labels)
+  p <- p %>% layout(title = "",
+         xaxis = list(title = ""),
+         yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.93,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    layout(margin=m,annotations = 
+            list(x = 1, y = -0.13, text = paste("Daten: ACPP + WoCo.","N ~",Nrund,"pro Welle"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    #layout(annotations = 
+    #        list(x = 1, y = -0.12, text = paste("N ~",Nrund,"pro Welle"), 
+    #        showarrow = F, xref='paper', yref='paper', 
+    #        xanchor='right', yanchor='auto', xshift=0, yshift=0,
+    #       font=list(size=12, color="#707070")))%>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           displayModeBar = TRUE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+  }
+ 
+  if(input$relevantdates)
+  {
+    vline_list <- list()
+    vanno_list <- list()
+    for(i in 1:length(hlinedata$x))
+      {
+        vline_list[[i]] <-list(type      = "line",
+                               line      = list(color="black",dash="dash"),
+                               opacity   = 0.3,
+                               x0        = hlinedata$x[i],
+                               x1        = hlinedata$x[i],
+                               xref      = "x",
+                               y0        = ifelse(input$axis0,0,min(data2$mean_measurement))*0.96,
+                               y1        = max(data2$mean_measurement)*1+(((i+1)%%2)*-0.11),
+                               yref      = "y")
+  
+        vanno_list[[i]] <- list(x = hlinedata$x[i],
+                                y = max(data2$mean_measurement)*1.02+(((i+1)%%2)*-0.11),
+                                text = hlinedata$label_de[i],
+                                xref = "x",
+                                yref = "y",
+                                showarrow = FALSE,
+                                arrowhead = 7,
+                                ax = 0,
+                                ay = 10,
+                                font=list(size=9))
+    }
+    p <- p %>%  layout(shapes  = vline_list,annotations = vanno_list)
+  }
+  if(input$incidence)
+  {
+    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+  
+  }
+  
+  p
+  
+})
+
+```
+
+### Mittelwerte nach Befragungswelle {.mobile}
+
+```{r,context="server"}
+
+#output$out1 <- renderPrint(input$relevantdates)
+#verbatimTextOutput('out1')
+
+renderPlotly({
+  
+  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variables]
+  
+  data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales,N_total) %>%
+    distinct(wavedate,variable, .keep_all = TRUE) %>%
+    filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_varlab,by=c("variable"))%>%
+    mutate(y_err=ymax-mean_measurement)
+  
+  Nrund<-round(mean(data2$N_total,na.rm=TRUE),0)
+  m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)  
 
   if(input$confidence)
   {
@@ -612,7 +754,7 @@ renderPlotly({
 
 ```
 
-### anmerkungen {.no-title data-height=200}
+### anmerkungen {.no-title data-height=150}
 ```{r,context="server"}
 #output$out1 <- renderPrint(input$variables)
 #verbatimTextOutput('out1')
@@ -732,6 +874,21 @@ checkboxInput(inputId = 'incidence2', label = "7-Tages Inzidenz", value = FALSE)
 checkboxInput(inputId = 'relevantdates2', label = "Relevante Ergeignisse", value = FALSE)
 checkboxInput(inputId = 'axis02', label = "Minimalwert der Y-Achse bei 0 fixieren", value = TRUE)
 
+filterinfo3 <- reactive(data_labels$q_filt[data_labels$variable %in% input$variablesgr])
+
+output$info3 <- renderUI({
+       if(filterinfo3()=="no") {
+         infotext2 <- HTML(paste0(''))
+         tagList(infotext2,tags$br(),tags$br())
+       }
+       else {
+         infotext1 <- HTML(paste0('<i class="fa fa-exclamation-triangle"></i> Diese Frage wurde nur an Personen gestellt wo:<br>',filterinfo3(),'.'))
+         tagList(infotext1,tags$br(),tags$br())
+        }
+    })
+
+uiOutput("info3",inline=TRUE)
+
 version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
@@ -743,7 +900,7 @@ HTML(paste0(
 Column
 -----------------------------------------------------------------------
 
-### Mittelwerte nach Befragungswelle und Subgruppe {data-height=800}
+### Mittelwerte nach Befragungswelle und Subgruppe {.no-mobile data-height=800}
 
 ```{r,context="server"}
 #output$out1 <- renderPrint(input$groupby)
@@ -773,7 +930,149 @@ renderPlotly({
   data3$subgroup<-droplevels(data3$subgroup)
   
   Nrund<-round(mean(data3$N_total,na.rm=TRUE),0)
-  m <- list(l = 0,r = 0,b = 80,t = 40,pad = 4)
+  m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)
+  
+  if(input$confidence2)
+  {
+  p <- data3[order(data3$subgroup),] %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~subgroup, 
+          error_y = list(array = ~y_err))#,
+          #sort = FALSE)
+  p <- p %>% layout(title = "",
+         xaxis = list(title = ""),
+         yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.94,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    layout(margin=m,annotations = 
+            list(x = 1, y = -0.18, text = "Daten: ACPP + WoCo", 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    layout(annotations = 
+            list(x = 1, y = -0.13, text = paste("N ~",Nrund,"pro Welle"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=12, color="#707070")))%>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           displayModeBar = TRUE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+  }
+  else
+  {
+  p <- data3[order(data3$subgroup),] %>%
+  plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)#,
+          #sort = FALSE)
+  p <- p %>% layout(title = "",
+         xaxis = list(title = ""),
+         yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
+         legend = list(orientation = 'h'),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.97,y=0.93,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom" 
+          ))) %>% 
+    layout(margin=m,annotations = 
+            list(x = 1, y = -0.16, text = "Daten: ACPP + WoCo", 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    layout(annotations = 
+            list(x = 1, y = -0.11, text = paste("N ~",Nrund,"pro Welle"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=12, color="#707070")))%>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           displayModeBar = TRUE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+  }
+  if(input$relevantdates2)
+  {
+    vline_list <- list()
+    vanno_list <- list()
+    for(i in 1:length(hlinedata$x))
+      {
+        vline_list[[i]] <-list(type      = "line",
+                               line      = list(color="black",dash="dash"),
+                               opacity   = 0.3,
+                               x0        = hlinedata$x[i],
+                               x1        = hlinedata$x[i],
+                               xref      = "x",
+                               y0        = ifelse(input$axis02,0,min(data3$mean_measurement))*0.96,
+                               y1        = max(data3$mean_measurement)*1+(((i+1)%%2)*-0.11),
+                               yref      = "y")
+  
+        vanno_list[[i]] <- list(x = hlinedata$x[i],
+                                y = max(data3$mean_measurement)*1.02+(((i+1)%%2)*-0.11),
+                                text = hlinedata$label_de[i],
+                                xref = "x",
+                                yref = "y",
+                                showarrow = FALSE,
+                                arrowhead = 7,
+                                ax = 0,
+                                ay = 10,
+                                font=list(size=9))
+    }
+    p <- p %>%  layout(shapes  = vline_list,annotations = vanno_list)
+  }
+  if(input$incidence2)
+  {
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+  }
+
+  p
+})
+
+```
+
+### Mittelwerte nach Befragungswelle und Subgruppe {.mobile}
+
+```{r,context="server"}
+#output$out1 <- renderPrint(input$groupby)
+#verbatimTextOutput('out1')
+
+# data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
+#     filter(variable %in% test2) %>%
+#     filter(case_when(test=="Gender"~ groupby=="ge",
+#                test=="Age"~ groupby=="ag"))
+
+renderPlotly({
+  
+  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
+
+  data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,N_total) %>%
+    filter(variable %in% inputvariables[1]) %>%
+    filter(case_when(input$groupby=="Keine"~ groupby=="all",
+                     input$groupby=="Geschlecht"~ groupby=="ge",
+                     input$groupby=="Alter"~ groupby=="ag",
+                     input$groupby=="Bildungsgrad"~ groupby=="ed",
+                     input$groupby=="Einwohnerzahl"~ groupby=="bl",
+                     input$groupby=="Einkommen"~ groupby=="hi",
+                     input$groupby=="Arbeitsmarktstatus"~ groupby=="es")) %>%
+    mutate(y_err=ymax-mean_measurement)
+  
+  data3$subgroup<-as.factor(data3$subgroup)
+  data3$subgroup<-droplevels(data3$subgroup)
+  
+  Nrund<-round(mean(data3$N_total,na.rm=TRUE),0)
+  m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)
   
   if(input$confidence2)
   {
@@ -883,7 +1182,7 @@ renderPlotly({
 
 ```
 
-### anmerkungen2 {.no-title data-height=200}
+### anmerkungen2 {.no-title data-height=150}
 
 ```{r,context="server"}
  #output$out1 <- renderPrint(input$variables)
@@ -1005,12 +1304,22 @@ selectInput(
 
 checkboxInput(inputId = 'colordirect2', label = "Farbschema umkehren", value = FALSE)
 
- # radioButtons("inpercent2", "Y-Achse:",
-#               c("In Prozent" = "percent",
-#                 "In Personen" = "persons"
-#                 )
-#               )
 checkboxInput(inputId = 'play', label = "Wellen dynamisch abspielen (BETA)", value = FALSE)
+
+filterinfo4 <- reactive(data_labels$q_filt[data_labels$variable %in% input$var_shares2])
+
+output$info4 <- renderUI({
+       if(filterinfo4()=="no") {
+         infotext2 <- HTML(paste0(''))
+         tagList(infotext2,tags$br(),tags$br())
+       }
+       else {
+         infotext1 <- HTML(paste0('<i class="fa fa-exclamation-triangle"></i> Diese Frage wurde nur an Personen gestellt wo:<br>',filterinfo4(),'.'))
+         tagList(infotext1,tags$br(),tags$br())
+        }
+    })
+
+uiOutput("info4",inline=TRUE)
 
 version<-"V1.0"
 HTML(paste0(
@@ -1024,7 +1333,7 @@ HTML(paste0(
 Column
 -----------------------------------------------------------------------
 
-### Anteile der Antwortkategorien in % aller gültigen Antworten {data-height=1000}
+### Anteile der Antwortkategorien in % aller gültigen Antworten {.no-mobile data-height=1000}
 
 ```{r,context="server"}
 #output$out1 <- renderPrint(input$var_shares2)
@@ -1051,8 +1360,6 @@ renderPlotly({
   
   Nrund<-round(mean(data3$N,na.rm=TRUE),0)
   
- # if(input$inpercent2=="percent")
- # {
   p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
     geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
     #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
@@ -1063,23 +1370,8 @@ renderPlotly({
     scale_x_discrete(guide = guide_axis(n.dodge = 2))+
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
- # }
   
-  # if(input$inpercent2=="persons")
-  # {
-  #  p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Personen,text=paste("N:",Nrund))) + 
-  #   geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) +
-  #   #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-  #   scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
-  #   labs(y = "", x= "",fill="") +
-  #   theme_minimal() +
-  #   #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-  #   scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
-  #   theme(legend.position="bottom") + 
-  #   guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE))  
-  # }
-  
-  m <- list(l = 40,r = 40,b = 80,t = 40,pad = 4)
+  m <- list(l = 40,r = 40,b = 80,t = 20,pad = 4)
   
   g <- ggplotly(p,tooltip = c("frame","x","y","text"))  %>% layout(barmode = "dodge") %>%
 layout(showlegend = FALSE,
@@ -1101,6 +1393,154 @@ layout(showlegend = FALSE,
             font=list(size=14, color="#707070"))) %>% 
     layout(annotations = 
             list(x = 1, y = -0.12, text = paste("N =",Nrund,""), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=12, color="#707070")))%>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           displayModeBar = TRUE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        ))%>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+   }
+ if(input$play==TRUE)
+  {
+  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% 
+    filter(variable %in% inputvariable_shares) %>% filter(!is.na(measurement))
+  data4 <- data4 %>% mutate(Personen = round(prop*N_total,0)) %>% 
+                     rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement,
+                            N = N_total) %>% 
+    mutate(Kategoriex = if_else(row_number() %% 2 == 0, paste0("\n",Kategorie), as.character(Kategorie)),
+           Kategorie2 = as.factor(Kategorie),
+           Kategorie3 = as.numeric(Kategorie),
+           dummy = "a")
+  
+  Nrund<-round(mean(data4$N,na.rm=TRUE),0)
+  
+   p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
+    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + #identity
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
+    #scale_fill_manual(values = c("blue", "blue", "green","yellow","orange")) +
+    labs(y = "", x= "") +
+    theme_minimal() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_discrete(guide = guide_axis(n.dodge = 2)) 
+   
+   m <- list(l = 40,r = 40,b = 130,t = 40,pad = 4)  
+
+  g <- ggplotly(p,tooltip = c("frame","x","y","text"))  %>% layout(barmode = "dodge") %>%
+layout(showlegend = FALSE,
+         xaxis = list(ticktext=~Kategoriex),
+         legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.95,y=0.955,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom"
+          )),
+       margin=m)  %>% 
+    layout(annotations = 
+            list(x = 0, y = -0.12, text = paste("N ~",Nrund," pro Welle", "Daten: ACPP + WoCo"), 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='left', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    config(locale = 'de',
+           displaylogo = FALSE,
+           displayModeBar = TRUE,
+           modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
+           toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
+        )) %>%
+    layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
+  g <- g %>% animation_slider(currentvalue = list(prefix = "Befragungsdatum: ", font = list(color="red")))
+   } 
+   
+  if(input$play==TRUE) g %>% animation_slider(currentvalue = list(prefix = "Befragungsdatum: ", font = list(color="red")))
+   else g
+  
+})
+
+  observeEvent(input$var_shares2, {
+
+      inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
+
+  data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
+     mutate(wave = cur_group_id()) %>% ungroup() %>%
+    filter(variable %in% inputvariable_shares)
+
+  myval3<-paste("Welle ",names(table(data4$wave))," (",names(table(format(data4$wavedate, "%Y-%m-%d"))),")",sep = "")
+
+  updateSelectInput(session, "waves", choices = myval3)
+
+   })
+
+```
+
+### Anteile der Antwortkategorien in % aller gültigen Antworten {.mobile}
+
+```{r,context="server"}
+#output$out1 <- renderPrint(input$var_shares2)
+#verbatimTextOutput('out1')
+
+ #Observe changes in variables (will run when variables change)
+ 
+
+renderPlotly({
+  
+   inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
+ 
+   if(input$play==FALSE) 
+   {
+  data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
+     mutate(wave = cur_group_id()) %>% ungroup() %>%
+    filter(variable %in% inputvariable_shares & wave %in% str_split(input$waves,pattern=" ",simplify = TRUE)[2])
+  data3 <- data3 %>% mutate(Personen = round(prop*N_total,0)) %>% 
+                     rename(Datum = wavedate,
+                            Anteil = prop,
+                            Kategorie = measurement,
+                            N = N_total) %>% 
+    mutate(Kategoriex = if_else(row_number() %% 2 == 0, paste0("\n",Kategorie), as.character(Kategorie)))
+  
+  Nrund<-round(mean(data3$N,na.rm=TRUE),0)
+  
+  p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
+    geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
+    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
+    labs(y = "", x= "",fill="") +
+    theme_minimal() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+    theme(legend.position="bottom") + 
+    guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
+  
+  m <- list(l = 40,r = 40,b = 80,t = 20,pad = 4)
+  
+  g <- ggplotly(p,tooltip = c("frame","x","y","text"))  %>% layout(barmode = "dodge") %>%
+layout(showlegend = FALSE,
+         xaxis = list(ticktext=~Kategoriex),
+         legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
+         images = list(list(  
+          source =  base64enc::dataURI(file = "logo2.png"), 
+          xref = "paper",  
+          yref = "paper",
+          x=0.95,y=0.955,
+          sizex = 0.25,sizey = 0.25,  
+          xanchor="right",yanchor="bottom"
+          )),
+       margin=m)  %>% 
+    layout(annotations = 
+            list(x = 1.05, y = -0.17, text = "Daten: ACPP + WoCo", 
+            showarrow = F, xref='paper', yref='paper', 
+            xanchor='right', yanchor='auto', xshift=0, yshift=0,
+            font=list(size=14, color="#707070"))) %>% 
+    layout(annotations = 
+            list(x = 1.05, y = -0.12, text = paste("N =",Nrund,""), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=12, color="#707070")))%>% 
@@ -1153,10 +1593,10 @@ layout(showlegend = FALSE,
           )),
        margin=m)  %>% 
     layout(annotations = 
-            list(x = 0, y = -0.12, text = paste("N ~",Nrund," pro Welle", "Daten: ACPP + WoCo"), 
+            list(x = 0, y = -0.18, text = paste("N ~",Nrund," pro Welle", "Daten: ACPP + WoCo"), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='left', yanchor='auto', xshift=0, yshift=0,
-            font=list(size=14, color="#707070"))) %>% 
+            font=list(size=12, color="#707070"))) %>% 
     config(locale = 'de',
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","hoverCompareCartesian","pan2d","hoverClosestCartesian"),
