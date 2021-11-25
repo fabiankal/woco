@@ -755,7 +755,7 @@ renderPlotly({
 ```
 
 ### anmerkungen {.no-title data-height=150}
-```{r,context="server"}
+```{r,context="server",eval = FALSE}
 #output$out1 <- renderPrint(input$variables)
 #verbatimTextOutput('out1')
 
@@ -915,7 +915,7 @@ renderPlotly({
   
   inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
 
-  data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,N_total) %>%
+  data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,mean_tot,N_total) %>%
     filter(variable %in% inputvariables[1]) %>%
     filter(case_when(input$groupby=="Keine"~ groupby=="all",
                      input$groupby=="Geschlecht"~ groupby=="ge",
@@ -929,7 +929,7 @@ renderPlotly({
   data3$subgroup<-as.factor(data3$subgroup)
   data3$subgroup<-droplevels(data3$subgroup)
   
-  Nrund<-round(mean(data3$N_total,na.rm=TRUE),0)
+  Nrund<-round(mean(data3%>%group_by(wavedate)%>%summarise(N=sum(mean_tot,na.rm=TRUE))%>%pull(N),na.rm=TRUE),0)
   m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)
   
   if(input$confidence2)
@@ -1057,7 +1057,7 @@ renderPlotly({
   
   inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
 
-  data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,N_total) %>%
+  data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,mean_tot,N_total) %>%
     filter(variable %in% inputvariables[1]) %>%
     filter(case_when(input$groupby=="Keine"~ groupby=="all",
                      input$groupby=="Geschlecht"~ groupby=="ge",
@@ -1071,7 +1071,8 @@ renderPlotly({
   data3$subgroup<-as.factor(data3$subgroup)
   data3$subgroup<-droplevels(data3$subgroup)
   
-  Nrund<-round(mean(data3$N_total,na.rm=TRUE),0)
+  Nrund<-round(mean(data3%>%group_by(wavedate)%>%summarise(N=sum(mean_tot,na.rm=TRUE))%>%pull(N),na.rm=TRUE),0)
+  
   m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)
   
   if(input$confidence2)
@@ -1184,7 +1185,7 @@ renderPlotly({
 
 ### anmerkungen2 {.no-title data-height=150}
 
-```{r,context="server"}
+```{r,context="server",eval = FALSE}
  #output$out1 <- renderPrint(input$variables)
  #verbatimTextOutput('out1')
  
