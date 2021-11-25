@@ -12,32 +12,19 @@ output:
       - {title: "Source Code", icon: "fa-github", href: "https://github.com/fabiankal/woco", target: "_blank",align: "right"}
 ---
 
-```{js}
-//$('.navbar-inverse').removeClass('navbar-inverse').addClass('navbar-default');
-//source_code: "https://github.com/fabiankal/woco"
-//fa-area-chart
-```
-
 ```{css, echo=FALSE}
+/*change position of plotly modebar*/
 .js-plotly-plot .plotly .modebar {
     left: 60%;
 }
+/*include a scrollbar in section anmerkungen*/
 #section-anmerkungen
   .chart-shim {
     overflow-y: scroll;
     }
-/*#section-anmerkungen2
-  .chart-shim {
-    overflow-y: scroll;
-    }*/
 ```
 
 ```{r setup, include=FALSE}
-#navbar-bg: "#00102E"
-#theme:
-#      version: 4
-#      bootswatch: flatly
-#
 #runtime: shiny_prerendered
 library(plotly)
 library(tidyr)
@@ -58,18 +45,28 @@ library(shiny)
 
 ```{r data, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
+
+#dashboard release version
+version<-"V1.0" 
+
+#data with variable means
 data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data.csv",show_col_types = FALSE)
 
+#data with shares of answer categories
 data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/export_shiny_data_shares.csv",show_col_types = FALSE)
 
+#variable labels
 data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/data_labels_cq.csv",show_col_types = FALSE)
 data_labels$scalenumber=data_labels$scalenumber+1
+
+#variable labels
 data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv",show_col_types = FALSE)
 
-
-#epidf = read.delim("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/raw/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+#covid cases
 epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv",show_col_types = FALSE)
 
+
+#change some letters to german "umlaute"
 data_varlab$labels<-gsub(pattern = 'ae', replacement = "ä",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'Ae', replacement = "Ä",data_varlab$labels)
 data_varlab$labels<-gsub(pattern = 'ue', replacement = "ü",data_varlab$labels)
@@ -119,9 +116,9 @@ xy.list <- split(data_labels$q_cate,data_labels$q_cate)
  xy.list[[val]] <- data_labels %>% filter(q_cate==val) %>% pull(variable,labels) 
  }
 
-#my_autocomplete_list <- data_varlab$labels[data_varlab$variable %in% unique(data$variable)]
 my_autocomplete_list <- xy.list
 
+#important dates during the COVID-19 pandemic
 hlinedata = data.frame(x = c("16.03.2020",
                              "14.04.2020",
                              "15.05.2020",
@@ -183,6 +180,8 @@ hlinedata = data.frame(x = c("16.03.2020",
 
 hlinedata$x<-as.Date(hlinedata$x,"%d.%m.%Y")
 
+#Filter and recode covid 19 cases
+
 epidf_rc = epidf %>% filter(BundeslandID==10) %>% rename(daily_inf = names(epidf)[5],
                                                          daily_inf_7T = names(epidf)[7])
 
@@ -191,6 +190,7 @@ epidf_rc$time = as.Date(str_split(string = epidf_rc$Time,
                         simplify = TRUE)[, 1],
                         "%d.%m.%Y")
 
+#reorder factor levels for the subgroup means 
 data$subgroup<-as.factor(data$subgroup)
 data$subgroup<-fct_relevel(data$subgroup,"<30","30-59",">60","1-3.Decile","4-7.Decile","8-10.Decile","primary","Lehre","secondary","tertiary","<10.000","10.000–1 Million",">1 Million","female","male","Arbeitend","in Home-office","in Kurzarbeit","Arbeitslos","Nicht-Arbeitend","none")
 levels(data$subgroup)<- c("<30","30-59",">60","1.-3. Dezil","4.-7. Dezil","8.-10. Dezil",
@@ -198,12 +198,14 @@ levels(data$subgroup)<- c("<30","30-59",">60","1.-3. Dezil","4.-7. Dezil","8.-10
                           ">1 Million","weiblich","männlich","Arbeitend","in Home-office","in Kurzarbeit",
                           "Arbeitslos","Nicht-Arbeitend","keine")
 
+#umlaute for data shares
 data_shares$measurement<-gsub(pattern = 'ae', replacement = "ä",data_shares$measurement)
 data_shares$measurement<-gsub(pattern = 'ue', replacement = "ü",data_shares$measurement)
 data_shares$measurement<-gsub(pattern = 'Ue', replacement = "Ü",data_shares$measurement)
 data_shares$measurement<-gsub(pattern = 'oe', replacement = "ö",data_shares$measurement)
 data_shares$measurement<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_shares$measurement)
 
+#reorder measurement so that 10 is not between 1 and 2
 data_shares$measurement<-as.factor(data_shares$measurement)
 data_shares$measurement<-fct_relevel(data_shares$measurement,"10 = äusserst zufrieden",after = Inf)
 data_shares$measurement<-fct_relevel(data_shares$measurement,"10 = Sehr viel Vertrauen",after = Inf)
@@ -218,7 +220,7 @@ Verteilung der Antworten {data-icon="fa-area-chart"}
 
 ```{r}
 
-#Dynamic link creation
+#Create intro text with Dynamic link to the questionnaire
 output$link <- renderUI({
        icons <-HTML(paste0('<i class="fa fa-info-circle"></i> Wählen Sie hier die Variable aus, die Sie anzeigen möchten. (Infos zu den Variablen finden Sie <a href="https://woco.univie.ac.at/dashboard/variablen/?',page(),'" target="_blank">hier</a>)'))
        tagList(tags$br(),icons)
@@ -227,6 +229,7 @@ output$link <- renderUI({
 #Dynamic link display
 uiOutput("link",inline=TRUE)
 
+#Variable selection element
 selectizeInput(
     inputId = 'var_shares',
     label = 'Variable auswählen:',
@@ -236,13 +239,13 @@ selectizeInput(
     options = list(create = FALSE,maxItems = 1)
   )
 
-#Choose Page
+#Choose page = variable category for the link to the questionnaire
 page <- reactive(str_split(data_labels$q_cate[data_labels$variable %in% input$var_shares]," ",simplify = TRUE)[1])
 
-
-
+#Color direction selection element
 checkboxInput(inputId = 'colordirect', label = "Farbschema umkehren", value = FALSE)
 
+#Add information if variable is only available for a subgroup of the respondents
 filterinfo <- reactive(data_labels$q_filt[data_labels$variable %in% input$var_shares])
 
 output$info <- renderUI({
@@ -255,12 +258,12 @@ output$info <- renderUI({
          tagList(infotext1,tags$br(),tags$br())
         }
     })
-
+#Output text information about potential filters
 uiOutput("info",inline=TRUE)
 
-#uiOutput("downloadUI")
+#uiOutput("downloadUI") #html download button for future use
 
-version<-"V1.0"
+#Display information about the dashboard
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>
@@ -275,15 +278,18 @@ Column
 
 ```{r,context="server"}
 
-#output$out1 <- renderPrint(as.numeric(input$colordirect))
+#output$out1 <- renderPrint(as.numeric(input$colordirect)) test output for debugging
 #verbatimTextOutput('out1')
 
-session_store <- reactiveValues()
+#session_store <- reactiveValues() #html download for future use
+
+#create Plotly output
 
 renderPlotly({
-  
+  # get variable that should be displayed
   inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares]
   
+  # select data and rename variables
   data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>%
     filter(variable %in% inputvariable_shares) 
   data3 <- data3 %>% mutate(Personen = round(prop*N_total,0)) %>% rename(Datum = wavedate,
@@ -291,13 +297,14 @@ renderPlotly({
                             Kategorie = measurement,
                             N = N_total)
   
+  #calculate N
   Nrund<-round(mean(data3$N,na.rm=TRUE),0)
   
+  #create graph with ggplot
   p <- ggplot(data3, aes(fill=Kategorie,x=Datum, y=Anteil)) + 
-    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + #geom_bar width=0.7
+    geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
     geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) + 
     labs(y = "", x= "",fill="") +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
@@ -305,8 +312,10 @@ renderPlotly({
     theme(legend.position="bottom") + 
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
   
+  #increase size (margin) around the plot to fit the logo and information about the data source and N
 m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)  
-
+  
+  #transform the ggplot t plotly and display the graph
   g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
 layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045,tracegroupgap = 0),
          images = list(list(  
@@ -335,16 +344,17 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045,tracegr
            toImageButtonOptions = list(format = "png",width = 800,height = 600,scale = 4
         ))%>%
     layout(xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE))
-  #g$x$data[[1]]$hoverinfo <- "none"
+  #g$x$data[[1]]$hoverinfo <- "none" # necessary if hoverCompareCartesian should be used
   #g$x$data[[2]]$hoverinfo <- "none"
   #g$x$data[[3]]$hoverinfo <- "none"
   #g$x$data[[4]]$hoverinfo <- "none"
   #g$x$data[[5]]$hoverinfo <- "none"
-  session_store$plt<-g
+  #session_store$plt<-g #html download for future use
   g
   
 })
 
+#html download for future use
 # output$downBtn  <- downloadHandler(
 #         filename = function() {
 #             paste("data-", Sys.Date(), ".html", sep = "")
@@ -755,7 +765,7 @@ renderPlotly({
 ```
 
 ### anmerkungen {.no-title data-height=150}
-```{r,context="server",eval = FALSE}
+```{r,context="server"}
 #output$out1 <- renderPrint(input$variables)
 #verbatimTextOutput('out1')
 
@@ -1185,7 +1195,7 @@ renderPlotly({
 
 ### anmerkungen2 {.no-title data-height=150}
 
-```{r,context="server",eval = FALSE}
+```{r,context="server"}
  #output$out1 <- renderPrint(input$variables)
  #verbatimTextOutput('out1')
  

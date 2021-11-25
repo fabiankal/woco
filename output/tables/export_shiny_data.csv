@@ -23980,6 +23980,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 1,2021-09-25,lebensz,7.19,0.22,122,7.63,6.76,es,in Home-office,1480
 1,2021-09-25,lebensz,4.89,0.38,77,5.64,4.14,es,Arbeitslos,1480
 1,2021-09-25,lebensz,6.58,0.13,554,6.84,6.33,es,Nicht-Arbeitend,1480
+1,2021-10-23,lebensz,6.86,0.1,678,7.05,6.67,es,Arbeitend,1487
+1,2021-10-23,lebensz,6.51,0.64,20,7.77,5.25,es,in Kurzarbeit,1487
+1,2021-10-23,lebensz,7.12,0.2,131,7.52,6.73,es,in Home-office,1487
+1,2021-10-23,lebensz,5.37,0.34,79,6.05,4.7,es,Arbeitslos,1487
+1,2021-10-23,lebensz,6.63,0.12,564,6.86,6.4,es,Nicht-Arbeitend,1487
 2,2020-03-28,ver_gov,7,0.16,354,7.32,6.68,es,Arbeitend,1513
 2,2020-03-28,ver_gov,6.92,0.21,143,7.34,6.5,es,in Kurzarbeit,1513
 2,2020-03-28,ver_gov,7.3,0.17,281,7.64,6.97,es,in Home-office,1513
@@ -24575,6 +24580,31 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 2,2021-09-25,ver_orf,4.95,0.29,120,5.53,4.38,es,in Home-office,1445
 2,2021-09-25,ver_orf,3.88,0.47,77,4.8,2.96,es,Arbeitslos,1445
 2,2021-09-25,ver_orf,4.86,0.15,542,5.16,4.57,es,Nicht-Arbeitend,1445
+2,2021-10-23,ver_gov,3.62,0.13,664,3.87,3.36,es,Arbeitend,1444
+2,2021-10-23,ver_gov,4.57,0.66,19,5.86,3.27,es,in Kurzarbeit,1444
+2,2021-10-23,ver_gov,3.51,0.28,129,4.05,2.97,es,in Home-office,1444
+2,2021-10-23,ver_gov,3.55,0.45,75,4.44,2.67,es,Arbeitslos,1444
+2,2021-10-23,ver_gov,3.98,0.16,544,4.28,3.67,es,Nicht-Arbeitend,1444
+2,2021-10-23,ver_ges,6.38,0.12,667,6.61,6.16,es,Arbeitend,1455
+2,2021-10-23,ver_ges,6.87,0.69,19,8.22,5.52,es,in Kurzarbeit,1455
+2,2021-10-23,ver_ges,6.61,0.23,131,7.07,6.15,es,in Home-office,1455
+2,2021-10-23,ver_ges,5.88,0.53,76,6.92,4.84,es,Arbeitslos,1455
+2,2021-10-23,ver_ges,6.52,0.14,550,6.79,6.25,es,Nicht-Arbeitend,1455
+2,2021-10-23,ver_par,4.07,0.13,661,4.32,3.82,es,Arbeitend,1443
+2,2021-10-23,ver_par,4.39,0.7,19,5.77,3,es,in Kurzarbeit,1443
+2,2021-10-23,ver_par,4.21,0.29,129,4.78,3.65,es,in Home-office,1443
+2,2021-10-23,ver_par,3.55,0.44,76,4.41,2.69,es,Arbeitslos,1443
+2,2021-10-23,ver_par,4.29,0.15,544,4.58,4,es,Nicht-Arbeitend,1443
+2,2021-10-23,ver_pol,6,0.12,665,6.23,5.76,es,Arbeitend,1453
+2,2021-10-23,ver_pol,6.03,0.73,20,7.45,4.6,es,in Kurzarbeit,1453
+2,2021-10-23,ver_pol,5.82,0.25,129,6.31,5.32,es,in Home-office,1453
+2,2021-10-23,ver_pol,5.33,0.51,76,6.33,4.32,es,Arbeitslos,1453
+2,2021-10-23,ver_pol,6.61,0.13,550,6.88,6.35,es,Nicht-Arbeitend,1453
+2,2021-10-23,ver_orf,4.05,0.14,663,4.33,3.77,es,Arbeitend,1444
+2,2021-10-23,ver_orf,5.99,0.44,18,6.86,5.12,es,in Kurzarbeit,1444
+2,2021-10-23,ver_orf,4.8,0.28,128,5.34,4.26,es,in Home-office,1444
+2,2021-10-23,ver_orf,3.77,0.45,76,4.66,2.89,es,Arbeitslos,1444
+2,2021-10-23,ver_orf,4.64,0.15,546,4.94,4.34,es,Nicht-Arbeitend,1444
 3,2020-04-04,sozkont,2.37,0.08,292,2.53,2.22,es,Arbeitend,1511
 3,2020-04-04,sozkont,2.31,0.1,167,2.51,2.12,es,in Kurzarbeit,1511
 3,2020-04-04,sozkont,2.62,0.08,268,2.78,2.46,es,in Home-office,1511
@@ -24680,6 +24710,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 3,2021-09-25,sozkont,2.85,0.1,119,3.06,2.65,es,in Home-office,1449
 3,2021-09-25,sozkont,2.29,0.2,76,2.68,1.89,es,Arbeitslos,1449
 3,2021-09-25,sozkont,2.62,0.06,549,2.73,2.51,es,Nicht-Arbeitend,1449
+3,2021-10-23,sozkont,2.55,0.05,662,2.64,2.46,es,Arbeitend,1446
+3,2021-10-23,sozkont,2.49,0.33,17,3.12,1.85,es,in Kurzarbeit,1446
+3,2021-10-23,sozkont,2.65,0.1,128,2.85,2.44,es,in Home-office,1446
+3,2021-10-23,sozkont,2.4,0.17,75,2.73,2.07,es,Arbeitslos,1446
+3,2021-10-23,sozkont,2.6,0.05,551,2.71,2.5,es,Nicht-Arbeitend,1446
 4,2020-04-11,sozialn_verh_eig_abs,3.58,0.06,303,3.69,3.47,es,Arbeitend,1467
 4,2020-04-11,sozialn_verh_eig_abs,3.62,0.06,160,3.73,3.51,es,in Kurzarbeit,1467
 4,2020-04-11,sozialn_verh_eig_abs,3.67,0.06,268,3.79,3.56,es,in Home-office,1467
@@ -25889,6 +25924,26 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 5,2021-09-25,wir_pub_gefahr,2.66,0.08,121,2.81,2.51,es,in Home-office,1493
 5,2021-09-25,wir_pub_gefahr,2.64,0.12,79,2.87,2.41,es,Arbeitslos,1493
 5,2021-09-25,wir_pub_gefahr,2.64,0.05,560,2.74,2.55,es,Nicht-Arbeitend,1493
+5,2021-10-23,ges_per_gefahr,1.33,0.05,686,1.42,1.24,es,Arbeitend,1502
+5,2021-10-23,ges_per_gefahr,1.52,0.26,19,2.03,1.01,es,in Kurzarbeit,1502
+5,2021-10-23,ges_per_gefahr,1.39,0.1,130,1.59,1.2,es,in Home-office,1502
+5,2021-10-23,ges_per_gefahr,1.73,0.17,80,2.07,1.39,es,Arbeitslos,1502
+5,2021-10-23,ges_per_gefahr,1.31,0.05,570,1.41,1.21,es,Nicht-Arbeitend,1502
+5,2021-10-23,ges_pub_gefahr,1.99,0.05,686,2.08,1.89,es,Arbeitend,1500
+5,2021-10-23,ges_pub_gefahr,2.3,0.26,19,2.82,1.78,es,in Kurzarbeit,1500
+5,2021-10-23,ges_pub_gefahr,2.04,0.1,131,2.24,1.84,es,in Home-office,1500
+5,2021-10-23,ges_pub_gefahr,2.09,0.16,79,2.4,1.77,es,Arbeitslos,1500
+5,2021-10-23,ges_pub_gefahr,2.24,0.05,569,2.34,2.14,es,Nicht-Arbeitend,1500
+5,2021-10-23,wir_per_gefahr,1.84,0.05,682,1.95,1.74,es,Arbeitend,1499
+5,2021-10-23,wir_per_gefahr,2.01,0.3,20,2.6,1.42,es,in Kurzarbeit,1499
+5,2021-10-23,wir_per_gefahr,1.75,0.1,132,1.95,1.55,es,in Home-office,1499
+5,2021-10-23,wir_per_gefahr,2.22,0.17,81,2.54,1.89,es,Arbeitslos,1499
+5,2021-10-23,wir_per_gefahr,1.58,0.05,567,1.69,1.48,es,Nicht-Arbeitend,1499
+5,2021-10-23,wir_pub_gefahr,2.62,0.04,685,2.71,2.54,es,Arbeitend,1500
+5,2021-10-23,wir_pub_gefahr,2.34,0.24,20,2.82,1.87,es,in Kurzarbeit,1500
+5,2021-10-23,wir_pub_gefahr,2.52,0.09,131,2.7,2.35,es,in Home-office,1500
+5,2021-10-23,wir_pub_gefahr,2.54,0.14,80,2.81,2.27,es,Arbeitslos,1500
+5,2021-10-23,wir_pub_gefahr,2.61,0.04,567,2.69,2.54,es,Nicht-Arbeitend,1500
 6,2020-03-28,kaufen_haus,1.14,0.06,333,1.26,1.02,es,Arbeitend,1428
 6,2020-03-28,kaufen_haus,0.92,0.08,135,1.07,0.76,es,in Kurzarbeit,1428
 6,2020-03-28,kaufen_haus,1.17,0.06,270,1.3,1.05,es,in Home-office,1428
@@ -26129,6 +26184,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 6,2021-09-25,kaufen_haus,1.89,0.09,112,2.06,1.72,es,in Home-office,1350
 6,2021-09-25,kaufen_haus,1.58,0.14,70,1.84,1.31,es,Arbeitslos,1350
 6,2021-09-25,kaufen_haus,1.94,0.05,491,2.04,1.85,es,Nicht-Arbeitend,1350
+6,2021-10-23,kaufen_haus,1.81,0.05,624,1.9,1.72,es,Arbeitend,1335
+6,2021-10-23,kaufen_haus,1.61,0.16,16,1.93,1.3,es,in Kurzarbeit,1335
+6,2021-10-23,kaufen_haus,1.94,0.09,119,2.12,1.76,es,in Home-office,1335
+6,2021-10-23,kaufen_haus,1.62,0.13,69,1.88,1.36,es,Arbeitslos,1335
+6,2021-10-23,kaufen_haus,1.91,0.05,493,1.99,1.82,es,Nicht-Arbeitend,1335
 7,2020-03-28,demokratie,2.7,0.06,353,2.82,2.59,es,Arbeitend,1516
 7,2020-03-28,demokratie,2.75,0.08,144,2.9,2.59,es,in Kurzarbeit,1516
 7,2020-03-28,demokratie,2.88,0.06,279,3.01,2.76,es,in Home-office,1516
@@ -26499,6 +26559,31 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 7,2021-09-25,blianz_reg,1.57,0.12,120,1.81,1.33,es,in Home-office,1451
 7,2021-09-25,blianz_reg,1.54,0.16,77,1.86,1.22,es,Arbeitslos,1451
 7,2021-09-25,blianz_reg,1.73,0.06,542,1.85,1.6,es,Nicht-Arbeitend,1451
+7,2021-10-23,demokratie,1.82,0.05,673,1.92,1.72,es,Arbeitend,1468
+7,2021-10-23,demokratie,2.08,0.3,19,2.68,1.49,es,in Kurzarbeit,1468
+7,2021-10-23,demokratie,1.89,0.11,131,2.11,1.67,es,in Home-office,1468
+7,2021-10-23,demokratie,1.81,0.17,78,2.14,1.48,es,Arbeitslos,1468
+7,2021-10-23,demokratie,1.84,0.06,553,1.95,1.72,es,Nicht-Arbeitend,1468
+7,2021-10-23,blianz_reg,1.39,0.05,660,1.49,1.28,es,Arbeitend,1444
+7,2021-10-23,blianz_reg,1.33,0.24,17,1.81,0.86,es,in Kurzarbeit,1444
+7,2021-10-23,blianz_reg,1.41,0.1,129,1.61,1.2,es,in Home-office,1444
+7,2021-10-23,blianz_reg,1.35,0.15,76,1.65,1.06,es,Arbeitslos,1444
+7,2021-10-23,blianz_reg,1.46,0.06,548,1.58,1.35,es,Nicht-Arbeitend,1444
+7,2021-10-23,zuf_reg_al,1.74,0.05,637,1.83,1.64,es,Arbeitend,1372
+7,2021-10-23,zuf_reg_al,1.74,0.2,18,2.12,1.35,es,in Kurzarbeit,1372
+7,2021-10-23,zuf_reg_al,1.89,0.1,126,2.08,1.7,es,in Home-office,1372
+7,2021-10-23,zuf_reg_al,1.52,0.13,72,1.78,1.26,es,Arbeitslos,1372
+7,2021-10-23,zuf_reg_al,1.74,0.06,506,1.85,1.63,es,Nicht-Arbeitend,1372
+7,2021-10-23,zuf_reg_un,1.65,0.05,610,1.75,1.55,es,Arbeitend,1327
+7,2021-10-23,zuf_reg_un,1.71,0.23,16,2.17,1.26,es,in Kurzarbeit,1327
+7,2021-10-23,zuf_reg_un,1.71,0.1,127,1.9,1.52,es,in Home-office,1327
+7,2021-10-23,zuf_reg_un,1.45,0.15,69,1.75,1.15,es,Arbeitslos,1327
+7,2021-10-23,zuf_reg_un,1.67,0.05,493,1.77,1.56,es,Nicht-Arbeitend,1327
+7,2021-10-23,zuf_reg_wi,1.9,0.05,629,2,1.81,es,Arbeitend,1356
+7,2021-10-23,zuf_reg_wi,1.95,0.37,16,2.67,1.23,es,in Kurzarbeit,1356
+7,2021-10-23,zuf_reg_wi,1.94,0.1,131,2.13,1.74,es,in Home-office,1356
+7,2021-10-23,zuf_reg_wi,1.79,0.15,70,2.09,1.5,es,Arbeitslos,1356
+7,2021-10-23,zuf_reg_wi,2.01,0.05,499,2.12,1.91,es,Nicht-Arbeitend,1356
 8,2020-05-29,welfshov_such,2.4,0.06,418,2.53,2.28,es,Arbeitend,1394
 8,2020-05-29,welfshov_such,2.54,0.11,138,2.76,2.31,es,in Kurzarbeit,1394
 8,2020-05-29,welfshov_such,2.12,0.1,162,2.32,1.93,es,in Home-office,1394
@@ -26544,6 +26629,21 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 8,2021-02-13,welfshov_sozl,2.64,0.09,181,2.81,2.47,es,in Home-office,1400
 8,2021-02-13,welfshov_sozl,2.52,0.13,98,2.78,2.25,es,Arbeitslos,1400
 8,2021-02-13,welfshov_sozl,2.82,0.06,563,2.93,2.71,es,Nicht-Arbeitend,1400
+8,2021-10-23,welfshov_such,2.33,0.05,644,2.44,2.23,es,Arbeitend,1401
+8,2021-10-23,welfshov_such,2.05,0.27,17,2.58,1.53,es,in Kurzarbeit,1401
+8,2021-10-23,welfshov_such,2.27,0.11,126,2.5,2.05,es,in Home-office,1401
+8,2021-10-23,welfshov_such,1.5,0.17,74,1.84,1.16,es,Arbeitslos,1401
+8,2021-10-23,welfshov_such,2.37,0.06,527,2.49,2.24,es,Nicht-Arbeitend,1401
+8,2021-10-23,welfshov_zust,2.4,0.05,572,2.51,2.3,es,Arbeitend,1251
+8,2021-10-23,welfshov_zust,2.05,0.18,17,2.4,1.69,es,in Kurzarbeit,1251
+8,2021-10-23,welfshov_zust,2.28,0.12,111,2.51,2.06,es,in Home-office,1251
+8,2021-10-23,welfshov_zust,2.78,0.14,69,3.05,2.52,es,Arbeitslos,1251
+8,2021-10-23,welfshov_zust,2.38,0.06,469,2.51,2.26,es,Nicht-Arbeitend,1251
+8,2021-10-23,welfshov_sozl,2.85,0.05,629,2.95,2.75,es,Arbeitend,1376
+8,2021-10-23,welfshov_sozl,2.45,0.23,18,2.89,2.01,es,in Kurzarbeit,1376
+8,2021-10-23,welfshov_sozl,2.79,0.1,119,2.98,2.6,es,in Home-office,1376
+8,2021-10-23,welfshov_sozl,2.28,0.18,75,2.63,1.93,es,Arbeitslos,1376
+8,2021-10-23,welfshov_sozl,2.88,0.06,521,3,2.76,es,Nicht-Arbeitend,1376
 9,2020-04-25,issue_ungl,2.87,0.06,320,3,2.75,es,Arbeitend,1457
 9,2020-04-25,issue_ungl,2.9,0.08,164,3.05,2.75,es,in Kurzarbeit,1457
 9,2020-04-25,issue_ungl,2.91,0.06,244,3.04,2.79,es,in Home-office,1457
@@ -29219,6 +29319,86 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 10,2021-09-25,impf_soz,2.93,0.11,119,3.14,2.73,es,in Home-office,1453
 10,2021-09-25,impf_soz,2.43,0.21,75,2.84,2.02,es,Arbeitslos,1453
 10,2021-09-25,impf_soz,2.91,0.06,544,3.03,2.8,es,Nicht-Arbeitend,1453
+10,2021-10-23,wochentag,0.8,0.05,674,0.9,0.7,es,Arbeitend,1482
+10,2021-10-23,wochentag,1.79,0.39,19,2.55,1.03,es,in Kurzarbeit,1482
+10,2021-10-23,wochentag,0.73,0.1,132,0.91,0.54,es,in Home-office,1482
+10,2021-10-23,wochentag,1.81,0.17,79,2.14,1.47,es,Arbeitslos,1482
+10,2021-10-23,wochentag,1.17,0.07,562,1.3,1.03,es,Nicht-Arbeitend,1482
+10,2021-10-23,kontakt,1.14,0.05,674,1.25,1.03,es,Arbeitend,1477
+10,2021-10-23,kontakt,1.61,0.23,18,2.07,1.16,es,in Kurzarbeit,1477
+10,2021-10-23,kontakt,1.29,0.12,132,1.54,1.05,es,in Home-office,1477
+10,2021-10-23,kontakt,1.4,0.17,79,1.74,1.06,es,Arbeitslos,1477
+10,2021-10-23,kontakt,1.49,0.06,560,1.62,1.37,es,Nicht-Arbeitend,1477
+10,2021-10-23,zeit,1.19,0.05,671,1.29,1.08,es,Arbeitend,1465
+10,2021-10-23,zeit,1.8,0.26,20,2.31,1.28,es,in Kurzarbeit,1465
+10,2021-10-23,zeit,1.61,0.12,132,1.85,1.37,es,in Home-office,1465
+10,2021-10-23,zeit,1.98,0.13,79,2.24,1.72,es,Arbeitslos,1465
+10,2021-10-23,zeit,1.46,0.06,548,1.59,1.34,es,Nicht-Arbeitend,1465
+10,2021-10-23,konflikt,0.8,0.05,676,0.89,0.7,es,Arbeitend,1476
+10,2021-10-23,konflikt,1.08,0.21,20,1.49,0.67,es,in Kurzarbeit,1476
+10,2021-10-23,konflikt,0.76,0.1,132,0.95,0.58,es,in Home-office,1476
+10,2021-10-23,konflikt,1.36,0.21,78,1.77,0.94,es,Arbeitslos,1476
+10,2021-10-23,konflikt,0.67,0.06,554,0.78,0.56,es,Nicht-Arbeitend,1476
+10,2021-10-23,kinder,1.26,0.12,163,1.49,1.03,es,Arbeitend,274
+10,2021-10-23,kinder,0.88,0.57,5,2,-0.24,es,in Kurzarbeit,274
+10,2021-10-23,kinder,1.31,0.2,34,1.7,0.91,es,in Home-office,274
+10,2021-10-23,kinder,1.29,0.5,15,2.28,0.31,es,Arbeitslos,274
+10,2021-10-23,kinder,0.78,0.2,55,1.17,0.38,es,Nicht-Arbeitend,274
+10,2021-10-23,zusammenhalt,1.12,0.05,656,1.21,1.03,es,Arbeitend,1435
+10,2021-10-23,zusammenhalt,1.28,0.22,20,1.71,0.86,es,in Kurzarbeit,1435
+10,2021-10-23,zusammenhalt,1.12,0.08,130,1.28,0.96,es,in Home-office,1435
+10,2021-10-23,zusammenhalt,1.35,0.17,74,1.69,1.02,es,Arbeitslos,1435
+10,2021-10-23,zusammenhalt,1.19,0.05,541,1.29,1.1,es,Nicht-Arbeitend,1435
+10,2021-10-23,umweundklima,2.29,0.05,661,2.39,2.19,es,Arbeitend,1447
+10,2021-10-23,umweundklima,1.98,0.32,20,2.61,1.34,es,in Kurzarbeit,1447
+10,2021-10-23,umweundklima,2.41,0.1,131,2.62,2.21,es,in Home-office,1447
+10,2021-10-23,umweundklima,2.73,0.15,76,3.03,2.42,es,Arbeitslos,1447
+10,2021-10-23,umweundklima,2.29,0.06,546,2.4,2.17,es,Nicht-Arbeitend,1447
+10,2021-10-23,onlinekommun,2.15,0.05,655,2.24,2.06,es,Arbeitend,1407
+10,2021-10-23,onlinekommun,1.72,0.21,19,2.13,1.3,es,in Kurzarbeit,1407
+10,2021-10-23,onlinekommun,2.61,0.11,130,2.82,2.4,es,in Home-office,1407
+10,2021-10-23,onlinekommun,2.46,0.16,75,2.77,2.15,es,Arbeitslos,1407
+10,2021-10-23,onlinekommun,2.27,0.05,513,2.37,2.17,es,Nicht-Arbeitend,1407
+10,2021-10-23,zus_bestes,1.76,0.05,667,1.85,1.66,es,Arbeitend,1452
+10,2021-10-23,zus_bestes,1.49,0.25,20,1.98,1,es,in Kurzarbeit,1452
+10,2021-10-23,zus_bestes,1.85,0.09,130,2.02,1.67,es,in Home-office,1452
+10,2021-10-23,zus_bestes,1.85,0.16,74,2.16,1.54,es,Arbeitslos,1452
+10,2021-10-23,zus_bestes,1.98,0.05,547,2.08,1.88,es,Nicht-Arbeitend,1452
+10,2021-10-23,zus_einig,2.02,0.05,660,2.11,1.92,es,Arbeitend,1437
+10,2021-10-23,zus_einig,1.71,0.18,19,2.06,1.35,es,in Kurzarbeit,1437
+10,2021-10-23,zus_einig,2.08,0.1,132,2.27,1.9,es,in Home-office,1437
+10,2021-10-23,zus_einig,2.14,0.13,73,2.4,1.87,es,Arbeitslos,1437
+10,2021-10-23,zus_einig,2.22,0.05,539,2.32,2.12,es,Nicht-Arbeitend,1437
+10,2021-10-23,zus_schutzen,1.48,0.05,663,1.58,1.39,es,Arbeitend,1439
+10,2021-10-23,zus_schutzen,1.4,0.15,19,1.7,1.1,es,in Kurzarbeit,1439
+10,2021-10-23,zus_schutzen,1.49,0.09,130,1.67,1.32,es,in Home-office,1439
+10,2021-10-23,zus_schutzen,1.29,0.17,73,1.62,0.96,es,Arbeitslos,1439
+10,2021-10-23,zus_schutzen,1.57,0.06,540,1.67,1.46,es,Nicht-Arbeitend,1439
+10,2021-10-23,impf_pfl,1.65,0.07,668,1.78,1.51,es,Arbeitend,1467
+10,2021-10-23,impf_pfl,2.03,0.48,19,2.97,1.09,es,in Kurzarbeit,1467
+10,2021-10-23,impf_pfl,1.84,0.15,131,2.13,1.54,es,in Home-office,1467
+10,2021-10-23,impf_pfl,1.6,0.21,79,2.01,1.18,es,Arbeitslos,1467
+10,2021-10-23,impf_pfl,2.18,0.08,557,2.34,2.02,es,Nicht-Arbeitend,1467
+10,2021-10-23,impf_gra,3.59,0.04,663,3.67,3.51,es,Arbeitend,1458
+10,2021-10-23,impf_gra,3.13,0.33,20,3.77,2.49,es,in Kurzarbeit,1458
+10,2021-10-23,impf_gra,3.63,0.08,132,3.78,3.48,es,in Home-office,1458
+10,2021-10-23,impf_gra,3.09,0.26,77,3.6,2.58,es,Arbeitslos,1458
+10,2021-10-23,impf_gra,3.61,0.05,552,3.71,3.52,es,Nicht-Arbeitend,1458
+10,2021-10-23,impf_pfb,2.3,0.07,673,2.44,2.16,es,Arbeitend,1470
+10,2021-10-23,impf_pfb,2.51,0.25,19,2.99,2.03,es,in Kurzarbeit,1470
+10,2021-10-23,impf_pfb,2.66,0.15,131,2.94,2.37,es,in Home-office,1470
+10,2021-10-23,impf_pfb,2.28,0.25,76,2.78,1.79,es,Arbeitslos,1470
+10,2021-10-23,impf_pfb,2.83,0.08,557,2.98,2.68,es,Nicht-Arbeitend,1470
+10,2021-10-23,impf_kin,1.56,0.14,158,1.83,1.29,es,Arbeitend,262
+10,2021-10-23,impf_kin,2.53,0.62,4,3.74,1.33,es,in Kurzarbeit,262
+10,2021-10-23,impf_kin,1.79,0.28,32,2.34,1.24,es,in Home-office,262
+10,2021-10-23,impf_kin,1.45,0.4,14,2.24,0.65,es,Arbeitslos,262
+10,2021-10-23,impf_kin,1.51,0.25,53,1.99,1.03,es,Nicht-Arbeitend,262
+10,2021-10-23,impf_soz,2.63,0.06,668,2.74,2.52,es,Arbeitend,1457
+10,2021-10-23,impf_soz,2.82,0.27,20,3.35,2.29,es,in Kurzarbeit,1457
+10,2021-10-23,impf_soz,2.85,0.11,131,3.07,2.64,es,in Home-office,1457
+10,2021-10-23,impf_soz,2.38,0.19,75,2.75,2.01,es,Arbeitslos,1457
+10,2021-10-23,impf_soz,2.87,0.06,551,2.99,2.75,es,Nicht-Arbeitend,1457
 11,2020-03-28,mas_angemessen,1.97,0.04,353,2.05,1.89,es,Arbeitend,1516
 11,2020-03-28,mas_angemessen,2.05,0.07,144,2.19,1.9,es,in Kurzarbeit,1516
 11,2020-03-28,mas_angemessen,2.11,0.04,277,2.2,2.02,es,in Home-office,1516
@@ -29344,6 +29524,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 11,2021-09-25,mas_angemessen,1.76,0.11,119,1.97,1.55,es,in Home-office,1465
 11,2021-09-25,mas_angemessen,1.69,0.18,75,2.05,1.34,es,Arbeitslos,1465
 11,2021-09-25,mas_angemessen,1.92,0.06,553,2.03,1.8,es,Nicht-Arbeitend,1465
+11,2021-10-23,mas_angemessen,1.69,0.05,668,1.79,1.58,es,Arbeitend,1470
+11,2021-10-23,mas_angemessen,1.84,0.3,20,2.42,1.25,es,in Kurzarbeit,1470
+11,2021-10-23,mas_angemessen,1.97,0.11,129,2.19,1.75,es,in Home-office,1470
+11,2021-10-23,mas_angemessen,1.69,0.16,80,2,1.38,es,Arbeitslos,1470
+11,2021-10-23,mas_angemessen,1.97,0.06,557,2.08,1.86,es,Nicht-Arbeitend,1470
 12,2020-03-28,mas_effektiv,2.83,0.05,350,2.92,2.73,es,Arbeitend,1512
 12,2020-03-28,mas_effektiv,2.81,0.08,145,2.97,2.65,es,in Kurzarbeit,1512
 12,2020-03-28,mas_effektiv,2.8,0.06,277,2.91,2.68,es,in Home-office,1512
@@ -29469,6 +29654,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 12,2021-09-25,mas_effektiv,1.79,0.09,120,1.96,1.62,es,in Home-office,1448
 12,2021-09-25,mas_effektiv,1.72,0.17,74,2.05,1.38,es,Arbeitslos,1448
 12,2021-09-25,mas_effektiv,1.81,0.06,547,1.92,1.69,es,Nicht-Arbeitend,1448
+12,2021-10-23,mas_effektiv,1.63,0.05,659,1.72,1.54,es,Arbeitend,1445
+12,2021-10-23,mas_effektiv,1.97,0.33,19,2.62,1.32,es,in Kurzarbeit,1445
+12,2021-10-23,mas_effektiv,1.59,0.09,130,1.76,1.41,es,in Home-office,1445
+12,2021-10-23,mas_effektiv,1.86,0.16,76,2.17,1.55,es,Arbeitslos,1445
+12,2021-10-23,mas_effektiv,1.75,0.05,548,1.86,1.65,es,Nicht-Arbeitend,1445
 13,2020-04-11,fin_ausk_yea,2,0.05,278,2.11,1.89,es,Arbeitend,1378
 13,2020-04-11,fin_ausk_yea,2.32,0.09,149,2.49,2.15,es,in Kurzarbeit,1378
 13,2020-04-11,fin_ausk_yea,2.21,0.07,260,2.35,2.07,es,in Home-office,1378
@@ -29529,6 +29719,16 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 13,2021-04-16,eco_ausk_yea,2.18,0.08,191,2.34,2.02,es,in Home-office,1420
 13,2021-04-16,eco_ausk_yea,1.93,0.16,102,2.24,1.62,es,Arbeitslos,1420
 13,2021-04-16,eco_ausk_yea,1.77,0.06,538,1.89,1.65,es,Nicht-Arbeitend,1420
+13,2021-10-23,fin_ausk_yea,2.05,0.04,650,2.13,1.97,es,Arbeitend,1411
+13,2021-10-23,fin_ausk_yea,2.19,0.16,18,2.5,1.88,es,in Kurzarbeit,1411
+13,2021-10-23,fin_ausk_yea,2.26,0.09,130,2.43,2.08,es,in Home-office,1411
+13,2021-10-23,fin_ausk_yea,2.01,0.17,72,2.34,1.68,es,Arbeitslos,1411
+13,2021-10-23,fin_ausk_yea,1.76,0.04,530,1.84,1.69,es,Nicht-Arbeitend,1411
+13,2021-10-23,eco_ausk_yea,1.88,0.04,639,1.97,1.8,es,Arbeitend,1400
+13,2021-10-23,eco_ausk_yea,2.03,0.18,18,2.39,1.67,es,in Kurzarbeit,1400
+13,2021-10-23,eco_ausk_yea,1.98,0.1,129,2.18,1.78,es,in Home-office,1400
+13,2021-10-23,eco_ausk_yea,1.81,0.21,73,2.21,1.41,es,Arbeitslos,1400
+13,2021-10-23,eco_ausk_yea,1.74,0.05,527,1.84,1.65,es,Nicht-Arbeitend,1400
 14,2020-03-28,depress_A1,2.51,0.08,348,2.67,2.35,es,Arbeitend,1513
 14,2020-03-28,depress_A1,2.31,0.12,144,2.54,2.08,es,in Kurzarbeit,1513
 14,2020-03-28,depress_A1,2.59,0.08,279,2.75,2.44,es,in Home-office,1513
@@ -30654,6 +30854,51 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 14,2021-09-25,depress_A9,2.08,0.12,119,2.31,1.85,es,in Home-office,1456
 14,2021-09-25,depress_A9,1.35,0.14,75,1.63,1.07,es,Arbeitslos,1456
 14,2021-09-25,depress_A9,1.96,0.06,550,2.08,1.83,es,Nicht-Arbeitend,1456
+14,2021-10-23,depress_A1,2.33,0.05,665,2.43,2.22,es,Arbeitend,1458
+14,2021-10-23,depress_A1,2.17,0.26,20,2.67,1.66,es,in Kurzarbeit,1458
+14,2021-10-23,depress_A1,2.47,0.12,130,2.7,2.24,es,in Home-office,1458
+14,2021-10-23,depress_A1,1.7,0.17,75,2.03,1.36,es,Arbeitslos,1458
+14,2021-10-23,depress_A1,2.43,0.06,554,2.54,2.31,es,Nicht-Arbeitend,1458
+14,2021-10-23,depress_A2,0.46,0.04,668,0.53,0.38,es,Arbeitend,1462
+14,2021-10-23,depress_A2,0.72,0.25,20,1.21,0.23,es,in Kurzarbeit,1462
+14,2021-10-23,depress_A2,0.4,0.07,129,0.54,0.26,es,in Home-office,1462
+14,2021-10-23,depress_A2,1.12,0.2,78,1.51,0.74,es,Arbeitslos,1462
+14,2021-10-23,depress_A2,0.55,0.05,553,0.65,0.46,es,Nicht-Arbeitend,1462
+14,2021-10-23,depress_A3,1.02,0.04,663,1.1,0.93,es,Arbeitend,1457
+14,2021-10-23,depress_A3,1.33,0.18,20,1.68,0.99,es,in Kurzarbeit,1457
+14,2021-10-23,depress_A3,0.91,0.08,130,1.08,0.75,es,in Home-office,1457
+14,2021-10-23,depress_A3,1.41,0.16,74,1.72,1.09,es,Arbeitslos,1457
+14,2021-10-23,depress_A3,0.89,0.05,556,0.98,0.8,es,Nicht-Arbeitend,1457
+14,2021-10-23,depress_A4,0.46,0.04,664,0.53,0.38,es,Arbeitend,1455
+14,2021-10-23,depress_A4,0.82,0.24,20,1.3,0.35,es,in Kurzarbeit,1455
+14,2021-10-23,depress_A4,0.44,0.08,129,0.61,0.28,es,in Home-office,1455
+14,2021-10-23,depress_A4,1.17,0.19,78,1.54,0.8,es,Arbeitslos,1455
+14,2021-10-23,depress_A4,0.48,0.05,550,0.58,0.39,es,Nicht-Arbeitend,1455
+14,2021-10-23,depress_A5,2.31,0.05,663,2.42,2.21,es,Arbeitend,1448
+14,2021-10-23,depress_A5,2.18,0.27,20,2.71,1.64,es,in Kurzarbeit,1448
+14,2021-10-23,depress_A5,2.24,0.1,131,2.44,2.03,es,in Home-office,1448
+14,2021-10-23,depress_A5,1.67,0.16,76,1.98,1.36,es,Arbeitslos,1448
+14,2021-10-23,depress_A5,2.2,0.07,544,2.32,2.07,es,Nicht-Arbeitend,1448
+14,2021-10-23,depress_A6,0.55,0.04,663,0.62,0.48,es,Arbeitend,1451
+14,2021-10-23,depress_A6,1.25,0.26,20,1.76,0.75,es,in Kurzarbeit,1451
+14,2021-10-23,depress_A6,0.61,0.09,129,0.78,0.44,es,in Home-office,1451
+14,2021-10-23,depress_A6,1.36,0.22,77,1.79,0.93,es,Arbeitslos,1451
+14,2021-10-23,depress_A6,0.61,0.05,547,0.7,0.52,es,Nicht-Arbeitend,1451
+14,2021-10-23,depress_A7,0.47,0.04,667,0.54,0.39,es,Arbeitend,1455
+14,2021-10-23,depress_A7,1.05,0.29,20,1.62,0.47,es,in Kurzarbeit,1455
+14,2021-10-23,depress_A7,0.49,0.09,129,0.66,0.32,es,in Home-office,1455
+14,2021-10-23,depress_A7,1.24,0.21,75,1.66,0.82,es,Arbeitslos,1455
+14,2021-10-23,depress_A7,0.51,0.04,550,0.59,0.42,es,Nicht-Arbeitend,1455
+14,2021-10-23,depress_A8,0.66,0.04,661,0.74,0.59,es,Arbeitend,1453
+14,2021-10-23,depress_A8,0.84,0.3,19,1.42,0.26,es,in Kurzarbeit,1453
+14,2021-10-23,depress_A8,0.69,0.08,129,0.86,0.53,es,in Home-office,1453
+14,2021-10-23,depress_A8,1.54,0.2,77,1.93,1.16,es,Arbeitslos,1453
+14,2021-10-23,depress_A8,0.62,0.04,553,0.69,0.54,es,Nicht-Arbeitend,1453
+14,2021-10-23,depress_A9,1.93,0.05,668,2.03,1.83,es,Arbeitend,1455
+14,2021-10-23,depress_A9,1.82,0.25,20,2.32,1.33,es,in Kurzarbeit,1455
+14,2021-10-23,depress_A9,1.99,0.1,131,2.19,1.78,es,in Home-office,1455
+14,2021-10-23,depress_A9,1.27,0.15,75,1.56,0.97,es,Arbeitslos,1455
+14,2021-10-23,depress_A9,1.89,0.06,546,2,1.77,es,Nicht-Arbeitend,1455
 15,2020-05-03,fin_ausk_akt,2.61,0.06,351,2.74,2.48,es,Arbeitend,1501
 15,2020-05-03,fin_ausk_akt,2.35,0.09,160,2.52,2.17,es,in Kurzarbeit,1501
 15,2020-05-03,fin_ausk_akt,2.94,0.05,242,3.04,2.84,es,in Home-office,1501
@@ -30754,6 +30999,11 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 15,2021-09-25,fin_ausk_akt,2.76,0.09,119,2.93,2.59,es,in Home-office,1464
 15,2021-09-25,fin_ausk_akt,1.78,0.18,76,2.13,1.43,es,Arbeitslos,1464
 15,2021-09-25,fin_ausk_akt,2.52,0.05,550,2.62,2.42,es,Nicht-Arbeitend,1464
+15,2021-10-23,fin_ausk_akt,2.52,0.05,673,2.61,2.42,es,Arbeitend,1466
+15,2021-10-23,fin_ausk_akt,2.35,0.35,17,3.04,1.66,es,in Kurzarbeit,1466
+15,2021-10-23,fin_ausk_akt,2.65,0.09,132,2.82,2.48,es,in Home-office,1466
+15,2021-10-23,fin_ausk_akt,1.74,0.16,80,2.05,1.42,es,Arbeitslos,1466
+15,2021-10-23,fin_ausk_akt,2.46,0.05,550,2.56,2.37,es,Nicht-Arbeitend,1466
 16,2020-04-25,zuf_fam,2.25,0.05,321,2.36,2.14,es,Arbeitend,1447
 16,2020-04-25,zuf_fam,2.32,0.06,167,2.44,2.19,es,in Kurzarbeit,1447
 16,2020-04-25,zuf_fam,2.28,0.05,243,2.38,2.18,es,in Home-office,1447
@@ -30894,6 +31144,26 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 16,2021-06-26,zuf_frz,2.02,0.07,140,2.16,1.89,es,in Home-office,1479
 16,2021-06-26,zuf_frz,1.56,0.13,100,1.82,1.29,es,Arbeitslos,1479
 16,2021-06-26,zuf_frz,2.1,0.04,553,2.18,2.02,es,Nicht-Arbeitend,1479
+16,2021-10-23,zuf_fam,2.3,0.03,673,2.37,2.24,es,Arbeitend,1434
+16,2021-10-23,zuf_fam,2.31,0.2,18,2.7,1.92,es,in Kurzarbeit,1434
+16,2021-10-23,zuf_fam,2.27,0.08,125,2.43,2.1,es,in Home-office,1434
+16,2021-10-23,zuf_fam,1.65,0.14,74,1.91,1.38,es,Arbeitslos,1434
+16,2021-10-23,zuf_fam,2.36,0.04,529,2.44,2.28,es,Nicht-Arbeitend,1434
+16,2021-10-23,zuf_par,2.3,0.04,594,2.38,2.22,es,Arbeitend,1199
+16,2021-10-23,zuf_par,2.06,0.22,19,2.5,1.62,es,in Kurzarbeit,1199
+16,2021-10-23,zuf_par,2.23,0.11,107,2.43,2.02,es,in Home-office,1199
+16,2021-10-23,zuf_par,1.69,0.17,56,2.03,1.36,es,Arbeitslos,1199
+16,2021-10-23,zuf_par,2.29,0.05,408,2.4,2.18,es,Nicht-Arbeitend,1199
+16,2021-10-23,zuf_ber,2.07,0.03,687,2.14,2.01,es,Arbeitend,1113
+16,2021-10-23,zuf_ber,1.99,0.16,20,2.31,1.66,es,in Kurzarbeit,1113
+16,2021-10-23,zuf_ber,2.2,0.07,132,2.33,2.07,es,in Home-office,1113
+16,2021-10-23,zuf_ber,1.49,0.17,40,1.82,1.16,es,Arbeitslos,1113
+16,2021-10-23,zuf_ber,2.14,0.08,219,2.3,1.99,es,Nicht-Arbeitend,1113
+16,2021-10-23,zuf_frz,2.01,0.03,690,2.07,1.94,es,Arbeitend,1496
+16,2021-10-23,zuf_frz,2.19,0.15,20,2.49,1.89,es,in Kurzarbeit,1496
+16,2021-10-23,zuf_frz,2.04,0.07,132,2.19,1.89,es,in Home-office,1496
+16,2021-10-23,zuf_frz,1.6,0.12,75,1.84,1.36,es,Arbeitslos,1496
+16,2021-10-23,zuf_frz,2.12,0.04,563,2.2,2.04,es,Nicht-Arbeitend,1496
 17,2020-03-28,dauer,2.84,0.07,342,2.97,2.71,es,Arbeitend,1489
 17,2020-03-28,dauer,2.92,0.1,145,3.11,2.74,es,in Kurzarbeit,1489
 17,2020-03-28,dauer,2.8,0.06,276,2.92,2.67,es,in Home-office,1489
@@ -31019,3 +31289,8 @@ scales,wavedate,variable,mean_measurement,mean_measurement_se,mean_tot,ymax,ymin
 17,2021-09-25,dauer,3.78,0.07,115,3.91,3.65,es,in Home-office,1366
 17,2021-09-25,dauer,3.55,0.11,69,3.77,3.33,es,Arbeitslos,1366
 17,2021-09-25,dauer,3.84,0.02,509,3.89,3.79,es,Nicht-Arbeitend,1366
+17,2021-10-23,dauer,3.83,0.02,639,3.88,3.79,es,Arbeitend,1383
+17,2021-10-23,dauer,3.59,0.16,20,3.91,3.27,es,in Kurzarbeit,1383
+17,2021-10-23,dauer,3.8,0.05,125,3.89,3.71,es,in Home-office,1383
+17,2021-10-23,dauer,3.74,0.09,72,3.91,3.56,es,Arbeitslos,1383
+17,2021-10-23,dauer,3.86,0.02,516,3.91,3.81,es,Nicht-Arbeitend,1383

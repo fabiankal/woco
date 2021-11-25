@@ -47,30 +47,29 @@ pander::panderOptions("table.split.table", Inf)
 Dieses Dokument zeigt verschiedene Graphentypen der zentralen Variablen des Austrian Corona Panel Projects der W1-26. Ziel ist es möglichst einfach und klar die zeitlichen Veränderungen zu erkennen. Deshalb fokussiert das Dokument auf Variablen, die in mehreren Wellen abgefragt wurden. Dies ist keine Vollständige Auflistung aller Variablen. Siehe für diese das Codebook.
 
 ```{r data import and sociodem, include = FALSE}
-#setwd("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse")
+
+#import ACPP data in long format
 bern_data_long2_factored = readRDS("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/processed/W1-26_CORONAPANEL_recoded.rds")
 
-#variable_doc = read_excel("Y:/Wirtschaftssoziologie/Corona/Daten downloaded/Daten Welle 25/ACPP_Documentation/W1-25_ACPP_Variablelist_V20211002.xlsx",sheet = "Variablenübersicht")
-
-#bern_data_long2_factored <- bern_data_long2_factored %>% mutate_if(is.factor, ~(na_if(.,"Weiss nicht")))
-#bern_data_long2_factored <- bern_data_long2_factored %>% mutate_if(is.factor, ~(na_if(.,"keine Angabe")))
-
-bern_data_long2_factored = bern_data_long2_factored
-bern_data_long2_factored$wavedate <- as_factor(as.character(bern_data_long2_factored$wave))
-
-
-#median(as.Date(bern_data_long2_factored$START_DATE[bern_data_long2_factored$wave==24],"%y-%m-%d"),na.rm=TRUE)
-
-levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020","03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020","13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020","17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021","13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021","23.10.2021")
-bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
-
-
-#import reverse information (which variable scales to reverse)
+#import reverse information (which variable scales to reverse [handcoded!])
 rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
 
 ##############################
 #RECODING
 ##############################
+
+#create wave variable in data format
+bern_data_long2_factored$wavedate <- as_factor(as.character(bern_data_long2_factored$wave))
+
+#input median date of interview to wavedate for every survey wave
+#median(as.Date(bern_data_long2_factored$START_DATE[bern_data_long2_factored$wave==24],"%y-%m-%d"),na.rm=TRUE)
+
+levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020","03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020","13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020","17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021","13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021","23.10.2021")
+bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
+
+#SOCIODEMOGRAPHICS--------------------------------------------------------------
+
+#EDUCATION LEVEL------------------------
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate( 
   edu4= ifelse(SD_EDU == "Volksschule oder weniger" | SD_EDU == "Hauptschule oder AHS Unterstufe" | SD_EDU == "Polytechnikum, BMS (Fachschule, z.B. HASCH)", "primary",
@@ -82,6 +81,8 @@ bern_data_long2_factored$edu4 <- as.factor(bern_data_long2_factored$edu4)
 
 bern_data_long2_factored$edu4 <- fct_relevel(bern_data_long2_factored$edu4, "primary","Lehre","secondary","tertiary" )
 
+#AGE GROUP------------------------------
+
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(alter=2020-SD_BIRTHYEAR)
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(alter_g=ifelse(alter<30,"<30",
@@ -92,14 +93,20 @@ bern_data_long2_factored$alter_g <- as.factor(bern_data_long2_factored$alter_g)
 
 bern_data_long2_factored$alter_g <- fct_relevel(bern_data_long2_factored$alter_g, "<30", "30-59", ">60")
 
+#GENDER--------------------------------
+
 bern_data_long2_factored <-  bern_data_long2_factored %>% mutate(gender=ifelse(SD_GENDER=="Maennlich","male",
                                                                         ifelse(SD_GENDER=="Weiblich","female",NA)))
 
 bern_data_long2_factored$gender <- as.factor(bern_data_long2_factored$gender)
 
+#REGION--------------------------------
+
 bern_data_long2_factored$bula = as.factor(droplevels(bern_data_long2_factored$SD_BULA))
 bern_data_long2_factored$bula = bern_data_long2_factored$bula %>% fct_relevel(., sort)
 levels(bern_data_long2_factored$bula)<-c("BG","KT","NÖ","OÖ","SB","ST","TI","VB","WI")
+
+#INCOME--------------------------------
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate( 
   hh_inc_cur_quintile= ifelse(hh_inc_cur=="weniger als 1.100 Euro" | hh_inc_cur=="1.100 bis unter 1.500 Euro", "1.Quintile",
@@ -115,6 +122,7 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(
                         | hh_inc_cur=="3.100 bis unter 3.700 Euro", "4-7.Decile",
                    ifelse(hh_inc_cur=="3.700 bis unter 4.300 Euro" | hh_inc_cur=="4.300 bis unter 5.500 Euro" | hh_inc_cur=="5.500 Euro und mehr"       , "8-10.Decile",NA))))
 
+#POPULATION---------------------------
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate( 
   population_3g  = ifelse(SD_POPNUM=="<2.500"  | SD_POPNUM=="2.500-" | SD_POPNUM=="5.000-" , "<10.000",
@@ -124,8 +132,9 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(
 bern_data_long2_factored$population_3g <- as.factor(bern_data_long2_factored$population_3g)
 bern_data_long2_factored$population_3g <- fct_relevel(bern_data_long2_factored$population_3g, "<10.000","10.000–1 Million",">1 Million")
 
-# Recode control variables
-#Employment status
+#EMPLOYMENT STATUS-------------------
+
+#wave1
 # *(self) employed as usal
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & (as.numeric(berufa_kaen) == 2 | as.numeric(berufa_kang) == 2) & (Paneli_W1 == 1	& wave == 1),"(self) employed as usual",NA))
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) < 4 & (as.numeric(berufa_urla) == 2 | as.numeric(berufa_aufs) == 2) & (Paneli_W1 == 1	& wave == 1),"(self) employed as usual",empl))
@@ -144,7 +153,7 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse((as.
 # *not in labour market
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(SD_EMPLSTATUS_FEB2020) > 4 & as.numeric(SD_EMPLSTATUS_FEB2020) < 11 & (Paneli_W1 == 1	& wave == 1),"not in labour market",empl))
 
-
+#!wave1
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(panelist2=ifelse(Paneli_W1 == 1 & wave==1,1,
                                                 ifelse(Paneli_W2 == 1 & wave==2,2,
                                                 ifelse(Paneli_W3 == 1 & wave==3,3,
@@ -169,7 +178,8 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(panelist2=ifelse
                                                 ifelse(Paneli_W22 == 1 & wave==22,22,
                                                 ifelse(Paneli_W23 == 1 & wave==23,23,
                                                 ifelse(Paneli_W24 == 1 & wave==24,24,
-                                                ifelse(Paneli_W25 == 1 & wave==25,25,NA))))))))))))))))))))))))))
+                                                ifelse(Paneli_W25 == 1 & wave==25,25,
+                                                ifelse(Paneli_W26 == 1 & wave==26,26,NA)))))))))))))))))))))))))))
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(berufst) < 4 & (panelist2>1),"(self) employed as usual",empl))
 
@@ -181,7 +191,7 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse((as.
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(((as.numeric(berufst) > 4)&(as.numeric(berufst) < 11)) & (panelist2>1),"not in labour market",empl))
 
-table(bern_data_long2_factored$empl)
+#table(bern_data_long2_factored$empl)
 
 bern_data_long2_factored$empl<-as.factor(bern_data_long2_factored$empl)
 levels(bern_data_long2_factored$empl)<-c("Arbeitend","in Kurzarbeit","in Home-office","Nicht-Arbeitend","Arbeitslos")
@@ -209,7 +219,7 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 #names(lr_gen_w1)
 #paste(names(lr_gen_w1),collapse=",")
 
-#What variables should be used for the dashboard
+#What variables should be used for the dashboard 
  variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wir_per_gefahr","wir_pub_gefahr",
                    "wochentag","kontakt","zeit" ,"konflikt","kinder",
                    "depress_A1","depress_A2","depress_A3","depress_A4",
@@ -241,9 +251,6 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
                    "sozialn_verh_eig_abs","sozialn_verh_eig_hau",
                    "sozialn_verh_eig_sch","sozialn_verh_eig_ver"
 )
-                                     #"sozialn_mein_and_abs","sozialn_mein_and_bes","sozialn_mein_and_ges","sozialn_mein_and_hau","sozialn_mein_and_sch","sozialn_mein_and_ver",
- #                   "sozialn_verh_and_abs", "sozialn_verh_and_hau","sozialn_verh_and_sch","sozialn_verh_and_ver",
- #                   "berufst"
 
 #variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
@@ -256,11 +263,11 @@ labels <- lr_gen_w1 %>% ungroup() %>% select(variablelist) %>%  sapply(levels)
 df <- do.call(rbind, labels) %>% as.data.frame()
 df <-bind_rows(lapply(labels,function(y) as.data.frame(t(y),stringsAsFactors=FALSE,y.id = "column_label")))
 rownames(df)<-names(labels)
-#grouped_labels<- df %>% mutate(ID = group_indices(.,V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12)) 
+
 grouped_labels<- df %>% 
   mutate(variable=rownames(.)) %>%
-  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,V13) %>% #,V13
-  mutate(ID = group_indices()) #%>% 
+  group_by(V1,V2,V3,V4,V5,V6,V7,V8,V9,V10,V11,V12,V13) %>% 
+  mutate(ID = group_indices()) 
 
 
 #hinzufügen von nummerierung in labels ohne nummerierung
