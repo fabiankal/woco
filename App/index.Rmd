@@ -29,14 +29,14 @@ output:
 library(plotly)
 library(tidyr)
 library(dplyr)
-library(rlang)
 library(stringr)
 library(forcats)
 library(base64enc)
-#library(bslib)
 library(flexdashboard)
 library(readr)
 library(shiny)
+#library(rlang)
+#library(bslib)
 #library(htmlwidgets)
 
 #get a reactive (text) variable
@@ -59,27 +59,11 @@ data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/
 data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/data_labels_cq.csv",show_col_types = FALSE)
 data_labels$scalenumber=data_labels$scalenumber+1
 
-#variable labels
-data_varlab <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/varlabels.csv",show_col_types = FALSE)
-
 #covid cases
 epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/master/output/tables/CovidFaelle_Timeline.csv",show_col_types = FALSE)
 
 
 #change some letters to german "umlaute"
-data_varlab$labels<-gsub(pattern = 'ae', replacement = "ä",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Ae', replacement = "Ä",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'ue', replacement = "ü",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Ue', replacement = "ü",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Vertraün', replacement = "Vertrauen",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Daür', replacement = "Dauer",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Aktüll', replacement = "Aktuell",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'oe', replacement = "ö",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Oe', replacement = "Ö",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Neü', replacement = "Neue",data_varlab$labels)
-data_varlab$labels<-gsub(pattern = 'Steürn', replacement = "Steürn",data_varlab$labels)
-
 
 data_labels$q_cate<-gsub(pattern = 'ae', replacement = "ä",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Ae', replacement = "Ä",data_labels$q_cate)
@@ -91,6 +75,8 @@ data_labels$q_cate<-gsub(pattern = 'Aktüll', replacement = "Aktuell",data_label
 data_labels$q_cate<-gsub(pattern = 'oe', replacement = "ö",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Oe', replacement = "Ö",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Neü', replacement = "Neue",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Steürn', replacement = "Steürn",data_labels$q_cate)
 
 data_labels$labels<-gsub(pattern = 'ae', replacement = "ä",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'Ae', replacement = "Ä",data_labels$labels)
@@ -193,7 +179,7 @@ epidf_rc$time = as.Date(str_split(string = epidf_rc$Time,
 #reorder factor levels for the subgroup means 
 data$subgroup<-as.factor(data$subgroup)
 data$subgroup<-fct_relevel(data$subgroup,"<30","30-59",">60","1-3.Decile","4-7.Decile","8-10.Decile","primary","Lehre","secondary","tertiary","<10.000","10.000–1 Million",">1 Million","female","male","Arbeitend","in Home-office","in Kurzarbeit","Arbeitslos","Nicht-Arbeitend","none")
-levels(data$subgroup)<- c("<30","30-59",">60","1.-3. Dezil","4.-7. Dezil","8.-10. Dezil",
+levels(data$subgroup)<- c("<30","30-59",">60","gering (1.-3. Dezil)","mittel (4.-7. Dezil)"," hoch (8.-10. Dezil)",
                           "primär","Lehre","sekundär","tertiär","<10.000","10.000–1 Million",
                           ">1 Million","weiblich","männlich","Arbeitend","in Home-office","in Kurzarbeit",
                           "Arbeitslos","Nicht-Arbeitend","keine")
@@ -287,7 +273,7 @@ Column
 
 renderPlotly({
   # get variable that should be displayed
-  inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares]
+  inputvariable_shares <- data_labels$variable[data_labels$variable %in% input$var_shares]
   
   # select data and rename variables
   data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>%
@@ -381,7 +367,7 @@ layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045,tracegr
 
 renderPlotly({
   
-  inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares]
+  inputvariable_shares <- data_labels$variable[data_labels$variable %in% input$var_shares]
   
   data3 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>%
     filter(variable %in% inputvariable_shares) 
@@ -515,11 +501,11 @@ Column
 
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variables]
+  inputvariables <- data_labels$variable[data_labels$variable %in% input$variables]
   
   data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales,N_total) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_varlab,by=c("variable"))%>%
+    filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_labels,by=c("variable"))%>%
     mutate(y_err=ymax-mean_measurement)
   
   Nrund<-round(mean(data2$N_total,na.rm=TRUE),0)
@@ -645,11 +631,11 @@ renderPlotly({
 
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variables]
+  inputvariables <- data_labels$variable[data_labels$variable %in% input$variables]
   
   data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales,N_total) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_varlab,by=c("variable"))%>%
+    filter(variable %in% inputvariables & groupby=="all") %>% left_join(data_labels,by=c("variable"))%>%
     mutate(y_err=ymax-mean_measurement)
   
   Nrund<-round(mean(data2$N_total,na.rm=TRUE),0)
@@ -677,11 +663,6 @@ renderPlotly({
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
-    # layout(annotations = 
-    #         list(x = 1, y = -0.16, text = paste("N ~",Nrund,"pro Welle"), 
-    #         showarrow = F, xref='paper', yref='paper', 
-    #         xanchor='right', yanchor='auto', xshift=0, yshift=0,
-    #         font=list(size=12, color="#707070")))%>% 
     config(locale = 'de',
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
@@ -710,11 +691,6 @@ renderPlotly({
             showarrow = F, xref='paper', yref='paper', 
             xanchor='right', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
-    #layout(annotations = 
-    #        list(x = 1, y = -0.12, text = paste("N ~",Nrund,"pro Welle"), 
-    #        showarrow = F, xref='paper', yref='paper', 
-    #        xanchor='right', yanchor='auto', xshift=0, yshift=0,
-    #       font=list(size=12, color="#707070")))%>% 
     config(locale = 'de',
            displaylogo = FALSE,
            modeBarButtonsToRemove = c("select2d", "lasso2d","autoScale2d","zoom2d","zoomIn2d","zoomOut2d","pan2d"),
@@ -775,12 +751,11 @@ myval <- reactiveValues()
  #Observe changes in variables (will run when variables change)
   observeEvent(input$variables, {
     
-    inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variables]
+    inputvariables <- data_labels$variable[data_labels$variable %in% input$variables]
     
     data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
     distinct(wavedate,variable, .keep_all = TRUE) %>%
-    filter(variable %in% inputvariables & groupby=="all") #%>%
-    #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
+    filter(variable %in% inputvariables & groupby=="all") 
   
   variables=0
   labels_st=0
@@ -801,7 +776,7 @@ data_labels$noka=NA
   for(i in unique(data2$scales))
       {
       k=k+1
-       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],collapse='", "')
+       variables[k]=paste(data_labels$labels[data_labels$variable %in% unique(data2$variable[data2$scales==i])],collapse='", "')
        labeln_st[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct()-
                           data_labels %>% filter(scales==i) %>% 
@@ -916,14 +891,9 @@ Column
 #output$out1 <- renderPrint(input$groupby)
 #verbatimTextOutput('out1')
 
-# data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
-#     filter(variable %in% test2) %>%
-#     filter(case_when(test=="Gender"~ groupby=="ge",
-#                test=="Age"~ groupby=="ag"))
-
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
+  inputvariables <- data_labels$variable[data_labels$variable %in% input$variablesgr]
 
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,mean_tot,N_total) %>%
     filter(variable %in% inputvariables[1]) %>%
@@ -1058,14 +1028,9 @@ renderPlotly({
 #output$out1 <- renderPrint(input$groupby)
 #verbatimTextOutput('out1')
 
-# data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin) %>%
-#     filter(variable %in% test2) %>%
-#     filter(case_when(test=="Gender"~ groupby=="ge",
-#                test=="Age"~ groupby=="ag"))
-
 renderPlotly({
   
-  inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
+  inputvariables <- data_labels$variable[data_labels$variable %in% input$variablesgr]
 
   data3 = data %>% select(wavedate,variable,groupby,subgroup,mean_measurement,ymax,ymin,mean_tot,N_total) %>%
     filter(variable %in% inputvariables[1]) %>%
@@ -1205,13 +1170,12 @@ renderPlotly({
   #Observe changes in variables (will run when variables change)
    observeEvent(input$variablesgr, {
      
-     inputvariables <- data_varlab$variable[data_varlab$variable %in% input$variablesgr]
+     inputvariables <- data_labels$variable[data_labels$variable %in% input$variablesgr]
      
      data2 = data %>% select(wavedate,variable,groupby,mean_measurement,ymax,ymin,scales) %>%
      distinct(wavedate,variable, .keep_all = TRUE) %>%
-     filter(variable %in% inputvariables & groupby=="all") #%>%
-     #pivot_wider(id_cols = c(wavedate,variable),names_from=variable, values_from=c(mean_measurement,ymax_mean,ymin_mean), names_glue = "{variable}_{.value}")
-#   
+     filter(variable %in% inputvariables & groupby=="all") 
+ 
    variables=0
    labels_st=0
    labels_en=0
@@ -1230,7 +1194,7 @@ renderPlotly({
   for(i in unique(data2$scales))
       {
       k=k+1
-       variables[k]=paste(data_varlab$labels[data_varlab$variable %in% unique(data2$variable[data2$scales==i])],collapse='", "')
+       variables[k]=paste(data_labels$labels[data_labels$variable %in% unique(data2$variable[data2$scales==i])],collapse='", "')
        labeln_st[k]=paste(data_labels %>% filter(scales==i) %>% 
                             select(min) %>% distinct()-
                           data_labels %>% filter(scales==i) %>% 
@@ -1355,7 +1319,7 @@ Column
 
 renderPlotly({
   
-   inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
+   inputvariable_shares <- data_labels$variable[data_labels$variable %in% input$var_shares2]
  
    if(input$play==FALSE) 
    {
@@ -1373,8 +1337,7 @@ renderPlotly({
   
   p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
     geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
     labs(y = "", x= "",fill="") +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
@@ -1431,11 +1394,9 @@ layout(showlegend = FALSE,
   
   Nrund<-round(mean(data4$N,na.rm=TRUE),0)
   
-   p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
-    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + #identity
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
-    #scale_fill_manual(values = c("blue", "blue", "green","yellow","orange")) +
+   p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
+    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + 
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
     labs(y = "", x= "") +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
@@ -1478,7 +1439,7 @@ layout(showlegend = FALSE,
 
   observeEvent(input$var_shares2, {
 
-      inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
+      inputvariable_shares <- data_labels$variable[data_labels$variable %in% input$var_shares2]
 
   data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
      mutate(wave = cur_group_id()) %>% ungroup() %>%
@@ -1503,7 +1464,7 @@ layout(showlegend = FALSE,
 
 renderPlotly({
   
-   inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
+   inputvariable_shares <- data_labels$variable[data_labels$variable %in% input$var_shares2]
  
    if(input$play==FALSE) 
    {
@@ -1521,8 +1482,7 @@ renderPlotly({
   
   p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
     geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
     labs(y = "", x= "",fill="") +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
@@ -1579,10 +1539,8 @@ layout(showlegend = FALSE,
   Nrund<-round(mean(data4$N,na.rm=TRUE),0)
   
    p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
-    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + #identity
-    #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
-    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  #alternative:Blues
-    #scale_fill_manual(values = c("blue", "blue", "green","yellow","orange")) +
+    geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + 
+    scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
     labs(y = "", x= "") +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
@@ -1624,7 +1582,7 @@ layout(showlegend = FALSE,
 
   observeEvent(input$var_shares2, {
 
-      inputvariable_shares <- data_varlab$variable[data_varlab$variable %in% input$var_shares2]
+      inputvariable_shares <- data_labels$variable[data_labels$variable %in% input$var_shares2]
 
   data4 = data_shares %>% select(wavedate,variable,measurement,prop,N_total) %>% group_by(wavedate) %>%
      mutate(wave = cur_group_id()) %>% ungroup() %>%

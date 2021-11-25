@@ -5,7 +5,6 @@ dependencies:
   - r-tidyr
   - r-plotly
   - r-dplyr
-  - r-rlang
   - r-stringr
   - r-forcats
   - r-base64enc
@@ -13,5 +12,4 @@ dependencies:
   - r-httr
   - r-readr
   - r-shiny
-  - r-bslib
   - r-flexdashboard
