@@ -2,13 +2,16 @@ channels:
   - conda-forge
 dependencies:
   - r-base=4.0.2
-  - r-plotly
   - r-tidyr
+  - r-plotly
   - r-dplyr
+  - r-rlang
   - r-stringr
   - r-forcats
   - r-base64enc
-  - r-flexdashboard
   - r-rmarkdown
+  - r-httr
   - r-readr
   - r-shiny
+  - r-bslib
+  - r-flexdashboard
