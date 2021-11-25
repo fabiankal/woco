@@ -385,10 +385,13 @@ grouped_labels_sum <- grouped_labels %>% group_by(ID) %>% filter(row_number()==1
 
 # data_plot_long_mean[[3]] <- out[[3]]  %>% filter(!is.na(measurement)) %>%
 #   as_survey_design(weights = c(WEIGHTD)) %>%
-#   group_by(wavedate,variable) %>%
-#   summarise(mean_measurement=survey_mean(abs((as.numeric(measurement)-grouped_labels_sum$min[grouped_labels_sum$ID==3])+((grouped_labels_sum$max[grouped_labels_sum$ID==3]-grouped_labels_sum$min[grouped_labels_sum$ID==3])*(-grouped_labels_sum$rev[grouped_labels_sum$ID==3]))),vartype = c("se"))) %>%
-#   group_by(wavedate,variable) %>%
-#      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="none")
+#   group_by(wavedate,variable,hh_inc_cur_3g) %>%
+#   summarise(mean_measurement=survey_mean(abs((as.numeric(measurement)-grouped_labels_sum$min[grouped_labels_sum$ID==3])+((grouped_labels_sum$max[grouped_labels_sum$ID==3]-grouped_labels_sum$min[grouped_labels_sum$ID==3])*(-grouped_labels_sum$rev[grouped_labels_sum$ID==3]))),vartype = c("se")),
+#             #mean_tot1 = survey_total(measurement),
+#             #mean_tot2 = survey_total(!is.na(measurement)),
+#             mean_tot3 = n()) %>%
+#   group_by(wavedate,variable,hh_inc_cur_3g) %>%
+#      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="hi")
 
 #endtest
 
@@ -399,7 +402,8 @@ for (val in unique(grouped_labels$ID)) {
 data_plot_long_mean[[val]] <- out[[val]]  %>% filter(!is.na(measurement)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable) %>%
-  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>% 
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>% 
   group_by(wavedate,variable) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="all",subgroup="none")
 
@@ -408,7 +412,8 @@ data_plot_long_mean[[val]] <- out[[val]]  %>% filter(!is.na(measurement)) %>%
 data_plot_long_mean_ge[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(gender)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,gender) %>%
- summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+ summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>%  
   group_by(wavedate,variable,gender) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ge")
 
@@ -416,7 +421,8 @@ data_plot_long_mean_ge[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
 data_plot_long_mean_ag[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(alter_g)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,alter_g) %>%
-  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>%  
   group_by(wavedate,variable,alter_g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ag")
 
@@ -424,7 +430,8 @@ data_plot_long_mean_ag[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
 data_plot_long_mean_ed[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(edu4)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,edu4) %>%
-  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>%  
   group_by(wavedate,variable,edu4) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="ed")
 
@@ -432,7 +439,8 @@ data_plot_long_mean_ed[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
 data_plot_long_mean_bl[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(population_3g)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,population_3g) %>%
-  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>%  
   group_by(wavedate,variable,population_3g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="bl")
 
@@ -440,7 +448,8 @@ data_plot_long_mean_bl[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
 data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(hh_inc_cur_3g)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,hh_inc_cur_3g) %>%
-  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>%  
   group_by(wavedate,variable,hh_inc_cur_3g) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="hi")
 
@@ -448,7 +457,8 @@ data_plot_long_mean_hi[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.
 data_plot_long_mean_es[[val]] <- out[[val]]  %>% filter(!is.na(measurement)&!is.na(empl)) %>%
   as_survey_design(weights = c(WEIGHTD)) %>%
   group_by(wavedate,variable,empl) %>%
-  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se"))) %>%  
+  summarise(mean_measurement=survey_mean(abs((as.numeric(as.factor(measurement))-grouped_labels_sum$min[val])+((grouped_labels_sum$max[val]-grouped_labels_sum$min[val])*(-grouped_labels_sum$rev[val]))),vartype = c("se")),
+            mean_tot = n()) %>%  
   group_by(wavedate,variable,empl) %>%
      mutate(ymax=mean_measurement+1.96*mean_measurement_se, ymin=mean_measurement-1.96*mean_measurement_se,groupby="es")
 
