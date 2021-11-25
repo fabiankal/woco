@@ -7,8 +7,8 @@ output:
     theme: bootstrap
     orientation: columns
     favicon: www/favicon-32x32.png
-    social: ["twitter"]
     navbar:
+      - {title: "", icon: "fa-twitter", href: "https://twitter.com/intent/tweet?text=Work+%26+Corona+Dashboard%3A+https%3A%2F%2Fwoco.univie.ac.at%2Fdashboard%2F", target: "_blank",align: "right"}
       - {title: "Source Code", icon: "fa-github", href: "https://github.com/fabiankal/woco", target: "_blank",align: "right"}
 ---
 
