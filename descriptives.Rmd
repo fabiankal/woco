@@ -47,7 +47,7 @@ pander::panderOptions("table.split.table", Inf)
 ```{r data import and sociodem, include = FALSE}
 
 #import ACPP data in long format
-bern_data_long2_factored = readRDS("Y:/Wirtschaftssoziologie/Corona/Corona_Panel_Analyse/data/processed/W1-27_CORONAPANEL_recoded.rds")
+bern_data_long2_factored = readRDS("./../../R/W1-27_CORONAPANEL_recoded.rds")
 
 #import reverse information (which variable scales to reverse [handcoded!])
 rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
@@ -62,7 +62,12 @@ bern_data_long2_factored$wavedate <- as_factor(as.character(bern_data_long2_fact
 #input median date of interview to wavedate for every survey wave
 #median(as.Date(bern_data_long2_factored$START_DATE[bern_data_long2_factored$wave==24],"%y-%m-%d"),na.rm=TRUE)
 
-levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020","03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020","13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020","17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021","13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021","23.10.2021","23.10.2021","26.11.2021")
+levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020",
+                                              "03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020",
+                                              "13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020",
+                                              "17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021",
+                                              "13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021",
+                                              "23.10.2021","26.11.2021")
 bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
 
 #SOCIODEMOGRAPHICS--------------------------------------------------------------
