@@ -615,7 +615,7 @@ renderPlotly({
   }
   if(input$incidence)
   {
-    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
   
   }
   
@@ -733,7 +733,7 @@ renderPlotly({
   }
   if(input$incidence)
   {
-    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
   
   }
   
@@ -1017,7 +1017,7 @@ renderPlotly({
   }
   if(input$incidence2)
   {
-    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
   }
 
   p
@@ -1153,7 +1153,7 @@ renderPlotly({
   }
   if(input$incidence2)
   {
-    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=30))
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
   }
 
   p
