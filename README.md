@@ -10,6 +10,8 @@ And even change the code within an online R studio environment: https://mybinder
 The package includes:
 1) *descriptives.Rmd*: for creating aggregated data of time-trends from micro data provided @AUSSDA [previous recoding to long required]
 2) *flexdashboard.Rmd*: for creating the R-shiny app
-3) several data files of aggregated data produced by the package or published online here XX  
+3) several data files of aggregated data produced by the package. 
+
+The ACPP micro dataset can be accessed here: Kittel, Bernhard; Kritzinger, Sylvia; Boomgaarden, Hajo; Prainsack, Barbara; Eberl, Jakob-Moritz; Kalleitner, Fabian; Lebernegg, Noëlle S.; Partheymüller, Julia; Plescia, Carolina; Schiestl, David W.; Schlogl, Lukas, 2020, "Austrian Corona Panel Project (SUF edition)", https://doi.org/10.11587/28KQNS, AUSSDA, V4.
 
 Please contact Fabian Kalleitner at fabian.kalleitner@univie.ac.at with any questions.

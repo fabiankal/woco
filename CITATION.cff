@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Kalleitner"
+  given-names: "Fabian"
+  orcid: "https://orcid.org/0000-0002-1196-824X"
+- family-names: "Schlogl"
+  given-names: "Lukas"
+  orcid: "https://orcid.org/0000-0001-7335-4887"
+- family-names: "Bobzien"
+  given-names: "Licia"
+  orcid: "https://orcid.org/0000-0003-2274-509X"
+title: "The Work and Corona Dashboard"
+version: 1.0
+doi: 10.31219/osf.io/3mcna
+date-released: 2021-12-15
+url: "https://github.com/github/linguist"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Kalleitner"
+    given-names: "Fabian"
+    orcid: "https://orcid.org/0000-0002-1196-824X"
+  - family-names: "Schlogl"
+    given-names: "Lukas"
+    orcid: "https://orcid.org/0000-0001-7335-4887"
+  - family-names: "Bobzien"
+    given-names: "Licia"
+    orcid: "https://orcid.org/0000-0003-2274-509X"
+  doi: "10.31219/osf.io/3mcna"
+  journal: "The Work and Corona Dashboard"
+  month: 12
+  start: 1 # First page number
+  end: 9 # Last page number
+  title: "The Work and Corona Dashboard"
+  issue:
+  volume:
+  year: 2021

@@ -8,8 +8,8 @@ output:
     orientation: columns
     favicon: www/favicon-32x32.png
     navbar:
-      - {title: "", icon: "fa-twitter", href: "https://twitter.com/intent/tweet?text=Work+%26+Corona+Dashboard%3A+https%3A%2F%2Fwoco.univie.ac.at%2Fdashboard%2F", target: "_blank",align: "right"}
       - {title: "Source Code", icon: "fa-github", href: "https://github.com/fabiankal/woco", target: "_blank",align: "right"}
+      - {title: "", icon: "fa-twitter", href: "https://twitter.com/intent/tweet?text=Work+%26+Corona+Dashboard%3A+https%3A%2F%2Fwoco.univie.ac.at%2Fdashboard%2F", target: "_blank",align: "right"}
 ---
 
 ```{css, echo=FALSE}
@@ -77,6 +77,7 @@ data_labels$q_cate<-gsub(pattern = 'Oe', replacement = "Ö",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Depressivität', replacement = "Emotionen",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Neü', replacement = "Neue",data_labels$q_cate)
 data_labels$q_cate<-gsub(pattern = 'Steürn', replacement = "Steürn",data_labels$q_cate)
+data_labels$q_cate<-gsub(pattern = 'Fraün', replacement = "Frauen",data_labels$q_cate)
 
 data_labels$labels<-gsub(pattern = 'ae', replacement = "ä",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'Ae', replacement = "Ä",data_labels$labels)
@@ -91,6 +92,8 @@ data_labels$labels<-gsub(pattern = 'Depressivität', replacement = "Emotionen",d
 data_labels$labels<-gsub(pattern = 'CafÃ©s', replacement = "Cafés",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'Neü', replacement = "Neue",data_labels$labels)
 data_labels$labels<-gsub(pattern = 'Steürn', replacement = "Steuern",data_labels$labels)
+data_labels$labels<-gsub(pattern = 'Fraün', replacement = "Frauen",data_labels$labels)
+
 
 data_labels <- data_labels %>% filter(!is.na(labels))
 
