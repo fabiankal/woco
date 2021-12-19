@@ -46,21 +46,23 @@ library(shiny)
 ```{r data, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 
+githubdir <-"https://raw.githubusercontent.com/fabiankal/woco/master/"
+
 #dashboard release version
-version<-"V1.0" 
+version<-"V1.1" 
 
 #data with variable means
-data <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/beta/output/tables/export_shiny_data.csv",show_col_types = FALSE)
+data <-readr::read_csv(paste0(githubdir,"output/tables/export_shiny_data.csv"),show_col_types = FALSE)
 
 #data with shares of answer categories
-data_shares <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/beta/output/tables/export_shiny_data_shares.csv",show_col_types = FALSE)
+data_shares <-readr::read_csv(paste0(githubdir,"output/tables/export_shiny_data_shares.csv"),show_col_types = FALSE)
 
 #variable labels
-data_labels <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/beta/output/tables/data_labels_cq.csv",show_col_types = FALSE)
+data_labels <-readr::read_csv(paste0(githubdir,"output/tables/data_labels_cq.csv"),show_col_types = FALSE)
 data_labels$scalenumber=data_labels$scalenumber+1
 
 #covid cases
-epidf       <-readr::read_csv("https://raw.githubusercontent.com/fabiankal/woco/beta/output/tables/CovidFaelle_Timeline.csv",show_col_types = FALSE)
+epidf       <-readr::read_csv(paste0(githubdir,"output/tables/CovidFaelle_Timeline.csv"),show_col_types = FALSE)
 
 
 #change some letters to german "umlaute"
