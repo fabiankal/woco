@@ -1,7 +1,7 @@
 ---
 title: "Work and Corona dashboard aggregation of ACPP data"
 author: "Fabian Kalleitner"
-date: "13/12/2021"
+date: "26/06/2021"
 output:
   html_document:
     df_print: paged
@@ -47,7 +47,7 @@ pander::panderOptions("table.split.table", Inf)
 ```{r data import and sociodem, include = FALSE}
 
 #import ACPP data in long format
-bern_data_long2_factored = readRDS("./../../R/W1-27_CORONAPANEL_recoded.rds")
+bern_data_long2_factored = readRDS("./../../R/W1-32_CORONAPANEL_recoded.rds")
 
 #import reverse information (which variable scales to reverse [handcoded!])
 rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
@@ -67,7 +67,8 @@ levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04
                                               "13.06.2020","27.06.2020","11.07.2020","15.08.2020","12.09.2020",
                                               "17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021",
                                               "13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021",
-                                              "23.10.2021","26.11.2021")
+                                              "23.10.2021","26.11.2021","14.01.2022","18.02.2022","18.03.2022",
+                                              "22.04.2022","21.05.2022")
 bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
 
 #SOCIODEMOGRAPHICS--------------------------------------------------------------
@@ -183,7 +184,12 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(panelist2=ifelse
                                                 ifelse(Paneli_W24 == 1 & wave==24,24,
                                                 ifelse(Paneli_W25 == 1 & wave==25,25,
                                                 ifelse(Paneli_W26 == 1 & wave==26,26,
-                                                ifelse(Paneli_W27 == 1 & wave==27,27,NA))))))))))))))))))))))))))))
+                                                ifelse(Paneli_W27 == 1 & wave==27,27,
+                                                ifelse(Paneli_W28 == 1 & wave==28,28,
+                                                ifelse(Paneli_W29 == 1 & wave==29,29,
+                                                ifelse(Paneli_W30 == 1 & wave==30,30,
+                                                ifelse(Paneli_W31 == 1 & wave==31,31,
+                                                ifelse(Paneli_W32 == 1 & wave==32,32,NA)))))))))))))))))))))))))))))))))
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(berufst) < 4 & (panelist2>1),"(self) employed as usual",empl))
 
@@ -259,7 +265,7 @@ lr_gen_w1 <- bern_data_long2_factored %>% filter(!is.na(WEIGHTD))
 #variablelist <- c("ges_per_gefahr","ges_pub_gefahr","wochentag","kontakt","lebensz")
 
 #What are the crucial values to identify individual datapoints and what are the categories for subgroup analyses
-sociodem <-c("WEIGHTD","wave","wavedate","gender","alter_g","edu4","population_3g","hh_inc_cur_3g","empl")
+sociodem <-c("WEIGHTD","id","wave","wavedate","gender","alter_g","edu4","population_3g","hh_inc_cur_3g","empl")
 
 #Get the different factor scales in the data and generate a dataframe indicating which variables use different answer scales
 labels <- lr_gen_w1 %>% ungroup() %>% select(variablelist) %>%  sapply(levels)
@@ -537,10 +543,6 @@ export_shiny_data_shares <- export_shiny_data_shares %>% select(-c(n,n_se)) %>% 
                                                                                        ymax=round(ymax,3),
                                                                                        ymin=round(ymin,3))
 
-#Export the data
-write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
-write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.csv", na = "NA")
-write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
 
 
 #data_long$measurement<-as.factor(data_long$measurement)
@@ -552,6 +554,13 @@ write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
 ```
 
 ```{r download and export covid19 cases, echo=FALSE, fig.width=8, fig.height=5, results='asis'}
+
+#Export the data
+write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
+#write.csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
+write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.csv", na = "NA")
+write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
+
 
 epidf2 =            read.delim("https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
 

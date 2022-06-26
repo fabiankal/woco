@@ -38,6 +38,7 @@ library(shiny)
 #library(rlang)
 #library(bslib)
 #library(htmlwidgets)
+library(gganimate)
 
 #get a reactive (text) variable
  myval3 <- reactiveValues()
@@ -48,8 +49,13 @@ library(shiny)
 
 githubdir <-"https://raw.githubusercontent.com/fabiankal/woco/master/"
 
+#githubdir <-"C:/Users/Kalleitner/Documents/GIT/woco/"
+
+logodir <-""
+
+
 #dashboard release version
-version<-"V1.1" 
+version<-"V1.2" 
 
 #data with variable means
 data <-readr::read_csv(paste0(githubdir,"output/tables/export_shiny_data.csv"),show_col_types = FALSE)
@@ -127,7 +133,12 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "19.05.2021",
                              "01.07.2021",
                              "15.09.2021",
-                             "22.11.2021"),
+                             "22.11.2021",
+                             "12.12.2021",
+                             "11.01.2022",
+                             "05.02.2022",
+                             "05.03.2022",
+                             "02.06.2022"),
                      label_en=c("Lockdown",
                              "Easing of\nmeasurments",
                              "Reopening\nrestaurants",
@@ -145,7 +156,12 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "Reopening",
                              "Easing of mask rules",
                              "FFP2-\nmasks",
-                             "Lockdown"),
+                             "Lockdown",
+                             "Reopening",
+                             "Omic.\nmeasures",
+                             "Vaccine mandate",
+                             "Reopening",
+                             "Easing of\nmask rules"),
                       label_de=c("Lockdown",
                              "Erste\nÖffnungen",
                              "Gastro-\nöffnung",
@@ -163,8 +179,14 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "Öffnung",
                              "Lockerung\nMasken",
                              "FFP2-\nMasken",
-                             "Lockdown"),
+                             "Lockdown",
+                             "Öffnung",
+                             "Omic.\nmeasures",
+                             "Impfpflicht",
+                             "Öffnung",
+                             "Lockerung\nMasken"),
                        y = c(1.1,1.1,1.1,1.1,1.1,
+                             1.1,1.1,1.1,1.1,1.1,
                              1.1,1.1,1.1,1.1,1.1,
                              1.1,1.1,1.1,1.1,1.1,
                              1.1,1.1,1.1))
@@ -310,7 +332,7 @@ m <- list(l = 0,r = 0,b = 80,t = 20,pad = 4)
   g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
 layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045,tracegroupgap = 0),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
@@ -401,7 +423,7 @@ m <- list(l = 0,r = 0,b = 110,t = 20,pad = 4)
   g <- ggplotly(p,tooltip = c("x","y","fill","text"),dblclick = FALSE) %>%
 layout(legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.11,tracegroupgap = 0),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
@@ -486,7 +508,6 @@ output$info2 <- renderUI({
 
 uiOutput("info2",inline=TRUE)
 
-version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/"  target="_blank">CC BY 3.0 AT</a>
@@ -526,7 +547,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.94,
@@ -560,7 +581,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -617,7 +638,7 @@ renderPlotly({
   }
   if(input$incidence)
   {
-    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
+    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=38))
   
   }
   
@@ -656,7 +677,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.94,
@@ -684,7 +705,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -735,7 +756,7 @@ renderPlotly({
   }
   if(input$incidence)
   {
-    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
+    p <- p  %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=38))
   
   }
   
@@ -879,7 +900,6 @@ output$info3 <- renderUI({
 
 uiOutput("info3",inline=TRUE)
 
-version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/"  target="_blank">CC BY 3.0 AT</a>
@@ -928,7 +948,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.94,
@@ -963,7 +983,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -1019,7 +1039,7 @@ renderPlotly({
   }
   if(input$incidence2)
   {
-    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=38))
   }
 
   p
@@ -1066,7 +1086,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.94,
@@ -1100,7 +1120,7 @@ renderPlotly({
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.97,y=0.93,
@@ -1155,7 +1175,7 @@ renderPlotly({
   }
   if(input$incidence2)
   {
-    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=35))
+    p <- p %>% add_trace(x = ~epidf_rc$time, y = ~round((epidf_rc$daily_inf_7T*0.01123461),1), type = 'scatter', mode = 'none', name = '7-Tage Inzidenz',yaxis = "y2", fill = 'tozeroy', inherit = FALSE) %>% layout(yaxis2 = list(overlaying = "y", side = "right",showgrid = F),margin = list(r=38))
   }
 
   p
@@ -1286,6 +1306,19 @@ checkboxInput(inputId = 'colordirect2', label = "Farbschema umkehren", value = F
 
 checkboxInput(inputId = 'play', label = "Wellen dynamisch abspielen (BETA)", value = FALSE)
 
+# ## Download Button
+# downloadButton('downloadData','Download Result Set')
+# 
+# downloadHandler(filename = function() {
+#      paste('graph_', Sys.Date(), '.png', sep='')
+#    },
+#      content = function(file) {
+#      ggsave(p,file)
+#        #gg_animate
+#       # write.csv(subset_dataset(), file, row.names = FALSE)
+#    }
+# )
+
 filterinfo4 <- reactive(data_labels$q_filt[data_labels$variable %in% input$var_shares2])
 
 output$info4 <- renderUI({
@@ -1301,7 +1334,6 @@ output$info4 <- renderUI({
 
 uiOutput("info4",inline=TRUE)
 
-version<-"V1.0"
 HTML(paste0(
         "<div style='position: absolute; bottom: 5px; right: 10px; text-align: right; font-size: 1.75ex'>",
         "WoCo-Dashboard ",version,"<br>",Sys.Date(),'<br> Lizenz:  <a href="https://creativecommons.org/licenses/by/3.0/at/"  target="_blank">CC BY 3.0 AT</a>
@@ -1357,7 +1389,7 @@ layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
@@ -1408,13 +1440,18 @@ layout(showlegend = FALSE,
     scale_x_discrete(guide = guide_axis(n.dodge = 2)) 
    
    m <- list(l = 40,r = 40,b = 130,t = 40,pad = 4)  
-
+   
+  #  if(input$downloadData==TRUE)
+  # {
+  #    gg_animate(p,"outfile.gif")
+  #  }
+   
   g <- ggplotly(p,tooltip = c("frame","x","y","text"))  %>% layout(barmode = "dodge") %>%
 layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
@@ -1502,7 +1539,7 @@ layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,
@@ -1558,7 +1595,7 @@ layout(showlegend = FALSE,
          xaxis = list(ticktext=~Kategoriex),
          legend = list(orientation = "h",sort = FALSE,x = -0.1, y = -0.045),
          images = list(list(  
-          source =  base64enc::dataURI(file = "logo2.png"), 
+          source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
           xref = "paper",  
           yref = "paper",
           x=0.95,y=0.955,

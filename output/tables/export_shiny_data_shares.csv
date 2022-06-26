@@ -296,6 +296,61 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 1,2021-11-26,lebensz,8,0.225,0.227,0.223,none,1523
 1,2021-11-26,lebensz,9,0.127,0.131,0.124,none,1523
 1,2021-11-26,lebensz,10 = aeusserst zufrieden,0.062,0.067,0.058,none,1523
+1,2022-01-14,lebensz,0 = aeusserst unzufrieden,0.019,0.028,0.009,none,1496
+1,2022-01-14,lebensz,1,0.018,0.028,0.009,none,1496
+1,2022-01-14,lebensz,2,0.035,0.042,0.028,none,1496
+1,2022-01-14,lebensz,3,0.049,0.055,0.043,none,1496
+1,2022-01-14,lebensz,4,0.04,0.046,0.034,none,1496
+1,2022-01-14,lebensz,5,0.12,0.123,0.117,none,1496
+1,2022-01-14,lebensz,6,0.107,0.11,0.103,none,1496
+1,2022-01-14,lebensz,7,0.19,0.192,0.187,none,1496
+1,2022-01-14,lebensz,8,0.216,0.219,0.214,none,1496
+1,2022-01-14,lebensz,9,0.136,0.139,0.133,none,1496
+1,2022-01-14,lebensz,10 = aeusserst zufrieden,0.07,0.075,0.065,none,1496
+1,2022-02-18,lebensz,0 = aeusserst unzufrieden,0.017,0.027,0.007,none,1490
+1,2022-02-18,lebensz,1,0.011,0.024,-0.001,none,1490
+1,2022-02-18,lebensz,2,0.038,0.044,0.031,none,1490
+1,2022-02-18,lebensz,3,0.053,0.058,0.048,none,1490
+1,2022-02-18,lebensz,4,0.052,0.057,0.046,none,1490
+1,2022-02-18,lebensz,5,0.122,0.126,0.119,none,1490
+1,2022-02-18,lebensz,6,0.105,0.109,0.102,none,1490
+1,2022-02-18,lebensz,7,0.201,0.203,0.198,none,1490
+1,2022-02-18,lebensz,8,0.232,0.235,0.23,none,1490
+1,2022-02-18,lebensz,9,0.108,0.112,0.105,none,1490
+1,2022-02-18,lebensz,10 = aeusserst zufrieden,0.06,0.065,0.055,none,1490
+1,2022-03-18,lebensz,0 = aeusserst unzufrieden,0.022,0.03,0.013,none,1471
+1,2022-03-18,lebensz,1,0.019,0.029,0.01,none,1471
+1,2022-03-18,lebensz,2,0.03,0.037,0.022,none,1471
+1,2022-03-18,lebensz,3,0.057,0.062,0.052,none,1471
+1,2022-03-18,lebensz,4,0.055,0.06,0.05,none,1471
+1,2022-03-18,lebensz,5,0.124,0.128,0.121,none,1471
+1,2022-03-18,lebensz,6,0.099,0.103,0.095,none,1471
+1,2022-03-18,lebensz,7,0.206,0.208,0.203,none,1471
+1,2022-03-18,lebensz,8,0.228,0.23,0.226,none,1471
+1,2022-03-18,lebensz,9,0.099,0.103,0.095,none,1471
+1,2022-03-18,lebensz,10 = aeusserst zufrieden,0.062,0.067,0.057,none,1471
+1,2022-04-22,lebensz,0 = aeusserst unzufrieden,0.019,0.028,0.009,none,1490
+1,2022-04-22,lebensz,1,0.014,0.025,0.003,none,1490
+1,2022-04-22,lebensz,2,0.036,0.043,0.029,none,1490
+1,2022-04-22,lebensz,3,0.051,0.057,0.046,none,1490
+1,2022-04-22,lebensz,4,0.042,0.048,0.036,none,1490
+1,2022-04-22,lebensz,5,0.138,0.141,0.135,none,1490
+1,2022-04-22,lebensz,6,0.087,0.091,0.083,none,1490
+1,2022-04-22,lebensz,7,0.198,0.201,0.196,none,1490
+1,2022-04-22,lebensz,8,0.213,0.215,0.211,none,1490
+1,2022-04-22,lebensz,9,0.129,0.132,0.126,none,1490
+1,2022-04-22,lebensz,10 = aeusserst zufrieden,0.073,0.077,0.068,none,1490
+1,2022-05-21,lebensz,0 = aeusserst unzufrieden,0.025,0.033,0.016,none,1512
+1,2022-05-21,lebensz,1,0.019,0.028,0.01,none,1512
+1,2022-05-21,lebensz,2,0.042,0.048,0.036,none,1512
+1,2022-05-21,lebensz,3,0.059,0.064,0.054,none,1512
+1,2022-05-21,lebensz,4,0.061,0.066,0.056,none,1512
+1,2022-05-21,lebensz,5,0.115,0.118,0.111,none,1512
+1,2022-05-21,lebensz,6,0.116,0.119,0.112,none,1512
+1,2022-05-21,lebensz,7,0.196,0.198,0.193,none,1512
+1,2022-05-21,lebensz,8,0.225,0.227,0.222,none,1512
+1,2022-05-21,lebensz,9,0.089,0.093,0.086,none,1512
+1,2022-05-21,lebensz,10 = aeusserst zufrieden,0.054,0.06,0.049,none,1512
 2,2020-03-28,ver_gov,0 = Ueberhaupt kein Vertrauen,0.044,0.05,0.039,none,1513
 2,2020-03-28,ver_gov,1,0.024,0.032,0.016,none,1513
 2,2020-03-28,ver_gov,2,0.018,0.028,0.009,none,1513
@@ -1715,6 +1770,281 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 2,2021-11-26,ver_orf,8,0.11,0.113,0.106,none,1488
 2,2021-11-26,ver_orf,9,0.053,0.058,0.047,none,1488
 2,2021-11-26,ver_orf,10 = Sehr viel Vertrauen,0.052,0.057,0.046,none,1488
+2,2022-01-14,ver_gov,0 = Ueberhaupt kein Vertrauen,0.303,0.304,0.301,none,1471
+2,2022-01-14,ver_gov,1,0.059,0.064,0.054,none,1471
+2,2022-01-14,ver_gov,2,0.072,0.077,0.068,none,1471
+2,2022-01-14,ver_gov,3,0.055,0.061,0.05,none,1471
+2,2022-01-14,ver_gov,4,0.072,0.077,0.068,none,1471
+2,2022-01-14,ver_gov,5,0.118,0.121,0.114,none,1471
+2,2022-01-14,ver_gov,6,0.097,0.101,0.094,none,1471
+2,2022-01-14,ver_gov,7,0.091,0.095,0.087,none,1471
+2,2022-01-14,ver_gov,8,0.072,0.077,0.067,none,1471
+2,2022-01-14,ver_gov,9,0.038,0.044,0.031,none,1471
+2,2022-01-14,ver_gov,10 = Sehr viel Vertrauen,0.022,0.031,0.014,none,1471
+2,2022-01-14,ver_ges,0 = Ueberhaupt kein Vertrauen,0.092,0.096,0.088,none,1470
+2,2022-01-14,ver_ges,1,0.023,0.032,0.015,none,1470
+2,2022-01-14,ver_ges,2,0.04,0.046,0.034,none,1470
+2,2022-01-14,ver_ges,3,0.054,0.06,0.049,none,1470
+2,2022-01-14,ver_ges,4,0.058,0.064,0.053,none,1470
+2,2022-01-14,ver_ges,5,0.093,0.096,0.089,none,1470
+2,2022-01-14,ver_ges,6,0.078,0.083,0.074,none,1470
+2,2022-01-14,ver_ges,7,0.115,0.119,0.112,none,1470
+2,2022-01-14,ver_ges,8,0.161,0.163,0.158,none,1470
+2,2022-01-14,ver_ges,9,0.134,0.137,0.13,none,1470
+2,2022-01-14,ver_ges,10 = Sehr viel Vertrauen,0.152,0.155,0.149,none,1470
+2,2022-01-14,ver_par,0 = Ueberhaupt kein Vertrauen,0.239,0.241,0.237,none,1459
+2,2022-01-14,ver_par,1,0.067,0.072,0.063,none,1459
+2,2022-01-14,ver_par,2,0.089,0.093,0.084,none,1459
+2,2022-01-14,ver_par,3,0.074,0.079,0.07,none,1459
+2,2022-01-14,ver_par,4,0.081,0.085,0.076,none,1459
+2,2022-01-14,ver_par,5,0.143,0.146,0.14,none,1459
+2,2022-01-14,ver_par,6,0.095,0.099,0.091,none,1459
+2,2022-01-14,ver_par,7,0.093,0.097,0.089,none,1459
+2,2022-01-14,ver_par,8,0.075,0.08,0.071,none,1459
+2,2022-01-14,ver_par,9,0.031,0.038,0.023,none,1459
+2,2022-01-14,ver_par,10 = Sehr viel Vertrauen,0.013,0.025,0.001,none,1459
+2,2022-01-14,ver_pol,0 = Ueberhaupt kein Vertrauen,0.097,0.101,0.093,none,1463
+2,2022-01-14,ver_pol,1,0.039,0.046,0.033,none,1463
+2,2022-01-14,ver_pol,2,0.058,0.063,0.053,none,1463
+2,2022-01-14,ver_pol,3,0.06,0.065,0.055,none,1463
+2,2022-01-14,ver_pol,4,0.057,0.063,0.052,none,1463
+2,2022-01-14,ver_pol,5,0.127,0.131,0.124,none,1463
+2,2022-01-14,ver_pol,6,0.099,0.103,0.095,none,1463
+2,2022-01-14,ver_pol,7,0.127,0.131,0.124,none,1463
+2,2022-01-14,ver_pol,8,0.14,0.143,0.137,none,1463
+2,2022-01-14,ver_pol,9,0.085,0.089,0.081,none,1463
+2,2022-01-14,ver_pol,10 = Sehr viel Vertrauen,0.109,0.113,0.106,none,1463
+2,2022-01-14,ver_orf,0 = Ueberhaupt kein Vertrauen,0.257,0.259,0.255,none,1466
+2,2022-01-14,ver_orf,1,0.052,0.057,0.046,none,1466
+2,2022-01-14,ver_orf,2,0.062,0.067,0.057,none,1466
+2,2022-01-14,ver_orf,3,0.058,0.063,0.053,none,1466
+2,2022-01-14,ver_orf,4,0.059,0.064,0.054,none,1466
+2,2022-01-14,ver_orf,5,0.116,0.119,0.112,none,1466
+2,2022-01-14,ver_orf,6,0.093,0.097,0.089,none,1466
+2,2022-01-14,ver_orf,7,0.117,0.121,0.114,none,1466
+2,2022-01-14,ver_orf,8,0.088,0.092,0.083,none,1466
+2,2022-01-14,ver_orf,9,0.056,0.061,0.051,none,1466
+2,2022-01-14,ver_orf,10 = Sehr viel Vertrauen,0.043,0.05,0.037,none,1466
+2,2022-02-18,ver_gov,0 = Ueberhaupt kein Vertrauen,0.301,0.303,0.299,none,1465
+2,2022-02-18,ver_gov,1,0.067,0.072,0.062,none,1465
+2,2022-02-18,ver_gov,2,0.069,0.073,0.064,none,1465
+2,2022-02-18,ver_gov,3,0.082,0.086,0.078,none,1465
+2,2022-02-18,ver_gov,4,0.082,0.086,0.077,none,1465
+2,2022-02-18,ver_gov,5,0.129,0.133,0.126,none,1465
+2,2022-02-18,ver_gov,6,0.084,0.088,0.079,none,1465
+2,2022-02-18,ver_gov,7,0.084,0.088,0.08,none,1465
+2,2022-02-18,ver_gov,8,0.062,0.067,0.057,none,1465
+2,2022-02-18,ver_gov,9,0.025,0.033,0.016,none,1465
+2,2022-02-18,ver_gov,10 = Sehr viel Vertrauen,0.016,0.026,0.005,none,1465
+2,2022-02-18,ver_ges,0 = Ueberhaupt kein Vertrauen,0.07,0.075,0.066,none,1473
+2,2022-02-18,ver_ges,1,0.02,0.029,0.011,none,1473
+2,2022-02-18,ver_ges,2,0.049,0.055,0.043,none,1473
+2,2022-02-18,ver_ges,3,0.047,0.052,0.041,none,1473
+2,2022-02-18,ver_ges,4,0.065,0.07,0.06,none,1473
+2,2022-02-18,ver_ges,5,0.108,0.112,0.105,none,1473
+2,2022-02-18,ver_ges,6,0.091,0.095,0.087,none,1473
+2,2022-02-18,ver_ges,7,0.152,0.155,0.149,none,1473
+2,2022-02-18,ver_ges,8,0.175,0.178,0.172,none,1473
+2,2022-02-18,ver_ges,9,0.116,0.119,0.112,none,1473
+2,2022-02-18,ver_ges,10 = Sehr viel Vertrauen,0.107,0.111,0.103,none,1473
+2,2022-02-18,ver_par,0 = Ueberhaupt kein Vertrauen,0.228,0.23,0.226,none,1460
+2,2022-02-18,ver_par,1,0.077,0.081,0.072,none,1460
+2,2022-02-18,ver_par,2,0.073,0.078,0.069,none,1460
+2,2022-02-18,ver_par,3,0.077,0.082,0.073,none,1460
+2,2022-02-18,ver_par,4,0.089,0.093,0.085,none,1460
+2,2022-02-18,ver_par,5,0.161,0.164,0.159,none,1460
+2,2022-02-18,ver_par,6,0.097,0.101,0.093,none,1460
+2,2022-02-18,ver_par,7,0.085,0.089,0.08,none,1460
+2,2022-02-18,ver_par,8,0.078,0.082,0.073,none,1460
+2,2022-02-18,ver_par,9,0.022,0.031,0.013,none,1460
+2,2022-02-18,ver_par,10 = Sehr viel Vertrauen,0.013,0.025,0.001,none,1460
+2,2022-02-18,ver_pol,0 = Ueberhaupt kein Vertrauen,0.066,0.071,0.061,none,1467
+2,2022-02-18,ver_pol,1,0.032,0.04,0.025,none,1467
+2,2022-02-18,ver_pol,2,0.038,0.045,0.031,none,1467
+2,2022-02-18,ver_pol,3,0.059,0.065,0.054,none,1467
+2,2022-02-18,ver_pol,4,0.066,0.071,0.061,none,1467
+2,2022-02-18,ver_pol,5,0.138,0.141,0.135,none,1467
+2,2022-02-18,ver_pol,6,0.097,0.101,0.093,none,1467
+2,2022-02-18,ver_pol,7,0.148,0.151,0.145,none,1467
+2,2022-02-18,ver_pol,8,0.154,0.157,0.151,none,1467
+2,2022-02-18,ver_pol,9,0.102,0.105,0.098,none,1467
+2,2022-02-18,ver_pol,10 = Sehr viel Vertrauen,0.1,0.104,0.097,none,1467
+2,2022-02-18,ver_orf,0 = Ueberhaupt kein Vertrauen,0.221,0.223,0.219,none,1465
+2,2022-02-18,ver_orf,1,0.055,0.061,0.05,none,1465
+2,2022-02-18,ver_orf,2,0.052,0.058,0.047,none,1465
+2,2022-02-18,ver_orf,3,0.063,0.068,0.058,none,1465
+2,2022-02-18,ver_orf,4,0.077,0.082,0.073,none,1465
+2,2022-02-18,ver_orf,5,0.131,0.134,0.128,none,1465
+2,2022-02-18,ver_orf,6,0.108,0.112,0.104,none,1465
+2,2022-02-18,ver_orf,7,0.107,0.111,0.104,none,1465
+2,2022-02-18,ver_orf,8,0.104,0.107,0.1,none,1465
+2,2022-02-18,ver_orf,9,0.051,0.057,0.046,none,1465
+2,2022-02-18,ver_orf,10 = Sehr viel Vertrauen,0.031,0.038,0.023,none,1465
+2,2022-03-18,ver_gov,0 = Ueberhaupt kein Vertrauen,0.283,0.285,0.281,none,1454
+2,2022-03-18,ver_gov,1,0.078,0.082,0.073,none,1454
+2,2022-03-18,ver_gov,2,0.091,0.095,0.087,none,1454
+2,2022-03-18,ver_gov,3,0.075,0.079,0.07,none,1454
+2,2022-03-18,ver_gov,4,0.083,0.087,0.078,none,1454
+2,2022-03-18,ver_gov,5,0.129,0.132,0.126,none,1454
+2,2022-03-18,ver_gov,6,0.102,0.106,0.098,none,1454
+2,2022-03-18,ver_gov,7,0.074,0.078,0.069,none,1454
+2,2022-03-18,ver_gov,8,0.056,0.061,0.05,none,1454
+2,2022-03-18,ver_gov,9,0.02,0.029,0.011,none,1454
+2,2022-03-18,ver_gov,10 = Sehr viel Vertrauen,0.01,0.023,-0.003,none,1454
+2,2022-03-18,ver_ges,0 = Ueberhaupt kein Vertrauen,0.07,0.075,0.065,none,1463
+2,2022-03-18,ver_ges,1,0.031,0.039,0.024,none,1463
+2,2022-03-18,ver_ges,2,0.038,0.044,0.031,none,1463
+2,2022-03-18,ver_ges,3,0.078,0.082,0.074,none,1463
+2,2022-03-18,ver_ges,4,0.058,0.063,0.052,none,1463
+2,2022-03-18,ver_ges,5,0.13,0.133,0.127,none,1463
+2,2022-03-18,ver_ges,6,0.083,0.087,0.079,none,1463
+2,2022-03-18,ver_ges,7,0.127,0.13,0.124,none,1463
+2,2022-03-18,ver_ges,8,0.171,0.173,0.168,none,1463
+2,2022-03-18,ver_ges,9,0.116,0.119,0.112,none,1463
+2,2022-03-18,ver_ges,10 = Sehr viel Vertrauen,0.1,0.104,0.096,none,1463
+2,2022-03-18,ver_par,0 = Ueberhaupt kein Vertrauen,0.212,0.214,0.209,none,1445
+2,2022-03-18,ver_par,1,0.072,0.077,0.068,none,1445
+2,2022-03-18,ver_par,2,0.09,0.094,0.085,none,1445
+2,2022-03-18,ver_par,3,0.095,0.099,0.091,none,1445
+2,2022-03-18,ver_par,4,0.086,0.09,0.082,none,1445
+2,2022-03-18,ver_par,5,0.157,0.16,0.154,none,1445
+2,2022-03-18,ver_par,6,0.103,0.107,0.1,none,1445
+2,2022-03-18,ver_par,7,0.084,0.088,0.08,none,1445
+2,2022-03-18,ver_par,8,0.068,0.073,0.063,none,1445
+2,2022-03-18,ver_par,9,0.021,0.03,0.012,none,1445
+2,2022-03-18,ver_par,10 = Sehr viel Vertrauen,0.012,0.024,0,none,1445
+2,2022-03-18,ver_pol,0 = Ueberhaupt kein Vertrauen,0.066,0.071,0.061,none,1448
+2,2022-03-18,ver_pol,1,0.03,0.038,0.023,none,1448
+2,2022-03-18,ver_pol,2,0.046,0.052,0.04,none,1448
+2,2022-03-18,ver_pol,3,0.058,0.063,0.053,none,1448
+2,2022-03-18,ver_pol,4,0.078,0.083,0.074,none,1448
+2,2022-03-18,ver_pol,5,0.122,0.125,0.118,none,1448
+2,2022-03-18,ver_pol,6,0.097,0.101,0.093,none,1448
+2,2022-03-18,ver_pol,7,0.149,0.152,0.146,none,1448
+2,2022-03-18,ver_pol,8,0.149,0.152,0.146,none,1448
+2,2022-03-18,ver_pol,9,0.114,0.117,0.11,none,1448
+2,2022-03-18,ver_pol,10 = Sehr viel Vertrauen,0.092,0.097,0.088,none,1448
+2,2022-03-18,ver_orf,0 = Ueberhaupt kein Vertrauen,0.232,0.234,0.229,none,1453
+2,2022-03-18,ver_orf,1,0.046,0.052,0.04,none,1453
+2,2022-03-18,ver_orf,2,0.066,0.071,0.061,none,1453
+2,2022-03-18,ver_orf,3,0.062,0.067,0.057,none,1453
+2,2022-03-18,ver_orf,4,0.069,0.074,0.065,none,1453
+2,2022-03-18,ver_orf,5,0.126,0.129,0.123,none,1453
+2,2022-03-18,ver_orf,6,0.09,0.095,0.086,none,1453
+2,2022-03-18,ver_orf,7,0.108,0.112,0.105,none,1453
+2,2022-03-18,ver_orf,8,0.099,0.103,0.095,none,1453
+2,2022-03-18,ver_orf,9,0.057,0.062,0.051,none,1453
+2,2022-03-18,ver_orf,10 = Sehr viel Vertrauen,0.046,0.052,0.039,none,1453
+2,2022-04-22,ver_gov,0 = Ueberhaupt kein Vertrauen,0.277,0.279,0.276,none,1466
+2,2022-04-22,ver_gov,1,0.066,0.07,0.061,none,1466
+2,2022-04-22,ver_gov,2,0.081,0.085,0.077,none,1466
+2,2022-04-22,ver_gov,3,0.098,0.102,0.095,none,1466
+2,2022-04-22,ver_gov,4,0.079,0.084,0.075,none,1466
+2,2022-04-22,ver_gov,5,0.126,0.129,0.122,none,1466
+2,2022-04-22,ver_gov,6,0.086,0.09,0.082,none,1466
+2,2022-04-22,ver_gov,7,0.09,0.094,0.085,none,1466
+2,2022-04-22,ver_gov,8,0.058,0.064,0.053,none,1466
+2,2022-04-22,ver_gov,9,0.021,0.03,0.012,none,1466
+2,2022-04-22,ver_gov,10 = Sehr viel Vertrauen,0.018,0.027,0.008,none,1466
+2,2022-04-22,ver_ges,0 = Ueberhaupt kein Vertrauen,0.07,0.075,0.065,none,1467
+2,2022-04-22,ver_ges,1,0.031,0.039,0.024,none,1467
+2,2022-04-22,ver_ges,2,0.044,0.05,0.038,none,1467
+2,2022-04-22,ver_ges,3,0.062,0.067,0.057,none,1467
+2,2022-04-22,ver_ges,4,0.081,0.085,0.076,none,1467
+2,2022-04-22,ver_ges,5,0.133,0.136,0.13,none,1467
+2,2022-04-22,ver_ges,6,0.09,0.094,0.086,none,1467
+2,2022-04-22,ver_ges,7,0.125,0.129,0.122,none,1467
+2,2022-04-22,ver_ges,8,0.156,0.159,0.153,none,1467
+2,2022-04-22,ver_ges,9,0.105,0.109,0.101,none,1467
+2,2022-04-22,ver_ges,10 = Sehr viel Vertrauen,0.104,0.107,0.1,none,1467
+2,2022-04-22,ver_par,0 = Ueberhaupt kein Vertrauen,0.214,0.216,0.211,none,1461
+2,2022-04-22,ver_par,1,0.075,0.08,0.071,none,1461
+2,2022-04-22,ver_par,2,0.083,0.087,0.079,none,1461
+2,2022-04-22,ver_par,3,0.111,0.114,0.107,none,1461
+2,2022-04-22,ver_par,4,0.094,0.098,0.09,none,1461
+2,2022-04-22,ver_par,5,0.155,0.158,0.152,none,1461
+2,2022-04-22,ver_par,6,0.089,0.094,0.085,none,1461
+2,2022-04-22,ver_par,7,0.082,0.086,0.078,none,1461
+2,2022-04-22,ver_par,8,0.059,0.064,0.054,none,1461
+2,2022-04-22,ver_par,9,0.022,0.031,0.014,none,1461
+2,2022-04-22,ver_par,10 = Sehr viel Vertrauen,0.015,0.026,0.004,none,1461
+2,2022-04-22,ver_pol,0 = Ueberhaupt kein Vertrauen,0.077,0.081,0.072,none,1461
+2,2022-04-22,ver_pol,1,0.038,0.045,0.032,none,1461
+2,2022-04-22,ver_pol,2,0.055,0.06,0.049,none,1461
+2,2022-04-22,ver_pol,3,0.066,0.071,0.061,none,1461
+2,2022-04-22,ver_pol,4,0.074,0.079,0.07,none,1461
+2,2022-04-22,ver_pol,5,0.122,0.126,0.119,none,1461
+2,2022-04-22,ver_pol,6,0.089,0.093,0.085,none,1461
+2,2022-04-22,ver_pol,7,0.146,0.149,0.143,none,1461
+2,2022-04-22,ver_pol,8,0.154,0.157,0.152,none,1461
+2,2022-04-22,ver_pol,9,0.088,0.092,0.084,none,1461
+2,2022-04-22,ver_pol,10 = Sehr viel Vertrauen,0.09,0.095,0.086,none,1461
+2,2022-04-22,ver_orf,0 = Ueberhaupt kein Vertrauen,0.207,0.209,0.204,none,1463
+2,2022-04-22,ver_orf,1,0.06,0.065,0.055,none,1463
+2,2022-04-22,ver_orf,2,0.082,0.086,0.077,none,1463
+2,2022-04-22,ver_orf,3,0.066,0.071,0.061,none,1463
+2,2022-04-22,ver_orf,4,0.078,0.082,0.074,none,1463
+2,2022-04-22,ver_orf,5,0.132,0.135,0.128,none,1463
+2,2022-04-22,ver_orf,6,0.096,0.1,0.092,none,1463
+2,2022-04-22,ver_orf,7,0.103,0.107,0.1,none,1463
+2,2022-04-22,ver_orf,8,0.091,0.095,0.087,none,1463
+2,2022-04-22,ver_orf,9,0.048,0.054,0.042,none,1463
+2,2022-04-22,ver_orf,10 = Sehr viel Vertrauen,0.038,0.044,0.031,none,1463
+2,2022-05-21,ver_gov,0 = Ueberhaupt kein Vertrauen,0.281,0.283,0.279,none,1499
+2,2022-05-21,ver_gov,1,0.06,0.065,0.055,none,1499
+2,2022-05-21,ver_gov,2,0.075,0.08,0.071,none,1499
+2,2022-05-21,ver_gov,3,0.072,0.077,0.067,none,1499
+2,2022-05-21,ver_gov,4,0.084,0.088,0.079,none,1499
+2,2022-05-21,ver_gov,5,0.137,0.14,0.134,none,1499
+2,2022-05-21,ver_gov,6,0.09,0.094,0.086,none,1499
+2,2022-05-21,ver_gov,7,0.094,0.097,0.09,none,1499
+2,2022-05-21,ver_gov,8,0.064,0.069,0.06,none,1499
+2,2022-05-21,ver_gov,9,0.028,0.036,0.021,none,1499
+2,2022-05-21,ver_gov,10 = Sehr viel Vertrauen,0.015,0.026,0.005,none,1499
+2,2022-05-21,ver_ges,0 = Ueberhaupt kein Vertrauen,0.065,0.07,0.06,none,1503
+2,2022-05-21,ver_ges,1,0.029,0.037,0.022,none,1503
+2,2022-05-21,ver_ges,2,0.047,0.053,0.041,none,1503
+2,2022-05-21,ver_ges,3,0.054,0.059,0.048,none,1503
+2,2022-05-21,ver_ges,4,0.057,0.062,0.051,none,1503
+2,2022-05-21,ver_ges,5,0.122,0.125,0.118,none,1503
+2,2022-05-21,ver_ges,6,0.092,0.096,0.088,none,1503
+2,2022-05-21,ver_ges,7,0.163,0.166,0.16,none,1503
+2,2022-05-21,ver_ges,8,0.15,0.152,0.147,none,1503
+2,2022-05-21,ver_ges,9,0.115,0.118,0.111,none,1503
+2,2022-05-21,ver_ges,10 = Sehr viel Vertrauen,0.108,0.111,0.104,none,1503
+2,2022-05-21,ver_par,0 = Ueberhaupt kein Vertrauen,0.223,0.225,0.221,none,1484
+2,2022-05-21,ver_par,1,0.06,0.065,0.055,none,1484
+2,2022-05-21,ver_par,2,0.076,0.08,0.072,none,1484
+2,2022-05-21,ver_par,3,0.093,0.097,0.089,none,1484
+2,2022-05-21,ver_par,4,0.091,0.095,0.087,none,1484
+2,2022-05-21,ver_par,5,0.162,0.165,0.16,none,1484
+2,2022-05-21,ver_par,6,0.096,0.099,0.092,none,1484
+2,2022-05-21,ver_par,7,0.101,0.105,0.097,none,1484
+2,2022-05-21,ver_par,8,0.051,0.057,0.046,none,1484
+2,2022-05-21,ver_par,9,0.034,0.04,0.027,none,1484
+2,2022-05-21,ver_par,10 = Sehr viel Vertrauen,0.013,0.024,0.001,none,1484
+2,2022-05-21,ver_pol,0 = Ueberhaupt kein Vertrauen,0.073,0.077,0.068,none,1499
+2,2022-05-21,ver_pol,1,0.033,0.04,0.026,none,1499
+2,2022-05-21,ver_pol,2,0.044,0.05,0.038,none,1499
+2,2022-05-21,ver_pol,3,0.05,0.055,0.044,none,1499
+2,2022-05-21,ver_pol,4,0.071,0.075,0.066,none,1499
+2,2022-05-21,ver_pol,5,0.137,0.14,0.133,none,1499
+2,2022-05-21,ver_pol,6,0.111,0.115,0.108,none,1499
+2,2022-05-21,ver_pol,7,0.135,0.139,0.132,none,1499
+2,2022-05-21,ver_pol,8,0.136,0.139,0.133,none,1499
+2,2022-05-21,ver_pol,9,0.123,0.127,0.12,none,1499
+2,2022-05-21,ver_pol,10 = Sehr viel Vertrauen,0.087,0.091,0.083,none,1499
+2,2022-05-21,ver_orf,0 = Ueberhaupt kein Vertrauen,0.213,0.215,0.211,none,1496
+2,2022-05-21,ver_orf,1,0.055,0.06,0.05,none,1496
+2,2022-05-21,ver_orf,2,0.064,0.069,0.059,none,1496
+2,2022-05-21,ver_orf,3,0.059,0.064,0.054,none,1496
+2,2022-05-21,ver_orf,4,0.084,0.088,0.08,none,1496
+2,2022-05-21,ver_orf,5,0.128,0.131,0.125,none,1496
+2,2022-05-21,ver_orf,6,0.086,0.09,0.082,none,1496
+2,2022-05-21,ver_orf,7,0.116,0.119,0.112,none,1496
+2,2022-05-21,ver_orf,8,0.107,0.111,0.103,none,1496
+2,2022-05-21,ver_orf,9,0.053,0.059,0.048,none,1496
+2,2022-05-21,ver_orf,10 = Sehr viel Vertrauen,0.035,0.042,0.028,none,1496
 3,2020-04-04,sozkont,1 = Mehrmals taeglich,0.257,0.258,0.255,none,1511
 3,2020-04-04,sozkont,2 = Einmal taeglich,0.148,0.15,0.145,none,1511
 3,2020-04-04,sozkont,3 = Mehrmals in der Woche,0.387,0.389,0.386,none,1511
@@ -1830,6 +2160,31 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 3,2021-11-26,sozkont,3 = Mehrmals in der Woche,0.371,0.372,0.369,none,1481
 3,2021-11-26,sozkont,4 = Einmal in der Woche,0.118,0.121,0.114,none,1481
 3,2021-11-26,sozkont,5 = Gar nicht/ nie,0.036,0.043,0.029,none,1481
+3,2022-01-14,sozkont,1 = Mehrmals taeglich,0.333,0.334,0.331,none,1471
+3,2022-01-14,sozkont,2 = Einmal taeglich,0.15,0.153,0.148,none,1471
+3,2022-01-14,sozkont,3 = Mehrmals in der Woche,0.388,0.39,0.387,none,1471
+3,2022-01-14,sozkont,4 = Einmal in der Woche,0.101,0.105,0.097,none,1471
+3,2022-01-14,sozkont,5 = Gar nicht/ nie,0.027,0.035,0.02,none,1471
+3,2022-02-18,sozkont,1 = Mehrmals taeglich,0.314,0.316,0.312,none,1452
+3,2022-02-18,sozkont,2 = Einmal taeglich,0.153,0.156,0.15,none,1452
+3,2022-02-18,sozkont,3 = Mehrmals in der Woche,0.386,0.388,0.385,none,1452
+3,2022-02-18,sozkont,4 = Einmal in der Woche,0.114,0.117,0.11,none,1452
+3,2022-02-18,sozkont,5 = Gar nicht/ nie,0.033,0.041,0.026,none,1452
+3,2022-03-18,sozkont,1 = Mehrmals taeglich,0.307,0.308,0.305,none,1439
+3,2022-03-18,sozkont,2 = Einmal taeglich,0.152,0.155,0.149,none,1439
+3,2022-03-18,sozkont,3 = Mehrmals in der Woche,0.404,0.405,0.402,none,1439
+3,2022-03-18,sozkont,4 = Einmal in der Woche,0.106,0.109,0.102,none,1439
+3,2022-03-18,sozkont,5 = Gar nicht/ nie,0.033,0.04,0.025,none,1439
+3,2022-04-22,sozkont,1 = Mehrmals taeglich,0.349,0.35,0.347,none,1467
+3,2022-04-22,sozkont,2 = Einmal taeglich,0.17,0.172,0.167,none,1467
+3,2022-04-22,sozkont,3 = Mehrmals in der Woche,0.369,0.37,0.368,none,1467
+3,2022-04-22,sozkont,4 = Einmal in der Woche,0.081,0.085,0.076,none,1467
+3,2022-04-22,sozkont,5 = Gar nicht/ nie,0.032,0.039,0.024,none,1467
+3,2022-05-21,sozkont,1 = Mehrmals taeglich,0.314,0.316,0.312,none,1483
+3,2022-05-21,sozkont,2 = Einmal taeglich,0.151,0.154,0.148,none,1483
+3,2022-05-21,sozkont,3 = Mehrmals in der Woche,0.403,0.405,0.402,none,1483
+3,2022-05-21,sozkont,4 = Einmal in der Woche,0.098,0.102,0.094,none,1483
+3,2022-05-21,sozkont,5 = Gar nicht/ nie,0.034,0.041,0.027,none,1483
 4,2020-04-11,sozialn_verh_eig_abs,1 = Nahezu immer,0.785,0.785,0.784,none,1467
 4,2020-04-11,sozialn_verh_eig_abs,2 = Meistens,0.143,0.146,0.139,none,1467
 4,2020-04-11,sozialn_verh_eig_abs,3 = Manchmal,0.04,0.047,0.034,none,1467
@@ -2050,6 +2405,46 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 4,2021-11-26,sozialn_verh_eig_ver,3 = Manchmal,0.197,0.199,0.194,none,1485
 4,2021-11-26,sozialn_verh_eig_ver,4 = Selten,0.1,0.104,0.097,none,1485
 4,2021-11-26,sozialn_verh_eig_ver,5 = Nahezu nie,0.16,0.163,0.157,none,1485
+4,2022-02-18,sozialn_verh_eig_abs,1 = Nahezu immer,0.336,0.337,0.334,none,1461
+4,2022-02-18,sozialn_verh_eig_abs,2 = Meistens,0.327,0.328,0.325,none,1461
+4,2022-02-18,sozialn_verh_eig_abs,3 = Manchmal,0.163,0.165,0.16,none,1461
+4,2022-02-18,sozialn_verh_eig_abs,4 = Selten,0.086,0.091,0.082,none,1461
+4,2022-02-18,sozialn_verh_eig_abs,5 = Nahezu nie,0.089,0.093,0.085,none,1461
+4,2022-02-18,sozialn_verh_eig_hau,1 = Nahezu immer,0.116,0.119,0.112,none,1463
+4,2022-02-18,sozialn_verh_eig_hau,2 = Meistens,0.216,0.218,0.214,none,1463
+4,2022-02-18,sozialn_verh_eig_hau,3 = Manchmal,0.204,0.206,0.202,none,1463
+4,2022-02-18,sozialn_verh_eig_hau,4 = Selten,0.186,0.188,0.183,none,1463
+4,2022-02-18,sozialn_verh_eig_hau,5 = Nahezu nie,0.278,0.28,0.277,none,1463
+4,2022-02-18,sozialn_verh_eig_sch,1 = Nahezu immer,0.354,0.356,0.353,none,1455
+4,2022-02-18,sozialn_verh_eig_sch,2 = Meistens,0.251,0.253,0.249,none,1455
+4,2022-02-18,sozialn_verh_eig_sch,3 = Manchmal,0.177,0.18,0.175,none,1455
+4,2022-02-18,sozialn_verh_eig_sch,4 = Selten,0.092,0.096,0.088,none,1455
+4,2022-02-18,sozialn_verh_eig_sch,5 = Nahezu nie,0.125,0.129,0.122,none,1455
+4,2022-02-18,sozialn_verh_eig_ver,1 = Nahezu immer,0.133,0.136,0.13,none,1444
+4,2022-02-18,sozialn_verh_eig_ver,2 = Meistens,0.229,0.231,0.227,none,1444
+4,2022-02-18,sozialn_verh_eig_ver,3 = Manchmal,0.207,0.209,0.204,none,1444
+4,2022-02-18,sozialn_verh_eig_ver,4 = Selten,0.163,0.166,0.16,none,1444
+4,2022-02-18,sozialn_verh_eig_ver,5 = Nahezu nie,0.268,0.27,0.266,none,1444
+4,2022-04-22,sozialn_verh_eig_abs,1 = Nahezu immer,0.214,0.217,0.212,none,1466
+4,2022-04-22,sozialn_verh_eig_abs,2 = Meistens,0.319,0.321,0.318,none,1466
+4,2022-04-22,sozialn_verh_eig_abs,3 = Manchmal,0.21,0.212,0.208,none,1466
+4,2022-04-22,sozialn_verh_eig_abs,4 = Selten,0.115,0.119,0.112,none,1466
+4,2022-04-22,sozialn_verh_eig_abs,5 = Nahezu nie,0.141,0.144,0.138,none,1466
+4,2022-04-22,sozialn_verh_eig_hau,1 = Nahezu immer,0.074,0.078,0.069,none,1456
+4,2022-04-22,sozialn_verh_eig_hau,2 = Meistens,0.164,0.167,0.162,none,1456
+4,2022-04-22,sozialn_verh_eig_hau,3 = Manchmal,0.219,0.221,0.217,none,1456
+4,2022-04-22,sozialn_verh_eig_hau,4 = Selten,0.174,0.176,0.171,none,1456
+4,2022-04-22,sozialn_verh_eig_hau,5 = Nahezu nie,0.37,0.371,0.368,none,1456
+4,2022-04-22,sozialn_verh_eig_sch,1 = Nahezu immer,0.215,0.217,0.212,none,1459
+4,2022-04-22,sozialn_verh_eig_sch,2 = Meistens,0.22,0.222,0.218,none,1459
+4,2022-04-22,sozialn_verh_eig_sch,3 = Manchmal,0.208,0.21,0.206,none,1459
+4,2022-04-22,sozialn_verh_eig_sch,4 = Selten,0.135,0.138,0.132,none,1459
+4,2022-04-22,sozialn_verh_eig_sch,5 = Nahezu nie,0.222,0.224,0.22,none,1459
+4,2022-04-22,sozialn_verh_eig_ver,1 = Nahezu immer,0.113,0.116,0.109,none,1433
+4,2022-04-22,sozialn_verh_eig_ver,2 = Meistens,0.199,0.201,0.196,none,1433
+4,2022-04-22,sozialn_verh_eig_ver,3 = Manchmal,0.19,0.193,0.187,none,1433
+4,2022-04-22,sozialn_verh_eig_ver,4 = Selten,0.168,0.171,0.165,none,1433
+4,2022-04-22,sozialn_verh_eig_ver,5 = Nahezu nie,0.33,0.332,0.329,none,1433
 5,2020-03-28,ges_per_gefahr,1 = sehr gross,0.102,0.105,0.098,none,1534
 5,2020-03-28,ges_per_gefahr,2 = gross,0.164,0.166,0.161,none,1534
 5,2020-03-28,ges_per_gefahr,3 = mittelmaessig,0.38,0.382,0.379,none,1534
@@ -3155,6 +3550,306 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 5,2021-11-26,anst_freu,3 = mittelmaessig,0.313,0.314,0.311,none,1521
 5,2021-11-26,anst_freu,4 = klein,0.144,0.146,0.141,none,1521
 5,2021-11-26,anst_freu,5 = sehr klein,0.098,0.102,0.095,none,1521
+5,2022-01-14,ges_per_gefahr,1 = sehr gross,0.049,0.054,0.043,none,1510
+5,2022-01-14,ges_per_gefahr,2 = gross,0.103,0.107,0.099,none,1510
+5,2022-01-14,ges_per_gefahr,3 = mittelmaessig,0.331,0.332,0.329,none,1510
+5,2022-01-14,ges_per_gefahr,4 = klein,0.294,0.296,0.292,none,1510
+5,2022-01-14,ges_per_gefahr,5 = sehr klein,0.224,0.226,0.221,none,1510
+5,2022-01-14,ges_pub_gefahr,1 = sehr gross,0.106,0.109,0.102,none,1510
+5,2022-01-14,ges_pub_gefahr,2 = gross,0.287,0.289,0.285,none,1510
+5,2022-01-14,ges_pub_gefahr,3 = mittelmaessig,0.399,0.4,0.398,none,1510
+5,2022-01-14,ges_pub_gefahr,4 = klein,0.136,0.139,0.133,none,1510
+5,2022-01-14,ges_pub_gefahr,5 = sehr klein,0.072,0.077,0.068,none,1510
+5,2022-01-14,wir_per_gefahr,1 = sehr gross,0.085,0.089,0.081,none,1505
+5,2022-01-14,wir_per_gefahr,2 = gross,0.17,0.172,0.167,none,1505
+5,2022-01-14,wir_per_gefahr,3 = mittelmaessig,0.343,0.345,0.342,none,1505
+5,2022-01-14,wir_per_gefahr,4 = klein,0.243,0.245,0.241,none,1505
+5,2022-01-14,wir_per_gefahr,5 = sehr klein,0.159,0.162,0.157,none,1505
+5,2022-01-14,wir_pub_gefahr,1 = sehr gross,0.207,0.209,0.205,none,1503
+5,2022-01-14,wir_pub_gefahr,2 = gross,0.411,0.412,0.41,none,1503
+5,2022-01-14,wir_pub_gefahr,3 = mittelmaessig,0.307,0.309,0.305,none,1503
+5,2022-01-14,wir_pub_gefahr,4 = klein,0.056,0.061,0.051,none,1503
+5,2022-01-14,wir_pub_gefahr,5 = sehr klein,0.018,0.028,0.009,none,1503
+5,2022-01-14,anst_rest,1 = sehr gross,0.077,0.081,0.072,none,1493
+5,2022-01-14,anst_rest,2 = gross,0.176,0.178,0.173,none,1493
+5,2022-01-14,anst_rest,3 = mittelmaessig,0.365,0.366,0.363,none,1493
+5,2022-01-14,anst_rest,4 = klein,0.236,0.238,0.234,none,1493
+5,2022-01-14,anst_rest,5 = sehr klein,0.147,0.15,0.144,none,1493
+5,2022-01-14,anst_oeff,1 = sehr gross,0.221,0.224,0.219,none,1492
+5,2022-01-14,anst_oeff,2 = gross,0.259,0.261,0.257,none,1492
+5,2022-01-14,anst_oeff,3 = mittelmaessig,0.302,0.304,0.301,none,1492
+5,2022-01-14,anst_oeff,4 = klein,0.137,0.14,0.134,none,1492
+5,2022-01-14,anst_oeff,5 = sehr klein,0.08,0.084,0.075,none,1492
+5,2022-01-14,anst_arbe,1 = sehr gross,0.073,0.081,0.064,none,847
+5,2022-01-14,anst_arbe,2 = gross,0.149,0.154,0.143,none,847
+5,2022-01-14,anst_arbe,3 = mittelmaessig,0.308,0.311,0.305,none,847
+5,2022-01-14,anst_arbe,4 = klein,0.248,0.252,0.245,none,847
+5,2022-01-14,anst_arbe,5 = sehr klein,0.223,0.227,0.219,none,847
+5,2022-01-14,anst_schu,1 = sehr gross,0.151,0.154,0.148,none,1486
+5,2022-01-14,anst_schu,2 = gross,0.275,0.277,0.274,none,1486
+5,2022-01-14,anst_schu,3 = mittelmaessig,0.368,0.369,0.366,none,1486
+5,2022-01-14,anst_schu,4 = klein,0.123,0.127,0.12,none,1486
+5,2022-01-14,anst_schu,5 = sehr klein,0.083,0.087,0.078,none,1486
+5,2022-01-14,anst_park,1 = sehr gross,0.031,0.038,0.024,none,1493
+5,2022-01-14,anst_park,2 = gross,0.083,0.087,0.079,none,1493
+5,2022-01-14,anst_park,3 = mittelmaessig,0.265,0.266,0.263,none,1493
+5,2022-01-14,anst_park,4 = klein,0.322,0.324,0.32,none,1493
+5,2022-01-14,anst_park,5 = sehr klein,0.3,0.301,0.298,none,1493
+5,2022-01-14,anst_arzt,1 = sehr gross,0.077,0.081,0.073,none,1489
+5,2022-01-14,anst_arzt,2 = gross,0.195,0.197,0.193,none,1489
+5,2022-01-14,anst_arzt,3 = mittelmaessig,0.354,0.356,0.353,none,1489
+5,2022-01-14,anst_arzt,4 = klein,0.227,0.229,0.225,none,1489
+5,2022-01-14,anst_arzt,5 = sehr klein,0.147,0.15,0.144,none,1489
+5,2022-01-14,anst_fami,1 = sehr gross,0.226,0.228,0.224,none,1492
+5,2022-01-14,anst_fami,2 = gross,0.265,0.267,0.263,none,1492
+5,2022-01-14,anst_fami,3 = mittelmaessig,0.279,0.28,0.277,none,1492
+5,2022-01-14,anst_fami,4 = klein,0.129,0.132,0.126,none,1492
+5,2022-01-14,anst_fami,5 = sehr klein,0.102,0.106,0.098,none,1492
+5,2022-01-14,anst_freu,1 = sehr gross,0.173,0.176,0.171,none,1490
+5,2022-01-14,anst_freu,2 = gross,0.225,0.227,0.222,none,1490
+5,2022-01-14,anst_freu,3 = mittelmaessig,0.34,0.342,0.339,none,1490
+5,2022-01-14,anst_freu,4 = klein,0.162,0.165,0.159,none,1490
+5,2022-01-14,anst_freu,5 = sehr klein,0.1,0.104,0.096,none,1490
+5,2022-02-18,ges_per_gefahr,1 = sehr gross,0.041,0.047,0.035,none,1511
+5,2022-02-18,ges_per_gefahr,2 = gross,0.101,0.105,0.097,none,1511
+5,2022-02-18,ges_per_gefahr,3 = mittelmaessig,0.329,0.331,0.328,none,1511
+5,2022-02-18,ges_per_gefahr,4 = klein,0.281,0.282,0.279,none,1511
+5,2022-02-18,ges_per_gefahr,5 = sehr klein,0.248,0.25,0.246,none,1511
+5,2022-02-18,ges_pub_gefahr,1 = sehr gross,0.059,0.064,0.054,none,1509
+5,2022-02-18,ges_pub_gefahr,2 = gross,0.228,0.23,0.226,none,1509
+5,2022-02-18,ges_pub_gefahr,3 = mittelmaessig,0.43,0.432,0.429,none,1509
+5,2022-02-18,ges_pub_gefahr,4 = klein,0.187,0.19,0.185,none,1509
+5,2022-02-18,ges_pub_gefahr,5 = sehr klein,0.096,0.1,0.092,none,1509
+5,2022-02-18,wir_per_gefahr,1 = sehr gross,0.085,0.089,0.081,none,1506
+5,2022-02-18,wir_per_gefahr,2 = gross,0.163,0.165,0.16,none,1506
+5,2022-02-18,wir_per_gefahr,3 = mittelmaessig,0.336,0.338,0.335,none,1506
+5,2022-02-18,wir_per_gefahr,4 = klein,0.244,0.246,0.242,none,1506
+5,2022-02-18,wir_per_gefahr,5 = sehr klein,0.172,0.175,0.169,none,1506
+5,2022-02-18,wir_pub_gefahr,1 = sehr gross,0.166,0.169,0.164,none,1507
+5,2022-02-18,wir_pub_gefahr,2 = gross,0.363,0.364,0.362,none,1507
+5,2022-02-18,wir_pub_gefahr,3 = mittelmaessig,0.369,0.37,0.368,none,1507
+5,2022-02-18,wir_pub_gefahr,4 = klein,0.081,0.085,0.077,none,1507
+5,2022-02-18,wir_pub_gefahr,5 = sehr klein,0.02,0.029,0.011,none,1507
+5,2022-02-18,anst_rest,1 = sehr gross,0.054,0.06,0.049,none,1495
+5,2022-02-18,anst_rest,2 = gross,0.172,0.174,0.169,none,1495
+5,2022-02-18,anst_rest,3 = mittelmaessig,0.394,0.395,0.393,none,1495
+5,2022-02-18,anst_rest,4 = klein,0.222,0.224,0.22,none,1495
+5,2022-02-18,anst_rest,5 = sehr klein,0.158,0.161,0.155,none,1495
+5,2022-02-18,anst_oeff,1 = sehr gross,0.162,0.165,0.159,none,1493
+5,2022-02-18,anst_oeff,2 = gross,0.264,0.266,0.262,none,1493
+5,2022-02-18,anst_oeff,3 = mittelmaessig,0.34,0.341,0.338,none,1493
+5,2022-02-18,anst_oeff,4 = klein,0.145,0.148,0.142,none,1493
+5,2022-02-18,anst_oeff,5 = sehr klein,0.089,0.093,0.085,none,1493
+5,2022-02-18,anst_arbe,1 = sehr gross,0.064,0.073,0.054,none,842
+5,2022-02-18,anst_arbe,2 = gross,0.152,0.158,0.147,none,842
+5,2022-02-18,anst_arbe,3 = mittelmaessig,0.336,0.339,0.334,none,842
+5,2022-02-18,anst_arbe,4 = klein,0.246,0.249,0.242,none,842
+5,2022-02-18,anst_arbe,5 = sehr klein,0.202,0.207,0.198,none,842
+5,2022-02-18,anst_schu,1 = sehr gross,0.149,0.151,0.146,none,1486
+5,2022-02-18,anst_schu,2 = gross,0.293,0.295,0.291,none,1486
+5,2022-02-18,anst_schu,3 = mittelmaessig,0.338,0.339,0.336,none,1486
+5,2022-02-18,anst_schu,4 = klein,0.13,0.134,0.127,none,1486
+5,2022-02-18,anst_schu,5 = sehr klein,0.09,0.094,0.086,none,1486
+5,2022-02-18,anst_park,1 = sehr gross,0.024,0.032,0.015,none,1494
+5,2022-02-18,anst_park,2 = gross,0.057,0.062,0.052,none,1494
+5,2022-02-18,anst_park,3 = mittelmaessig,0.244,0.246,0.242,none,1494
+5,2022-02-18,anst_park,4 = klein,0.324,0.325,0.322,none,1494
+5,2022-02-18,anst_park,5 = sehr klein,0.352,0.353,0.35,none,1494
+5,2022-02-18,anst_arzt,1 = sehr gross,0.065,0.07,0.06,none,1498
+5,2022-02-18,anst_arzt,2 = gross,0.196,0.199,0.194,none,1498
+5,2022-02-18,anst_arzt,3 = mittelmaessig,0.36,0.362,0.359,none,1498
+5,2022-02-18,anst_arzt,4 = klein,0.242,0.244,0.24,none,1498
+5,2022-02-18,anst_arzt,5 = sehr klein,0.136,0.139,0.133,none,1498
+5,2022-02-18,anst_fami,1 = sehr gross,0.181,0.183,0.178,none,1494
+5,2022-02-18,anst_fami,2 = gross,0.255,0.257,0.253,none,1494
+5,2022-02-18,anst_fami,3 = mittelmaessig,0.327,0.328,0.325,none,1494
+5,2022-02-18,anst_fami,4 = klein,0.119,0.123,0.116,none,1494
+5,2022-02-18,anst_fami,5 = sehr klein,0.119,0.122,0.115,none,1494
+5,2022-02-18,anst_freu,1 = sehr gross,0.124,0.127,0.121,none,1497
+5,2022-02-18,anst_freu,2 = gross,0.22,0.223,0.218,none,1497
+5,2022-02-18,anst_freu,3 = mittelmaessig,0.365,0.367,0.364,none,1497
+5,2022-02-18,anst_freu,4 = klein,0.166,0.169,0.163,none,1497
+5,2022-02-18,anst_freu,5 = sehr klein,0.124,0.127,0.121,none,1497
+5,2022-03-18,ges_per_gefahr,1 = sehr gross,0.058,0.063,0.053,none,1497
+5,2022-03-18,ges_per_gefahr,2 = gross,0.128,0.131,0.125,none,1497
+5,2022-03-18,ges_per_gefahr,3 = mittelmaessig,0.355,0.357,0.354,none,1497
+5,2022-03-18,ges_per_gefahr,4 = klein,0.259,0.261,0.257,none,1497
+5,2022-03-18,ges_per_gefahr,5 = sehr klein,0.2,0.202,0.197,none,1497
+5,2022-03-18,ges_pub_gefahr,1 = sehr gross,0.116,0.119,0.112,none,1491
+5,2022-03-18,ges_pub_gefahr,2 = gross,0.276,0.278,0.274,none,1491
+5,2022-03-18,ges_pub_gefahr,3 = mittelmaessig,0.388,0.39,0.387,none,1491
+5,2022-03-18,ges_pub_gefahr,4 = klein,0.143,0.146,0.14,none,1491
+5,2022-03-18,ges_pub_gefahr,5 = sehr klein,0.077,0.081,0.073,none,1491
+5,2022-03-18,wir_per_gefahr,1 = sehr gross,0.105,0.109,0.101,none,1491
+5,2022-03-18,wir_per_gefahr,2 = gross,0.183,0.185,0.18,none,1491
+5,2022-03-18,wir_per_gefahr,3 = mittelmaessig,0.368,0.369,0.367,none,1491
+5,2022-03-18,wir_per_gefahr,4 = klein,0.218,0.22,0.216,none,1491
+5,2022-03-18,wir_per_gefahr,5 = sehr klein,0.126,0.13,0.123,none,1491
+5,2022-03-18,wir_pub_gefahr,1 = sehr gross,0.204,0.206,0.201,none,1491
+5,2022-03-18,wir_pub_gefahr,2 = gross,0.382,0.383,0.381,none,1491
+5,2022-03-18,wir_pub_gefahr,3 = mittelmaessig,0.342,0.344,0.341,none,1491
+5,2022-03-18,wir_pub_gefahr,4 = klein,0.057,0.062,0.051,none,1491
+5,2022-03-18,wir_pub_gefahr,5 = sehr klein,0.016,0.026,0.005,none,1491
+5,2022-03-18,anst_rest,1 = sehr gross,0.097,0.1,0.093,none,1479
+5,2022-03-18,anst_rest,2 = gross,0.207,0.209,0.204,none,1479
+5,2022-03-18,anst_rest,3 = mittelmaessig,0.393,0.394,0.392,none,1479
+5,2022-03-18,anst_rest,4 = klein,0.19,0.193,0.188,none,1479
+5,2022-03-18,anst_rest,5 = sehr klein,0.114,0.117,0.11,none,1479
+5,2022-03-18,anst_oeff,1 = sehr gross,0.208,0.21,0.206,none,1477
+5,2022-03-18,anst_oeff,2 = gross,0.26,0.262,0.258,none,1477
+5,2022-03-18,anst_oeff,3 = mittelmaessig,0.303,0.304,0.301,none,1477
+5,2022-03-18,anst_oeff,4 = klein,0.155,0.157,0.152,none,1477
+5,2022-03-18,anst_oeff,5 = sehr klein,0.075,0.079,0.07,none,1477
+5,2022-03-18,anst_arbe,1 = sehr gross,0.106,0.113,0.099,none,834
+5,2022-03-18,anst_arbe,2 = gross,0.17,0.175,0.165,none,834
+5,2022-03-18,anst_arbe,3 = mittelmaessig,0.36,0.363,0.358,none,834
+5,2022-03-18,anst_arbe,4 = klein,0.187,0.191,0.182,none,834
+5,2022-03-18,anst_arbe,5 = sehr klein,0.177,0.182,0.172,none,834
+5,2022-03-18,anst_schu,1 = sehr gross,0.19,0.193,0.188,none,1477
+5,2022-03-18,anst_schu,2 = gross,0.33,0.331,0.328,none,1477
+5,2022-03-18,anst_schu,3 = mittelmaessig,0.303,0.305,0.302,none,1477
+5,2022-03-18,anst_schu,4 = klein,0.105,0.108,0.101,none,1477
+5,2022-03-18,anst_schu,5 = sehr klein,0.072,0.077,0.067,none,1477
+5,2022-03-18,anst_park,1 = sehr gross,0.035,0.042,0.028,none,1479
+5,2022-03-18,anst_park,2 = gross,0.075,0.079,0.07,none,1479
+5,2022-03-18,anst_park,3 = mittelmaessig,0.277,0.279,0.275,none,1479
+5,2022-03-18,anst_park,4 = klein,0.324,0.326,0.323,none,1479
+5,2022-03-18,anst_park,5 = sehr klein,0.289,0.291,0.287,none,1479
+5,2022-03-18,anst_arzt,1 = sehr gross,0.086,0.09,0.082,none,1484
+5,2022-03-18,anst_arzt,2 = gross,0.191,0.194,0.189,none,1484
+5,2022-03-18,anst_arzt,3 = mittelmaessig,0.362,0.363,0.36,none,1484
+5,2022-03-18,anst_arzt,4 = klein,0.237,0.239,0.234,none,1484
+5,2022-03-18,anst_arzt,5 = sehr klein,0.124,0.128,0.121,none,1484
+5,2022-03-18,anst_fami,1 = sehr gross,0.249,0.251,0.247,none,1476
+5,2022-03-18,anst_fami,2 = gross,0.26,0.262,0.258,none,1476
+5,2022-03-18,anst_fami,3 = mittelmaessig,0.293,0.295,0.291,none,1476
+5,2022-03-18,anst_fami,4 = klein,0.107,0.111,0.104,none,1476
+5,2022-03-18,anst_fami,5 = sehr klein,0.091,0.095,0.087,none,1476
+5,2022-03-18,anst_freu,1 = sehr gross,0.181,0.184,0.178,none,1480
+5,2022-03-18,anst_freu,2 = gross,0.226,0.228,0.223,none,1480
+5,2022-03-18,anst_freu,3 = mittelmaessig,0.351,0.353,0.35,none,1480
+5,2022-03-18,anst_freu,4 = klein,0.142,0.145,0.139,none,1480
+5,2022-03-18,anst_freu,5 = sehr klein,0.101,0.104,0.097,none,1480
+5,2022-04-22,ges_per_gefahr,1 = sehr gross,0.037,0.043,0.03,none,1510
+5,2022-04-22,ges_per_gefahr,2 = gross,0.093,0.097,0.089,none,1510
+5,2022-04-22,ges_per_gefahr,3 = mittelmaessig,0.32,0.321,0.318,none,1510
+5,2022-04-22,ges_per_gefahr,4 = klein,0.295,0.296,0.293,none,1510
+5,2022-04-22,ges_per_gefahr,5 = sehr klein,0.256,0.257,0.254,none,1510
+5,2022-04-22,ges_pub_gefahr,1 = sehr gross,0.043,0.049,0.037,none,1507
+5,2022-04-22,ges_pub_gefahr,2 = gross,0.191,0.193,0.189,none,1507
+5,2022-04-22,ges_pub_gefahr,3 = mittelmaessig,0.438,0.439,0.437,none,1507
+5,2022-04-22,ges_pub_gefahr,4 = klein,0.224,0.226,0.222,none,1507
+5,2022-04-22,ges_pub_gefahr,5 = sehr klein,0.104,0.108,0.101,none,1507
+5,2022-04-22,wir_per_gefahr,1 = sehr gross,0.109,0.113,0.106,none,1508
+5,2022-04-22,wir_per_gefahr,2 = gross,0.184,0.187,0.182,none,1508
+5,2022-04-22,wir_per_gefahr,3 = mittelmaessig,0.326,0.328,0.324,none,1508
+5,2022-04-22,wir_per_gefahr,4 = klein,0.248,0.25,0.246,none,1508
+5,2022-04-22,wir_per_gefahr,5 = sehr klein,0.133,0.136,0.13,none,1508
+5,2022-04-22,wir_pub_gefahr,1 = sehr gross,0.193,0.195,0.19,none,1507
+5,2022-04-22,wir_pub_gefahr,2 = gross,0.318,0.32,0.316,none,1507
+5,2022-04-22,wir_pub_gefahr,3 = mittelmaessig,0.382,0.383,0.38,none,1507
+5,2022-04-22,wir_pub_gefahr,4 = klein,0.078,0.082,0.074,none,1507
+5,2022-04-22,wir_pub_gefahr,5 = sehr klein,0.03,0.037,0.023,none,1507
+5,2022-04-22,anst_rest,1 = sehr gross,0.051,0.057,0.046,none,1500
+5,2022-04-22,anst_rest,2 = gross,0.14,0.143,0.137,none,1500
+5,2022-04-22,anst_rest,3 = mittelmaessig,0.384,0.386,0.383,none,1500
+5,2022-04-22,anst_rest,4 = klein,0.237,0.239,0.235,none,1500
+5,2022-04-22,anst_rest,5 = sehr klein,0.188,0.19,0.185,none,1500
+5,2022-04-22,anst_oeff,1 = sehr gross,0.142,0.145,0.139,none,1499
+5,2022-04-22,anst_oeff,2 = gross,0.25,0.252,0.248,none,1499
+5,2022-04-22,anst_oeff,3 = mittelmaessig,0.307,0.308,0.305,none,1499
+5,2022-04-22,anst_oeff,4 = klein,0.179,0.182,0.177,none,1499
+5,2022-04-22,anst_oeff,5 = sehr klein,0.122,0.125,0.119,none,1499
+5,2022-04-22,anst_arbe,1 = sehr gross,0.057,0.066,0.047,none,863
+5,2022-04-22,anst_arbe,2 = gross,0.122,0.129,0.116,none,863
+5,2022-04-22,anst_arbe,3 = mittelmaessig,0.299,0.302,0.296,none,863
+5,2022-04-22,anst_arbe,4 = klein,0.254,0.257,0.25,none,863
+5,2022-04-22,anst_arbe,5 = sehr klein,0.268,0.271,0.265,none,863
+5,2022-04-22,anst_schu,1 = sehr gross,0.097,0.101,0.093,none,1493
+5,2022-04-22,anst_schu,2 = gross,0.251,0.253,0.249,none,1493
+5,2022-04-22,anst_schu,3 = mittelmaessig,0.366,0.367,0.364,none,1493
+5,2022-04-22,anst_schu,4 = klein,0.165,0.168,0.162,none,1493
+5,2022-04-22,anst_schu,5 = sehr klein,0.122,0.125,0.118,none,1493
+5,2022-04-22,anst_park,1 = sehr gross,0.021,0.03,0.012,none,1501
+5,2022-04-22,anst_park,2 = gross,0.05,0.055,0.044,none,1501
+5,2022-04-22,anst_park,3 = mittelmaessig,0.217,0.219,0.215,none,1501
+5,2022-04-22,anst_park,4 = klein,0.315,0.317,0.314,none,1501
+5,2022-04-22,anst_park,5 = sehr klein,0.397,0.398,0.396,none,1501
+5,2022-04-22,anst_arzt,1 = sehr gross,0.056,0.061,0.051,none,1500
+5,2022-04-22,anst_arzt,2 = gross,0.172,0.175,0.169,none,1500
+5,2022-04-22,anst_arzt,3 = mittelmaessig,0.334,0.335,0.332,none,1500
+5,2022-04-22,anst_arzt,4 = klein,0.259,0.261,0.257,none,1500
+5,2022-04-22,anst_arzt,5 = sehr klein,0.179,0.182,0.177,none,1500
+5,2022-04-22,anst_fami,1 = sehr gross,0.153,0.156,0.15,none,1499
+5,2022-04-22,anst_fami,2 = gross,0.227,0.229,0.225,none,1499
+5,2022-04-22,anst_fami,3 = mittelmaessig,0.313,0.314,0.311,none,1499
+5,2022-04-22,anst_fami,4 = klein,0.165,0.168,0.163,none,1499
+5,2022-04-22,anst_fami,5 = sehr klein,0.142,0.145,0.139,none,1499
+5,2022-04-22,anst_freu,1 = sehr gross,0.107,0.111,0.104,none,1499
+5,2022-04-22,anst_freu,2 = gross,0.177,0.179,0.174,none,1499
+5,2022-04-22,anst_freu,3 = mittelmaessig,0.337,0.338,0.335,none,1499
+5,2022-04-22,anst_freu,4 = klein,0.215,0.217,0.213,none,1499
+5,2022-04-22,anst_freu,5 = sehr klein,0.164,0.167,0.162,none,1499
+5,2022-05-21,ges_per_gefahr,1 = sehr gross,0.026,0.034,0.019,none,1539
+5,2022-05-21,ges_per_gefahr,2 = gross,0.086,0.09,0.082,none,1539
+5,2022-05-21,ges_per_gefahr,3 = mittelmaessig,0.306,0.308,0.304,none,1539
+5,2022-05-21,ges_per_gefahr,4 = klein,0.308,0.31,0.307,none,1539
+5,2022-05-21,ges_per_gefahr,5 = sehr klein,0.273,0.275,0.271,none,1539
+5,2022-05-21,ges_pub_gefahr,1 = sehr gross,0.031,0.038,0.024,none,1539
+5,2022-05-21,ges_pub_gefahr,2 = gross,0.155,0.158,0.152,none,1539
+5,2022-05-21,ges_pub_gefahr,3 = mittelmaessig,0.443,0.444,0.442,none,1539
+5,2022-05-21,ges_pub_gefahr,4 = klein,0.235,0.237,0.233,none,1539
+5,2022-05-21,ges_pub_gefahr,5 = sehr klein,0.135,0.138,0.132,none,1539
+5,2022-05-21,wir_per_gefahr,1 = sehr gross,0.106,0.11,0.103,none,1541
+5,2022-05-21,wir_per_gefahr,2 = gross,0.168,0.171,0.165,none,1541
+5,2022-05-21,wir_per_gefahr,3 = mittelmaessig,0.338,0.339,0.337,none,1541
+5,2022-05-21,wir_per_gefahr,4 = klein,0.236,0.238,0.234,none,1541
+5,2022-05-21,wir_per_gefahr,5 = sehr klein,0.151,0.154,0.149,none,1541
+5,2022-05-21,wir_pub_gefahr,1 = sehr gross,0.173,0.175,0.17,none,1539
+5,2022-05-21,wir_pub_gefahr,2 = gross,0.32,0.321,0.318,none,1539
+5,2022-05-21,wir_pub_gefahr,3 = mittelmaessig,0.387,0.388,0.385,none,1539
+5,2022-05-21,wir_pub_gefahr,4 = klein,0.086,0.09,0.082,none,1539
+5,2022-05-21,wir_pub_gefahr,5 = sehr klein,0.035,0.042,0.029,none,1539
+5,2022-05-21,anst_rest,1 = sehr gross,0.036,0.043,0.03,none,1524
+5,2022-05-21,anst_rest,2 = gross,0.11,0.113,0.107,none,1524
+5,2022-05-21,anst_rest,3 = mittelmaessig,0.349,0.35,0.347,none,1524
+5,2022-05-21,anst_rest,4 = klein,0.289,0.291,0.287,none,1524
+5,2022-05-21,anst_rest,5 = sehr klein,0.216,0.218,0.214,none,1524
+5,2022-05-21,anst_oeff,1 = sehr gross,0.109,0.112,0.105,none,1526
+5,2022-05-21,anst_oeff,2 = gross,0.237,0.239,0.235,none,1526
+5,2022-05-21,anst_oeff,3 = mittelmaessig,0.325,0.326,0.323,none,1526
+5,2022-05-21,anst_oeff,4 = klein,0.187,0.19,0.185,none,1526
+5,2022-05-21,anst_oeff,5 = sehr klein,0.142,0.145,0.139,none,1526
+5,2022-05-21,anst_arbe,1 = sehr gross,0.039,0.051,0.028,none,890
+5,2022-05-21,anst_arbe,2 = gross,0.101,0.108,0.094,none,890
+5,2022-05-21,anst_arbe,3 = mittelmaessig,0.301,0.304,0.298,none,890
+5,2022-05-21,anst_arbe,4 = klein,0.263,0.266,0.259,none,890
+5,2022-05-21,anst_arbe,5 = sehr klein,0.296,0.299,0.293,none,890
+5,2022-05-21,anst_schu,1 = sehr gross,0.074,0.078,0.069,none,1508
+5,2022-05-21,anst_schu,2 = gross,0.196,0.199,0.194,none,1508
+5,2022-05-21,anst_schu,3 = mittelmaessig,0.368,0.369,0.367,none,1508
+5,2022-05-21,anst_schu,4 = klein,0.215,0.217,0.213,none,1508
+5,2022-05-21,anst_schu,5 = sehr klein,0.147,0.15,0.144,none,1508
+5,2022-05-21,anst_park,1 = sehr gross,0.011,0.023,-0,none,1519
+5,2022-05-21,anst_park,2 = gross,0.051,0.056,0.046,none,1519
+5,2022-05-21,anst_park,3 = mittelmaessig,0.19,0.192,0.188,none,1519
+5,2022-05-21,anst_park,4 = klein,0.318,0.319,0.316,none,1519
+5,2022-05-21,anst_park,5 = sehr klein,0.43,0.431,0.429,none,1519
+5,2022-05-21,anst_arzt,1 = sehr gross,0.052,0.057,0.046,none,1522
+5,2022-05-21,anst_arzt,2 = gross,0.142,0.145,0.139,none,1522
+5,2022-05-21,anst_arzt,3 = mittelmaessig,0.344,0.345,0.343,none,1522
+5,2022-05-21,anst_arzt,4 = klein,0.261,0.263,0.259,none,1522
+5,2022-05-21,anst_arzt,5 = sehr klein,0.202,0.204,0.199,none,1522
+5,2022-05-21,anst_fami,1 = sehr gross,0.094,0.098,0.09,none,1522
+5,2022-05-21,anst_fami,2 = gross,0.219,0.221,0.217,none,1522
+5,2022-05-21,anst_fami,3 = mittelmaessig,0.329,0.33,0.327,none,1522
+5,2022-05-21,anst_fami,4 = klein,0.191,0.193,0.188,none,1522
+5,2022-05-21,anst_fami,5 = sehr klein,0.168,0.171,0.165,none,1522
+5,2022-05-21,anst_freu,1 = sehr gross,0.076,0.08,0.072,none,1527
+5,2022-05-21,anst_freu,2 = gross,0.168,0.171,0.166,none,1527
+5,2022-05-21,anst_freu,3 = mittelmaessig,0.335,0.336,0.333,none,1527
+5,2022-05-21,anst_freu,4 = klein,0.236,0.238,0.234,none,1527
+5,2022-05-21,anst_freu,5 = sehr klein,0.185,0.188,0.183,none,1527
 6,2020-03-28,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.308,0.31,0.306,none,1428
 6,2020-03-28,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.349,0.35,0.347,none,1428
 6,2020-03-28,kaufen_haus,3 = Teils-teils,0.264,0.266,0.263,none,1428
@@ -3425,6 +4120,51 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 6,2021-11-26,zeitp_kred,3 = Teils-teils,0.312,0.314,0.311,none,1347
 6,2021-11-26,zeitp_kred,4 = Eher guter Zeitpunkt,0.272,0.274,0.269,none,1347
 6,2021-11-26,zeitp_kred,5 = Sehr guter Zeitpunkt,0.085,0.089,0.08,none,1347
+6,2022-01-14,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.121,0.124,0.117,none,1356
+6,2022-01-14,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.196,0.199,0.193,none,1356
+6,2022-01-14,kaufen_haus,3 = Teils-teils,0.473,0.474,0.472,none,1356
+6,2022-01-14,kaufen_haus,4 = Eher guter Zeitpunkt,0.166,0.169,0.163,none,1356
+6,2022-01-14,kaufen_haus,5 = Sehr guter Zeitpunkt,0.044,0.051,0.037,none,1356
+6,2022-02-18,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.1,0.104,0.096,none,1376
+6,2022-02-18,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.22,0.223,0.218,none,1376
+6,2022-02-18,kaufen_haus,3 = Teils-teils,0.482,0.483,0.481,none,1376
+6,2022-02-18,kaufen_haus,4 = Eher guter Zeitpunkt,0.157,0.16,0.154,none,1376
+6,2022-02-18,kaufen_haus,5 = Sehr guter Zeitpunkt,0.041,0.048,0.034,none,1376
+6,2022-03-18,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.149,0.152,0.145,none,1300
+6,2022-03-18,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.206,0.208,0.203,none,1300
+6,2022-03-18,kaufen_haus,3 = Teils-teils,0.414,0.416,0.413,none,1300
+6,2022-03-18,kaufen_haus,4 = Eher guter Zeitpunkt,0.182,0.185,0.179,none,1300
+6,2022-03-18,kaufen_haus,5 = Sehr guter Zeitpunkt,0.05,0.056,0.043,none,1300
+6,2022-04-22,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.149,0.152,0.146,none,1383
+6,2022-04-22,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.218,0.22,0.215,none,1383
+6,2022-04-22,kaufen_haus,3 = Teils-teils,0.46,0.461,0.459,none,1383
+6,2022-04-22,kaufen_haus,4 = Eher guter Zeitpunkt,0.133,0.137,0.13,none,1383
+6,2022-04-22,kaufen_haus,5 = Sehr guter Zeitpunkt,0.04,0.047,0.033,none,1383
+6,2022-04-22,zeitp_spar,1 = Sehr schlechter Zeitpunkt,0.213,0.216,0.211,none,1429
+6,2022-04-22,zeitp_spar,2 = Eher schlechter Zeitpunkt,0.266,0.268,0.264,none,1429
+6,2022-04-22,zeitp_spar,3 = Teils-teils,0.326,0.328,0.325,none,1429
+6,2022-04-22,zeitp_spar,4 = Eher guter Zeitpunkt,0.14,0.143,0.137,none,1429
+6,2022-04-22,zeitp_spar,5 = Sehr guter Zeitpunkt,0.054,0.06,0.049,none,1429
+6,2022-04-22,zeitp_inve,1 = Sehr schlechter Zeitpunkt,0.15,0.154,0.147,none,1368
+6,2022-04-22,zeitp_inve,2 = Eher schlechter Zeitpunkt,0.19,0.193,0.188,none,1368
+6,2022-04-22,zeitp_inve,3 = Teils-teils,0.384,0.385,0.382,none,1368
+6,2022-04-22,zeitp_inve,4 = Eher guter Zeitpunkt,0.208,0.21,0.205,none,1368
+6,2022-04-22,zeitp_inve,5 = Sehr guter Zeitpunkt,0.068,0.073,0.062,none,1368
+6,2022-04-22,zeitp_lieg,1 = Sehr schlechter Zeitpunkt,0.194,0.196,0.191,none,1386
+6,2022-04-22,zeitp_lieg,2 = Eher schlechter Zeitpunkt,0.259,0.261,0.257,none,1386
+6,2022-04-22,zeitp_lieg,3 = Teils-teils,0.308,0.31,0.306,none,1386
+6,2022-04-22,zeitp_lieg,4 = Eher guter Zeitpunkt,0.178,0.18,0.175,none,1386
+6,2022-04-22,zeitp_lieg,5 = Sehr guter Zeitpunkt,0.062,0.067,0.056,none,1386
+6,2022-04-22,zeitp_kred,1 = Sehr schlechter Zeitpunkt,0.19,0.192,0.187,none,1372
+6,2022-04-22,zeitp_kred,2 = Eher schlechter Zeitpunkt,0.199,0.202,0.197,none,1372
+6,2022-04-22,zeitp_kred,3 = Teils-teils,0.305,0.307,0.304,none,1372
+6,2022-04-22,zeitp_kred,4 = Eher guter Zeitpunkt,0.24,0.242,0.238,none,1372
+6,2022-04-22,zeitp_kred,5 = Sehr guter Zeitpunkt,0.066,0.071,0.061,none,1372
+6,2022-05-21,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.143,0.146,0.14,none,1400
+6,2022-05-21,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.285,0.287,0.283,none,1400
+6,2022-05-21,kaufen_haus,3 = Teils-teils,0.405,0.407,0.404,none,1400
+6,2022-05-21,kaufen_haus,4 = Eher guter Zeitpunkt,0.135,0.138,0.131,none,1400
+6,2022-05-21,kaufen_haus,5 = Sehr guter Zeitpunkt,0.032,0.039,0.024,none,1400
 7,2020-03-28,demokratie,1 = Sehr zufrieden,0.231,0.233,0.229,none,1516
 7,2020-03-28,demokratie,2 = Eher zufrieden,0.424,0.425,0.423,none,1516
 7,2020-03-28,demokratie,3 = Teils-teils,0.253,0.255,0.251,none,1516
@@ -3830,6 +4570,71 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 7,2021-11-26,blianz_reg,3 = Teils-teils,0.272,0.274,0.27,none,1483
 7,2021-11-26,blianz_reg,4 = Eher unzufrieden,0.212,0.214,0.21,none,1483
 7,2021-11-26,blianz_reg,5 = Sehr unzufrieden,0.349,0.35,0.347,none,1483
+7,2022-01-14,demokratie,1 = Sehr zufrieden,0.047,0.053,0.041,none,1485
+7,2022-01-14,demokratie,2 = Eher zufrieden,0.292,0.294,0.29,none,1485
+7,2022-01-14,demokratie,3 = Teils-teils,0.282,0.284,0.28,none,1485
+7,2022-01-14,demokratie,4 = Eher unzufrieden,0.177,0.179,0.174,none,1485
+7,2022-01-14,demokratie,5 = Sehr unzufrieden,0.202,0.205,0.2,none,1485
+7,2022-01-14,blianz_reg,1 = Sehr zufrieden,0.027,0.035,0.019,none,1458
+7,2022-01-14,blianz_reg,2 = Eher zufrieden,0.193,0.196,0.191,none,1458
+7,2022-01-14,blianz_reg,3 = Teils-teils,0.277,0.278,0.275,none,1458
+7,2022-01-14,blianz_reg,4 = Eher unzufrieden,0.181,0.184,0.178,none,1458
+7,2022-01-14,blianz_reg,5 = Sehr unzufrieden,0.322,0.324,0.32,none,1458
+7,2022-02-18,demokratie,1 = Sehr zufrieden,0.058,0.063,0.053,none,1472
+7,2022-02-18,demokratie,2 = Eher zufrieden,0.238,0.24,0.236,none,1472
+7,2022-02-18,demokratie,3 = Teils-teils,0.312,0.314,0.31,none,1472
+7,2022-02-18,demokratie,4 = Eher unzufrieden,0.183,0.185,0.18,none,1472
+7,2022-02-18,demokratie,5 = Sehr unzufrieden,0.209,0.211,0.206,none,1472
+7,2022-02-18,blianz_reg,1 = Sehr zufrieden,0.026,0.035,0.018,none,1460
+7,2022-02-18,blianz_reg,2 = Eher zufrieden,0.152,0.155,0.149,none,1460
+7,2022-02-18,blianz_reg,3 = Teils-teils,0.294,0.296,0.292,none,1460
+7,2022-02-18,blianz_reg,4 = Eher unzufrieden,0.193,0.195,0.19,none,1460
+7,2022-02-18,blianz_reg,5 = Sehr unzufrieden,0.335,0.336,0.333,none,1460
+7,2022-03-18,demokratie,1 = Sehr zufrieden,0.054,0.059,0.048,none,1459
+7,2022-03-18,demokratie,2 = Eher zufrieden,0.275,0.277,0.273,none,1459
+7,2022-03-18,demokratie,3 = Teils-teils,0.284,0.285,0.282,none,1459
+7,2022-03-18,demokratie,4 = Eher unzufrieden,0.213,0.215,0.211,none,1459
+7,2022-03-18,demokratie,5 = Sehr unzufrieden,0.175,0.177,0.172,none,1459
+7,2022-03-18,blianz_reg,1 = Sehr zufrieden,0.02,0.029,0.01,none,1444
+7,2022-03-18,blianz_reg,2 = Eher zufrieden,0.134,0.138,0.131,none,1444
+7,2022-03-18,blianz_reg,3 = Teils-teils,0.268,0.27,0.266,none,1444
+7,2022-03-18,blianz_reg,4 = Eher unzufrieden,0.237,0.239,0.235,none,1444
+7,2022-03-18,blianz_reg,5 = Sehr unzufrieden,0.341,0.343,0.34,none,1444
+7,2022-04-22,demokratie,1 = Sehr zufrieden,0.051,0.056,0.045,none,1475
+7,2022-04-22,demokratie,2 = Eher zufrieden,0.256,0.258,0.254,none,1475
+7,2022-04-22,demokratie,3 = Teils-teils,0.301,0.302,0.299,none,1475
+7,2022-04-22,demokratie,4 = Eher unzufrieden,0.19,0.192,0.187,none,1475
+7,2022-04-22,demokratie,5 = Sehr unzufrieden,0.203,0.205,0.2,none,1475
+7,2022-04-22,blianz_reg,1 = Sehr zufrieden,0.016,0.027,0.006,none,1450
+7,2022-04-22,blianz_reg,2 = Eher zufrieden,0.166,0.169,0.164,none,1450
+7,2022-04-22,blianz_reg,3 = Teils-teils,0.288,0.29,0.286,none,1450
+7,2022-04-22,blianz_reg,4 = Eher unzufrieden,0.203,0.205,0.2,none,1450
+7,2022-04-22,blianz_reg,5 = Sehr unzufrieden,0.326,0.328,0.325,none,1450
+7,2022-05-21,demokratie,1 = Sehr zufrieden,0.048,0.054,0.042,none,1500
+7,2022-05-21,demokratie,2 = Eher zufrieden,0.252,0.254,0.25,none,1500
+7,2022-05-21,demokratie,3 = Teils-teils,0.306,0.308,0.304,none,1500
+7,2022-05-21,demokratie,4 = Eher unzufrieden,0.205,0.207,0.203,none,1500
+7,2022-05-21,demokratie,5 = Sehr unzufrieden,0.189,0.191,0.187,none,1500
+7,2022-05-21,blianz_reg,1 = Sehr zufrieden,0.018,0.027,0.008,none,1477
+7,2022-05-21,blianz_reg,2 = Eher zufrieden,0.152,0.155,0.149,none,1477
+7,2022-05-21,blianz_reg,3 = Teils-teils,0.284,0.286,0.282,none,1477
+7,2022-05-21,blianz_reg,4 = Eher unzufrieden,0.216,0.218,0.214,none,1477
+7,2022-05-21,blianz_reg,5 = Sehr unzufrieden,0.331,0.332,0.329,none,1477
+7,2022-05-21,zuf_reg_al,1 = Sehr zufrieden,0.036,0.043,0.029,none,1407
+7,2022-05-21,zuf_reg_al,2 = Eher zufrieden,0.238,0.241,0.236,none,1407
+7,2022-05-21,zuf_reg_al,3 = Teils-teils,0.347,0.348,0.345,none,1407
+7,2022-05-21,zuf_reg_al,4 = Eher unzufrieden,0.217,0.219,0.214,none,1407
+7,2022-05-21,zuf_reg_al,5 = Sehr unzufrieden,0.162,0.165,0.159,none,1407
+7,2022-05-21,zuf_reg_un,1 = Sehr zufrieden,0.037,0.045,0.03,none,1362
+7,2022-05-21,zuf_reg_un,2 = Eher zufrieden,0.183,0.185,0.18,none,1362
+7,2022-05-21,zuf_reg_un,3 = Teils-teils,0.336,0.338,0.334,none,1362
+7,2022-05-21,zuf_reg_un,4 = Eher unzufrieden,0.245,0.247,0.243,none,1362
+7,2022-05-21,zuf_reg_un,5 = Sehr unzufrieden,0.199,0.201,0.196,none,1362
+7,2022-05-21,zuf_reg_wi,1 = Sehr zufrieden,0.044,0.051,0.038,none,1397
+7,2022-05-21,zuf_reg_wi,2 = Eher zufrieden,0.217,0.219,0.215,none,1397
+7,2022-05-21,zuf_reg_wi,3 = Teils-teils,0.417,0.418,0.415,none,1397
+7,2022-05-21,zuf_reg_wi,4 = Eher unzufrieden,0.181,0.184,0.178,none,1397
+7,2022-05-21,zuf_reg_wi,5 = Sehr unzufrieden,0.141,0.144,0.138,none,1397
 8,2020-05-29,welfshov_such,1 = Stimme stark zu,0.172,0.175,0.169,none,1394
 8,2020-05-29,welfshov_such,2 = Stimme zu,0.29,0.292,0.288,none,1394
 8,2020-05-29,welfshov_such,3 = Weder noch,0.269,0.271,0.267,none,1394
@@ -3890,6 +4695,21 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 8,2021-10-23,welfshov_sozl,3 = Weder noch,0.169,0.172,0.166,none,1376
 8,2021-10-23,welfshov_sozl,4 = Lehne ab,0.1,0.104,0.096,none,1376
 8,2021-10-23,welfshov_sozl,5 = Lehne stark ab,0.049,0.056,0.043,none,1376
+8,2022-02-18,welfshov_such,1 = Stimme stark zu,0.17,0.173,0.167,none,1393
+8,2022-02-18,welfshov_such,2 = Stimme zu,0.286,0.287,0.284,none,1393
+8,2022-02-18,welfshov_such,3 = Weder noch,0.288,0.29,0.287,none,1393
+8,2022-02-18,welfshov_such,4 = Lehne ab,0.184,0.187,0.182,none,1393
+8,2022-02-18,welfshov_such,5 = Lehne stark ab,0.071,0.076,0.067,none,1393
+8,2022-02-18,welfshov_zust,1 = Stimme stark zu,0.15,0.153,0.146,none,1219
+8,2022-02-18,welfshov_zust,2 = Stimme zu,0.351,0.353,0.35,none,1219
+8,2022-02-18,welfshov_zust,3 = Weder noch,0.312,0.314,0.31,none,1219
+8,2022-02-18,welfshov_zust,4 = Lehne ab,0.129,0.133,0.125,none,1219
+8,2022-02-18,welfshov_zust,5 = Lehne stark ab,0.058,0.064,0.052,none,1219
+8,2022-02-18,welfshov_sozl,1 = Stimme stark zu,0.281,0.283,0.279,none,1368
+8,2022-02-18,welfshov_sozl,2 = Stimme zu,0.393,0.394,0.391,none,1368
+8,2022-02-18,welfshov_sozl,3 = Weder noch,0.184,0.187,0.181,none,1368
+8,2022-02-18,welfshov_sozl,4 = Lehne ab,0.103,0.107,0.099,none,1368
+8,2022-02-18,welfshov_sozl,5 = Lehne stark ab,0.04,0.047,0.033,none,1368
 9,2020-04-25,issue_ungl,1 = Trifft sehr zu,0.312,0.313,0.31,none,1457
 9,2020-04-25,issue_ungl,2 = Trifft eher zu,0.401,0.402,0.4,none,1457
 9,2020-04-25,issue_ungl,3 = Teils-teils,0.221,0.223,0.219,none,1457
@@ -4170,6 +4990,116 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 9,2021-06-26,issue_redu,3 = Teils-teils,0.297,0.299,0.296,none,1394
 9,2021-06-26,issue_redu,4 = Trifft eher nicht zu,0.087,0.091,0.083,none,1394
 9,2021-06-26,issue_redu,5 = Trifft ueberhaupt nicht zu,0.027,0.035,0.018,none,1394
+9,2022-02-18,issue_ungl,1 = Trifft sehr zu,0.36,0.361,0.358,none,1440
+9,2022-02-18,issue_ungl,2 = Trifft eher zu,0.334,0.336,0.333,none,1440
+9,2022-02-18,issue_ungl,3 = Teils-teils,0.218,0.221,0.216,none,1440
+9,2022-02-18,issue_ungl,4 = Trifft eher nicht zu,0.067,0.072,0.062,none,1440
+9,2022-02-18,issue_ungl,5 = Trifft ueberhaupt nicht zu,0.021,0.03,0.011,none,1440
+9,2022-02-18,issue_faul,1 = Trifft sehr zu,0.152,0.155,0.148,none,1424
+9,2022-02-18,issue_faul,2 = Trifft eher zu,0.204,0.207,0.202,none,1424
+9,2022-02-18,issue_faul,3 = Teils-teils,0.354,0.356,0.352,none,1424
+9,2022-02-18,issue_faul,4 = Trifft eher nicht zu,0.18,0.182,0.177,none,1424
+9,2022-02-18,issue_faul,5 = Trifft ueberhaupt nicht zu,0.111,0.115,0.107,none,1424
+9,2022-02-18,issue_albe,1 = Trifft sehr zu,0.135,0.138,0.132,none,1420
+9,2022-02-18,issue_albe,2 = Trifft eher zu,0.281,0.283,0.279,none,1420
+9,2022-02-18,issue_albe,3 = Teils-teils,0.426,0.427,0.424,none,1420
+9,2022-02-18,issue_albe,4 = Trifft eher nicht zu,0.118,0.121,0.114,none,1420
+9,2022-02-18,issue_albe,5 = Trifft ueberhaupt nicht zu,0.041,0.047,0.034,none,1420
+9,2022-02-18,issue_wirt,1 = Trifft sehr zu,0.148,0.151,0.145,none,1394
+9,2022-02-18,issue_wirt,2 = Trifft eher zu,0.215,0.218,0.213,none,1394
+9,2022-02-18,issue_wirt,3 = Teils-teils,0.427,0.428,0.426,none,1394
+9,2022-02-18,issue_wirt,4 = Trifft eher nicht zu,0.151,0.154,0.148,none,1394
+9,2022-02-18,issue_wirt,5 = Trifft ueberhaupt nicht zu,0.059,0.064,0.053,none,1394
+9,2022-02-18,issue_frau,1 = Trifft sehr zu,0.137,0.14,0.134,none,1435
+9,2022-02-18,issue_frau,2 = Trifft eher zu,0.168,0.171,0.166,none,1435
+9,2022-02-18,issue_frau,3 = Teils-teils,0.332,0.334,0.33,none,1435
+9,2022-02-18,issue_frau,4 = Trifft eher nicht zu,0.175,0.178,0.173,none,1435
+9,2022-02-18,issue_frau,5 = Trifft ueberhaupt nicht zu,0.187,0.19,0.185,none,1435
+9,2022-02-18,issue_poli,1 = Trifft sehr zu,0.146,0.149,0.143,none,1420
+9,2022-02-18,issue_poli,2 = Trifft eher zu,0.188,0.19,0.185,none,1420
+9,2022-02-18,issue_poli,3 = Teils-teils,0.31,0.312,0.308,none,1420
+9,2022-02-18,issue_poli,4 = Trifft eher nicht zu,0.198,0.2,0.195,none,1420
+9,2022-02-18,issue_poli,5 = Trifft ueberhaupt nicht zu,0.158,0.161,0.156,none,1420
+9,2022-02-18,issue_zuwa,1 = Trifft sehr zu,0.294,0.296,0.293,none,1439
+9,2022-02-18,issue_zuwa,2 = Trifft eher zu,0.2,0.202,0.197,none,1439
+9,2022-02-18,issue_zuwa,3 = Teils-teils,0.229,0.231,0.227,none,1439
+9,2022-02-18,issue_zuwa,4 = Trifft eher nicht zu,0.167,0.17,0.164,none,1439
+9,2022-02-18,issue_zuwa,5 = Trifft ueberhaupt nicht zu,0.11,0.114,0.106,none,1439
+9,2022-02-18,issue_umwe,1 = Trifft sehr zu,0.175,0.178,0.173,none,1437
+9,2022-02-18,issue_umwe,2 = Trifft eher zu,0.256,0.258,0.254,none,1437
+9,2022-02-18,issue_umwe,3 = Teils-teils,0.384,0.385,0.382,none,1437
+9,2022-02-18,issue_umwe,4 = Trifft eher nicht zu,0.108,0.112,0.105,none,1437
+9,2022-02-18,issue_umwe,5 = Trifft ueberhaupt nicht zu,0.076,0.081,0.072,none,1437
+9,2022-02-18,issue_eink,1 = Trifft sehr zu,0.404,0.405,0.402,none,1436
+9,2022-02-18,issue_eink,2 = Trifft eher zu,0.3,0.302,0.299,none,1436
+9,2022-02-18,issue_eink,3 = Teils-teils,0.228,0.23,0.226,none,1436
+9,2022-02-18,issue_eink,4 = Trifft eher nicht zu,0.051,0.056,0.045,none,1436
+9,2022-02-18,issue_eink,5 = Trifft ueberhaupt nicht zu,0.017,0.027,0.007,none,1436
+9,2022-02-18,issue_gena,1 = Trifft sehr zu,0.034,0.041,0.027,none,1419
+9,2022-02-18,issue_gena,2 = Trifft eher zu,0.108,0.112,0.104,none,1419
+9,2022-02-18,issue_gena,3 = Teils-teils,0.337,0.339,0.336,none,1419
+9,2022-02-18,issue_gena,4 = Trifft eher nicht zu,0.353,0.355,0.352,none,1419
+9,2022-02-18,issue_gena,5 = Trifft ueberhaupt nicht zu,0.167,0.17,0.164,none,1419
+9,2022-02-18,issue_redu,1 = Trifft sehr zu,0.313,0.315,0.312,none,1434
+9,2022-02-18,issue_redu,2 = Trifft eher zu,0.297,0.299,0.295,none,1434
+9,2022-02-18,issue_redu,3 = Teils-teils,0.284,0.286,0.282,none,1434
+9,2022-02-18,issue_redu,4 = Trifft eher nicht zu,0.075,0.079,0.07,none,1434
+9,2022-02-18,issue_redu,5 = Trifft ueberhaupt nicht zu,0.031,0.038,0.023,none,1434
+9,2022-03-18,issue_ungl,1 = Trifft sehr zu,0.314,0.315,0.312,none,1433
+9,2022-03-18,issue_ungl,2 = Trifft eher zu,0.371,0.373,0.37,none,1433
+9,2022-03-18,issue_ungl,3 = Teils-teils,0.247,0.249,0.245,none,1433
+9,2022-03-18,issue_ungl,4 = Trifft eher nicht zu,0.046,0.052,0.04,none,1433
+9,2022-03-18,issue_ungl,5 = Trifft ueberhaupt nicht zu,0.023,0.032,0.014,none,1433
+9,2022-03-18,issue_faul,1 = Trifft sehr zu,0.15,0.153,0.147,none,1426
+9,2022-03-18,issue_faul,2 = Trifft eher zu,0.206,0.208,0.203,none,1426
+9,2022-03-18,issue_faul,3 = Teils-teils,0.344,0.345,0.342,none,1426
+9,2022-03-18,issue_faul,4 = Trifft eher nicht zu,0.164,0.167,0.161,none,1426
+9,2022-03-18,issue_faul,5 = Trifft ueberhaupt nicht zu,0.137,0.14,0.134,none,1426
+9,2022-03-18,issue_albe,1 = Trifft sehr zu,0.124,0.127,0.12,none,1406
+9,2022-03-18,issue_albe,2 = Trifft eher zu,0.298,0.3,0.296,none,1406
+9,2022-03-18,issue_albe,3 = Teils-teils,0.427,0.428,0.426,none,1406
+9,2022-03-18,issue_albe,4 = Trifft eher nicht zu,0.113,0.117,0.109,none,1406
+9,2022-03-18,issue_albe,5 = Trifft ueberhaupt nicht zu,0.038,0.045,0.031,none,1406
+9,2022-03-18,issue_wirt,1 = Trifft sehr zu,0.118,0.121,0.114,none,1389
+9,2022-03-18,issue_wirt,2 = Trifft eher zu,0.211,0.213,0.208,none,1389
+9,2022-03-18,issue_wirt,3 = Teils-teils,0.451,0.452,0.45,none,1389
+9,2022-03-18,issue_wirt,4 = Trifft eher nicht zu,0.161,0.163,0.158,none,1389
+9,2022-03-18,issue_wirt,5 = Trifft ueberhaupt nicht zu,0.06,0.066,0.055,none,1389
+9,2022-03-18,issue_frau,1 = Trifft sehr zu,0.119,0.123,0.116,none,1423
+9,2022-03-18,issue_frau,2 = Trifft eher zu,0.167,0.17,0.165,none,1423
+9,2022-03-18,issue_frau,3 = Teils-teils,0.341,0.342,0.339,none,1423
+9,2022-03-18,issue_frau,4 = Trifft eher nicht zu,0.194,0.197,0.192,none,1423
+9,2022-03-18,issue_frau,5 = Trifft ueberhaupt nicht zu,0.178,0.181,0.175,none,1423
+9,2022-03-18,issue_poli,1 = Trifft sehr zu,0.114,0.117,0.11,none,1409
+9,2022-03-18,issue_poli,2 = Trifft eher zu,0.214,0.216,0.211,none,1409
+9,2022-03-18,issue_poli,3 = Teils-teils,0.308,0.31,0.307,none,1409
+9,2022-03-18,issue_poli,4 = Trifft eher nicht zu,0.208,0.211,0.206,none,1409
+9,2022-03-18,issue_poli,5 = Trifft ueberhaupt nicht zu,0.156,0.159,0.153,none,1409
+9,2022-03-18,issue_zuwa,1 = Trifft sehr zu,0.177,0.179,0.174,none,1420
+9,2022-03-18,issue_zuwa,2 = Trifft eher zu,0.199,0.201,0.196,none,1420
+9,2022-03-18,issue_zuwa,3 = Teils-teils,0.307,0.308,0.305,none,1420
+9,2022-03-18,issue_zuwa,4 = Trifft eher nicht zu,0.192,0.195,0.189,none,1420
+9,2022-03-18,issue_zuwa,5 = Trifft ueberhaupt nicht zu,0.126,0.13,0.123,none,1420
+9,2022-03-18,issue_umwe,1 = Trifft sehr zu,0.153,0.156,0.15,none,1426
+9,2022-03-18,issue_umwe,2 = Trifft eher zu,0.296,0.298,0.294,none,1426
+9,2022-03-18,issue_umwe,3 = Teils-teils,0.367,0.368,0.365,none,1426
+9,2022-03-18,issue_umwe,4 = Trifft eher nicht zu,0.106,0.11,0.102,none,1426
+9,2022-03-18,issue_umwe,5 = Trifft ueberhaupt nicht zu,0.078,0.083,0.074,none,1426
+9,2022-03-18,issue_eink,1 = Trifft sehr zu,0.364,0.365,0.362,none,1425
+9,2022-03-18,issue_eink,2 = Trifft eher zu,0.309,0.31,0.307,none,1425
+9,2022-03-18,issue_eink,3 = Teils-teils,0.258,0.26,0.256,none,1425
+9,2022-03-18,issue_eink,4 = Trifft eher nicht zu,0.053,0.059,0.047,none,1425
+9,2022-03-18,issue_eink,5 = Trifft ueberhaupt nicht zu,0.016,0.027,0.006,none,1425
+9,2022-03-18,issue_gena,1 = Trifft sehr zu,0.026,0.034,0.017,none,1394
+9,2022-03-18,issue_gena,2 = Trifft eher zu,0.109,0.112,0.105,none,1394
+9,2022-03-18,issue_gena,3 = Teils-teils,0.325,0.327,0.323,none,1394
+9,2022-03-18,issue_gena,4 = Trifft eher nicht zu,0.355,0.357,0.354,none,1394
+9,2022-03-18,issue_gena,5 = Trifft ueberhaupt nicht zu,0.185,0.188,0.182,none,1394
+9,2022-03-18,issue_redu,1 = Trifft sehr zu,0.276,0.278,0.274,none,1421
+9,2022-03-18,issue_redu,2 = Trifft eher zu,0.316,0.318,0.314,none,1421
+9,2022-03-18,issue_redu,3 = Teils-teils,0.299,0.301,0.297,none,1421
+9,2022-03-18,issue_redu,4 = Trifft eher nicht zu,0.077,0.082,0.073,none,1421
+9,2022-03-18,issue_redu,5 = Trifft ueberhaupt nicht zu,0.032,0.039,0.024,none,1421
 10,2020-03-28,wochentag,1 = Trifft voll und ganz zu,0.143,0.146,0.14,none,1535
 10,2020-03-28,wochentag,2 = Trifft eher zu,0.19,0.192,0.188,none,1535
 10,2020-03-28,wochentag,3 = Teils-teils,0.189,0.192,0.187,none,1535
@@ -6750,6 +7680,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 10,2021-11-26,skept_andere,3 = Teils-teils,0.191,0.194,0.189,none,1440
 10,2021-11-26,skept_andere,4 = Trifft eher nicht zu,0.195,0.197,0.192,none,1440
 10,2021-11-26,skept_andere,5 = Trifft gar nicht zu,0.539,0.54,0.538,none,1440
+10,2021-11-26,skept_grippe,1 = Trifft voll und ganz zu,0.462,0.464,0.461,none,1468
+10,2021-11-26,skept_grippe,2 = Trifft eher zu,0.188,0.19,0.185,none,1468
+10,2021-11-26,skept_grippe,3 = Teils-teils,0.212,0.215,0.21,none,1468
+10,2021-11-26,skept_grippe,4 = Trifft eher nicht zu,0.068,0.072,0.063,none,1468
+10,2021-11-26,skept_grippe,5 = Trifft gar nicht zu,0.07,0.074,0.065,none,1468
 10,2021-11-26,skept_gerech,1 = Trifft voll und ganz zu,0.144,0.147,0.141,none,1501
 10,2021-11-26,skept_gerech,2 = Trifft eher zu,0.27,0.272,0.268,none,1501
 10,2021-11-26,skept_gerech,3 = Teils-teils,0.274,0.276,0.273,none,1501
@@ -6795,6 +7730,626 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 10,2021-11-26,impf_soz,3 = Teils-teils,0.238,0.24,0.236,none,1497
 10,2021-11-26,impf_soz,4 = Trifft eher nicht zu,0.06,0.065,0.055,none,1497
 10,2021-11-26,impf_soz,5 = Trifft gar nicht zu,0.065,0.069,0.06,none,1497
+10,2022-01-14,wochentag,1 = Trifft voll und ganz zu,0.057,0.062,0.051,none,1487
+10,2022-01-14,wochentag,2 = Trifft eher zu,0.109,0.112,0.105,none,1487
+10,2022-01-14,wochentag,3 = Teils-teils,0.172,0.174,0.169,none,1487
+10,2022-01-14,wochentag,4 = Trifft eher nicht zu,0.147,0.15,0.144,none,1487
+10,2022-01-14,wochentag,5 = Trifft gar nicht zu,0.515,0.516,0.514,none,1487
+10,2022-01-14,kontakt,1 = Trifft voll und ganz zu,0.145,0.148,0.142,none,1487
+10,2022-01-14,kontakt,2 = Trifft eher zu,0.141,0.144,0.138,none,1487
+10,2022-01-14,kontakt,3 = Teils-teils,0.26,0.262,0.258,none,1487
+10,2022-01-14,kontakt,4 = Trifft eher nicht zu,0.168,0.17,0.165,none,1487
+10,2022-01-14,kontakt,5 = Trifft gar nicht zu,0.286,0.288,0.285,none,1487
+10,2022-01-14,zeit,1 = Trifft voll und ganz zu,0.073,0.078,0.069,none,1464
+10,2022-01-14,zeit,2 = Trifft eher zu,0.109,0.112,0.105,none,1464
+10,2022-01-14,zeit,3 = Teils-teils,0.3,0.302,0.298,none,1464
+10,2022-01-14,zeit,4 = Trifft eher nicht zu,0.18,0.182,0.177,none,1464
+10,2022-01-14,zeit,5 = Trifft gar nicht zu,0.338,0.34,0.337,none,1464
+10,2022-01-14,konflikt,1 = Trifft voll und ganz zu,0.037,0.043,0.03,none,1471
+10,2022-01-14,konflikt,2 = Trifft eher zu,0.078,0.082,0.073,none,1471
+10,2022-01-14,konflikt,3 = Teils-teils,0.154,0.157,0.152,none,1471
+10,2022-01-14,konflikt,4 = Trifft eher nicht zu,0.172,0.175,0.169,none,1471
+10,2022-01-14,konflikt,5 = Trifft gar nicht zu,0.559,0.56,0.558,none,1471
+10,2022-01-14,kinder,1 = Trifft voll und ganz zu,0.057,0.08,0.034,none,284
+10,2022-01-14,kinder,2 = Trifft eher zu,0.062,0.084,0.04,none,284
+10,2022-01-14,kinder,3 = Teils-teils,0.253,0.261,0.244,none,284
+10,2022-01-14,kinder,4 = Trifft eher nicht zu,0.199,0.21,0.189,none,284
+10,2022-01-14,kinder,5 = Trifft gar nicht zu,0.428,0.434,0.423,none,284
+10,2022-01-14,zusammenhalt,1 = Trifft voll und ganz zu,0.021,0.03,0.011,none,1439
+10,2022-01-14,zusammenhalt,2 = Trifft eher zu,0.058,0.063,0.052,none,1439
+10,2022-01-14,zusammenhalt,3 = Teils-teils,0.218,0.22,0.216,none,1439
+10,2022-01-14,zusammenhalt,4 = Trifft eher nicht zu,0.284,0.286,0.282,none,1439
+10,2022-01-14,zusammenhalt,5 = Trifft gar nicht zu,0.419,0.421,0.418,none,1439
+10,2022-01-14,umweundklima,1 = Trifft voll und ganz zu,0.16,0.163,0.157,none,1462
+10,2022-01-14,umweundklima,2 = Trifft eher zu,0.215,0.217,0.213,none,1462
+10,2022-01-14,umweundklima,3 = Teils-teils,0.397,0.398,0.395,none,1462
+10,2022-01-14,umweundklima,4 = Trifft eher nicht zu,0.125,0.128,0.122,none,1462
+10,2022-01-14,umweundklima,5 = Trifft gar nicht zu,0.103,0.107,0.1,none,1462
+10,2022-01-14,onlinekommun,1 = Trifft voll und ganz zu,0.098,0.102,0.094,none,1428
+10,2022-01-14,onlinekommun,2 = Trifft eher zu,0.234,0.237,0.232,none,1428
+10,2022-01-14,onlinekommun,3 = Teils-teils,0.449,0.45,0.448,none,1428
+10,2022-01-14,onlinekommun,4 = Trifft eher nicht zu,0.128,0.131,0.124,none,1428
+10,2022-01-14,onlinekommun,5 = Trifft gar nicht zu,0.091,0.095,0.087,none,1428
+10,2022-01-14,zus_bestes,1 = Trifft voll und ganz zu,0.05,0.056,0.045,none,1472
+10,2022-01-14,zus_bestes,2 = Trifft eher zu,0.166,0.168,0.163,none,1472
+10,2022-01-14,zus_bestes,3 = Teils-teils,0.408,0.409,0.406,none,1472
+10,2022-01-14,zus_bestes,4 = Trifft eher nicht zu,0.214,0.216,0.212,none,1472
+10,2022-01-14,zus_bestes,5 = Trifft gar nicht zu,0.163,0.165,0.16,none,1472
+10,2022-01-14,zus_einig,1 = Trifft voll und ganz zu,0.092,0.096,0.088,none,1468
+10,2022-01-14,zus_einig,2 = Trifft eher zu,0.294,0.295,0.292,none,1468
+10,2022-01-14,zus_einig,3 = Teils-teils,0.397,0.398,0.396,none,1468
+10,2022-01-14,zus_einig,4 = Trifft eher nicht zu,0.124,0.127,0.12,none,1468
+10,2022-01-14,zus_einig,5 = Trifft gar nicht zu,0.094,0.097,0.09,none,1468
+10,2022-01-14,zus_schutzen,1 = Trifft voll und ganz zu,0.034,0.041,0.027,none,1456
+10,2022-01-14,zus_schutzen,2 = Trifft eher zu,0.116,0.119,0.112,none,1456
+10,2022-01-14,zus_schutzen,3 = Teils-teils,0.348,0.35,0.347,none,1456
+10,2022-01-14,zus_schutzen,4 = Trifft eher nicht zu,0.252,0.254,0.25,none,1456
+10,2022-01-14,zus_schutzen,5 = Trifft gar nicht zu,0.249,0.251,0.247,none,1456
+10,2022-01-14,skept_lebens,1 = Trifft voll und ganz zu,0.13,0.133,0.127,none,1456
+10,2022-01-14,skept_lebens,2 = Trifft eher zu,0.249,0.251,0.247,none,1456
+10,2022-01-14,skept_lebens,3 = Teils-teils,0.378,0.38,0.377,none,1456
+10,2022-01-14,skept_lebens,4 = Trifft eher nicht zu,0.107,0.111,0.104,none,1456
+10,2022-01-14,skept_lebens,5 = Trifft gar nicht zu,0.135,0.138,0.132,none,1456
+10,2022-01-14,skept_wichti,1 = Trifft voll und ganz zu,0.308,0.31,0.306,none,1468
+10,2022-01-14,skept_wichti,2 = Trifft eher zu,0.221,0.223,0.218,none,1468
+10,2022-01-14,skept_wichti,3 = Teils-teils,0.316,0.318,0.315,none,1468
+10,2022-01-14,skept_wichti,4 = Trifft eher nicht zu,0.09,0.094,0.086,none,1468
+10,2022-01-14,skept_wichti,5 = Trifft gar nicht zu,0.065,0.07,0.06,none,1468
+10,2022-01-14,skept_behaup,1 = Trifft voll und ganz zu,0.172,0.175,0.169,none,1428
+10,2022-01-14,skept_behaup,2 = Trifft eher zu,0.21,0.212,0.207,none,1428
+10,2022-01-14,skept_behaup,3 = Teils-teils,0.32,0.321,0.318,none,1428
+10,2022-01-14,skept_behaup,4 = Trifft eher nicht zu,0.151,0.154,0.148,none,1428
+10,2022-01-14,skept_behaup,5 = Trifft gar nicht zu,0.148,0.151,0.145,none,1428
+10,2022-01-14,skept_andere,1 = Trifft voll und ganz zu,0.035,0.042,0.027,none,1402
+10,2022-01-14,skept_andere,2 = Trifft eher zu,0.042,0.048,0.035,none,1402
+10,2022-01-14,skept_andere,3 = Teils-teils,0.161,0.164,0.158,none,1402
+10,2022-01-14,skept_andere,4 = Trifft eher nicht zu,0.21,0.212,0.207,none,1402
+10,2022-01-14,skept_andere,5 = Trifft gar nicht zu,0.553,0.554,0.552,none,1402
+10,2022-01-14,skept_grippe,1 = Trifft voll und ganz zu,0.398,0.399,0.396,none,1444
+10,2022-01-14,skept_grippe,2 = Trifft eher zu,0.215,0.217,0.212,none,1444
+10,2022-01-14,skept_grippe,3 = Teils-teils,0.21,0.212,0.207,none,1444
+10,2022-01-14,skept_grippe,4 = Trifft eher nicht zu,0.084,0.089,0.08,none,1444
+10,2022-01-14,skept_grippe,5 = Trifft gar nicht zu,0.094,0.098,0.09,none,1444
+10,2022-01-14,skept_gerech,1 = Trifft voll und ganz zu,0.126,0.129,0.123,none,1481
+10,2022-01-14,skept_gerech,2 = Trifft eher zu,0.286,0.288,0.284,none,1481
+10,2022-01-14,skept_gerech,3 = Teils-teils,0.259,0.261,0.257,none,1481
+10,2022-01-14,skept_gerech,4 = Trifft eher nicht zu,0.136,0.139,0.133,none,1481
+10,2022-01-14,skept_gerech,5 = Trifft gar nicht zu,0.193,0.195,0.19,none,1481
+10,2022-01-14,mastest_eff,1 = Trifft voll und ganz zu,0.232,0.234,0.229,none,1487
+10,2022-01-14,mastest_eff,2 = Trifft eher zu,0.287,0.289,0.286,none,1487
+10,2022-01-14,mastest_eff,3 = Teils-teils,0.288,0.29,0.286,none,1487
+10,2022-01-14,mastest_eff,4 = Trifft eher nicht zu,0.085,0.089,0.08,none,1487
+10,2022-01-14,mastest_eff,5 = Trifft gar nicht zu,0.109,0.112,0.105,none,1487
+10,2022-01-14,mastest_zuv,1 = Trifft voll und ganz zu,0.156,0.158,0.153,none,1461
+10,2022-01-14,mastest_zuv,2 = Trifft eher zu,0.356,0.357,0.354,none,1461
+10,2022-01-14,mastest_zuv,3 = Teils-teils,0.329,0.331,0.328,none,1461
+10,2022-01-14,mastest_zuv,4 = Trifft eher nicht zu,0.087,0.091,0.083,none,1461
+10,2022-01-14,mastest_zuv,5 = Trifft gar nicht zu,0.073,0.077,0.068,none,1461
+10,2022-01-14,mastest_mot,1 = Trifft voll und ganz zu,0.351,0.353,0.35,none,1482
+10,2022-01-14,mastest_mot,2 = Trifft eher zu,0.28,0.282,0.278,none,1482
+10,2022-01-14,mastest_mot,3 = Teils-teils,0.219,0.221,0.217,none,1482
+10,2022-01-14,mastest_mot,4 = Trifft eher nicht zu,0.09,0.094,0.086,none,1482
+10,2022-01-14,mastest_mot,5 = Trifft gar nicht zu,0.06,0.065,0.055,none,1482
+10,2022-01-14,impf_pfl,1 = Trifft voll und ganz zu,0.344,0.346,0.343,none,1485
+10,2022-01-14,impf_pfl,2 = Trifft eher zu,0.152,0.154,0.149,none,1485
+10,2022-01-14,impf_pfl,3 = Teils-teils,0.121,0.124,0.117,none,1485
+10,2022-01-14,impf_pfl,4 = Trifft eher nicht zu,0.069,0.074,0.065,none,1485
+10,2022-01-14,impf_pfl,5 = Trifft gar nicht zu,0.315,0.316,0.313,none,1485
+10,2022-01-14,impf_gra,1 = Trifft voll und ganz zu,0.769,0.769,0.769,none,1459
+10,2022-01-14,impf_gra,2 = Trifft eher zu,0.117,0.12,0.113,none,1459
+10,2022-01-14,impf_gra,3 = Teils-teils,0.069,0.074,0.064,none,1459
+10,2022-01-14,impf_gra,4 = Trifft eher nicht zu,0.019,0.028,0.009,none,1459
+10,2022-01-14,impf_gra,5 = Trifft gar nicht zu,0.026,0.034,0.018,none,1459
+10,2022-01-14,impf_pfb,1 = Trifft voll und ganz zu,0.49,0.491,0.489,none,1473
+10,2022-01-14,impf_pfb,2 = Trifft eher zu,0.139,0.142,0.136,none,1473
+10,2022-01-14,impf_pfb,3 = Teils-teils,0.104,0.108,0.1,none,1473
+10,2022-01-14,impf_pfb,4 = Trifft eher nicht zu,0.057,0.062,0.051,none,1473
+10,2022-01-14,impf_pfb,5 = Trifft gar nicht zu,0.21,0.212,0.208,none,1473
+10,2022-01-14,impf_kin,1 = Trifft voll und ganz zu,0.337,0.344,0.33,none,275
+10,2022-01-14,impf_kin,2 = Trifft eher zu,0.109,0.126,0.093,none,275
+10,2022-01-14,impf_kin,3 = Teils-teils,0.127,0.142,0.112,none,275
+10,2022-01-14,impf_kin,4 = Trifft eher nicht zu,0.092,0.11,0.074,none,275
+10,2022-01-14,impf_kin,5 = Trifft gar nicht zu,0.334,0.341,0.327,none,275
+10,2022-01-14,impf_soz,1 = Trifft voll und ganz zu,0.384,0.385,0.382,none,1467
+10,2022-01-14,impf_soz,2 = Trifft eher zu,0.267,0.269,0.266,none,1467
+10,2022-01-14,impf_soz,3 = Teils-teils,0.232,0.234,0.23,none,1467
+10,2022-01-14,impf_soz,4 = Trifft eher nicht zu,0.054,0.06,0.049,none,1467
+10,2022-01-14,impf_soz,5 = Trifft gar nicht zu,0.063,0.068,0.058,none,1467
+10,2022-02-18,wochentag,1 = Trifft voll und ganz zu,0.054,0.059,0.048,none,1481
+10,2022-02-18,wochentag,2 = Trifft eher zu,0.099,0.103,0.095,none,1481
+10,2022-02-18,wochentag,3 = Teils-teils,0.183,0.186,0.181,none,1481
+10,2022-02-18,wochentag,4 = Trifft eher nicht zu,0.181,0.183,0.178,none,1481
+10,2022-02-18,wochentag,5 = Trifft gar nicht zu,0.484,0.485,0.483,none,1481
+10,2022-02-18,kontakt,1 = Trifft voll und ganz zu,0.11,0.114,0.106,none,1482
+10,2022-02-18,kontakt,2 = Trifft eher zu,0.161,0.163,0.158,none,1482
+10,2022-02-18,kontakt,3 = Teils-teils,0.278,0.279,0.276,none,1482
+10,2022-02-18,kontakt,4 = Trifft eher nicht zu,0.17,0.173,0.167,none,1482
+10,2022-02-18,kontakt,5 = Trifft gar nicht zu,0.282,0.284,0.28,none,1482
+10,2022-02-18,zeit,1 = Trifft voll und ganz zu,0.064,0.069,0.059,none,1463
+10,2022-02-18,zeit,2 = Trifft eher zu,0.137,0.14,0.134,none,1463
+10,2022-02-18,zeit,3 = Teils-teils,0.34,0.341,0.338,none,1463
+10,2022-02-18,zeit,4 = Trifft eher nicht zu,0.187,0.189,0.184,none,1463
+10,2022-02-18,zeit,5 = Trifft gar nicht zu,0.272,0.274,0.27,none,1463
+10,2022-02-18,konflikt,1 = Trifft voll und ganz zu,0.03,0.037,0.022,none,1473
+10,2022-02-18,konflikt,2 = Trifft eher zu,0.076,0.081,0.072,none,1473
+10,2022-02-18,konflikt,3 = Teils-teils,0.173,0.176,0.171,none,1473
+10,2022-02-18,konflikt,4 = Trifft eher nicht zu,0.183,0.185,0.18,none,1473
+10,2022-02-18,konflikt,5 = Trifft gar nicht zu,0.538,0.539,0.537,none,1473
+10,2022-02-18,kinder,1 = Trifft voll und ganz zu,0.05,0.075,0.024,none,279
+10,2022-02-18,kinder,2 = Trifft eher zu,0.121,0.136,0.106,none,279
+10,2022-02-18,kinder,3 = Teils-teils,0.237,0.246,0.227,none,279
+10,2022-02-18,kinder,4 = Trifft eher nicht zu,0.177,0.189,0.165,none,279
+10,2022-02-18,kinder,5 = Trifft gar nicht zu,0.416,0.421,0.41,none,279
+10,2022-02-18,zusammenhalt,1 = Trifft voll und ganz zu,0.036,0.043,0.029,none,1433
+10,2022-02-18,zusammenhalt,2 = Trifft eher zu,0.069,0.074,0.064,none,1433
+10,2022-02-18,zusammenhalt,3 = Teils-teils,0.261,0.263,0.259,none,1433
+10,2022-02-18,zusammenhalt,4 = Trifft eher nicht zu,0.31,0.312,0.309,none,1433
+10,2022-02-18,zusammenhalt,5 = Trifft gar nicht zu,0.324,0.325,0.322,none,1433
+10,2022-02-18,umweundklima,1 = Trifft voll und ganz zu,0.151,0.154,0.148,none,1434
+10,2022-02-18,umweundklima,2 = Trifft eher zu,0.218,0.22,0.216,none,1434
+10,2022-02-18,umweundklima,3 = Teils-teils,0.388,0.39,0.387,none,1434
+10,2022-02-18,umweundklima,4 = Trifft eher nicht zu,0.122,0.125,0.118,none,1434
+10,2022-02-18,umweundklima,5 = Trifft gar nicht zu,0.121,0.125,0.118,none,1434
+10,2022-02-18,onlinekommun,1 = Trifft voll und ganz zu,0.102,0.106,0.098,none,1406
+10,2022-02-18,onlinekommun,2 = Trifft eher zu,0.217,0.219,0.215,none,1406
+10,2022-02-18,onlinekommun,3 = Teils-teils,0.456,0.457,0.454,none,1406
+10,2022-02-18,onlinekommun,4 = Trifft eher nicht zu,0.134,0.137,0.13,none,1406
+10,2022-02-18,onlinekommun,5 = Trifft gar nicht zu,0.092,0.096,0.088,none,1406
+10,2022-02-18,zus_bestes,1 = Trifft voll und ganz zu,0.065,0.07,0.06,none,1450
+10,2022-02-18,zus_bestes,2 = Trifft eher zu,0.208,0.21,0.205,none,1450
+10,2022-02-18,zus_bestes,3 = Teils-teils,0.42,0.421,0.419,none,1450
+10,2022-02-18,zus_bestes,4 = Trifft eher nicht zu,0.209,0.212,0.207,none,1450
+10,2022-02-18,zus_bestes,5 = Trifft gar nicht zu,0.097,0.101,0.093,none,1450
+10,2022-02-18,zus_einig,1 = Trifft voll und ganz zu,0.085,0.09,0.081,none,1444
+10,2022-02-18,zus_einig,2 = Trifft eher zu,0.291,0.293,0.289,none,1444
+10,2022-02-18,zus_einig,3 = Teils-teils,0.385,0.386,0.384,none,1444
+10,2022-02-18,zus_einig,4 = Trifft eher nicht zu,0.159,0.162,0.156,none,1444
+10,2022-02-18,zus_einig,5 = Trifft gar nicht zu,0.08,0.084,0.076,none,1444
+10,2022-02-18,zus_schutzen,1 = Trifft voll und ganz zu,0.041,0.047,0.035,none,1445
+10,2022-02-18,zus_schutzen,2 = Trifft eher zu,0.107,0.111,0.103,none,1445
+10,2022-02-18,zus_schutzen,3 = Teils-teils,0.369,0.37,0.367,none,1445
+10,2022-02-18,zus_schutzen,4 = Trifft eher nicht zu,0.281,0.283,0.279,none,1445
+10,2022-02-18,zus_schutzen,5 = Trifft gar nicht zu,0.203,0.205,0.201,none,1445
+10,2022-02-18,skept_lebens,1 = Trifft voll und ganz zu,0.112,0.116,0.109,none,1460
+10,2022-02-18,skept_lebens,2 = Trifft eher zu,0.243,0.245,0.241,none,1460
+10,2022-02-18,skept_lebens,3 = Teils-teils,0.36,0.361,0.359,none,1460
+10,2022-02-18,skept_lebens,4 = Trifft eher nicht zu,0.145,0.148,0.142,none,1460
+10,2022-02-18,skept_lebens,5 = Trifft gar nicht zu,0.141,0.144,0.138,none,1460
+10,2022-02-18,skept_wichti,1 = Trifft voll und ganz zu,0.32,0.322,0.319,none,1463
+10,2022-02-18,skept_wichti,2 = Trifft eher zu,0.237,0.239,0.235,none,1463
+10,2022-02-18,skept_wichti,3 = Teils-teils,0.33,0.331,0.328,none,1463
+10,2022-02-18,skept_wichti,4 = Trifft eher nicht zu,0.076,0.081,0.072,none,1463
+10,2022-02-18,skept_wichti,5 = Trifft gar nicht zu,0.037,0.043,0.03,none,1463
+10,2022-02-18,skept_behaup,1 = Trifft voll und ganz zu,0.175,0.178,0.172,none,1416
+10,2022-02-18,skept_behaup,2 = Trifft eher zu,0.177,0.18,0.174,none,1416
+10,2022-02-18,skept_behaup,3 = Teils-teils,0.372,0.373,0.37,none,1416
+10,2022-02-18,skept_behaup,4 = Trifft eher nicht zu,0.155,0.158,0.152,none,1416
+10,2022-02-18,skept_behaup,5 = Trifft gar nicht zu,0.121,0.124,0.117,none,1416
+10,2022-02-18,skept_andere,1 = Trifft voll und ganz zu,0.029,0.037,0.021,none,1397
+10,2022-02-18,skept_andere,2 = Trifft eher zu,0.06,0.066,0.055,none,1397
+10,2022-02-18,skept_andere,3 = Teils-teils,0.219,0.221,0.217,none,1397
+10,2022-02-18,skept_andere,4 = Trifft eher nicht zu,0.221,0.223,0.219,none,1397
+10,2022-02-18,skept_andere,5 = Trifft gar nicht zu,0.471,0.472,0.47,none,1397
+10,2022-02-18,skept_grippe,1 = Trifft voll und ganz zu,0.329,0.33,0.327,none,1440
+10,2022-02-18,skept_grippe,2 = Trifft eher zu,0.212,0.215,0.21,none,1440
+10,2022-02-18,skept_grippe,3 = Teils-teils,0.246,0.248,0.244,none,1440
+10,2022-02-18,skept_grippe,4 = Trifft eher nicht zu,0.098,0.102,0.094,none,1440
+10,2022-02-18,skept_grippe,5 = Trifft gar nicht zu,0.115,0.119,0.112,none,1440
+10,2022-02-18,skept_gerech,1 = Trifft voll und ganz zu,0.105,0.109,0.102,none,1461
+10,2022-02-18,skept_gerech,2 = Trifft eher zu,0.266,0.268,0.264,none,1461
+10,2022-02-18,skept_gerech,3 = Teils-teils,0.272,0.274,0.27,none,1461
+10,2022-02-18,skept_gerech,4 = Trifft eher nicht zu,0.154,0.157,0.151,none,1461
+10,2022-02-18,skept_gerech,5 = Trifft gar nicht zu,0.203,0.205,0.201,none,1461
+10,2022-02-18,tax_gleich,1 = Trifft voll und ganz zu,0.117,0.121,0.113,none,1402
+10,2022-02-18,tax_gleich,2 = Trifft eher zu,0.176,0.179,0.173,none,1402
+10,2022-02-18,tax_gleich,3 = Teils-teils,0.325,0.326,0.323,none,1402
+10,2022-02-18,tax_gleich,4 = Trifft eher nicht zu,0.204,0.206,0.201,none,1402
+10,2022-02-18,tax_gleich,5 = Trifft gar nicht zu,0.179,0.182,0.176,none,1402
+10,2022-02-18,tax_ineq,1 = Trifft voll und ganz zu,0.455,0.456,0.454,none,1452
+10,2022-02-18,tax_ineq,2 = Trifft eher zu,0.331,0.333,0.33,none,1452
+10,2022-02-18,tax_ineq,3 = Teils-teils,0.153,0.156,0.15,none,1452
+10,2022-02-18,tax_ineq,4 = Trifft eher nicht zu,0.043,0.05,0.037,none,1452
+10,2022-02-18,tax_ineq,5 = Trifft gar nicht zu,0.017,0.027,0.007,none,1452
+10,2022-02-18,tax_hurt,1 = Trifft voll und ganz zu,0.324,0.325,0.322,none,1399
+10,2022-02-18,tax_hurt,2 = Trifft eher zu,0.268,0.27,0.266,none,1399
+10,2022-02-18,tax_hurt,3 = Teils-teils,0.284,0.286,0.282,none,1399
+10,2022-02-18,tax_hurt,4 = Trifft eher nicht zu,0.088,0.092,0.084,none,1399
+10,2022-02-18,tax_hurt,5 = Trifft gar nicht zu,0.037,0.044,0.03,none,1399
+10,2022-02-18,mastest_eff,1 = Trifft voll und ganz zu,0.202,0.205,0.2,none,1480
+10,2022-02-18,mastest_eff,2 = Trifft eher zu,0.279,0.281,0.277,none,1480
+10,2022-02-18,mastest_eff,3 = Teils-teils,0.281,0.283,0.28,none,1480
+10,2022-02-18,mastest_eff,4 = Trifft eher nicht zu,0.109,0.113,0.105,none,1480
+10,2022-02-18,mastest_eff,5 = Trifft gar nicht zu,0.128,0.131,0.125,none,1480
+10,2022-02-18,mastest_zuv,1 = Trifft voll und ganz zu,0.145,0.148,0.142,none,1469
+10,2022-02-18,mastest_zuv,2 = Trifft eher zu,0.355,0.356,0.353,none,1469
+10,2022-02-18,mastest_zuv,3 = Teils-teils,0.304,0.306,0.303,none,1469
+10,2022-02-18,mastest_zuv,4 = Trifft eher nicht zu,0.113,0.116,0.109,none,1469
+10,2022-02-18,mastest_zuv,5 = Trifft gar nicht zu,0.083,0.088,0.079,none,1469
+10,2022-02-18,mastest_mot,1 = Trifft voll und ganz zu,0.424,0.425,0.422,none,1477
+10,2022-02-18,mastest_mot,2 = Trifft eher zu,0.27,0.272,0.269,none,1477
+10,2022-02-18,mastest_mot,3 = Teils-teils,0.208,0.211,0.206,none,1477
+10,2022-02-18,mastest_mot,4 = Trifft eher nicht zu,0.059,0.064,0.054,none,1477
+10,2022-02-18,mastest_mot,5 = Trifft gar nicht zu,0.039,0.045,0.032,none,1477
+10,2022-02-18,impf_pfl,1 = Trifft voll und ganz zu,0.312,0.313,0.31,none,1468
+10,2022-02-18,impf_pfl,2 = Trifft eher zu,0.142,0.146,0.139,none,1468
+10,2022-02-18,impf_pfl,3 = Teils-teils,0.131,0.135,0.128,none,1468
+10,2022-02-18,impf_pfl,4 = Trifft eher nicht zu,0.085,0.09,0.081,none,1468
+10,2022-02-18,impf_pfl,5 = Trifft gar nicht zu,0.329,0.33,0.327,none,1468
+10,2022-02-18,impf_gra,1 = Trifft voll und ganz zu,0.732,0.732,0.732,none,1463
+10,2022-02-18,impf_gra,2 = Trifft eher zu,0.136,0.139,0.133,none,1463
+10,2022-02-18,impf_gra,3 = Teils-teils,0.075,0.08,0.071,none,1463
+10,2022-02-18,impf_gra,4 = Trifft eher nicht zu,0.021,0.03,0.012,none,1463
+10,2022-02-18,impf_gra,5 = Trifft gar nicht zu,0.035,0.042,0.028,none,1463
+10,2022-02-18,impf_pfb,1 = Trifft voll und ganz zu,0.424,0.425,0.423,none,1475
+10,2022-02-18,impf_pfb,2 = Trifft eher zu,0.167,0.17,0.165,none,1475
+10,2022-02-18,impf_pfb,3 = Teils-teils,0.114,0.117,0.11,none,1475
+10,2022-02-18,impf_pfb,4 = Trifft eher nicht zu,0.055,0.061,0.05,none,1475
+10,2022-02-18,impf_pfb,5 = Trifft gar nicht zu,0.24,0.242,0.238,none,1475
+10,2022-02-18,impf_soz,1 = Trifft voll und ganz zu,0.357,0.358,0.355,none,1465
+10,2022-02-18,impf_soz,2 = Trifft eher zu,0.294,0.296,0.292,none,1465
+10,2022-02-18,impf_soz,3 = Teils-teils,0.245,0.247,0.243,none,1465
+10,2022-02-18,impf_soz,4 = Trifft eher nicht zu,0.046,0.052,0.04,none,1465
+10,2022-02-18,impf_soz,5 = Trifft gar nicht zu,0.058,0.063,0.053,none,1465
+10,2022-03-18,wochentag,1 = Trifft voll und ganz zu,0.052,0.058,0.047,none,1472
+10,2022-03-18,wochentag,2 = Trifft eher zu,0.086,0.09,0.082,none,1472
+10,2022-03-18,wochentag,3 = Teils-teils,0.186,0.189,0.184,none,1472
+10,2022-03-18,wochentag,4 = Trifft eher nicht zu,0.197,0.199,0.194,none,1472
+10,2022-03-18,wochentag,5 = Trifft gar nicht zu,0.479,0.48,0.478,none,1472
+10,2022-03-18,kontakt,1 = Trifft voll und ganz zu,0.08,0.084,0.076,none,1467
+10,2022-03-18,kontakt,2 = Trifft eher zu,0.155,0.158,0.152,none,1467
+10,2022-03-18,kontakt,3 = Teils-teils,0.228,0.23,0.226,none,1467
+10,2022-03-18,kontakt,4 = Trifft eher nicht zu,0.192,0.194,0.189,none,1467
+10,2022-03-18,kontakt,5 = Trifft gar nicht zu,0.345,0.346,0.343,none,1467
+10,2022-03-18,zeit,1 = Trifft voll und ganz zu,0.074,0.078,0.069,none,1452
+10,2022-03-18,zeit,2 = Trifft eher zu,0.116,0.12,0.113,none,1452
+10,2022-03-18,zeit,3 = Teils-teils,0.324,0.325,0.322,none,1452
+10,2022-03-18,zeit,4 = Trifft eher nicht zu,0.173,0.176,0.171,none,1452
+10,2022-03-18,zeit,5 = Trifft gar nicht zu,0.313,0.315,0.311,none,1452
+10,2022-03-18,konflikt,1 = Trifft voll und ganz zu,0.034,0.041,0.027,none,1459
+10,2022-03-18,konflikt,2 = Trifft eher zu,0.059,0.064,0.054,none,1459
+10,2022-03-18,konflikt,3 = Teils-teils,0.152,0.155,0.149,none,1459
+10,2022-03-18,konflikt,4 = Trifft eher nicht zu,0.172,0.175,0.17,none,1459
+10,2022-03-18,konflikt,5 = Trifft gar nicht zu,0.582,0.583,0.581,none,1459
+10,2022-03-18,kinder,1 = Trifft voll und ganz zu,0.052,0.077,0.026,none,280
+10,2022-03-18,kinder,2 = Trifft eher zu,0.116,0.132,0.1,none,280
+10,2022-03-18,kinder,3 = Teils-teils,0.249,0.258,0.24,none,280
+10,2022-03-18,kinder,4 = Trifft eher nicht zu,0.185,0.196,0.173,none,280
+10,2022-03-18,kinder,5 = Trifft gar nicht zu,0.399,0.405,0.393,none,280
+10,2022-03-18,zusammenhalt,1 = Trifft voll und ganz zu,0.029,0.037,0.022,none,1426
+10,2022-03-18,zusammenhalt,2 = Trifft eher zu,0.112,0.116,0.109,none,1426
+10,2022-03-18,zusammenhalt,3 = Teils-teils,0.287,0.288,0.285,none,1426
+10,2022-03-18,zusammenhalt,4 = Trifft eher nicht zu,0.272,0.274,0.27,none,1426
+10,2022-03-18,zusammenhalt,5 = Trifft gar nicht zu,0.3,0.302,0.298,none,1426
+10,2022-03-18,umweundklima,1 = Trifft voll und ganz zu,0.127,0.131,0.124,none,1432
+10,2022-03-18,umweundklima,2 = Trifft eher zu,0.222,0.224,0.22,none,1432
+10,2022-03-18,umweundklima,3 = Teils-teils,0.411,0.412,0.41,none,1432
+10,2022-03-18,umweundklima,4 = Trifft eher nicht zu,0.134,0.137,0.131,none,1432
+10,2022-03-18,umweundklima,5 = Trifft gar nicht zu,0.106,0.11,0.102,none,1432
+10,2022-03-18,onlinekommun,1 = Trifft voll und ganz zu,0.083,0.087,0.078,none,1406
+10,2022-03-18,onlinekommun,2 = Trifft eher zu,0.254,0.256,0.252,none,1406
+10,2022-03-18,onlinekommun,3 = Teils-teils,0.462,0.463,0.461,none,1406
+10,2022-03-18,onlinekommun,4 = Trifft eher nicht zu,0.12,0.124,0.116,none,1406
+10,2022-03-18,onlinekommun,5 = Trifft gar nicht zu,0.081,0.086,0.077,none,1406
+10,2022-03-18,zus_bestes,1 = Trifft voll und ganz zu,0.052,0.058,0.047,none,1446
+10,2022-03-18,zus_bestes,2 = Trifft eher zu,0.178,0.181,0.176,none,1446
+10,2022-03-18,zus_bestes,3 = Teils-teils,0.435,0.436,0.433,none,1446
+10,2022-03-18,zus_bestes,4 = Trifft eher nicht zu,0.21,0.212,0.208,none,1446
+10,2022-03-18,zus_bestes,5 = Trifft gar nicht zu,0.125,0.128,0.121,none,1446
+10,2022-03-18,zus_einig,1 = Trifft voll und ganz zu,0.077,0.082,0.073,none,1435
+10,2022-03-18,zus_einig,2 = Trifft eher zu,0.299,0.301,0.298,none,1435
+10,2022-03-18,zus_einig,3 = Teils-teils,0.392,0.394,0.391,none,1435
+10,2022-03-18,zus_einig,4 = Trifft eher nicht zu,0.145,0.148,0.142,none,1435
+10,2022-03-18,zus_einig,5 = Trifft gar nicht zu,0.086,0.09,0.081,none,1435
+10,2022-03-18,zus_schutzen,1 = Trifft voll und ganz zu,0.039,0.045,0.032,none,1446
+10,2022-03-18,zus_schutzen,2 = Trifft eher zu,0.161,0.164,0.158,none,1446
+10,2022-03-18,zus_schutzen,3 = Teils-teils,0.381,0.383,0.38,none,1446
+10,2022-03-18,zus_schutzen,4 = Trifft eher nicht zu,0.233,0.235,0.23,none,1446
+10,2022-03-18,zus_schutzen,5 = Trifft gar nicht zu,0.187,0.189,0.184,none,1446
+10,2022-03-18,skept_lebens,1 = Trifft voll und ganz zu,0.137,0.141,0.134,none,1433
+10,2022-03-18,skept_lebens,2 = Trifft eher zu,0.249,0.251,0.247,none,1433
+10,2022-03-18,skept_lebens,3 = Teils-teils,0.384,0.386,0.383,none,1433
+10,2022-03-18,skept_lebens,4 = Trifft eher nicht zu,0.104,0.108,0.1,none,1433
+10,2022-03-18,skept_lebens,5 = Trifft gar nicht zu,0.125,0.128,0.122,none,1433
+10,2022-03-18,skept_wichti,1 = Trifft voll und ganz zu,0.337,0.338,0.335,none,1448
+10,2022-03-18,skept_wichti,2 = Trifft eher zu,0.242,0.244,0.24,none,1448
+10,2022-03-18,skept_wichti,3 = Teils-teils,0.297,0.299,0.296,none,1448
+10,2022-03-18,skept_wichti,4 = Trifft eher nicht zu,0.075,0.079,0.07,none,1448
+10,2022-03-18,skept_wichti,5 = Trifft gar nicht zu,0.05,0.055,0.044,none,1448
+10,2022-03-18,skept_behaup,1 = Trifft voll und ganz zu,0.163,0.166,0.16,none,1409
+10,2022-03-18,skept_behaup,2 = Trifft eher zu,0.205,0.207,0.202,none,1409
+10,2022-03-18,skept_behaup,3 = Teils-teils,0.355,0.357,0.354,none,1409
+10,2022-03-18,skept_behaup,4 = Trifft eher nicht zu,0.149,0.152,0.146,none,1409
+10,2022-03-18,skept_behaup,5 = Trifft gar nicht zu,0.127,0.131,0.124,none,1409
+10,2022-03-18,skept_andere,1 = Trifft voll und ganz zu,0.03,0.038,0.023,none,1395
+10,2022-03-18,skept_andere,2 = Trifft eher zu,0.053,0.059,0.047,none,1395
+10,2022-03-18,skept_andere,3 = Teils-teils,0.229,0.231,0.226,none,1395
+10,2022-03-18,skept_andere,4 = Trifft eher nicht zu,0.217,0.219,0.214,none,1395
+10,2022-03-18,skept_andere,5 = Trifft gar nicht zu,0.471,0.472,0.47,none,1395
+10,2022-03-18,skept_grippe,1 = Trifft voll und ganz zu,0.332,0.334,0.331,none,1430
+10,2022-03-18,skept_grippe,2 = Trifft eher zu,0.208,0.21,0.205,none,1430
+10,2022-03-18,skept_grippe,3 = Teils-teils,0.243,0.245,0.241,none,1430
+10,2022-03-18,skept_grippe,4 = Trifft eher nicht zu,0.101,0.104,0.097,none,1430
+10,2022-03-18,skept_grippe,5 = Trifft gar nicht zu,0.116,0.12,0.113,none,1430
+10,2022-03-18,skept_gerech,1 = Trifft voll und ganz zu,0.104,0.108,0.1,none,1441
+10,2022-03-18,skept_gerech,2 = Trifft eher zu,0.237,0.239,0.235,none,1441
+10,2022-03-18,skept_gerech,3 = Teils-teils,0.313,0.315,0.311,none,1441
+10,2022-03-18,skept_gerech,4 = Trifft eher nicht zu,0.164,0.167,0.161,none,1441
+10,2022-03-18,skept_gerech,5 = Trifft gar nicht zu,0.182,0.184,0.179,none,1441
+10,2022-03-18,mastest_eff,1 = Trifft voll und ganz zu,0.229,0.231,0.227,none,1456
+10,2022-03-18,mastest_eff,2 = Trifft eher zu,0.237,0.239,0.235,none,1456
+10,2022-03-18,mastest_eff,3 = Teils-teils,0.289,0.291,0.287,none,1456
+10,2022-03-18,mastest_eff,4 = Trifft eher nicht zu,0.113,0.117,0.109,none,1456
+10,2022-03-18,mastest_eff,5 = Trifft gar nicht zu,0.132,0.135,0.129,none,1456
+10,2022-03-18,mastest_zuv,1 = Trifft voll und ganz zu,0.156,0.159,0.153,none,1445
+10,2022-03-18,mastest_zuv,2 = Trifft eher zu,0.356,0.358,0.355,none,1445
+10,2022-03-18,mastest_zuv,3 = Teils-teils,0.311,0.313,0.309,none,1445
+10,2022-03-18,mastest_zuv,4 = Trifft eher nicht zu,0.101,0.105,0.097,none,1445
+10,2022-03-18,mastest_zuv,5 = Trifft gar nicht zu,0.075,0.08,0.071,none,1445
+10,2022-03-18,mastest_mot,1 = Trifft voll und ganz zu,0.387,0.388,0.386,none,1460
+10,2022-03-18,mastest_mot,2 = Trifft eher zu,0.285,0.286,0.283,none,1460
+10,2022-03-18,mastest_mot,3 = Teils-teils,0.233,0.235,0.231,none,1460
+10,2022-03-18,mastest_mot,4 = Trifft eher nicht zu,0.067,0.072,0.062,none,1460
+10,2022-03-18,mastest_mot,5 = Trifft gar nicht zu,0.028,0.036,0.02,none,1460
+10,2022-03-18,impf_pfl,1 = Trifft voll und ganz zu,0.295,0.296,0.293,none,1459
+10,2022-03-18,impf_pfl,2 = Trifft eher zu,0.159,0.161,0.156,none,1459
+10,2022-03-18,impf_pfl,3 = Teils-teils,0.139,0.142,0.136,none,1459
+10,2022-03-18,impf_pfl,4 = Trifft eher nicht zu,0.102,0.106,0.099,none,1459
+10,2022-03-18,impf_pfl,5 = Trifft gar nicht zu,0.305,0.307,0.304,none,1459
+10,2022-03-18,impf_gra,1 = Trifft voll und ganz zu,0.746,0.746,0.745,none,1437
+10,2022-03-18,impf_gra,2 = Trifft eher zu,0.125,0.128,0.122,none,1437
+10,2022-03-18,impf_gra,3 = Teils-teils,0.067,0.072,0.062,none,1437
+10,2022-03-18,impf_gra,4 = Trifft eher nicht zu,0.031,0.039,0.024,none,1437
+10,2022-03-18,impf_gra,5 = Trifft gar nicht zu,0.031,0.039,0.024,none,1437
+10,2022-03-18,impf_pfb,1 = Trifft voll und ganz zu,0.427,0.428,0.425,none,1451
+10,2022-03-18,impf_pfb,2 = Trifft eher zu,0.161,0.164,0.158,none,1451
+10,2022-03-18,impf_pfb,3 = Teils-teils,0.13,0.133,0.127,none,1451
+10,2022-03-18,impf_pfb,4 = Trifft eher nicht zu,0.068,0.073,0.063,none,1451
+10,2022-03-18,impf_pfb,5 = Trifft gar nicht zu,0.214,0.216,0.212,none,1451
+10,2022-03-18,impf_soz,1 = Trifft voll und ganz zu,0.343,0.344,0.341,none,1440
+10,2022-03-18,impf_soz,2 = Trifft eher zu,0.302,0.304,0.3,none,1440
+10,2022-03-18,impf_soz,3 = Teils-teils,0.248,0.25,0.246,none,1440
+10,2022-03-18,impf_soz,4 = Trifft eher nicht zu,0.052,0.058,0.047,none,1440
+10,2022-03-18,impf_soz,5 = Trifft gar nicht zu,0.055,0.061,0.05,none,1440
+10,2022-04-22,wochentag,1 = Trifft voll und ganz zu,0.052,0.057,0.046,none,1480
+10,2022-04-22,wochentag,2 = Trifft eher zu,0.088,0.092,0.084,none,1480
+10,2022-04-22,wochentag,3 = Teils-teils,0.182,0.184,0.179,none,1480
+10,2022-04-22,wochentag,4 = Trifft eher nicht zu,0.161,0.164,0.158,none,1480
+10,2022-04-22,wochentag,5 = Trifft gar nicht zu,0.517,0.518,0.517,none,1480
+10,2022-04-22,kontakt,1 = Trifft voll und ganz zu,0.086,0.09,0.081,none,1477
+10,2022-04-22,kontakt,2 = Trifft eher zu,0.115,0.118,0.111,none,1477
+10,2022-04-22,kontakt,3 = Teils-teils,0.237,0.239,0.235,none,1477
+10,2022-04-22,kontakt,4 = Trifft eher nicht zu,0.169,0.171,0.166,none,1477
+10,2022-04-22,kontakt,5 = Trifft gar nicht zu,0.395,0.396,0.393,none,1477
+10,2022-04-22,zeit,1 = Trifft voll und ganz zu,0.057,0.062,0.051,none,1455
+10,2022-04-22,zeit,2 = Trifft eher zu,0.115,0.118,0.111,none,1455
+10,2022-04-22,zeit,3 = Teils-teils,0.312,0.314,0.311,none,1455
+10,2022-04-22,zeit,4 = Trifft eher nicht zu,0.17,0.173,0.167,none,1455
+10,2022-04-22,zeit,5 = Trifft gar nicht zu,0.346,0.348,0.345,none,1455
+10,2022-04-22,konflikt,1 = Trifft voll und ganz zu,0.031,0.038,0.024,none,1471
+10,2022-04-22,konflikt,2 = Trifft eher zu,0.061,0.066,0.056,none,1471
+10,2022-04-22,konflikt,3 = Teils-teils,0.132,0.135,0.129,none,1471
+10,2022-04-22,konflikt,4 = Trifft eher nicht zu,0.191,0.193,0.188,none,1471
+10,2022-04-22,konflikt,5 = Trifft gar nicht zu,0.585,0.586,0.584,none,1471
+10,2022-04-22,kinder,1 = Trifft voll und ganz zu,0.053,0.077,0.029,none,301
+10,2022-04-22,kinder,2 = Trifft eher zu,0.103,0.119,0.087,none,301
+10,2022-04-22,kinder,3 = Teils-teils,0.246,0.255,0.237,none,301
+10,2022-04-22,kinder,4 = Trifft eher nicht zu,0.184,0.195,0.172,none,301
+10,2022-04-22,kinder,5 = Trifft gar nicht zu,0.414,0.42,0.409,none,301
+10,2022-04-22,zusammenhalt,1 = Trifft voll und ganz zu,0.02,0.03,0.01,none,1403
+10,2022-04-22,zusammenhalt,2 = Trifft eher zu,0.085,0.09,0.081,none,1403
+10,2022-04-22,zusammenhalt,3 = Teils-teils,0.28,0.282,0.278,none,1403
+10,2022-04-22,zusammenhalt,4 = Trifft eher nicht zu,0.298,0.3,0.296,none,1403
+10,2022-04-22,zusammenhalt,5 = Trifft gar nicht zu,0.317,0.318,0.315,none,1403
+10,2022-04-22,umweundklima,1 = Trifft voll und ganz zu,0.142,0.145,0.139,none,1424
+10,2022-04-22,umweundklima,2 = Trifft eher zu,0.205,0.207,0.202,none,1424
+10,2022-04-22,umweundklima,3 = Teils-teils,0.423,0.425,0.422,none,1424
+10,2022-04-22,umweundklima,4 = Trifft eher nicht zu,0.119,0.123,0.116,none,1424
+10,2022-04-22,umweundklima,5 = Trifft gar nicht zu,0.111,0.114,0.107,none,1424
+10,2022-04-22,onlinekommun,1 = Trifft voll und ganz zu,0.086,0.091,0.082,none,1394
+10,2022-04-22,onlinekommun,2 = Trifft eher zu,0.214,0.217,0.212,none,1394
+10,2022-04-22,onlinekommun,3 = Teils-teils,0.465,0.466,0.464,none,1394
+10,2022-04-22,onlinekommun,4 = Trifft eher nicht zu,0.144,0.147,0.141,none,1394
+10,2022-04-22,onlinekommun,5 = Trifft gar nicht zu,0.091,0.095,0.086,none,1394
+10,2022-04-22,zus_bestes,1 = Trifft voll und ganz zu,0.038,0.045,0.031,none,1434
+10,2022-04-22,zus_bestes,2 = Trifft eher zu,0.221,0.224,0.219,none,1434
+10,2022-04-22,zus_bestes,3 = Teils-teils,0.439,0.44,0.438,none,1434
+10,2022-04-22,zus_bestes,4 = Trifft eher nicht zu,0.201,0.203,0.198,none,1434
+10,2022-04-22,zus_bestes,5 = Trifft gar nicht zu,0.101,0.105,0.097,none,1434
+10,2022-04-22,zus_einig,1 = Trifft voll und ganz zu,0.049,0.055,0.043,none,1428
+10,2022-04-22,zus_einig,2 = Trifft eher zu,0.26,0.262,0.258,none,1428
+10,2022-04-22,zus_einig,3 = Teils-teils,0.438,0.44,0.437,none,1428
+10,2022-04-22,zus_einig,4 = Trifft eher nicht zu,0.161,0.164,0.158,none,1428
+10,2022-04-22,zus_einig,5 = Trifft gar nicht zu,0.091,0.096,0.087,none,1428
+10,2022-04-22,zus_schutzen,1 = Trifft voll und ganz zu,0.03,0.038,0.022,none,1426
+10,2022-04-22,zus_schutzen,2 = Trifft eher zu,0.143,0.146,0.14,none,1426
+10,2022-04-22,zus_schutzen,3 = Teils-teils,0.383,0.385,0.382,none,1426
+10,2022-04-22,zus_schutzen,4 = Trifft eher nicht zu,0.26,0.262,0.258,none,1426
+10,2022-04-22,zus_schutzen,5 = Trifft gar nicht zu,0.184,0.187,0.181,none,1426
+10,2022-04-22,skept_lebens,1 = Trifft voll und ganz zu,0.088,0.092,0.084,none,1456
+10,2022-04-22,skept_lebens,2 = Trifft eher zu,0.215,0.217,0.213,none,1456
+10,2022-04-22,skept_lebens,3 = Teils-teils,0.383,0.385,0.382,none,1456
+10,2022-04-22,skept_lebens,4 = Trifft eher nicht zu,0.146,0.149,0.143,none,1456
+10,2022-04-22,skept_lebens,5 = Trifft gar nicht zu,0.168,0.171,0.165,none,1456
+10,2022-04-22,skept_wichti,1 = Trifft voll und ganz zu,0.327,0.329,0.325,none,1459
+10,2022-04-22,skept_wichti,2 = Trifft eher zu,0.235,0.237,0.233,none,1459
+10,2022-04-22,skept_wichti,3 = Teils-teils,0.315,0.317,0.314,none,1459
+10,2022-04-22,skept_wichti,4 = Trifft eher nicht zu,0.068,0.073,0.064,none,1459
+10,2022-04-22,skept_wichti,5 = Trifft gar nicht zu,0.054,0.06,0.049,none,1459
+10,2022-04-22,skept_behaup,1 = Trifft voll und ganz zu,0.178,0.181,0.175,none,1425
+10,2022-04-22,skept_behaup,2 = Trifft eher zu,0.175,0.177,0.172,none,1425
+10,2022-04-22,skept_behaup,3 = Teils-teils,0.366,0.367,0.364,none,1425
+10,2022-04-22,skept_behaup,4 = Trifft eher nicht zu,0.164,0.167,0.161,none,1425
+10,2022-04-22,skept_behaup,5 = Trifft gar nicht zu,0.117,0.121,0.114,none,1425
+10,2022-04-22,skept_andere,1 = Trifft voll und ganz zu,0.028,0.036,0.02,none,1388
+10,2022-04-22,skept_andere,2 = Trifft eher zu,0.048,0.054,0.042,none,1388
+10,2022-04-22,skept_andere,3 = Teils-teils,0.193,0.195,0.19,none,1388
+10,2022-04-22,skept_andere,4 = Trifft eher nicht zu,0.236,0.238,0.234,none,1388
+10,2022-04-22,skept_andere,5 = Trifft gar nicht zu,0.495,0.496,0.494,none,1388
+10,2022-04-22,skept_grippe,1 = Trifft voll und ganz zu,0.305,0.306,0.303,none,1441
+10,2022-04-22,skept_grippe,2 = Trifft eher zu,0.227,0.229,0.224,none,1441
+10,2022-04-22,skept_grippe,3 = Teils-teils,0.263,0.265,0.262,none,1441
+10,2022-04-22,skept_grippe,4 = Trifft eher nicht zu,0.077,0.082,0.073,none,1441
+10,2022-04-22,skept_grippe,5 = Trifft gar nicht zu,0.128,0.131,0.125,none,1441
+10,2022-04-22,skept_gerech,1 = Trifft voll und ganz zu,0.094,0.098,0.09,none,1447
+10,2022-04-22,skept_gerech,2 = Trifft eher zu,0.258,0.26,0.256,none,1447
+10,2022-04-22,skept_gerech,3 = Teils-teils,0.311,0.312,0.309,none,1447
+10,2022-04-22,skept_gerech,4 = Trifft eher nicht zu,0.134,0.137,0.13,none,1447
+10,2022-04-22,skept_gerech,5 = Trifft gar nicht zu,0.203,0.205,0.201,none,1447
+10,2022-04-22,mastest_eff,1 = Trifft voll und ganz zu,0.193,0.196,0.191,none,1472
+10,2022-04-22,mastest_eff,2 = Trifft eher zu,0.251,0.253,0.249,none,1472
+10,2022-04-22,mastest_eff,3 = Teils-teils,0.321,0.322,0.319,none,1472
+10,2022-04-22,mastest_eff,4 = Trifft eher nicht zu,0.103,0.107,0.099,none,1472
+10,2022-04-22,mastest_eff,5 = Trifft gar nicht zu,0.132,0.135,0.129,none,1472
+10,2022-04-22,mastest_zuv,1 = Trifft voll und ganz zu,0.132,0.136,0.129,none,1473
+10,2022-04-22,mastest_zuv,2 = Trifft eher zu,0.34,0.341,0.338,none,1473
+10,2022-04-22,mastest_zuv,3 = Teils-teils,0.345,0.346,0.343,none,1473
+10,2022-04-22,mastest_zuv,4 = Trifft eher nicht zu,0.093,0.097,0.09,none,1473
+10,2022-04-22,mastest_zuv,5 = Trifft gar nicht zu,0.089,0.093,0.085,none,1473
+10,2022-04-22,mastest_mot,1 = Trifft voll und ganz zu,0.285,0.287,0.283,none,1469
+10,2022-04-22,mastest_mot,2 = Trifft eher zu,0.314,0.316,0.313,none,1469
+10,2022-04-22,mastest_mot,3 = Teils-teils,0.27,0.272,0.268,none,1469
+10,2022-04-22,mastest_mot,4 = Trifft eher nicht zu,0.091,0.095,0.087,none,1469
+10,2022-04-22,mastest_mot,5 = Trifft gar nicht zu,0.04,0.047,0.034,none,1469
+10,2022-04-22,impf_pfl,1 = Trifft voll und ganz zu,0.227,0.229,0.225,none,1467
+10,2022-04-22,impf_pfl,2 = Trifft eher zu,0.149,0.152,0.146,none,1467
+10,2022-04-22,impf_pfl,3 = Teils-teils,0.18,0.183,0.178,none,1467
+10,2022-04-22,impf_pfl,4 = Trifft eher nicht zu,0.094,0.098,0.09,none,1467
+10,2022-04-22,impf_pfl,5 = Trifft gar nicht zu,0.35,0.351,0.348,none,1467
+10,2022-04-22,impf_gra,1 = Trifft voll und ganz zu,0.698,0.699,0.698,none,1459
+10,2022-04-22,impf_gra,2 = Trifft eher zu,0.155,0.158,0.152,none,1459
+10,2022-04-22,impf_gra,3 = Teils-teils,0.092,0.096,0.088,none,1459
+10,2022-04-22,impf_gra,4 = Trifft eher nicht zu,0.02,0.03,0.011,none,1459
+10,2022-04-22,impf_gra,5 = Trifft gar nicht zu,0.034,0.041,0.027,none,1459
+10,2022-04-22,impf_pfb,1 = Trifft voll und ganz zu,0.359,0.36,0.357,none,1466
+10,2022-04-22,impf_pfb,2 = Trifft eher zu,0.191,0.193,0.188,none,1466
+10,2022-04-22,impf_pfb,3 = Teils-teils,0.14,0.143,0.137,none,1466
+10,2022-04-22,impf_pfb,4 = Trifft eher nicht zu,0.067,0.071,0.062,none,1466
+10,2022-04-22,impf_pfb,5 = Trifft gar nicht zu,0.243,0.245,0.241,none,1466
+10,2022-04-22,impf_soz,1 = Trifft voll und ganz zu,0.309,0.31,0.307,none,1464
+10,2022-04-22,impf_soz,2 = Trifft eher zu,0.302,0.304,0.3,none,1464
+10,2022-04-22,impf_soz,3 = Teils-teils,0.239,0.241,0.237,none,1464
+10,2022-04-22,impf_soz,4 = Trifft eher nicht zu,0.073,0.077,0.068,none,1464
+10,2022-04-22,impf_soz,5 = Trifft gar nicht zu,0.077,0.082,0.073,none,1464
+10,2022-05-21,wochentag,1 = Trifft voll und ganz zu,0.054,0.059,0.048,none,1504
+10,2022-05-21,wochentag,2 = Trifft eher zu,0.096,0.1,0.092,none,1504
+10,2022-05-21,wochentag,3 = Teils-teils,0.163,0.166,0.16,none,1504
+10,2022-05-21,wochentag,4 = Trifft eher nicht zu,0.172,0.175,0.17,none,1504
+10,2022-05-21,wochentag,5 = Trifft gar nicht zu,0.515,0.516,0.514,none,1504
+10,2022-05-21,kontakt,1 = Trifft voll und ganz zu,0.063,0.067,0.058,none,1507
+10,2022-05-21,kontakt,2 = Trifft eher zu,0.113,0.117,0.11,none,1507
+10,2022-05-21,kontakt,3 = Teils-teils,0.199,0.201,0.197,none,1507
+10,2022-05-21,kontakt,4 = Trifft eher nicht zu,0.226,0.228,0.224,none,1507
+10,2022-05-21,kontakt,5 = Trifft gar nicht zu,0.4,0.401,0.398,none,1507
+10,2022-05-21,zeit,1 = Trifft voll und ganz zu,0.052,0.058,0.047,none,1485
+10,2022-05-21,zeit,2 = Trifft eher zu,0.131,0.134,0.128,none,1485
+10,2022-05-21,zeit,3 = Teils-teils,0.299,0.3,0.297,none,1485
+10,2022-05-21,zeit,4 = Trifft eher nicht zu,0.181,0.183,0.178,none,1485
+10,2022-05-21,zeit,5 = Trifft gar nicht zu,0.337,0.339,0.336,none,1485
+10,2022-05-21,konflikt,1 = Trifft voll und ganz zu,0.031,0.038,0.024,none,1494
+10,2022-05-21,konflikt,2 = Trifft eher zu,0.066,0.07,0.061,none,1494
+10,2022-05-21,konflikt,3 = Teils-teils,0.155,0.158,0.152,none,1494
+10,2022-05-21,konflikt,4 = Trifft eher nicht zu,0.168,0.17,0.165,none,1494
+10,2022-05-21,konflikt,5 = Trifft gar nicht zu,0.581,0.581,0.58,none,1494
+10,2022-05-21,kinder,1 = Trifft voll und ganz zu,0.057,0.079,0.035,none,323
+10,2022-05-21,kinder,2 = Trifft eher zu,0.131,0.144,0.117,none,323
+10,2022-05-21,kinder,3 = Teils-teils,0.2,0.21,0.19,none,323
+10,2022-05-21,kinder,4 = Trifft eher nicht zu,0.161,0.173,0.149,none,323
+10,2022-05-21,kinder,5 = Trifft gar nicht zu,0.452,0.456,0.447,none,323
+10,2022-05-21,zusammenhalt,1 = Trifft voll und ganz zu,0.022,0.031,0.013,none,1441
+10,2022-05-21,zusammenhalt,2 = Trifft eher zu,0.071,0.076,0.067,none,1441
+10,2022-05-21,zusammenhalt,3 = Teils-teils,0.317,0.319,0.316,none,1441
+10,2022-05-21,zusammenhalt,4 = Trifft eher nicht zu,0.316,0.318,0.314,none,1441
+10,2022-05-21,zusammenhalt,5 = Trifft gar nicht zu,0.274,0.275,0.272,none,1441
+10,2022-05-21,umweundklima,1 = Trifft voll und ganz zu,0.151,0.154,0.149,none,1467
+10,2022-05-21,umweundklima,2 = Trifft eher zu,0.234,0.236,0.232,none,1467
+10,2022-05-21,umweundklima,3 = Teils-teils,0.382,0.383,0.38,none,1467
+10,2022-05-21,umweundklima,4 = Trifft eher nicht zu,0.13,0.133,0.127,none,1467
+10,2022-05-21,umweundklima,5 = Trifft gar nicht zu,0.103,0.107,0.099,none,1467
+10,2022-05-21,onlinekommun,1 = Trifft voll und ganz zu,0.109,0.113,0.106,none,1438
+10,2022-05-21,onlinekommun,2 = Trifft eher zu,0.229,0.231,0.227,none,1438
+10,2022-05-21,onlinekommun,3 = Teils-teils,0.462,0.463,0.46,none,1438
+10,2022-05-21,onlinekommun,4 = Trifft eher nicht zu,0.113,0.117,0.109,none,1438
+10,2022-05-21,onlinekommun,5 = Trifft gar nicht zu,0.087,0.091,0.083,none,1438
+10,2022-05-21,zus_bestes,1 = Trifft voll und ganz zu,0.048,0.054,0.043,none,1480
+10,2022-05-21,zus_bestes,2 = Trifft eher zu,0.195,0.197,0.192,none,1480
+10,2022-05-21,zus_bestes,3 = Teils-teils,0.444,0.445,0.442,none,1480
+10,2022-05-21,zus_bestes,4 = Trifft eher nicht zu,0.201,0.203,0.198,none,1480
+10,2022-05-21,zus_bestes,5 = Trifft gar nicht zu,0.113,0.116,0.109,none,1480
+10,2022-05-21,zus_einig,1 = Trifft voll und ganz zu,0.076,0.08,0.071,none,1473
+10,2022-05-21,zus_einig,2 = Trifft eher zu,0.272,0.274,0.27,none,1473
+10,2022-05-21,zus_einig,3 = Teils-teils,0.43,0.431,0.429,none,1473
+10,2022-05-21,zus_einig,4 = Trifft eher nicht zu,0.144,0.147,0.141,none,1473
+10,2022-05-21,zus_einig,5 = Trifft gar nicht zu,0.079,0.083,0.074,none,1473
+10,2022-05-21,zus_schutzen,1 = Trifft voll und ganz zu,0.034,0.041,0.028,none,1475
+10,2022-05-21,zus_schutzen,2 = Trifft eher zu,0.132,0.135,0.129,none,1475
+10,2022-05-21,zus_schutzen,3 = Teils-teils,0.395,0.396,0.394,none,1475
+10,2022-05-21,zus_schutzen,4 = Trifft eher nicht zu,0.259,0.261,0.257,none,1475
+10,2022-05-21,zus_schutzen,5 = Trifft gar nicht zu,0.179,0.182,0.177,none,1475
+10,2022-05-21,skept_lebens,1 = Trifft voll und ganz zu,0.107,0.11,0.103,none,1473
+10,2022-05-21,skept_lebens,2 = Trifft eher zu,0.247,0.249,0.245,none,1473
+10,2022-05-21,skept_lebens,3 = Teils-teils,0.357,0.359,0.356,none,1473
+10,2022-05-21,skept_lebens,4 = Trifft eher nicht zu,0.129,0.132,0.126,none,1473
+10,2022-05-21,skept_lebens,5 = Trifft gar nicht zu,0.16,0.162,0.157,none,1473
+10,2022-05-21,skept_wichti,1 = Trifft voll und ganz zu,0.359,0.36,0.357,none,1491
+10,2022-05-21,skept_wichti,2 = Trifft eher zu,0.243,0.245,0.241,none,1491
+10,2022-05-21,skept_wichti,3 = Teils-teils,0.293,0.295,0.291,none,1491
+10,2022-05-21,skept_wichti,4 = Trifft eher nicht zu,0.069,0.074,0.064,none,1491
+10,2022-05-21,skept_wichti,5 = Trifft gar nicht zu,0.037,0.043,0.03,none,1491
+10,2022-05-21,skept_behaup,1 = Trifft voll und ganz zu,0.186,0.189,0.184,none,1443
+10,2022-05-21,skept_behaup,2 = Trifft eher zu,0.182,0.184,0.179,none,1443
+10,2022-05-21,skept_behaup,3 = Teils-teils,0.377,0.378,0.375,none,1443
+10,2022-05-21,skept_behaup,4 = Trifft eher nicht zu,0.152,0.155,0.149,none,1443
+10,2022-05-21,skept_behaup,5 = Trifft gar nicht zu,0.103,0.107,0.099,none,1443
+10,2022-05-21,skept_andere,1 = Trifft voll und ganz zu,0.039,0.045,0.032,none,1415
+10,2022-05-21,skept_andere,2 = Trifft eher zu,0.068,0.073,0.063,none,1415
+10,2022-05-21,skept_andere,3 = Teils-teils,0.235,0.237,0.233,none,1415
+10,2022-05-21,skept_andere,4 = Trifft eher nicht zu,0.224,0.227,0.222,none,1415
+10,2022-05-21,skept_andere,5 = Trifft gar nicht zu,0.434,0.435,0.433,none,1415
+10,2022-05-21,skept_grippe,1 = Trifft voll und ganz zu,0.289,0.291,0.287,none,1457
+10,2022-05-21,skept_grippe,2 = Trifft eher zu,0.246,0.249,0.244,none,1457
+10,2022-05-21,skept_grippe,3 = Teils-teils,0.234,0.237,0.232,none,1457
+10,2022-05-21,skept_grippe,4 = Trifft eher nicht zu,0.092,0.096,0.088,none,1457
+10,2022-05-21,skept_grippe,5 = Trifft gar nicht zu,0.138,0.142,0.135,none,1457
+10,2022-05-21,skept_gerech,1 = Trifft voll und ganz zu,0.111,0.114,0.107,none,1479
+10,2022-05-21,skept_gerech,2 = Trifft eher zu,0.246,0.248,0.244,none,1479
+10,2022-05-21,skept_gerech,3 = Teils-teils,0.319,0.32,0.317,none,1479
+10,2022-05-21,skept_gerech,4 = Trifft eher nicht zu,0.135,0.138,0.132,none,1479
+10,2022-05-21,skept_gerech,5 = Trifft gar nicht zu,0.19,0.192,0.187,none,1479
+10,2022-05-21,mastest_eff,1 = Trifft voll und ganz zu,0.169,0.171,0.166,none,1498
+10,2022-05-21,mastest_eff,2 = Trifft eher zu,0.305,0.307,0.303,none,1498
+10,2022-05-21,mastest_eff,3 = Teils-teils,0.291,0.293,0.289,none,1498
+10,2022-05-21,mastest_eff,4 = Trifft eher nicht zu,0.099,0.103,0.095,none,1498
+10,2022-05-21,mastest_eff,5 = Trifft gar nicht zu,0.137,0.14,0.134,none,1498
+10,2022-05-21,mastest_zuv,1 = Trifft voll und ganz zu,0.144,0.147,0.141,none,1485
+10,2022-05-21,mastest_zuv,2 = Trifft eher zu,0.339,0.34,0.338,none,1485
+10,2022-05-21,mastest_zuv,3 = Teils-teils,0.335,0.337,0.334,none,1485
+10,2022-05-21,mastest_zuv,4 = Trifft eher nicht zu,0.086,0.09,0.082,none,1485
+10,2022-05-21,mastest_zuv,5 = Trifft gar nicht zu,0.096,0.1,0.092,none,1485
+10,2022-05-21,mastest_mot,1 = Trifft voll und ganz zu,0.273,0.275,0.272,none,1488
+10,2022-05-21,mastest_mot,2 = Trifft eher zu,0.294,0.295,0.292,none,1488
+10,2022-05-21,mastest_mot,3 = Teils-teils,0.272,0.274,0.27,none,1488
+10,2022-05-21,mastest_mot,4 = Trifft eher nicht zu,0.1,0.104,0.097,none,1488
+10,2022-05-21,mastest_mot,5 = Trifft gar nicht zu,0.061,0.066,0.056,none,1488
+10,2022-05-21,impf_pfl,1 = Trifft voll und ganz zu,0.224,0.226,0.222,none,1487
+10,2022-05-21,impf_pfl,2 = Trifft eher zu,0.146,0.149,0.143,none,1487
+10,2022-05-21,impf_pfl,3 = Teils-teils,0.171,0.174,0.169,none,1487
+10,2022-05-21,impf_pfl,4 = Trifft eher nicht zu,0.118,0.121,0.114,none,1487
+10,2022-05-21,impf_pfl,5 = Trifft gar nicht zu,0.341,0.342,0.339,none,1487
+10,2022-05-21,impf_gra,1 = Trifft voll und ganz zu,0.69,0.69,0.689,none,1483
+10,2022-05-21,impf_gra,2 = Trifft eher zu,0.143,0.146,0.139,none,1483
+10,2022-05-21,impf_gra,3 = Teils-teils,0.082,0.086,0.078,none,1483
+10,2022-05-21,impf_gra,4 = Trifft eher nicht zu,0.034,0.041,0.027,none,1483
+10,2022-05-21,impf_gra,5 = Trifft gar nicht zu,0.052,0.058,0.047,none,1483
+10,2022-05-21,impf_pfb,1 = Trifft voll und ganz zu,0.348,0.35,0.347,none,1485
+10,2022-05-21,impf_pfb,2 = Trifft eher zu,0.189,0.191,0.186,none,1485
+10,2022-05-21,impf_pfb,3 = Teils-teils,0.146,0.149,0.144,none,1485
+10,2022-05-21,impf_pfb,4 = Trifft eher nicht zu,0.072,0.077,0.068,none,1485
+10,2022-05-21,impf_pfb,5 = Trifft gar nicht zu,0.244,0.246,0.242,none,1485
+10,2022-05-21,impf_soz,1 = Trifft voll und ganz zu,0.281,0.283,0.28,none,1479
+10,2022-05-21,impf_soz,2 = Trifft eher zu,0.291,0.293,0.29,none,1479
+10,2022-05-21,impf_soz,3 = Teils-teils,0.258,0.26,0.257,none,1479
+10,2022-05-21,impf_soz,4 = Trifft eher nicht zu,0.078,0.082,0.073,none,1479
+10,2022-05-21,impf_soz,5 = Trifft gar nicht zu,0.091,0.095,0.087,none,1479
 11,2020-03-28,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.032,0.039,0.025,none,1516
 11,2020-03-28,mas_angemessen,2 = eher nicht ausreichend,0.124,0.127,0.121,none,1516
 11,2020-03-28,mas_angemessen,3 = angemessen,0.716,0.716,0.715,none,1516
@@ -6930,6 +8485,31 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 11,2021-11-26,mas_angemessen,3 = angemessen,0.277,0.279,0.275,none,1492
 11,2021-11-26,mas_angemessen,4 = eher zu stark,0.118,0.121,0.114,none,1492
 11,2021-11-26,mas_angemessen,5 = zu extrem,0.203,0.205,0.201,none,1492
+11,2022-01-14,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.079,0.083,0.074,none,1438
+11,2022-01-14,mas_angemessen,2 = eher nicht ausreichend,0.208,0.211,0.206,none,1438
+11,2022-01-14,mas_angemessen,3 = angemessen,0.34,0.341,0.338,none,1438
+11,2022-01-14,mas_angemessen,4 = eher zu stark,0.149,0.152,0.146,none,1438
+11,2022-01-14,mas_angemessen,5 = zu extrem,0.225,0.227,0.222,none,1438
+11,2022-02-18,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.082,0.087,0.078,none,1457
+11,2022-02-18,mas_angemessen,2 = eher nicht ausreichend,0.217,0.22,0.215,none,1457
+11,2022-02-18,mas_angemessen,3 = angemessen,0.347,0.348,0.345,none,1457
+11,2022-02-18,mas_angemessen,4 = eher zu stark,0.13,0.133,0.127,none,1457
+11,2022-02-18,mas_angemessen,5 = zu extrem,0.223,0.226,0.221,none,1457
+11,2022-03-18,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.189,0.191,0.186,none,1421
+11,2022-03-18,mas_angemessen,2 = eher nicht ausreichend,0.317,0.319,0.315,none,1421
+11,2022-03-18,mas_angemessen,3 = angemessen,0.234,0.236,0.231,none,1421
+11,2022-03-18,mas_angemessen,4 = eher zu stark,0.106,0.11,0.102,none,1421
+11,2022-03-18,mas_angemessen,5 = zu extrem,0.155,0.158,0.152,none,1421
+11,2022-04-22,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.068,0.073,0.063,none,1444
+11,2022-04-22,mas_angemessen,2 = eher nicht ausreichend,0.207,0.209,0.204,none,1444
+11,2022-04-22,mas_angemessen,3 = angemessen,0.374,0.375,0.372,none,1444
+11,2022-04-22,mas_angemessen,4 = eher zu stark,0.137,0.14,0.134,none,1444
+11,2022-04-22,mas_angemessen,5 = zu extrem,0.215,0.217,0.212,none,1444
+11,2022-05-21,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.043,0.049,0.037,none,1476
+11,2022-05-21,mas_angemessen,2 = eher nicht ausreichend,0.161,0.163,0.158,none,1476
+11,2022-05-21,mas_angemessen,3 = angemessen,0.417,0.418,0.415,none,1476
+11,2022-05-21,mas_angemessen,4 = eher zu stark,0.155,0.158,0.152,none,1476
+11,2022-05-21,mas_angemessen,5 = zu extrem,0.225,0.227,0.223,none,1476
 12,2020-03-28,mas_effektiv,1 = ueberhaupt nicht effektiv,0.015,0.025,0.004,none,1512
 12,2020-03-28,mas_effektiv,2 = eher nicht effektiv,0.042,0.048,0.035,none,1512
 12,2020-03-28,mas_effektiv,3 = teils effektiv,0.285,0.286,0.283,none,1512
@@ -7065,6 +8645,31 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 12,2021-11-26,mas_effektiv,3 = teils effektiv,0.355,0.357,0.354,none,1499
 12,2021-11-26,mas_effektiv,4 = eher effektiv,0.109,0.113,0.106,none,1499
 12,2021-11-26,mas_effektiv,5 = sehr effektiv,0.024,0.032,0.016,none,1499
+12,2022-01-14,mas_effektiv,1 = ueberhaupt nicht effektiv,0.237,0.239,0.235,none,1461
+12,2022-01-14,mas_effektiv,2 = eher nicht effektiv,0.222,0.225,0.22,none,1461
+12,2022-01-14,mas_effektiv,3 = teils effektiv,0.382,0.383,0.38,none,1461
+12,2022-01-14,mas_effektiv,4 = eher effektiv,0.134,0.137,0.131,none,1461
+12,2022-01-14,mas_effektiv,5 = sehr effektiv,0.025,0.033,0.017,none,1461
+12,2022-02-18,mas_effektiv,1 = ueberhaupt nicht effektiv,0.21,0.212,0.207,none,1449
+12,2022-02-18,mas_effektiv,2 = eher nicht effektiv,0.252,0.254,0.25,none,1449
+12,2022-02-18,mas_effektiv,3 = teils effektiv,0.388,0.389,0.387,none,1449
+12,2022-02-18,mas_effektiv,4 = eher effektiv,0.12,0.123,0.116,none,1449
+12,2022-02-18,mas_effektiv,5 = sehr effektiv,0.031,0.038,0.023,none,1449
+12,2022-03-18,mas_effektiv,1 = ueberhaupt nicht effektiv,0.317,0.318,0.315,none,1429
+12,2022-03-18,mas_effektiv,2 = eher nicht effektiv,0.307,0.308,0.305,none,1429
+12,2022-03-18,mas_effektiv,3 = teils effektiv,0.282,0.284,0.28,none,1429
+12,2022-03-18,mas_effektiv,4 = eher effektiv,0.074,0.079,0.07,none,1429
+12,2022-03-18,mas_effektiv,5 = sehr effektiv,0.02,0.029,0.01,none,1429
+12,2022-04-22,mas_effektiv,1 = ueberhaupt nicht effektiv,0.194,0.196,0.191,none,1437
+12,2022-04-22,mas_effektiv,2 = eher nicht effektiv,0.242,0.244,0.24,none,1437
+12,2022-04-22,mas_effektiv,3 = teils effektiv,0.393,0.394,0.392,none,1437
+12,2022-04-22,mas_effektiv,4 = eher effektiv,0.147,0.15,0.144,none,1437
+12,2022-04-22,mas_effektiv,5 = sehr effektiv,0.024,0.033,0.016,none,1437
+12,2022-05-21,mas_effektiv,1 = ueberhaupt nicht effektiv,0.189,0.191,0.186,none,1472
+12,2022-05-21,mas_effektiv,2 = eher nicht effektiv,0.192,0.194,0.189,none,1472
+12,2022-05-21,mas_effektiv,3 = teils effektiv,0.414,0.415,0.412,none,1472
+12,2022-05-21,mas_effektiv,4 = eher effektiv,0.164,0.166,0.161,none,1472
+12,2022-05-21,mas_effektiv,5 = sehr effektiv,0.043,0.049,0.037,none,1472
 13,2020-04-11,fin_ausk_yea,1 = Viel besser,0.073,0.077,0.068,none,1378
 13,2020-04-11,fin_ausk_yea,2 = Etwas besser,0.186,0.189,0.183,none,1378
 13,2020-04-11,fin_ausk_yea,3 = Gleich bleibend,0.517,0.518,0.516,none,1378
@@ -7135,6 +8740,16 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 13,2021-10-23,eco_ausk_yea,3 = Gleich bleibend,0.366,0.368,0.365,none,1400
 13,2021-10-23,eco_ausk_yea,4 = Etwas schlechter,0.282,0.284,0.28,none,1400
 13,2021-10-23,eco_ausk_yea,5 = Viel schlechter,0.089,0.093,0.085,none,1400
+13,2022-03-18,fin_ausk_yea,1 = Viel besser,0.027,0.036,0.019,none,1416
+13,2022-03-18,fin_ausk_yea,2 = Etwas besser,0.138,0.141,0.135,none,1416
+13,2022-03-18,fin_ausk_yea,3 = Gleich bleibend,0.481,0.482,0.48,none,1416
+13,2022-03-18,fin_ausk_yea,4 = Etwas schlechter,0.274,0.276,0.272,none,1416
+13,2022-03-18,fin_ausk_yea,5 = Viel schlechter,0.079,0.083,0.074,none,1416
+13,2022-03-18,eco_ausk_yea,1 = Viel besser,0.019,0.029,0.009,none,1412
+13,2022-03-18,eco_ausk_yea,2 = Etwas besser,0.116,0.12,0.113,none,1412
+13,2022-03-18,eco_ausk_yea,3 = Gleich bleibend,0.242,0.244,0.24,none,1412
+13,2022-03-18,eco_ausk_yea,4 = Etwas schlechter,0.427,0.428,0.426,none,1412
+13,2022-03-18,eco_ausk_yea,5 = Viel schlechter,0.196,0.198,0.193,none,1412
 14,2020-03-28,depress_A1,0 = nie,0.055,0.06,0.05,none,1513
 14,2020-03-28,depress_A1,1 = an manchen Tagen,0.204,0.207,0.202,none,1513
 14,2020-03-28,depress_A1,2 = mehrmals die Woche,0.181,0.184,0.179,none,1513
@@ -8350,6 +9965,231 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 14,2021-11-26,depress_A9,2 = mehrmals die Woche,0.219,0.221,0.217,none,1500
 14,2021-11-26,depress_A9,3 = beinahe jeden Tag,0.183,0.185,0.18,none,1500
 14,2021-11-26,depress_A9,4 = taeglich,0.109,0.112,0.105,none,1500
+14,2022-01-14,depress_A1,0 = nie,0.068,0.073,0.063,none,1463
+14,2022-01-14,depress_A1,1 = an manchen Tagen,0.241,0.243,0.239,none,1463
+14,2022-01-14,depress_A1,2 = mehrmals die Woche,0.203,0.205,0.2,none,1463
+14,2022-01-14,depress_A1,3 = beinahe jeden Tag,0.269,0.271,0.267,none,1463
+14,2022-01-14,depress_A1,4 = taeglich,0.219,0.221,0.217,none,1463
+14,2022-01-14,depress_A2,0 = nie,0.631,0.631,0.63,none,1459
+14,2022-01-14,depress_A2,1 = an manchen Tagen,0.224,0.227,0.222,none,1459
+14,2022-01-14,depress_A2,2 = mehrmals die Woche,0.065,0.07,0.061,none,1459
+14,2022-01-14,depress_A2,3 = beinahe jeden Tag,0.048,0.053,0.042,none,1459
+14,2022-01-14,depress_A2,4 = taeglich,0.032,0.039,0.024,none,1459
+14,2022-01-14,depress_A3,0 = nie,0.292,0.294,0.291,none,1455
+14,2022-01-14,depress_A3,1 = an manchen Tagen,0.473,0.474,0.472,none,1455
+14,2022-01-14,depress_A3,2 = mehrmals die Woche,0.127,0.131,0.124,none,1455
+14,2022-01-14,depress_A3,3 = beinahe jeden Tag,0.065,0.07,0.06,none,1455
+14,2022-01-14,depress_A3,4 = taeglich,0.042,0.049,0.036,none,1455
+14,2022-01-14,depress_A4,0 = nie,0.691,0.692,0.691,none,1451
+14,2022-01-14,depress_A4,1 = an manchen Tagen,0.177,0.18,0.174,none,1451
+14,2022-01-14,depress_A4,2 = mehrmals die Woche,0.065,0.07,0.06,none,1451
+14,2022-01-14,depress_A4,3 = beinahe jeden Tag,0.039,0.046,0.033,none,1451
+14,2022-01-14,depress_A4,4 = taeglich,0.027,0.035,0.019,none,1451
+14,2022-01-14,depress_A5,0 = nie,0.081,0.085,0.077,none,1450
+14,2022-01-14,depress_A5,1 = an manchen Tagen,0.3,0.302,0.299,none,1450
+14,2022-01-14,depress_A5,2 = mehrmals die Woche,0.211,0.213,0.208,none,1450
+14,2022-01-14,depress_A5,3 = beinahe jeden Tag,0.22,0.222,0.217,none,1450
+14,2022-01-14,depress_A5,4 = taeglich,0.188,0.191,0.186,none,1450
+14,2022-01-14,depress_A6,0 = nie,0.583,0.584,0.582,none,1457
+14,2022-01-14,depress_A6,1 = an manchen Tagen,0.277,0.279,0.275,none,1457
+14,2022-01-14,depress_A6,2 = mehrmals die Woche,0.068,0.073,0.063,none,1457
+14,2022-01-14,depress_A6,3 = beinahe jeden Tag,0.039,0.046,0.033,none,1457
+14,2022-01-14,depress_A6,4 = taeglich,0.032,0.04,0.025,none,1457
+14,2022-01-14,depress_A7,0 = nie,0.654,0.654,0.653,none,1455
+14,2022-01-14,depress_A7,1 = an manchen Tagen,0.222,0.224,0.22,none,1455
+14,2022-01-14,depress_A7,2 = mehrmals die Woche,0.05,0.056,0.044,none,1455
+14,2022-01-14,depress_A7,3 = beinahe jeden Tag,0.038,0.044,0.031,none,1455
+14,2022-01-14,depress_A7,4 = taeglich,0.037,0.043,0.03,none,1455
+14,2022-01-14,depress_A8,0 = nie,0.527,0.528,0.526,none,1455
+14,2022-01-14,depress_A8,1 = an manchen Tagen,0.314,0.316,0.313,none,1455
+14,2022-01-14,depress_A8,2 = mehrmals die Woche,0.072,0.077,0.068,none,1455
+14,2022-01-14,depress_A8,3 = beinahe jeden Tag,0.046,0.052,0.04,none,1455
+14,2022-01-14,depress_A8,4 = taeglich,0.04,0.046,0.033,none,1455
+14,2022-01-14,depress_A9,0 = nie,0.121,0.124,0.118,none,1461
+14,2022-01-14,depress_A9,1 = an manchen Tagen,0.319,0.321,0.318,none,1461
+14,2022-01-14,depress_A9,2 = mehrmals die Woche,0.229,0.231,0.227,none,1461
+14,2022-01-14,depress_A9,3 = beinahe jeden Tag,0.208,0.211,0.206,none,1461
+14,2022-01-14,depress_A9,4 = taeglich,0.123,0.126,0.119,none,1461
+14,2022-02-18,depress_A1,0 = nie,0.064,0.069,0.059,none,1471
+14,2022-02-18,depress_A1,1 = an manchen Tagen,0.252,0.254,0.25,none,1471
+14,2022-02-18,depress_A1,2 = mehrmals die Woche,0.208,0.211,0.206,none,1471
+14,2022-02-18,depress_A1,3 = beinahe jeden Tag,0.272,0.273,0.27,none,1471
+14,2022-02-18,depress_A1,4 = taeglich,0.205,0.207,0.203,none,1471
+14,2022-02-18,depress_A2,0 = nie,0.623,0.624,0.623,none,1473
+14,2022-02-18,depress_A2,1 = an manchen Tagen,0.218,0.22,0.216,none,1473
+14,2022-02-18,depress_A2,2 = mehrmals die Woche,0.08,0.084,0.076,none,1473
+14,2022-02-18,depress_A2,3 = beinahe jeden Tag,0.048,0.054,0.042,none,1473
+14,2022-02-18,depress_A2,4 = taeglich,0.031,0.038,0.023,none,1473
+14,2022-02-18,depress_A3,0 = nie,0.291,0.293,0.29,none,1473
+14,2022-02-18,depress_A3,1 = an manchen Tagen,0.469,0.47,0.468,none,1473
+14,2022-02-18,depress_A3,2 = mehrmals die Woche,0.129,0.132,0.126,none,1473
+14,2022-02-18,depress_A3,3 = beinahe jeden Tag,0.067,0.072,0.062,none,1473
+14,2022-02-18,depress_A3,4 = taeglich,0.043,0.05,0.037,none,1473
+14,2022-02-18,depress_A4,0 = nie,0.672,0.673,0.672,none,1466
+14,2022-02-18,depress_A4,1 = an manchen Tagen,0.193,0.196,0.191,none,1466
+14,2022-02-18,depress_A4,2 = mehrmals die Woche,0.062,0.067,0.057,none,1466
+14,2022-02-18,depress_A4,3 = beinahe jeden Tag,0.049,0.054,0.043,none,1466
+14,2022-02-18,depress_A4,4 = taeglich,0.024,0.032,0.015,none,1466
+14,2022-02-18,depress_A5,0 = nie,0.075,0.079,0.07,none,1453
+14,2022-02-18,depress_A5,1 = an manchen Tagen,0.301,0.303,0.299,none,1453
+14,2022-02-18,depress_A5,2 = mehrmals die Woche,0.219,0.221,0.217,none,1453
+14,2022-02-18,depress_A5,3 = beinahe jeden Tag,0.219,0.221,0.217,none,1453
+14,2022-02-18,depress_A5,4 = taeglich,0.187,0.189,0.184,none,1453
+14,2022-02-18,depress_A6,0 = nie,0.574,0.575,0.573,none,1460
+14,2022-02-18,depress_A6,1 = an manchen Tagen,0.275,0.277,0.273,none,1460
+14,2022-02-18,depress_A6,2 = mehrmals die Woche,0.081,0.086,0.077,none,1460
+14,2022-02-18,depress_A6,3 = beinahe jeden Tag,0.038,0.045,0.032,none,1460
+14,2022-02-18,depress_A6,4 = taeglich,0.031,0.039,0.024,none,1460
+14,2022-02-18,depress_A7,0 = nie,0.631,0.631,0.63,none,1471
+14,2022-02-18,depress_A7,1 = an manchen Tagen,0.235,0.237,0.233,none,1471
+14,2022-02-18,depress_A7,2 = mehrmals die Woche,0.064,0.069,0.059,none,1471
+14,2022-02-18,depress_A7,3 = beinahe jeden Tag,0.041,0.047,0.035,none,1471
+14,2022-02-18,depress_A7,4 = taeglich,0.029,0.037,0.022,none,1471
+14,2022-02-18,depress_A8,0 = nie,0.509,0.51,0.508,none,1467
+14,2022-02-18,depress_A8,1 = an manchen Tagen,0.328,0.33,0.327,none,1467
+14,2022-02-18,depress_A8,2 = mehrmals die Woche,0.088,0.092,0.084,none,1467
+14,2022-02-18,depress_A8,3 = beinahe jeden Tag,0.046,0.052,0.04,none,1467
+14,2022-02-18,depress_A8,4 = taeglich,0.028,0.036,0.021,none,1467
+14,2022-02-18,depress_A9,0 = nie,0.108,0.112,0.104,none,1462
+14,2022-02-18,depress_A9,1 = an manchen Tagen,0.346,0.348,0.345,none,1462
+14,2022-02-18,depress_A9,2 = mehrmals die Woche,0.257,0.259,0.255,none,1462
+14,2022-02-18,depress_A9,3 = beinahe jeden Tag,0.176,0.179,0.174,none,1462
+14,2022-02-18,depress_A9,4 = taeglich,0.112,0.116,0.109,none,1462
+14,2022-03-18,depress_A1,0 = nie,0.053,0.058,0.047,none,1435
+14,2022-03-18,depress_A1,1 = an manchen Tagen,0.246,0.248,0.244,none,1435
+14,2022-03-18,depress_A1,2 = mehrmals die Woche,0.215,0.217,0.212,none,1435
+14,2022-03-18,depress_A1,3 = beinahe jeden Tag,0.265,0.267,0.264,none,1435
+14,2022-03-18,depress_A1,4 = taeglich,0.221,0.223,0.219,none,1435
+14,2022-03-18,depress_A2,0 = nie,0.614,0.615,0.614,none,1437
+14,2022-03-18,depress_A2,1 = an manchen Tagen,0.209,0.211,0.207,none,1437
+14,2022-03-18,depress_A2,2 = mehrmals die Woche,0.085,0.089,0.081,none,1437
+14,2022-03-18,depress_A2,3 = beinahe jeden Tag,0.051,0.056,0.045,none,1437
+14,2022-03-18,depress_A2,4 = taeglich,0.041,0.048,0.035,none,1437
+14,2022-03-18,depress_A3,0 = nie,0.276,0.278,0.274,none,1437
+14,2022-03-18,depress_A3,1 = an manchen Tagen,0.502,0.503,0.501,none,1437
+14,2022-03-18,depress_A3,2 = mehrmals die Woche,0.121,0.124,0.117,none,1437
+14,2022-03-18,depress_A3,3 = beinahe jeden Tag,0.06,0.065,0.055,none,1437
+14,2022-03-18,depress_A3,4 = taeglich,0.041,0.048,0.035,none,1437
+14,2022-03-18,depress_A4,0 = nie,0.655,0.656,0.655,none,1437
+14,2022-03-18,depress_A4,1 = an manchen Tagen,0.201,0.203,0.199,none,1437
+14,2022-03-18,depress_A4,2 = mehrmals die Woche,0.064,0.07,0.059,none,1437
+14,2022-03-18,depress_A4,3 = beinahe jeden Tag,0.046,0.052,0.04,none,1437
+14,2022-03-18,depress_A4,4 = taeglich,0.033,0.04,0.026,none,1437
+14,2022-03-18,depress_A5,0 = nie,0.079,0.084,0.075,none,1429
+14,2022-03-18,depress_A5,1 = an manchen Tagen,0.302,0.303,0.3,none,1429
+14,2022-03-18,depress_A5,2 = mehrmals die Woche,0.219,0.221,0.216,none,1429
+14,2022-03-18,depress_A5,3 = beinahe jeden Tag,0.234,0.236,0.232,none,1429
+14,2022-03-18,depress_A5,4 = taeglich,0.166,0.169,0.164,none,1429
+14,2022-03-18,depress_A6,0 = nie,0.563,0.563,0.562,none,1430
+14,2022-03-18,depress_A6,1 = an manchen Tagen,0.28,0.282,0.278,none,1430
+14,2022-03-18,depress_A6,2 = mehrmals die Woche,0.082,0.087,0.078,none,1430
+14,2022-03-18,depress_A6,3 = beinahe jeden Tag,0.047,0.053,0.041,none,1430
+14,2022-03-18,depress_A6,4 = taeglich,0.028,0.036,0.02,none,1430
+14,2022-03-18,depress_A7,0 = nie,0.577,0.578,0.576,none,1442
+14,2022-03-18,depress_A7,1 = an manchen Tagen,0.26,0.262,0.258,none,1442
+14,2022-03-18,depress_A7,2 = mehrmals die Woche,0.079,0.083,0.074,none,1442
+14,2022-03-18,depress_A7,3 = beinahe jeden Tag,0.053,0.058,0.047,none,1442
+14,2022-03-18,depress_A7,4 = taeglich,0.032,0.039,0.025,none,1442
+14,2022-03-18,depress_A8,0 = nie,0.473,0.474,0.472,none,1436
+14,2022-03-18,depress_A8,1 = an manchen Tagen,0.348,0.349,0.346,none,1436
+14,2022-03-18,depress_A8,2 = mehrmals die Woche,0.086,0.09,0.082,none,1436
+14,2022-03-18,depress_A8,3 = beinahe jeden Tag,0.06,0.065,0.055,none,1436
+14,2022-03-18,depress_A8,4 = taeglich,0.034,0.041,0.026,none,1436
+14,2022-03-18,depress_A9,0 = nie,0.118,0.121,0.114,none,1443
+14,2022-03-18,depress_A9,1 = an manchen Tagen,0.32,0.321,0.318,none,1443
+14,2022-03-18,depress_A9,2 = mehrmals die Woche,0.235,0.237,0.233,none,1443
+14,2022-03-18,depress_A9,3 = beinahe jeden Tag,0.214,0.217,0.212,none,1443
+14,2022-03-18,depress_A9,4 = taeglich,0.113,0.117,0.11,none,1443
+14,2022-04-22,depress_A1,0 = nie,0.055,0.061,0.05,none,1462
+14,2022-04-22,depress_A1,1 = an manchen Tagen,0.267,0.269,0.266,none,1462
+14,2022-04-22,depress_A1,2 = mehrmals die Woche,0.201,0.203,0.198,none,1462
+14,2022-04-22,depress_A1,3 = beinahe jeden Tag,0.278,0.28,0.277,none,1462
+14,2022-04-22,depress_A1,4 = taeglich,0.198,0.201,0.196,none,1462
+14,2022-04-22,depress_A2,0 = nie,0.635,0.636,0.634,none,1467
+14,2022-04-22,depress_A2,1 = an manchen Tagen,0.217,0.219,0.215,none,1467
+14,2022-04-22,depress_A2,2 = mehrmals die Woche,0.059,0.064,0.054,none,1467
+14,2022-04-22,depress_A2,3 = beinahe jeden Tag,0.043,0.049,0.037,none,1467
+14,2022-04-22,depress_A2,4 = taeglich,0.046,0.052,0.04,none,1467
+14,2022-04-22,depress_A3,0 = nie,0.306,0.308,0.304,none,1449
+14,2022-04-22,depress_A3,1 = an manchen Tagen,0.471,0.473,0.47,none,1449
+14,2022-04-22,depress_A3,2 = mehrmals die Woche,0.118,0.121,0.114,none,1449
+14,2022-04-22,depress_A3,3 = beinahe jeden Tag,0.065,0.07,0.061,none,1449
+14,2022-04-22,depress_A3,4 = taeglich,0.039,0.046,0.032,none,1449
+14,2022-04-22,depress_A4,0 = nie,0.69,0.691,0.69,none,1458
+14,2022-04-22,depress_A4,1 = an manchen Tagen,0.179,0.182,0.176,none,1458
+14,2022-04-22,depress_A4,2 = mehrmals die Woche,0.057,0.062,0.051,none,1458
+14,2022-04-22,depress_A4,3 = beinahe jeden Tag,0.046,0.052,0.04,none,1458
+14,2022-04-22,depress_A4,4 = taeglich,0.028,0.036,0.021,none,1458
+14,2022-04-22,depress_A5,0 = nie,0.075,0.079,0.07,none,1443
+14,2022-04-22,depress_A5,1 = an manchen Tagen,0.3,0.302,0.299,none,1443
+14,2022-04-22,depress_A5,2 = mehrmals die Woche,0.219,0.221,0.217,none,1443
+14,2022-04-22,depress_A5,3 = beinahe jeden Tag,0.232,0.234,0.229,none,1443
+14,2022-04-22,depress_A5,4 = taeglich,0.174,0.177,0.171,none,1443
+14,2022-04-22,depress_A6,0 = nie,0.569,0.57,0.569,none,1447
+14,2022-04-22,depress_A6,1 = an manchen Tagen,0.283,0.285,0.281,none,1447
+14,2022-04-22,depress_A6,2 = mehrmals die Woche,0.07,0.074,0.065,none,1447
+14,2022-04-22,depress_A6,3 = beinahe jeden Tag,0.042,0.048,0.035,none,1447
+14,2022-04-22,depress_A6,4 = taeglich,0.036,0.043,0.029,none,1447
+14,2022-04-22,depress_A7,0 = nie,0.626,0.627,0.625,none,1450
+14,2022-04-22,depress_A7,1 = an manchen Tagen,0.24,0.242,0.238,none,1450
+14,2022-04-22,depress_A7,2 = mehrmals die Woche,0.067,0.072,0.063,none,1450
+14,2022-04-22,depress_A7,3 = beinahe jeden Tag,0.036,0.043,0.029,none,1450
+14,2022-04-22,depress_A7,4 = taeglich,0.031,0.038,0.024,none,1450
+14,2022-04-22,depress_A8,0 = nie,0.515,0.516,0.514,none,1447
+14,2022-04-22,depress_A8,1 = an manchen Tagen,0.325,0.327,0.324,none,1447
+14,2022-04-22,depress_A8,2 = mehrmals die Woche,0.073,0.078,0.069,none,1447
+14,2022-04-22,depress_A8,3 = beinahe jeden Tag,0.055,0.061,0.05,none,1447
+14,2022-04-22,depress_A8,4 = taeglich,0.031,0.039,0.024,none,1447
+14,2022-04-22,depress_A9,0 = nie,0.11,0.114,0.107,none,1448
+14,2022-04-22,depress_A9,1 = an manchen Tagen,0.346,0.347,0.344,none,1448
+14,2022-04-22,depress_A9,2 = mehrmals die Woche,0.226,0.229,0.224,none,1448
+14,2022-04-22,depress_A9,3 = beinahe jeden Tag,0.206,0.208,0.203,none,1448
+14,2022-04-22,depress_A9,4 = taeglich,0.112,0.116,0.108,none,1448
+14,2022-05-21,depress_A1,0 = nie,0.05,0.056,0.044,none,1488
+14,2022-05-21,depress_A1,1 = an manchen Tagen,0.26,0.262,0.258,none,1488
+14,2022-05-21,depress_A1,2 = mehrmals die Woche,0.218,0.22,0.216,none,1488
+14,2022-05-21,depress_A1,3 = beinahe jeden Tag,0.276,0.278,0.274,none,1488
+14,2022-05-21,depress_A1,4 = taeglich,0.196,0.199,0.194,none,1488
+14,2022-05-21,depress_A2,0 = nie,0.656,0.657,0.656,none,1475
+14,2022-05-21,depress_A2,1 = an manchen Tagen,0.206,0.208,0.204,none,1475
+14,2022-05-21,depress_A2,2 = mehrmals die Woche,0.063,0.068,0.058,none,1475
+14,2022-05-21,depress_A2,3 = beinahe jeden Tag,0.039,0.045,0.032,none,1475
+14,2022-05-21,depress_A2,4 = taeglich,0.036,0.043,0.03,none,1475
+14,2022-05-21,depress_A3,0 = nie,0.28,0.282,0.278,none,1485
+14,2022-05-21,depress_A3,1 = an manchen Tagen,0.504,0.505,0.503,none,1485
+14,2022-05-21,depress_A3,2 = mehrmals die Woche,0.135,0.138,0.132,none,1485
+14,2022-05-21,depress_A3,3 = beinahe jeden Tag,0.05,0.056,0.045,none,1485
+14,2022-05-21,depress_A3,4 = taeglich,0.031,0.038,0.024,none,1485
+14,2022-05-21,depress_A4,0 = nie,0.688,0.689,0.688,none,1479
+14,2022-05-21,depress_A4,1 = an manchen Tagen,0.181,0.183,0.178,none,1479
+14,2022-05-21,depress_A4,2 = mehrmals die Woche,0.064,0.069,0.059,none,1479
+14,2022-05-21,depress_A4,3 = beinahe jeden Tag,0.044,0.05,0.038,none,1479
+14,2022-05-21,depress_A4,4 = taeglich,0.023,0.032,0.015,none,1479
+14,2022-05-21,depress_A5,0 = nie,0.063,0.068,0.058,none,1479
+14,2022-05-21,depress_A5,1 = an manchen Tagen,0.298,0.3,0.297,none,1479
+14,2022-05-21,depress_A5,2 = mehrmals die Woche,0.213,0.215,0.21,none,1479
+14,2022-05-21,depress_A5,3 = beinahe jeden Tag,0.24,0.242,0.238,none,1479
+14,2022-05-21,depress_A5,4 = taeglich,0.186,0.189,0.184,none,1479
+14,2022-05-21,depress_A6,0 = nie,0.565,0.566,0.565,none,1475
+14,2022-05-21,depress_A6,1 = an manchen Tagen,0.295,0.297,0.293,none,1475
+14,2022-05-21,depress_A6,2 = mehrmals die Woche,0.072,0.077,0.068,none,1475
+14,2022-05-21,depress_A6,3 = beinahe jeden Tag,0.043,0.049,0.037,none,1475
+14,2022-05-21,depress_A6,4 = taeglich,0.024,0.033,0.016,none,1475
+14,2022-05-21,depress_A7,0 = nie,0.632,0.633,0.632,none,1473
+14,2022-05-21,depress_A7,1 = an manchen Tagen,0.246,0.248,0.244,none,1473
+14,2022-05-21,depress_A7,2 = mehrmals die Woche,0.064,0.069,0.059,none,1473
+14,2022-05-21,depress_A7,3 = beinahe jeden Tag,0.031,0.038,0.023,none,1473
+14,2022-05-21,depress_A7,4 = taeglich,0.027,0.034,0.019,none,1473
+14,2022-05-21,depress_A8,0 = nie,0.518,0.519,0.517,none,1483
+14,2022-05-21,depress_A8,1 = an manchen Tagen,0.319,0.321,0.318,none,1483
+14,2022-05-21,depress_A8,2 = mehrmals die Woche,0.082,0.086,0.078,none,1483
+14,2022-05-21,depress_A8,3 = beinahe jeden Tag,0.041,0.047,0.035,none,1483
+14,2022-05-21,depress_A8,4 = taeglich,0.04,0.046,0.034,none,1483
+14,2022-05-21,depress_A9,0 = nie,0.104,0.108,0.101,none,1481
+14,2022-05-21,depress_A9,1 = an manchen Tagen,0.322,0.324,0.321,none,1481
+14,2022-05-21,depress_A9,2 = mehrmals die Woche,0.239,0.241,0.237,none,1481
+14,2022-05-21,depress_A9,3 = beinahe jeden Tag,0.225,0.227,0.223,none,1481
+14,2022-05-21,depress_A9,4 = taeglich,0.109,0.112,0.105,none,1481
 15,2020-05-03,fin_ausk_akt,0 = sehr gut zurechtkommen,0.176,0.179,0.174,none,1501
 15,2020-05-03,fin_ausk_akt,1 = gut zurechtkommen,0.433,0.434,0.432,none,1501
 15,2020-05-03,fin_ausk_akt,2 = teils-teils,0.242,0.244,0.24,none,1501
@@ -8460,6 +10300,31 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 15,2021-11-26,fin_ausk_akt,2 = teils-teils,0.257,0.259,0.255,none,1505
 15,2021-11-26,fin_ausk_akt,3 = nur schwer zurechtkommen,0.105,0.109,0.102,none,1505
 15,2021-11-26,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.071,0.076,0.067,none,1505
+15,2022-01-14,fin_ausk_akt,0 = sehr gut zurechtkommen,0.132,0.135,0.129,none,1479
+15,2022-01-14,fin_ausk_akt,1 = gut zurechtkommen,0.465,0.466,0.464,none,1479
+15,2022-01-14,fin_ausk_akt,2 = teils-teils,0.228,0.23,0.226,none,1479
+15,2022-01-14,fin_ausk_akt,3 = nur schwer zurechtkommen,0.106,0.11,0.103,none,1479
+15,2022-01-14,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.069,0.073,0.064,none,1479
+15,2022-02-18,fin_ausk_akt,0 = sehr gut zurechtkommen,0.114,0.118,0.111,none,1468
+15,2022-02-18,fin_ausk_akt,1 = gut zurechtkommen,0.445,0.446,0.444,none,1468
+15,2022-02-18,fin_ausk_akt,2 = teils-teils,0.276,0.278,0.274,none,1468
+15,2022-02-18,fin_ausk_akt,3 = nur schwer zurechtkommen,0.099,0.103,0.096,none,1468
+15,2022-02-18,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.065,0.07,0.06,none,1468
+15,2022-03-18,fin_ausk_akt,0 = sehr gut zurechtkommen,0.116,0.12,0.113,none,1465
+15,2022-03-18,fin_ausk_akt,1 = gut zurechtkommen,0.424,0.425,0.423,none,1465
+15,2022-03-18,fin_ausk_akt,2 = teils-teils,0.279,0.281,0.277,none,1465
+15,2022-03-18,fin_ausk_akt,3 = nur schwer zurechtkommen,0.116,0.12,0.113,none,1465
+15,2022-03-18,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.064,0.069,0.059,none,1465
+15,2022-04-22,fin_ausk_akt,0 = sehr gut zurechtkommen,0.093,0.097,0.089,none,1483
+15,2022-04-22,fin_ausk_akt,1 = gut zurechtkommen,0.429,0.43,0.428,none,1483
+15,2022-04-22,fin_ausk_akt,2 = teils-teils,0.295,0.297,0.293,none,1483
+15,2022-04-22,fin_ausk_akt,3 = nur schwer zurechtkommen,0.105,0.109,0.102,none,1483
+15,2022-04-22,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.077,0.081,0.073,none,1483
+15,2022-05-21,fin_ausk_akt,0 = sehr gut zurechtkommen,0.095,0.099,0.092,none,1502
+15,2022-05-21,fin_ausk_akt,1 = gut zurechtkommen,0.418,0.419,0.417,none,1502
+15,2022-05-21,fin_ausk_akt,2 = teils-teils,0.281,0.283,0.28,none,1502
+15,2022-05-21,fin_ausk_akt,3 = nur schwer zurechtkommen,0.131,0.134,0.128,none,1502
+15,2022-05-21,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.074,0.078,0.07,none,1502
 16,2020-04-25,zuf_fam,0 = sehr zufrieden,0.417,0.418,0.416,none,1447
 16,2020-04-25,zuf_fam,1 = eher zufrieden,0.42,0.421,0.419,none,1447
 16,2020-04-25,zuf_fam,2 = weniger zufrieden,0.128,0.131,0.124,none,1447
@@ -8588,6 +10453,22 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 16,2021-10-23,zuf_frz,1 = eher zufrieden,0.449,0.45,0.448,none,1496
 16,2021-10-23,zuf_frz,2 = weniger zufrieden,0.19,0.193,0.188,none,1496
 16,2021-10-23,zuf_frz,3 = nicht zufrieden,0.046,0.051,0.04,none,1496
+16,2022-02-18,zuf_fam,0 = sehr zufrieden,0.446,0.447,0.445,none,1432
+16,2022-02-18,zuf_fam,1 = eher zufrieden,0.407,0.408,0.405,none,1432
+16,2022-02-18,zuf_fam,2 = weniger zufrieden,0.105,0.109,0.101,none,1432
+16,2022-02-18,zuf_fam,3 = nicht zufrieden,0.043,0.049,0.036,none,1432
+16,2022-02-18,zuf_par,0 = sehr zufrieden,0.477,0.478,0.476,none,1200
+16,2022-02-18,zuf_par,1 = eher zufrieden,0.366,0.368,0.364,none,1200
+16,2022-02-18,zuf_par,2 = weniger zufrieden,0.102,0.106,0.097,none,1200
+16,2022-02-18,zuf_par,3 = nicht zufrieden,0.055,0.062,0.048,none,1200
+16,2022-02-18,zuf_ber,0 = sehr zufrieden,0.3,0.303,0.298,none,1113
+16,2022-02-18,zuf_ber,1 = eher zufrieden,0.45,0.452,0.449,none,1113
+16,2022-02-18,zuf_ber,2 = weniger zufrieden,0.179,0.183,0.176,none,1113
+16,2022-02-18,zuf_ber,3 = nicht zufrieden,0.07,0.077,0.064,none,1113
+16,2022-02-18,zuf_frz,0 = sehr zufrieden,0.246,0.248,0.244,none,1494
+16,2022-02-18,zuf_frz,1 = eher zufrieden,0.431,0.432,0.429,none,1494
+16,2022-02-18,zuf_frz,2 = weniger zufrieden,0.266,0.268,0.264,none,1494
+16,2022-02-18,zuf_frz,3 = nicht zufrieden,0.058,0.063,0.053,none,1494
 17,2020-03-28,dauer,0 = Weniger als 1 Monat,0.008,0.023,-0.006,none,1489
 17,2020-03-28,dauer,1-2 Monate,0.105,0.109,0.102,none,1489
 17,2020-03-28,dauer,3-4 Monate,0.312,0.314,0.31,none,1489
@@ -8723,3 +10604,28 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 17,2021-11-26,dauer,3-4 Monate,0.037,0.044,0.029,none,1394
 17,2021-11-26,dauer,5-6 Monate,0.047,0.053,0.041,none,1394
 17,2021-11-26,dauer,7 = Mehr als 6 Monate,0.907,0.907,0.907,none,1394
+17,2022-01-14,dauer,0 = Weniger als 1 Monat,0.003,0.028,-0.021,none,1398
+17,2022-01-14,dauer,1-2 Monate,0.016,0.027,0.006,none,1398
+17,2022-01-14,dauer,3-4 Monate,0.046,0.052,0.04,none,1398
+17,2022-01-14,dauer,5-6 Monate,0.054,0.06,0.048,none,1398
+17,2022-01-14,dauer,7 = Mehr als 6 Monate,0.88,0.881,0.88,none,1398
+17,2022-02-18,dauer,0 = Weniger als 1 Monat,0.007,0.024,-0.011,none,1373
+17,2022-02-18,dauer,1-2 Monate,0.033,0.041,0.025,none,1373
+17,2022-02-18,dauer,3-4 Monate,0.066,0.071,0.06,none,1373
+17,2022-02-18,dauer,5-6 Monate,0.085,0.09,0.08,none,1373
+17,2022-02-18,dauer,7 = Mehr als 6 Monate,0.81,0.81,0.809,none,1373
+17,2022-03-18,dauer,0 = Weniger als 1 Monat,0.009,0.024,-0.007,none,1335
+17,2022-03-18,dauer,1-2 Monate,0.016,0.028,0.005,none,1335
+17,2022-03-18,dauer,3-4 Monate,0.055,0.061,0.049,none,1335
+17,2022-03-18,dauer,5-6 Monate,0.054,0.06,0.048,none,1335
+17,2022-03-18,dauer,7 = Mehr als 6 Monate,0.866,0.866,0.866,none,1335
+17,2022-04-22,dauer,0 = Weniger als 1 Monat,0.023,0.033,0.014,none,1350
+17,2022-04-22,dauer,1-2 Monate,0.04,0.047,0.033,none,1350
+17,2022-04-22,dauer,3-4 Monate,0.057,0.063,0.051,none,1350
+17,2022-04-22,dauer,5-6 Monate,0.067,0.073,0.062,none,1350
+17,2022-04-22,dauer,7 = Mehr als 6 Monate,0.812,0.813,0.812,none,1350
+17,2022-05-21,dauer,0 = Weniger als 1 Monat,0.028,0.036,0.019,none,1341
+17,2022-05-21,dauer,1-2 Monate,0.032,0.04,0.024,none,1341
+17,2022-05-21,dauer,3-4 Monate,0.063,0.068,0.057,none,1341
+17,2022-05-21,dauer,5-6 Monate,0.07,0.075,0.065,none,1341
+17,2022-05-21,dauer,7 = Mehr als 6 Monate,0.808,0.808,0.807,none,1341
