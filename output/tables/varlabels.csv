@@ -26,15 +26,15 @@ Auswirkungen: Fehlt Kontakt,kontakt,1,5
 "Auswirkungen: Dinge tun, fuer die sonst keine Zeit",zeit,1,5
 Auswirkungen: Konflikte in Beziehung/Familie,konflikt,1,5
 Aussage: Kinderbetreuung stellt Problem dar,kinder,1,5
-Depressivitaet: ruhig und gelassen,depress_A1,1,5
-Depressivitaet: einsam,depress_A2,1,5
-Depressivitaet: aergerlich,depress_A3,1,5
-Depressivitaet: so niedergeschlagen,depress_A4,1,5
-Depressivitaet: gluecklich,depress_A5,1,5
-Depressivitaet: sehr nervoes,depress_A6,1,5
-Depressivitaet: aengstlich,depress_A7,1,5
-Depressivitaet: bedrueckt und traurig,depress_A8,1,5
-Depressivitaet: voller Energie,depress_A9,1,5
+Depressivitaet: Ruhig und gelassen,depress_A1,1,5
+Depressivitaet: Einsam,depress_A2,1,5
+Depressivitaet: Aergerlich,depress_A3,1,5
+Depressivitaet: So niedergeschlagen,depress_A4,1,5
+Depressivitaet: Gluecklich,depress_A5,1,5
+Depressivitaet: Sehr nervoes,depress_A6,1,5
+Depressivitaet: Aengstlich,depress_A7,1,5
+Depressivitaet: Bedrueckt und traurig,depress_A8,1,5
+Depressivitaet: Voller Energie,depress_A9,1,5
 Zuhause verlassen: Arbeit,ausgeh_arbeit,1,5
 Zuhause verlassen: Sport,ausgeh_sport,1,5
 Zuhause verlassen: Freunde oder Verwandte treffen,ausgeh_freunde,1,5
@@ -83,10 +83,10 @@ Politische Entscheidungen: Unternehmen staerken anstatt Arbeitnehmer,mas_arbnarb
 Geschaetzte Dauer der Krise,dauer,1,5
 Geschaetzte Dauer der Krise: Mehr als 6 Monate,dauer_ext,1,6
 Gefahr zweite Welle des Coronavirus,danger_2wave,1,5
-Ueberwachung: per Video ueberwachen,komp_video,1,4
+Ueberwachung: Per Video ueberwachen,komp_video,1,4
 Ueberwachung: Informationen sammeln ohne Wissen,komp_infos,1,4
-Ueberwachung: per Handyortung aufspueren,komp_handy,1,4
-Ueberwachung: behoerdliche Schliessung,komp_schliessen,1,4
+Ueberwachung: Per Handyortung aufspueren,komp_handy,1,4
+Ueberwachung: Behoerdliche Schliessung,komp_schliessen,1,4
 Ueberwachung: Ausgangssperren,komp_ausgansp,1,4
 Ueberwachung: Nicht-Einhaltung bestrafen,komp_bestrafen,1,4
 Ueberwachung: App,komp_appaufenth,1,4
@@ -114,16 +114,16 @@ Aussage: Beitrag zur Finanzierung durch alle Personen gleich,tax_gleich,1,5
 Aussage: Kluft zwischen Arm und Reich wird durch Krise groesser,tax_ineq,1,5
 Aussage: Neue Steuern schaden Wirtschaftsstandort Oesterreich,tax_hurt,1,5
 Aussage: Ausgangsbeschraenkungen treffen arme Menschen staerker als reiche,tax_quarant,1,5
-Finanzierung: allgemeine Einkommenssteuer,fstax_eink_g,0,10
-Finanzierung: allgemeine Vermoegenssteuer,fstax_verm_g,0,10
-Finanzierung: allgemeine Erbschaftssteuer,fstax_erb_g,0,10
-Finanzierung: progressive Einkommenssteuer,fstax_eink_h,0,10
-Finanzierung: progressive Vermoegenssteuer,fstax_verm_h,0,10
-Finanzierung: progressive Erbschaftssteuer,fstax_erb_h,0,10
+Finanzierung: Allgemeine Einkommenssteuer,fstax_eink_g,0,10
+Finanzierung: Allgemeine Vermoegenssteuer,fstax_verm_g,0,10
+Finanzierung: Allgemeine Erbschaftssteuer,fstax_erb_g,0,10
+Finanzierung: Progressive Einkommenssteuer,fstax_eink_h,0,10
+Finanzierung: Progressive Vermoegenssteuer,fstax_verm_h,0,10
+Finanzierung: Progressive Erbschaftssteuer,fstax_erb_h,0,10
 Finanzierungsmoeglichkeit: Kuerzung Sozialausgaben,gentax_aussoz,NA,NA
 Finanzierungsmoeglichkeit: Kuerzung Bildungsausgaben,gentax_ausbil,NA,NA
 Finanzierungsmoeglichkeit: Steuererhoehung,gentax_steuer,NA,NA
-Finanzierungsmoeglichkeit: neue Staatsschulden,gentax_schuld,NA,NA
+Finanzierungsmoeglichkeit: Neue Staatsschulden,gentax_schuld,NA,NA
 Einkommensdezil,subj_eink,1,10
 Glueck vs. Leistung,bel_luckef,1,7
 Haushaltsgegenstaende: Gute Zeit zu kaufen,kaufen_haus,1,5
@@ -149,10 +149,10 @@ Urlaubsziel: Kroatien,urlaub_ziel_cr,0,1
 Urlaubsziel: Spanien,urlaub_ziel_es,0,1
 Urlaubsziel: Griechenland,urlaub_ziel_gr,0,1
 Urlaubsziel: Grossbritannien,urlaub_ziel_gb,0,1
-Urlaubsziel: anderes EU-Land,urlaub_ziel_eu,0,1
-Urlaubsziel: ausserhalb EU,urlaub_ziel_ex,0,1
-Urlaubsziel: weiss nicht,urlaub_ziel_wn,0,0
-Urlaubsziel: keine Angabe,urlaub_ziel_ka,0,0
+Urlaubsziel: Anderes EU-Land,urlaub_ziel_eu,0,1
+Urlaubsziel: Ausserhalb EU,urlaub_ziel_ex,0,1
+Urlaubsziel: Weiss nicht,urlaub_ziel_wn,0,0
+Urlaubsziel: Keine Angabe,urlaub_ziel_ka,0,0
 Urlaubsziel Oesterreich: Vorarlberg,urlaub_zielaut_vb,0,1
 Urlaubsziel Oesterreich: Tirol,urlaub_zielaut_ti,0,1
 Urlaubsziel Oesterreich: Salzburg,urlaub_zielaut_sb,0,1
@@ -162,8 +162,8 @@ Urlaubsziel Oesterreich: Oberoesterreich,urlaub_zielaut_oo,0,1
 Urlaubsziel Oesterreich: Niederoesterreich,urlaub_zielaut_no,0,1
 Urlaubsziel Oesterreich: Wien,urlaub_zielaut_wi,0,1
 Urlaubsziel Oesterreich: Burgenland,urlaub_zielaut_bg,0,1
-Urlaubsziel Oesterreich: weiss nicht,urlaub_zielaut_wn,0,0
-Urlaubsziel Oesterreich: keine Angabe,urlaub_zielaut_ka,0,0
+Urlaubsziel Oesterreich: Weiss nicht,urlaub_zielaut_wn,0,0
+Urlaubsziel Oesterreich: Keine Angabe,urlaub_zielaut_ka,0,0
 Urlaubsbeginn Monat,urlaub_beginn,1,10
 "Urlaubsart: Kultur-, Besichtigungs- und Staedteurlaub",urlaub_art_kult,0,1
 "Urlaubsart: Wander-, Rad- und Bergsteig-Urlaub",urlaub_art_wand,0,1
@@ -184,11 +184,11 @@ EU: Ausfuhrstopp durch andere Mitgliedslaender fuer notwendige Gueter,EU1_ausfuh
 "EU: Oesterreich profitiert davon, andere EU-Staaten finanziell zu unterstuetzen",EU2_autprof,1,5
 EU: Personenfreizuegigkeit foerdert Wirtschaftswachstum in Oesterreich,EU2_personenfr,1,5
 EU: Freihandel wichtiger als Schutz heimischer Wirtschaft,EU2_freihandel,1,5
-EU-Krisenfinanzierung: hoehere Beitraege durch Mitgliedsstaaten,EU_fin_beitr,1,5
-EU-Krisenfinanzierung: gemeinsame Schulden,EU_fin_schuld,1,5
-EU-Krisenfinanzierung: gemeinsamer Fond zur Kreditvergabe,EU_fin_fond,1,5
-EU-Krisenfinanzierung: freiwillige Vergabe von Hilfsgeldern ohne Rueckzahlung,EU_fin_hilfsg,1,5
-EU-Krisenfinanzierung: freiwillige Sachspenden an Mitgliedsstaaten,EU_fin_sachsp,1,5
+EU-Krisenfinanzierung: Hoehere Beitraege durch Mitgliedsstaaten,EU_fin_beitr,1,5
+EU-Krisenfinanzierung: Gemeinsame Schulden,EU_fin_schuld,1,5
+EU-Krisenfinanzierung: Gemeinsamer Fond zur Kreditvergabe,EU_fin_fond,1,5
+EU-Krisenfinanzierung: Freiwillige Vergabe von Hilfsgeldern ohne Rueckzahlung,EU_fin_hilfsg,1,5
+EU-Krisenfinanzierung: Freiwillige Sachspenden an Mitgliedsstaaten,EU_fin_sachsp,1,5
 Tradeoff Preis-Herkunft: Lebensmittel,preisherk_lebens,0,10
 Tradeoff Preis-Herkunft: Medikamente/Medizinische Produkte,preisherk_medik,0,10
 Tradeoff Preis-Herkunft: Kleidung,preisherk_kleid,0,10
@@ -268,19 +268,19 @@ Weihnachten/Neujahr: Schliessung aller Geschaefte abseits der Grundversorgung,ma
 Weihnachten/Neujahr: Einschraenkung der Reisefreiheit,masgelten_weih_reisefr,1,4
 Weihnachten/Neujahr: Maskenpflicht in Geschaeften/oeffentlichen Verkehrsmitteln,masgelten_weih_maskenp,1,4
 Weihnachten/Neujahr: Verzicht auf religioese Zusammenkuenfte,masgelten_weih_sreligo,1,4
-Massentests: Habe/werde mich testen lassen,getestet_old,1,4
+Corona-Tests: Habe/werde mich testen lassen,getestet_old,1,4
 Corona-Test: Haeufigkeit in den letzten vier Wochen,getestet_new,1,6
 Corona-Test: Haeufigkeit [Wenn mehr als 4 Mal],getestet_ext,1,4
-Massentests: Anmeldung funktioniert problemlos,mastest_anm,1,5
-Massentests: Durchfuehrung erfolgt professionell,mastest_dur,1,5
-Massentests: Teststation weit von Wohnort entfernt,mastest_woh,1,5
-Massentests: Lange Menschenschlangen vor Teststationen,mastest_war,1,5
-Massentests: Effektive Massnahme gegen Corona,mastest_eff,1,5
-Massentests: Ergebnis ist zuverlaessig,mastest_zuv,1,5
-"Massentests: Negativer Test bedeutet, dass ich mehr Personen treffen kann",mastest_tre,1,5
-Massentests: Trotz negativen Testergebnisses kann ich das Coronavirus verbreiten,mastest_ver,1,5
-Massentests: Privater Test kurz vor Weihnachten,mastest_pri,1,5
-"Massentests: keine Teilnahme, da Quarantaene nicht leistbar",mastest_qua,1,5
+Corona-Tests: Anmeldung funktioniert problemlos,mastest_anm,1,5
+Corona-Tests: Durchfuehrung erfolgt professionell,mastest_dur,1,5
+Corona-Tests: Teststation weit von Wohnort entfernt,mastest_woh,1,5
+Corona-Tests: Lange Menschenschlangen vor Teststationen,mastest_war,1,5
+Corona-Tests: Effektive Massnahme gegen Corona,mastest_eff,1,5
+Corona-Tests: Ergebnis ist zuverlaessig,mastest_zuv,1,5
+"Corona-Tests: Negativer Test bedeutet, dass ich mehr Personen treffen kann",mastest_tre,1,5
+Corona-Tests: Trotz negativen Testergebnisses kann ich das Coronavirus verbreite,mastest_ver,1,5
+Corona-Tests: Privater Test kurz vor Weihnachten,mastest_pri,1,5
+"Corona-Tests: Keine Teilnahme, da Quarantaene nicht leistbar",mastest_qua,1,5
 Corona-Tests: Strengere Massnahmen fuer Personen ohne Test,mastest_str,1,5
 Corona-Test: Moeglich sich schnell testen zu lassen,mastest_mot,1,5
 Umgang mit Corona: Moeglichst harte Massnahmen fuer eine kuerzere Krise,umgcor_hart,1,5
@@ -297,11 +297,11 @@ Ansteckungsgefahr: Arzt,anst_arzt,1,5
 Ansteckungsgefahr: Familienfeier,anst_fami,1,5
 Ansteckungsgefahr: Treffen von Freunden Zuhause,anst_freu,1,5
 Bereits gegen Corona geimpft,geimpft,1,2
-Geimpft: welcher Impfstoff,geim_impfs,1,6
-Geimpft: beide Impfungen,geim_beide,1,2
-Impfen: ehestmoeglich,impf_ehe,1,5
+Geimpft: Welcher Impfstoff,geim_impfs,1,6
+Geimpft: Zwei Impfungen,geim_beide,1,2
+Impfen: Ehestmoeglich,impf_ehe,1,5
 Impfen: Impfpflicht fuer alle,impf_pfl,1,5
-Impfen: gratis Impfstoff,impf_gra,1,5
+Impfen: Gratis Impfstoff,impf_gra,1,5
 Impfen: Impfpflicht fuer Berufsgruppen mit hohem Risiko,impf_pfb,1,5
 "Impfen: Sollte Moeglichkeit haben, mich sofort impfen zu lassen",impf_sof,1,5
 "Impfen: Es ist unfair, dass bestimmte Gruppen die Impfung frueher erhalten",impf_unf,1,5
@@ -309,23 +309,23 @@ Impfen: Meisten Personen in meinem Umfeld sind bereit sich impfen zu lassen,impf
 Aussage: Mache mir Sorgen ueber unvorhergesehene Nebenwirkungen der Impfung,impfe_sor,1,5
 Aussage: Verlasse mich lieber auf mein Immunsystem als auf eine Impfung,impfe_imm,1,5
 Aussage: Fuehle mich gut ueber die Wirkweise der Impfstoffe informiert,impfe_ini,1,5
-Aussage: Die Impfung erlaubt mir ein Leben wie vor der Pandemie.,impfe_leb,1,5
-Aussage: Mit einer Impfung kann ich andere schuetzen.,impfe_asc,1,5
+Aussage: Die Impfung erlaubt mir ein Leben wie vor der Pandemie,impfe_leb,1,5
+Aussage: Mit einer Impfung kann ich andere schuetzen,impfe_asc,1,5
 "Aussage: Lasse mich impfen, wenn andere sich zuerst impfen lassen",impfe_aim,1,5
-Aussage: Mit einer Impfung kann ich mich selbst schuetzen.,impfe_ssc,1,5
+Aussage: Mit einer Impfung kann ich mich selbst schuetzen,impfe_ssc,1,5
 Aussage: Behoerdlich zugelassene Impfungen sind sicher.,impfe_sic,1,5
 Aussage: Behoerden informieren hinreichend ueber Wirkungsweise der Impfstoffe,impfe_inb,1,5
-"Aussage: Mein Alltag ist zu stressig, ich habe keine Zeit fuer eine Impfung.",impfe_str,1,5
+"Aussage: Mein Alltag ist zu stressig, ich habe keine Zeit fuer eine Impfung",impfe_str,1,5
 Impfbereitschaft: BioNTech-Pfizer,impfs_bnp,1,5
 Impfbereitschaft: AstraZeneca,impfs_asz,1,5
 Impfbereitschaft: Moderna,impfs_mod,1,5
 Impfbereitschaft: Johnson & Johnson,impfs_jaj,1,5
 Impfbereitschaft: Sputnik V,impfs_spv,1,5
 Aussage: FFP2-Schutzmasken sind effektive Massnahme,ffp_eff,1,5
-Aussage: Mit einer FFP2-Schutzmaske kann ich andere schuetzen.,ffp_and,1,5
-Aussage: Mit einer FFP2-Schutzmaske kann ich mich selbst schuetzen.,ffp_slb,1,5
+Aussage: Mit einer FFP2-Schutzmaske kann ich andere schuetzen,ffp_and,1,5
+Aussage: Mit einer FFP2-Schutzmaske kann ich mich selbst schuetzen,ffp_slb,1,5
 Erwerbstaetigkeit aktuell,berufst,1,10
-Erwerbstaetigkeit Partner(in): aktuell,berufst_pa,1,10
+Erwerbstaetigkeit Partner(in): Aktuell,berufst_pa,1,10
 Erwerbstaetigkeit Partner(in): Februar 2020,berufst_pf,1,10
 Arbeitsstunden: Jetzt pro Woche,workh_akt,NA,NA
 Aenderung berufliche Situation: Home-Office,berufa_home,0,1
@@ -335,24 +335,24 @@ Aenderung berufliche Situation: Stundenaufstockung,berufa_aufs,0,1
 Aenderung berufliche Situation: Kurzarbeit,berufa_kurz,0,1
 Aenderung berufliche Situation: Arbeitslosenunterstuetzung,berufa_arbu,0,1
 Aenderung berufliche Situation: Geld aus Haertefonds,berufa_hafo,0,1
-Aenderung berufliche Situation: aws-Kredit,berufa_awsk,0,1
+Aenderung berufliche Situation: Aws-Kredit,berufa_awsk,0,1
 Aenderung berufliche Situation: Sozialhilfe,berufa_sozh,0,1
-Aenderung berufliche Situation: keine Arbeit und keine staatliche Unterstuetzung,berufa_kasa,0,1
-Aenderung berufliche Situation: keine Aenderung,berufa_kaen,0,1
-Aenderung berufliche Situation: keine Angabe,berufa_kang,0,0
+Aenderung berufliche Situation: Keine Arbeit und keine staatliche Unterstuetzung,berufa_kasa,0,1
+Aenderung berufliche Situation: Keine Aenderung,berufa_kaen,0,1
+Aenderung berufliche Situation: Keine Angabe,berufa_kang,0,0
 Zeit: Medienkonsum (in Sek.),zeitv_medi,NA,NA
-Zeit: Chatten/Telefonieren  (in Sek.),zeitv_telc,NA,NA
-Zeit: Hobbys  (in Sek.),zeitv_hobb,NA,NA
-Zeit: Hausarbeit / Einkaufen  (in Sek.),zeitv_eink,NA,NA
-Zeit: Pflege / Kinderbetreuung  (in Sek.),zeitv_betr,NA,NA
-Zeit: Bezahlte Arbeit (wenn Erwerbstaetigk. = erwerbstaetig; in Sek.),zeitv_arbe,NA,NA
-Zeit: Studium (wenn: Erwerbstaetigkeit = Studium)  (in Sek.),zeitv_stud,NA,NA
-Zeit: Weiterbildung / Bewerbung (arbeitslos)  (in Sek.),zeitv_weit,NA,NA
-Zeit: Schlafen (inklusive normaler Nachtruhe)  (in Sek.),zeitv_schl,NA,NA
+Zeit: Chatten/Telefonieren (in Sek.),zeitv_telc,NA,NA
+Zeit: Hobbys (in Sek.),zeitv_hobb,NA,NA
+Zeit: Hausarbeit/Einkaufen (in Sek.),zeitv_eink,NA,NA
+Zeit: Pflege/Kinderbetreuung (in Sek.),zeitv_betr,NA,NA
+Zeit: Bezahlte Arbeit (wenn Erwerbstaetigk. = erwerbstaetig) (in Sek.),zeitv_arbe,NA,NA
+Zeit: Studium (wenn: Erwerbstaetigkeit = Studium) (in Sek.),zeitv_stud,NA,NA
+Zeit: Weiterbildung/Bewerbung (arbeitslos) (in Sek.),zeitv_weit,NA,NA
+Zeit: Schlafen (inklusive normaler Nachtruhe) (in Sek.),zeitv_schl,NA,NA
 Aussage: Politik muss soziale Ungleichheit bekaempfen,issue_ungl,1,5
 Aussage: Sozialstaat macht Menschen traege und faul,issue_faul,1,5
 Aussage: Arbeitslosigkeit durch Staatsschulden bekaempfen,issue_albe,1,5
-Aussage: wenig Eingriff in Wirtschaft durch Politik,issue_wirt,1,5
+Aussage: Wenig Eingriff in Wirtschaft durch Politik,issue_wirt,1,5
 Aussage: Bevorzugung von Frauen bei gleicher Qualifikation,issue_frau,1,5
 Aussage: Ausweitung der Befugnisse der Polizei,issue_poli,1,5
 Aussage: Zuwanderung nach Oesterreich nur in Ausnahmefaellen,issue_zuwa,1,5
@@ -368,11 +368,11 @@ Ersatzleistung (Euro): Person mit 5000 Euro Bruttoentgelt bei Arbeitslosigkeit,e
 Aussage: Arbeitslose suchen nicht nach Arbeitsstelle,welfshov_such,1,5
 Aussage: Leute mit geringem Einkommen erhalten weniger Sozialleistungen,welfshov_zust,1,5
 "Aussage: Es gelingt Leuten, Sozialleistungen zu erhalten, ohne Anspruch",welfshov_sozl,1,5
-Verantwortung Regierung: angemessenen Lebensstandard fuer Pensionisten,verant_pens,0,10
-Verantwortung Regierung: angemessenen Lebensstandard fuer Arbeitslose,verant_arbl,0,10
-Verantwortung Regierung: ausreichend Kinderbetreuungsdienste fuer Berufstaetige,verant_kind,0,10
-Verantwortung Regierung: universitaere Ausbildung in guter Qualitaet,verant_univ,0,10
-Verantwortung Regierung: hochqualitative gesundheitl. Versorgung,verant_gesu,0,10
+Verantwortung Regierung: Angemessenen Lebensstandard fuer Pensionisten,verant_pens,0,10
+Verantwortung Regierung: Angemessenen Lebensstandard fuer Arbeitslose,verant_arbl,0,10
+Verantwortung Regierung: Ausreichend Kinderbetreuungsdienste fuer Berufstaetige,verant_kind,0,10
+Verantwortung Regierung: Universitaere Ausbildung in guter Qualitaet,verant_univ,0,10
+Verantwortung Regierung: Hochqualitative gesundheitl. Versorgung,verant_gesu,0,10
 Zufriedenheit: Arbeitsbedingungen,zuf_arb,1,4
 Jobattribut-Praeferenz: Ein sicherer Arbeitsplatz,joa_swc,1,4
 Jobattribut-Praeferenz: Ein hohes Einkommen,joa_hin,1,4
@@ -388,18 +388,18 @@ Lotto-Frage,lottoq,1,2
 Aussage: Arbeit ist eine Pflicht gegenueber der Gesellschaft.,wo_dty,1,4
 Aussage: Arbeit immer vor Freizeit,wo_lei,1,4
 "Aussage: Mann soll Geld verdienen, Frau sich um Haushalt kuemmern",wo_mal,1,4
-Staatliche Massnahmen: nur nachhaltige Unternehmen vs. alle gleichermassen,staatmas_unte,1,5
-Staatliche Massnahmen: nur Aermeren vs. fuer alle,staatmas_haus,1,5
+Staatliche Massnahmen: Nur nachhaltige Unternehmen vs. alle gleichermassen,staatmas_unte,1,5
+Staatliche Massnahmen: Nur aermeren Haushalten vs. allen Haushalten gleichermass,staatmas_haus,1,5
 Staatliche Massnahmen: Geld ausbezahlen vs. Gutscheine/Praemien,staatmas_form,1,5
-Staatliche Massnahmen: nachhaltige Produkte foerdern vs. alle gleichermassen,staatmas_prod,1,5
+Staatliche Massnahmen: Nachhaltige Produkte foerdern vs. alle gleichermassen,staatmas_prod,1,5
 Staatliche Massnahmen: Unternehmen ausbezahlen vs. direkt Buerger ausbezahlen,staatmas_empf,1,5
 "Pflegebeduerftige Angehoerige: Ja, in 24h Pflege",pflege_bet_24h,0,1
-Pflegebeduerftige Angehoerige: teilweise Pflege,pflege_bet_tei,0,1
+Pflegebeduerftige Angehoerige: Teilweise Pflege,pflege_bet_tei,0,1
 Pflegebeduerftige Angehoerige: Pflege durch mich selbst,pflege_bet_sel,0,1
 Pflegebeduerftige Angehoerige: Pflege durch Partner/in,pflege_bet_par,0,1
 Pflegebeduerftige Angehoerige: Nein,pflege_bet_nei,0,1
-Pflegebeduerftige Angehoerige: weiss nicht,pflege_bet_wni,0,0
-Pflegebeduerftige Angehoerige: keine Angabe,pflege_bet_kan,0,0
+Pflegebeduerftige Angehoerige: Weiss nicht,pflege_bet_wni,0,0
+Pflegebeduerftige Angehoerige: Keine Angabe,pflege_bet_kan,0,0
 Pflege stellt Problem dar,pflege_sit_prob,1,5
 Pflege: Neue Pflegekraft finden (selbst oder Haushaltsperson),pflege_sit_nkra,0,1
 Pflege: Neue Pflegekraft finden (Agentur/Hilfsorganisation),pflege_sit_nage,0,1
@@ -438,7 +438,7 @@ Verbundenheit: Wohnort,verbunden_gem,1,4
 Verbundenheit: Bundesland,verbunden_bdl,1,4
 Verbundenheit: Oesterreich,verbunden_aut,1,4
 Verbundenheit: Europa,verbunden_eur,1,4
-Gerechtigkeitsprinzipien: gleichmaessige Verteilung von Einkommen und Vermoegen,gerechtp_gle,1,5
+Gerechtigkeitsprinzipien: Gleichmaessige Verteilung von Einkommen und Vermoegen,gerechtp_gle,1,5
 Gerechtigkeitsprinzipien: Belohnung nach Leistung,gerechtp_lei,1,5
 Gerechtigkeitsprinzipien: Unterstuetzung fuer Beduerftige,gerechtp_bed,1,5
 Gerechtigkeitsprinzipien: Privilegien durch Status,gerechtp_sta,1,5
@@ -446,24 +446,24 @@ Gerechtigkeitsprinzipien: Glueck bei wirtschaftlichem Erfolg,gerechtp_zuf,1,5
 Wahlabsicht (Sonntagsfrage),sonntagsfrage,1,10
 Wahrscheinlichkeit: Wieder Arbeit zu finden,risk_fwrk,NA,NA
 Wahrscheinlichkeit: Job zu verlieren,risk_lwrk,NA,NA
-Wahrscheinlichkeit: gewohnte Arbeit wieder aufnehmen,risk_buwk,NA,NA
+Wahrscheinlichkeit: Gewohnte Arbeit wieder aufnehmen,risk_buwk,NA,NA
 Soziale Kontakte: Haeufigkeit ausgetauscht/Kontakt gehalten,sozkont,1,5
 Gerechter Anteil,geranteil,1,4
 Oben-unten: Selbsteinstufung,sss_akt,1,10
 Oben-unten: Selbsteinstufung (zukuenftige Situation),sss_5yr,1,10
 Grundeinkommen,greinkom,1,4
-Wahrnehmung Verdienst: ein praktischer Arzt: <...> Euro,eik_perc_doc,NA,NA
+Wahrnehmung Verdienst: Ein praktischer Arzt: <...> Euro,eik_perc_doc,NA,NA
 "Wahrnehmung Verdienst: Vorstandsvorsitzender, grosses Unternehmes: <...> Euro",eik_perc_ceo,NA,NA
-Wahrnehmung Verdienst: ein Verkaeufer in einem Kaufhaus: <...> Euro,eik_perc_ang,NA,NA
-Wahrnehmung Verdienst: ein ungelernter Fabrikarbeiter: <...> Euro,eik_perc_arb,NA,NA
-Wahrnehmung Verdienst: ein Minister in der Bundesregierung: <...> Euro,eik_perc_reg,NA,NA
+Wahrnehmung Verdienst: Ein Verkaeufer in einem Kaufhaus: <...> Euro,eik_perc_ang,NA,NA
+Wahrnehmung Verdienst: Ein ungelernter Fabrikarbeiter: <...> Euro,eik_perc_arb,NA,NA
+Wahrnehmung Verdienst: Ein Minister in der Bundesregierung: <...> Euro,eik_perc_reg,NA,NA
 Staatshilfe nach Leistungsprinzip,ger_sth_equi,1,5
 Staatshilfe nach Bedarf,ger_sth_need,1,5
 Staatshilfe gleich verteilt,ger_sth_equa,1,5
 Staatshilfe bei Verlust gesellschaftlicher Stellung,ger_sth_stat,1,5
 Aktuelles persoenliches Einkommen,inc_pers,1,20
 Risikobereitschaft,risikob,0,10
-Psychologie: habe Leben selbst in der Hand,psy_leb,1,4
+Psychologie: Habe Leben selbst in der Hand,psy_leb,1,4
 Psychologie: Belohnung durch Anstrengung,psy_bel,1,4
 Psychologie: Fremdbestimmung,psy_fbe,1,4
 Psychologie: Schicksal,psy_sci,1,4

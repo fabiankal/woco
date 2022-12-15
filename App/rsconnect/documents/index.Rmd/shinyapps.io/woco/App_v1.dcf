@@ -5,9 +5,9 @@ account: woco
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5119107
-bundleId: 6044346
+bundleId: 6046215
 url: https://woco.shinyapps.io/App_v1/
-when: 1656258573.41907
-lastSyncTime: 1656258573.41907
+when: 1656323465.77769
+lastSyncTime: 1656323465.77769
 asMultiple: FALSE
 asStatic: FALSE

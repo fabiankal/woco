@@ -137,6 +137,7 @@ hlinedata = data.frame(x = c("16.03.2020",
                              "12.12.2021",
                              "11.01.2022",
                              "05.02.2022",
+                             "24.02.2022",
                              "05.03.2022",
                              "02.06.2022"),
                      label_en=c("Lockdown",
@@ -1460,7 +1461,7 @@ layout(showlegend = FALSE,
           )),
        margin=m)  %>% 
     layout(annotations = 
-            list(x = 0, y = -0.12, text = paste("N ~",Nrund," pro Welle", "Daten: ACPP + WoCo"), 
+            list(x = 0, y = -0.14, text = paste("N ~",Nrund," pro Welle", "Daten: ACPP + WoCo"), 
             showarrow = F, xref='paper', yref='paper', 
             xanchor='left', yanchor='auto', xshift=0, yshift=0,
             font=list(size=14, color="#707070"))) %>% 
