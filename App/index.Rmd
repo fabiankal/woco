@@ -55,7 +55,7 @@ logodir <-""
 
 
 #dashboard release version
-version<-"V1.2" 
+version<-"V1.3" 
 
 #data with variable means
 data <-readr::read_csv(paste0(githubdir,"output/tables/export_shiny_data.csv"),show_col_types = FALSE)

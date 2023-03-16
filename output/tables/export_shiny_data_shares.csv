@@ -362,6 +362,17 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 1,2022-10-21,lebensz,8,0.243,0.245,0.241,none,1500
 1,2022-10-21,lebensz,9,0.114,0.118,0.111,none,1500
 1,2022-10-21,lebensz,10 = aeusserst zufrieden,0.063,0.068,0.059,none,1500
+1,2023-02-17,lebensz,0 = aeusserst unzufrieden,0.03,0.037,0.022,none,1496
+1,2023-02-17,lebensz,1,0.012,0.024,0.001,none,1496
+1,2023-02-17,lebensz,2,0.036,0.042,0.029,none,1496
+1,2023-02-17,lebensz,3,0.065,0.07,0.06,none,1496
+1,2023-02-17,lebensz,4,0.053,0.058,0.048,none,1496
+1,2023-02-17,lebensz,5,0.13,0.133,0.127,none,1496
+1,2023-02-17,lebensz,6,0.108,0.112,0.105,none,1496
+1,2023-02-17,lebensz,7,0.203,0.205,0.201,none,1496
+1,2023-02-17,lebensz,8,0.207,0.209,0.205,none,1496
+1,2023-02-17,lebensz,9,0.097,0.101,0.094,none,1496
+1,2023-02-17,lebensz,10 = aeusserst zufrieden,0.059,0.064,0.054,none,1496
 2,2020-03-28,ver_gov,0 = Ueberhaupt kein Vertrauen,0.044,0.05,0.039,none,1513
 2,2020-03-28,ver_gov,1,0.024,0.032,0.016,none,1513
 2,2020-03-28,ver_gov,2,0.018,0.028,0.009,none,1513
@@ -2111,6 +2122,61 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 2,2022-10-21,ver_orf,8,0.076,0.081,0.072,none,1466
 2,2022-10-21,ver_orf,9,0.041,0.048,0.035,none,1466
 2,2022-10-21,ver_orf,10 = Sehr viel Vertrauen,0.03,0.037,0.022,none,1466
+2,2023-02-17,ver_gov,0 = Ueberhaupt kein Vertrauen,0.317,0.318,0.315,none,1481
+2,2023-02-17,ver_gov,1,0.073,0.077,0.068,none,1481
+2,2023-02-17,ver_gov,2,0.077,0.081,0.072,none,1481
+2,2023-02-17,ver_gov,3,0.094,0.098,0.09,none,1481
+2,2023-02-17,ver_gov,4,0.085,0.089,0.081,none,1481
+2,2023-02-17,ver_gov,5,0.122,0.125,0.118,none,1481
+2,2023-02-17,ver_gov,6,0.082,0.086,0.077,none,1481
+2,2023-02-17,ver_gov,7,0.068,0.073,0.064,none,1481
+2,2023-02-17,ver_gov,8,0.046,0.052,0.041,none,1481
+2,2023-02-17,ver_gov,9,0.025,0.033,0.017,none,1481
+2,2023-02-17,ver_gov,10 = Sehr viel Vertrauen,0.011,0.023,-0.002,none,1481
+2,2023-02-17,ver_ges,0 = Ueberhaupt kein Vertrauen,0.062,0.067,0.057,none,1484
+2,2023-02-17,ver_ges,1,0.035,0.042,0.028,none,1484
+2,2023-02-17,ver_ges,2,0.045,0.051,0.039,none,1484
+2,2023-02-17,ver_ges,3,0.071,0.075,0.066,none,1484
+2,2023-02-17,ver_ges,4,0.079,0.083,0.075,none,1484
+2,2023-02-17,ver_ges,5,0.129,0.132,0.126,none,1484
+2,2023-02-17,ver_ges,6,0.107,0.11,0.103,none,1484
+2,2023-02-17,ver_ges,7,0.165,0.168,0.162,none,1484
+2,2023-02-17,ver_ges,8,0.159,0.161,0.156,none,1484
+2,2023-02-17,ver_ges,9,0.08,0.085,0.076,none,1484
+2,2023-02-17,ver_ges,10 = Sehr viel Vertrauen,0.068,0.073,0.064,none,1484
+2,2023-02-17,ver_par,0 = Ueberhaupt kein Vertrauen,0.239,0.241,0.237,none,1479
+2,2023-02-17,ver_par,1,0.076,0.081,0.072,none,1479
+2,2023-02-17,ver_par,2,0.096,0.1,0.092,none,1479
+2,2023-02-17,ver_par,3,0.095,0.099,0.091,none,1479
+2,2023-02-17,ver_par,4,0.1,0.104,0.096,none,1479
+2,2023-02-17,ver_par,5,0.141,0.144,0.138,none,1479
+2,2023-02-17,ver_par,6,0.094,0.098,0.09,none,1479
+2,2023-02-17,ver_par,7,0.073,0.077,0.068,none,1479
+2,2023-02-17,ver_par,8,0.056,0.061,0.051,none,1479
+2,2023-02-17,ver_par,9,0.019,0.028,0.01,none,1479
+2,2023-02-17,ver_par,10 = Sehr viel Vertrauen,0.01,0.023,-0.002,none,1479
+2,2023-02-17,ver_pol,0 = Ueberhaupt kein Vertrauen,0.064,0.069,0.059,none,1485
+2,2023-02-17,ver_pol,1,0.031,0.038,0.024,none,1485
+2,2023-02-17,ver_pol,2,0.056,0.062,0.051,none,1485
+2,2023-02-17,ver_pol,3,0.065,0.07,0.06,none,1485
+2,2023-02-17,ver_pol,4,0.074,0.078,0.069,none,1485
+2,2023-02-17,ver_pol,5,0.133,0.136,0.129,none,1485
+2,2023-02-17,ver_pol,6,0.098,0.102,0.095,none,1485
+2,2023-02-17,ver_pol,7,0.144,0.147,0.141,none,1485
+2,2023-02-17,ver_pol,8,0.156,0.159,0.154,none,1485
+2,2023-02-17,ver_pol,9,0.084,0.088,0.08,none,1485
+2,2023-02-17,ver_pol,10 = Sehr viel Vertrauen,0.095,0.099,0.091,none,1485
+2,2023-02-17,ver_orf,0 = Ueberhaupt kein Vertrauen,0.25,0.252,0.249,none,1487
+2,2023-02-17,ver_orf,1,0.066,0.071,0.061,none,1487
+2,2023-02-17,ver_orf,2,0.087,0.091,0.083,none,1487
+2,2023-02-17,ver_orf,3,0.077,0.082,0.073,none,1487
+2,2023-02-17,ver_orf,4,0.06,0.065,0.055,none,1487
+2,2023-02-17,ver_orf,5,0.142,0.145,0.139,none,1487
+2,2023-02-17,ver_orf,6,0.087,0.091,0.083,none,1487
+2,2023-02-17,ver_orf,7,0.093,0.097,0.089,none,1487
+2,2023-02-17,ver_orf,8,0.072,0.077,0.068,none,1487
+2,2023-02-17,ver_orf,9,0.041,0.048,0.035,none,1487
+2,2023-02-17,ver_orf,10 = Sehr viel Vertrauen,0.023,0.031,0.014,none,1487
 3,2020-04-04,sozkont,1 = Mehrmals taeglich,0.257,0.258,0.255,none,1511
 3,2020-04-04,sozkont,2 = Einmal taeglich,0.148,0.15,0.145,none,1511
 3,2020-04-04,sozkont,3 = Mehrmals in der Woche,0.387,0.389,0.386,none,1511
@@ -2256,6 +2322,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 3,2022-10-21,sozkont,3 = Mehrmals in der Woche,0.385,0.387,0.384,none,1459
 3,2022-10-21,sozkont,4 = Einmal in der Woche,0.089,0.093,0.085,none,1459
 3,2022-10-21,sozkont,5 = Gar nicht/ nie,0.019,0.028,0.009,none,1459
+3,2023-02-17,sozkont,1 = Mehrmals taeglich,0.301,0.303,0.3,none,1461
+3,2023-02-17,sozkont,2 = Einmal taeglich,0.123,0.127,0.12,none,1461
+3,2023-02-17,sozkont,3 = Mehrmals in der Woche,0.439,0.44,0.438,none,1461
+3,2023-02-17,sozkont,4 = Einmal in der Woche,0.107,0.111,0.103,none,1461
+3,2023-02-17,sozkont,5 = Gar nicht/ nie,0.029,0.037,0.021,none,1461
 4,2020-04-11,sozialn_verh_eig_abs,1 = Nahezu immer,0.785,0.785,0.784,none,1467
 4,2020-04-11,sozialn_verh_eig_abs,2 = Meistens,0.143,0.146,0.139,none,1467
 4,2020-04-11,sozialn_verh_eig_abs,3 = Manchmal,0.04,0.047,0.034,none,1467
@@ -3961,6 +4032,26 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 5,2022-10-21,wir_pub_gefahr,3 = mittelmaessig,0.389,0.39,0.388,none,1510
 5,2022-10-21,wir_pub_gefahr,4 = klein,0.109,0.113,0.106,none,1510
 5,2022-10-21,wir_pub_gefahr,5 = sehr klein,0.035,0.041,0.028,none,1510
+5,2023-02-17,ges_per_gefahr,1 = sehr gross,0.026,0.034,0.018,none,1525
+5,2023-02-17,ges_per_gefahr,2 = gross,0.064,0.069,0.06,none,1525
+5,2023-02-17,ges_per_gefahr,3 = mittelmaessig,0.267,0.269,0.265,none,1525
+5,2023-02-17,ges_per_gefahr,4 = klein,0.256,0.258,0.255,none,1525
+5,2023-02-17,ges_per_gefahr,5 = sehr klein,0.386,0.388,0.385,none,1525
+5,2023-02-17,ges_pub_gefahr,1 = sehr gross,0.028,0.035,0.02,none,1524
+5,2023-02-17,ges_pub_gefahr,2 = gross,0.084,0.088,0.08,none,1524
+5,2023-02-17,ges_pub_gefahr,3 = mittelmaessig,0.389,0.391,0.388,none,1524
+5,2023-02-17,ges_pub_gefahr,4 = klein,0.285,0.287,0.284,none,1524
+5,2023-02-17,ges_pub_gefahr,5 = sehr klein,0.214,0.216,0.211,none,1524
+5,2023-02-17,wir_per_gefahr,1 = sehr gross,0.086,0.09,0.082,none,1523
+5,2023-02-17,wir_per_gefahr,2 = gross,0.142,0.145,0.14,none,1523
+5,2023-02-17,wir_per_gefahr,3 = mittelmaessig,0.301,0.303,0.3,none,1523
+5,2023-02-17,wir_per_gefahr,4 = klein,0.244,0.246,0.242,none,1523
+5,2023-02-17,wir_per_gefahr,5 = sehr klein,0.227,0.229,0.224,none,1523
+5,2023-02-17,wir_pub_gefahr,1 = sehr gross,0.12,0.123,0.117,none,1520
+5,2023-02-17,wir_pub_gefahr,2 = gross,0.239,0.241,0.237,none,1520
+5,2023-02-17,wir_pub_gefahr,3 = mittelmaessig,0.369,0.371,0.368,none,1520
+5,2023-02-17,wir_pub_gefahr,4 = klein,0.166,0.169,0.164,none,1520
+5,2023-02-17,wir_pub_gefahr,5 = sehr klein,0.106,0.109,0.102,none,1520
 6,2020-03-28,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.308,0.31,0.306,none,1428
 6,2020-03-28,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.349,0.35,0.347,none,1428
 6,2020-03-28,kaufen_haus,3 = Teils-teils,0.264,0.266,0.263,none,1428
@@ -4301,6 +4392,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 6,2022-10-21,zeitp_kred,3 = Teils-teils,0.245,0.247,0.243,none,1397
 6,2022-10-21,zeitp_kred,4 = Eher guter Zeitpunkt,0.065,0.071,0.06,none,1397
 6,2022-10-21,zeitp_kred,5 = Sehr guter Zeitpunkt,0.013,0.025,0,none,1397
+6,2023-02-17,kaufen_haus,1 = Sehr schlechter Zeitpunkt,0.157,0.16,0.154,none,1357
+6,2023-02-17,kaufen_haus,2 = Eher schlechter Zeitpunkt,0.253,0.255,0.251,none,1357
+6,2023-02-17,kaufen_haus,3 = Teils-teils,0.473,0.474,0.472,none,1357
+6,2023-02-17,kaufen_haus,4 = Eher guter Zeitpunkt,0.102,0.106,0.098,none,1357
+6,2023-02-17,kaufen_haus,5 = Sehr guter Zeitpunkt,0.015,0.027,0.004,none,1357
 7,2020-03-28,demokratie,1 = Sehr zufrieden,0.231,0.233,0.229,none,1516
 7,2020-03-28,demokratie,2 = Eher zufrieden,0.424,0.425,0.423,none,1516
 7,2020-03-28,demokratie,3 = Teils-teils,0.253,0.255,0.251,none,1516
@@ -4796,6 +4892,16 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 7,2022-10-21,zuf_reg_wi,3 = Teils-teils,0.424,0.426,0.423,none,1382
 7,2022-10-21,zuf_reg_wi,4 = Eher unzufrieden,0.217,0.22,0.215,none,1382
 7,2022-10-21,zuf_reg_wi,5 = Sehr unzufrieden,0.145,0.148,0.142,none,1382
+7,2023-02-17,demokratie,1 = Sehr zufrieden,0.043,0.049,0.037,none,1489
+7,2023-02-17,demokratie,2 = Eher zufrieden,0.244,0.246,0.242,none,1489
+7,2023-02-17,demokratie,3 = Teils-teils,0.303,0.305,0.301,none,1489
+7,2023-02-17,demokratie,4 = Eher unzufrieden,0.186,0.188,0.183,none,1489
+7,2023-02-17,demokratie,5 = Sehr unzufrieden,0.225,0.227,0.223,none,1489
+7,2023-02-17,blianz_reg,1 = Sehr zufrieden,0.027,0.035,0.019,none,1472
+7,2023-02-17,blianz_reg,2 = Eher zufrieden,0.15,0.153,0.147,none,1472
+7,2023-02-17,blianz_reg,3 = Teils-teils,0.266,0.268,0.264,none,1472
+7,2023-02-17,blianz_reg,4 = Eher unzufrieden,0.204,0.206,0.202,none,1472
+7,2023-02-17,blianz_reg,5 = Sehr unzufrieden,0.354,0.355,0.352,none,1472
 8,2020-05-29,welfshov_such,1 = Stimme stark zu,0.172,0.175,0.169,none,1394
 8,2020-05-29,welfshov_such,2 = Stimme zu,0.29,0.292,0.288,none,1394
 8,2020-05-29,welfshov_such,3 = Weder noch,0.269,0.271,0.267,none,1394
@@ -5316,6 +5422,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 9,2022-10-21,issue_redu,3 = Teils-teils,0.295,0.296,0.293,none,1437
 9,2022-10-21,issue_redu,4 = Trifft eher nicht zu,0.102,0.105,0.098,none,1437
 9,2022-10-21,issue_redu,5 = Trifft ueberhaupt nicht zu,0.048,0.054,0.042,none,1437
+9,2023-02-17,issue_zuwa,1 = Trifft sehr zu,0.277,0.279,0.275,none,1475
+9,2023-02-17,issue_zuwa,2 = Trifft eher zu,0.232,0.234,0.23,none,1475
+9,2023-02-17,issue_zuwa,3 = Teils-teils,0.246,0.248,0.244,none,1475
+9,2023-02-17,issue_zuwa,4 = Trifft eher nicht zu,0.145,0.148,0.142,none,1475
+9,2023-02-17,issue_zuwa,5 = Trifft ueberhaupt nicht zu,0.1,0.104,0.096,none,1475
 10,2020-03-28,wochentag,1 = Trifft voll und ganz zu,0.143,0.146,0.14,none,1535
 10,2020-03-28,wochentag,2 = Trifft eher zu,0.19,0.192,0.188,none,1535
 10,2020-03-28,wochentag,3 = Teils-teils,0.189,0.192,0.187,none,1535
@@ -8651,6 +8762,106 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 10,2022-10-21,skept_gerech,3 = Teils-teils,0.311,0.313,0.309,none,1458
 10,2022-10-21,skept_gerech,4 = Trifft eher nicht zu,0.135,0.138,0.132,none,1458
 10,2022-10-21,skept_gerech,5 = Trifft gar nicht zu,0.205,0.208,0.203,none,1458
+10,2023-02-17,wochentag,1 = Trifft voll und ganz zu,0.045,0.051,0.039,none,1498
+10,2023-02-17,wochentag,2 = Trifft eher zu,0.074,0.079,0.07,none,1498
+10,2023-02-17,wochentag,3 = Teils-teils,0.178,0.18,0.175,none,1498
+10,2023-02-17,wochentag,4 = Trifft eher nicht zu,0.168,0.17,0.165,none,1498
+10,2023-02-17,wochentag,5 = Trifft gar nicht zu,0.535,0.536,0.534,none,1498
+10,2023-02-17,kontakt,1 = Trifft voll und ganz zu,0.034,0.041,0.027,none,1494
+10,2023-02-17,kontakt,2 = Trifft eher zu,0.096,0.099,0.092,none,1494
+10,2023-02-17,kontakt,3 = Teils-teils,0.16,0.163,0.157,none,1494
+10,2023-02-17,kontakt,4 = Trifft eher nicht zu,0.211,0.213,0.209,none,1494
+10,2023-02-17,kontakt,5 = Trifft gar nicht zu,0.5,0.501,0.499,none,1494
+10,2023-02-17,zeit,1 = Trifft voll und ganz zu,0.072,0.076,0.067,none,1467
+10,2023-02-17,zeit,2 = Trifft eher zu,0.113,0.117,0.11,none,1467
+10,2023-02-17,zeit,3 = Teils-teils,0.291,0.293,0.29,none,1467
+10,2023-02-17,zeit,4 = Trifft eher nicht zu,0.183,0.185,0.18,none,1467
+10,2023-02-17,zeit,5 = Trifft gar nicht zu,0.341,0.342,0.339,none,1467
+10,2023-02-17,konflikt,1 = Trifft voll und ganz zu,0.025,0.033,0.017,none,1480
+10,2023-02-17,konflikt,2 = Trifft eher zu,0.06,0.065,0.055,none,1480
+10,2023-02-17,konflikt,3 = Teils-teils,0.118,0.121,0.114,none,1480
+10,2023-02-17,konflikt,4 = Trifft eher nicht zu,0.177,0.18,0.175,none,1480
+10,2023-02-17,konflikt,5 = Trifft gar nicht zu,0.62,0.621,0.619,none,1480
+10,2023-02-17,kinder,1 = Trifft voll und ganz zu,0.044,0.072,0.017,none,299
+10,2023-02-17,kinder,2 = Trifft eher zu,0.129,0.143,0.114,none,299
+10,2023-02-17,kinder,3 = Teils-teils,0.234,0.243,0.224,none,299
+10,2023-02-17,kinder,4 = Trifft eher nicht zu,0.188,0.199,0.177,none,299
+10,2023-02-17,kinder,5 = Trifft gar nicht zu,0.406,0.411,0.4,none,299
+10,2023-02-17,zusammenhalt,1 = Trifft voll und ganz zu,0.009,0.024,-0.006,none,1397
+10,2023-02-17,zusammenhalt,2 = Trifft eher zu,0.072,0.077,0.067,none,1397
+10,2023-02-17,zusammenhalt,3 = Teils-teils,0.252,0.255,0.25,none,1397
+10,2023-02-17,zusammenhalt,4 = Trifft eher nicht zu,0.301,0.303,0.299,none,1397
+10,2023-02-17,zusammenhalt,5 = Trifft gar nicht zu,0.366,0.367,0.364,none,1397
+10,2023-02-17,umweundklima,1 = Trifft voll und ganz zu,0.098,0.102,0.094,none,1428
+10,2023-02-17,umweundklima,2 = Trifft eher zu,0.195,0.198,0.192,none,1428
+10,2023-02-17,umweundklima,3 = Teils-teils,0.407,0.409,0.406,none,1428
+10,2023-02-17,umweundklima,4 = Trifft eher nicht zu,0.142,0.145,0.139,none,1428
+10,2023-02-17,umweundklima,5 = Trifft gar nicht zu,0.158,0.161,0.155,none,1428
+10,2023-02-17,onlinekommun,1 = Trifft voll und ganz zu,0.06,0.066,0.055,none,1404
+10,2023-02-17,onlinekommun,2 = Trifft eher zu,0.231,0.234,0.229,none,1404
+10,2023-02-17,onlinekommun,3 = Teils-teils,0.44,0.441,0.439,none,1404
+10,2023-02-17,onlinekommun,4 = Trifft eher nicht zu,0.147,0.15,0.144,none,1404
+10,2023-02-17,onlinekommun,5 = Trifft gar nicht zu,0.121,0.125,0.118,none,1404
+10,2023-02-17,zus_bestes,1 = Trifft voll und ganz zu,0.034,0.041,0.027,none,1438
+10,2023-02-17,zus_bestes,2 = Trifft eher zu,0.183,0.186,0.181,none,1438
+10,2023-02-17,zus_bestes,3 = Teils-teils,0.465,0.466,0.464,none,1438
+10,2023-02-17,zus_bestes,4 = Trifft eher nicht zu,0.191,0.193,0.188,none,1438
+10,2023-02-17,zus_bestes,5 = Trifft gar nicht zu,0.127,0.13,0.123,none,1438
+10,2023-02-17,zus_einig,1 = Trifft voll und ganz zu,0.059,0.065,0.054,none,1435
+10,2023-02-17,zus_einig,2 = Trifft eher zu,0.242,0.244,0.24,none,1435
+10,2023-02-17,zus_einig,3 = Teils-teils,0.421,0.422,0.42,none,1435
+10,2023-02-17,zus_einig,4 = Trifft eher nicht zu,0.168,0.171,0.165,none,1435
+10,2023-02-17,zus_einig,5 = Trifft gar nicht zu,0.11,0.114,0.107,none,1435
+10,2023-02-17,zus_schutzen,1 = Trifft voll und ganz zu,0.031,0.039,0.024,none,1449
+10,2023-02-17,zus_schutzen,2 = Trifft eher zu,0.112,0.116,0.109,none,1449
+10,2023-02-17,zus_schutzen,3 = Teils-teils,0.372,0.373,0.371,none,1449
+10,2023-02-17,zus_schutzen,4 = Trifft eher nicht zu,0.271,0.273,0.269,none,1449
+10,2023-02-17,zus_schutzen,5 = Trifft gar nicht zu,0.213,0.216,0.211,none,1449
+10,2023-02-17,skept_lebens,1 = Trifft voll und ganz zu,0.064,0.069,0.059,none,1458
+10,2023-02-17,skept_lebens,2 = Trifft eher zu,0.205,0.208,0.203,none,1458
+10,2023-02-17,skept_lebens,3 = Teils-teils,0.352,0.354,0.351,none,1458
+10,2023-02-17,skept_lebens,4 = Trifft eher nicht zu,0.156,0.159,0.153,none,1458
+10,2023-02-17,skept_lebens,5 = Trifft gar nicht zu,0.222,0.225,0.22,none,1458
+10,2023-02-17,skept_wichti,1 = Trifft voll und ganz zu,0.4,0.401,0.398,none,1474
+10,2023-02-17,skept_wichti,2 = Trifft eher zu,0.224,0.226,0.222,none,1474
+10,2023-02-17,skept_wichti,3 = Teils-teils,0.265,0.267,0.263,none,1474
+10,2023-02-17,skept_wichti,4 = Trifft eher nicht zu,0.066,0.071,0.061,none,1474
+10,2023-02-17,skept_wichti,5 = Trifft gar nicht zu,0.045,0.051,0.039,none,1474
+10,2023-02-17,skept_behaup,1 = Trifft voll und ganz zu,0.219,0.221,0.217,none,1430
+10,2023-02-17,skept_behaup,2 = Trifft eher zu,0.179,0.182,0.177,none,1430
+10,2023-02-17,skept_behaup,3 = Teils-teils,0.343,0.345,0.342,none,1430
+10,2023-02-17,skept_behaup,4 = Trifft eher nicht zu,0.163,0.166,0.16,none,1430
+10,2023-02-17,skept_behaup,5 = Trifft gar nicht zu,0.095,0.099,0.091,none,1430
+10,2023-02-17,skept_andere,1 = Trifft voll und ganz zu,0.051,0.057,0.045,none,1382
+10,2023-02-17,skept_andere,2 = Trifft eher zu,0.058,0.063,0.052,none,1382
+10,2023-02-17,skept_andere,3 = Teils-teils,0.243,0.245,0.241,none,1382
+10,2023-02-17,skept_andere,4 = Trifft eher nicht zu,0.241,0.243,0.239,none,1382
+10,2023-02-17,skept_andere,5 = Trifft gar nicht zu,0.407,0.408,0.406,none,1382
+10,2023-02-17,skept_grippe,1 = Trifft voll und ganz zu,0.192,0.195,0.19,none,1443
+10,2023-02-17,skept_grippe,2 = Trifft eher zu,0.224,0.227,0.222,none,1443
+10,2023-02-17,skept_grippe,3 = Teils-teils,0.263,0.265,0.261,none,1443
+10,2023-02-17,skept_grippe,4 = Trifft eher nicht zu,0.138,0.141,0.135,none,1443
+10,2023-02-17,skept_grippe,5 = Trifft gar nicht zu,0.182,0.185,0.179,none,1443
+10,2023-02-17,skept_gerech,1 = Trifft voll und ganz zu,0.088,0.093,0.084,none,1463
+10,2023-02-17,skept_gerech,2 = Trifft eher zu,0.243,0.245,0.241,none,1463
+10,2023-02-17,skept_gerech,3 = Teils-teils,0.297,0.298,0.295,none,1463
+10,2023-02-17,skept_gerech,4 = Trifft eher nicht zu,0.142,0.145,0.139,none,1463
+10,2023-02-17,skept_gerech,5 = Trifft gar nicht zu,0.23,0.232,0.228,none,1463
+10,2023-02-17,tax_gleich,1 = Trifft voll und ganz zu,0.083,0.088,0.079,none,1421
+10,2023-02-17,tax_gleich,2 = Trifft eher zu,0.115,0.119,0.112,none,1421
+10,2023-02-17,tax_gleich,3 = Teils-teils,0.348,0.349,0.346,none,1421
+10,2023-02-17,tax_gleich,4 = Trifft eher nicht zu,0.227,0.229,0.225,none,1421
+10,2023-02-17,tax_gleich,5 = Trifft gar nicht zu,0.226,0.229,0.224,none,1421
+10,2023-02-17,tax_ineq,1 = Trifft voll und ganz zu,0.484,0.485,0.483,none,1468
+10,2023-02-17,tax_ineq,2 = Trifft eher zu,0.307,0.308,0.305,none,1468
+10,2023-02-17,tax_ineq,3 = Teils-teils,0.155,0.158,0.152,none,1468
+10,2023-02-17,tax_ineq,4 = Trifft eher nicht zu,0.04,0.047,0.034,none,1468
+10,2023-02-17,tax_ineq,5 = Trifft gar nicht zu,0.014,0.025,0.002,none,1468
+10,2023-02-17,tax_hurt,1 = Trifft voll und ganz zu,0.321,0.323,0.319,none,1401
+10,2023-02-17,tax_hurt,2 = Trifft eher zu,0.241,0.243,0.239,none,1401
+10,2023-02-17,tax_hurt,3 = Teils-teils,0.314,0.315,0.312,none,1401
+10,2023-02-17,tax_hurt,4 = Trifft eher nicht zu,0.076,0.08,0.071,none,1401
+10,2023-02-17,tax_hurt,5 = Trifft gar nicht zu,0.049,0.055,0.043,none,1401
 11,2020-03-28,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.032,0.039,0.025,none,1516
 11,2020-03-28,mas_angemessen,2 = eher nicht ausreichend,0.124,0.127,0.121,none,1516
 11,2020-03-28,mas_angemessen,3 = angemessen,0.716,0.716,0.715,none,1516
@@ -8816,6 +9027,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 11,2022-10-21,mas_angemessen,3 = angemessen,0.442,0.443,0.441,none,1449
 11,2022-10-21,mas_angemessen,4 = eher zu stark,0.139,0.142,0.136,none,1449
 11,2022-10-21,mas_angemessen,5 = zu extrem,0.178,0.18,0.175,none,1449
+11,2023-02-17,mas_angemessen,1 = ueberhaupt nicht ausreichend,0.031,0.039,0.024,none,1455
+11,2023-02-17,mas_angemessen,2 = eher nicht ausreichend,0.076,0.081,0.072,none,1455
+11,2023-02-17,mas_angemessen,3 = angemessen,0.494,0.495,0.493,none,1455
+11,2023-02-17,mas_angemessen,4 = eher zu stark,0.164,0.167,0.162,none,1455
+11,2023-02-17,mas_angemessen,5 = zu extrem,0.235,0.237,0.233,none,1455
 12,2020-03-28,mas_effektiv,1 = ueberhaupt nicht effektiv,0.015,0.025,0.004,none,1512
 12,2020-03-28,mas_effektiv,2 = eher nicht effektiv,0.042,0.048,0.035,none,1512
 12,2020-03-28,mas_effektiv,3 = teils effektiv,0.285,0.286,0.283,none,1512
@@ -8981,6 +9197,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 12,2022-10-21,mas_effektiv,3 = teils effektiv,0.394,0.395,0.393,none,1432
 12,2022-10-21,mas_effektiv,4 = eher effektiv,0.149,0.152,0.146,none,1432
 12,2022-10-21,mas_effektiv,5 = sehr effektiv,0.042,0.049,0.036,none,1432
+12,2023-02-17,mas_effektiv,1 = ueberhaupt nicht effektiv,0.182,0.184,0.179,none,1415
+12,2023-02-17,mas_effektiv,2 = eher nicht effektiv,0.164,0.167,0.161,none,1415
+12,2023-02-17,mas_effektiv,3 = teils effektiv,0.35,0.352,0.349,none,1415
+12,2023-02-17,mas_effektiv,4 = eher effektiv,0.248,0.25,0.246,none,1415
+12,2023-02-17,mas_effektiv,5 = sehr effektiv,0.057,0.062,0.051,none,1415
 13,2020-04-11,fin_ausk_yea,1 = Viel besser,0.073,0.077,0.068,none,1378
 13,2020-04-11,fin_ausk_yea,2 = Etwas besser,0.186,0.189,0.183,none,1378
 13,2020-04-11,fin_ausk_yea,3 = Gleich bleibend,0.517,0.518,0.516,none,1378
@@ -9071,6 +9292,16 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 13,2022-10-21,eco_ausk_yea,3 = Gleich bleibend,0.211,0.214,0.209,none,1447
 13,2022-10-21,eco_ausk_yea,4 = Etwas schlechter,0.433,0.434,0.431,none,1447
 13,2022-10-21,eco_ausk_yea,5 = Viel schlechter,0.276,0.278,0.274,none,1447
+13,2023-02-17,fin_ausk_yea,1 = Viel besser,0.022,0.031,0.013,none,1449
+13,2023-02-17,fin_ausk_yea,2 = Etwas besser,0.129,0.132,0.125,none,1449
+13,2023-02-17,fin_ausk_yea,3 = Gleich bleibend,0.482,0.483,0.481,none,1449
+13,2023-02-17,fin_ausk_yea,4 = Etwas schlechter,0.26,0.262,0.258,none,1449
+13,2023-02-17,fin_ausk_yea,5 = Viel schlechter,0.107,0.111,0.103,none,1449
+13,2023-02-17,eco_ausk_yea,1 = Viel besser,0.013,0.025,0.001,none,1441
+13,2023-02-17,eco_ausk_yea,2 = Etwas besser,0.114,0.117,0.11,none,1441
+13,2023-02-17,eco_ausk_yea,3 = Gleich bleibend,0.301,0.302,0.299,none,1441
+13,2023-02-17,eco_ausk_yea,4 = Etwas schlechter,0.408,0.409,0.407,none,1441
+13,2023-02-17,eco_ausk_yea,5 = Viel schlechter,0.165,0.168,0.162,none,1441
 14,2020-03-28,depress_A1,0 = nie,0.055,0.06,0.05,none,1513
 14,2020-03-28,depress_A1,1 = an manchen Tagen,0.204,0.207,0.202,none,1513
 14,2020-03-28,depress_A1,2 = mehrmals die Woche,0.181,0.184,0.179,none,1513
@@ -10556,6 +10787,51 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 14,2022-10-21,depress_A9,2 = mehrmals die Woche,0.239,0.241,0.237,none,1477
 14,2022-10-21,depress_A9,3 = beinahe jeden Tag,0.206,0.208,0.204,none,1477
 14,2022-10-21,depress_A9,4 = taeglich,0.121,0.124,0.117,none,1477
+14,2023-02-17,depress_A1,0 = nie,0.047,0.053,0.041,none,1484
+14,2023-02-17,depress_A1,1 = an manchen Tagen,0.286,0.288,0.285,none,1484
+14,2023-02-17,depress_A1,2 = mehrmals die Woche,0.205,0.208,0.203,none,1484
+14,2023-02-17,depress_A1,3 = beinahe jeden Tag,0.256,0.258,0.254,none,1484
+14,2023-02-17,depress_A1,4 = taeglich,0.205,0.208,0.203,none,1484
+14,2023-02-17,depress_A2,0 = nie,0.667,0.668,0.667,none,1478
+14,2023-02-17,depress_A2,1 = an manchen Tagen,0.207,0.21,0.205,none,1478
+14,2023-02-17,depress_A2,2 = mehrmals die Woche,0.06,0.065,0.055,none,1478
+14,2023-02-17,depress_A2,3 = beinahe jeden Tag,0.039,0.045,0.032,none,1478
+14,2023-02-17,depress_A2,4 = taeglich,0.027,0.035,0.019,none,1478
+14,2023-02-17,depress_A3,0 = nie,0.297,0.298,0.295,none,1477
+14,2023-02-17,depress_A3,1 = an manchen Tagen,0.493,0.494,0.492,none,1477
+14,2023-02-17,depress_A3,2 = mehrmals die Woche,0.124,0.127,0.121,none,1477
+14,2023-02-17,depress_A3,3 = beinahe jeden Tag,0.06,0.065,0.055,none,1477
+14,2023-02-17,depress_A3,4 = taeglich,0.026,0.034,0.018,none,1477
+14,2023-02-17,depress_A4,0 = nie,0.691,0.691,0.69,none,1469
+14,2023-02-17,depress_A4,1 = an manchen Tagen,0.18,0.183,0.177,none,1469
+14,2023-02-17,depress_A4,2 = mehrmals die Woche,0.064,0.069,0.059,none,1469
+14,2023-02-17,depress_A4,3 = beinahe jeden Tag,0.044,0.05,0.038,none,1469
+14,2023-02-17,depress_A4,4 = taeglich,0.022,0.031,0.013,none,1469
+14,2023-02-17,depress_A5,0 = nie,0.076,0.08,0.071,none,1466
+14,2023-02-17,depress_A5,1 = an manchen Tagen,0.282,0.284,0.28,none,1466
+14,2023-02-17,depress_A5,2 = mehrmals die Woche,0.225,0.228,0.223,none,1466
+14,2023-02-17,depress_A5,3 = beinahe jeden Tag,0.236,0.238,0.233,none,1466
+14,2023-02-17,depress_A5,4 = taeglich,0.182,0.184,0.179,none,1466
+14,2023-02-17,depress_A6,0 = nie,0.579,0.58,0.578,none,1468
+14,2023-02-17,depress_A6,1 = an manchen Tagen,0.278,0.28,0.276,none,1468
+14,2023-02-17,depress_A6,2 = mehrmals die Woche,0.073,0.077,0.068,none,1468
+14,2023-02-17,depress_A6,3 = beinahe jeden Tag,0.047,0.053,0.041,none,1468
+14,2023-02-17,depress_A6,4 = taeglich,0.023,0.032,0.015,none,1468
+14,2023-02-17,depress_A7,0 = nie,0.649,0.65,0.649,none,1467
+14,2023-02-17,depress_A7,1 = an manchen Tagen,0.218,0.22,0.216,none,1467
+14,2023-02-17,depress_A7,2 = mehrmals die Woche,0.075,0.079,0.07,none,1467
+14,2023-02-17,depress_A7,3 = beinahe jeden Tag,0.04,0.046,0.034,none,1467
+14,2023-02-17,depress_A7,4 = taeglich,0.018,0.028,0.008,none,1467
+14,2023-02-17,depress_A8,0 = nie,0.527,0.527,0.526,none,1475
+14,2023-02-17,depress_A8,1 = an manchen Tagen,0.323,0.325,0.322,none,1475
+14,2023-02-17,depress_A8,2 = mehrmals die Woche,0.074,0.078,0.069,none,1475
+14,2023-02-17,depress_A8,3 = beinahe jeden Tag,0.047,0.053,0.041,none,1475
+14,2023-02-17,depress_A8,4 = taeglich,0.029,0.037,0.022,none,1475
+14,2023-02-17,depress_A9,0 = nie,0.111,0.114,0.107,none,1484
+14,2023-02-17,depress_A9,1 = an manchen Tagen,0.353,0.354,0.351,none,1484
+14,2023-02-17,depress_A9,2 = mehrmals die Woche,0.23,0.232,0.228,none,1484
+14,2023-02-17,depress_A9,3 = beinahe jeden Tag,0.197,0.199,0.194,none,1484
+14,2023-02-17,depress_A9,4 = taeglich,0.11,0.114,0.107,none,1484
 15,2020-05-03,fin_ausk_akt,0 = sehr gut zurechtkommen,0.176,0.179,0.174,none,1501
 15,2020-05-03,fin_ausk_akt,1 = gut zurechtkommen,0.433,0.434,0.432,none,1501
 15,2020-05-03,fin_ausk_akt,2 = teils-teils,0.242,0.244,0.24,none,1501
@@ -10696,6 +10972,11 @@ scales,wavedate,variable,measurement,prop,ymax,ymin,groupby,N_total
 15,2022-10-21,fin_ausk_akt,2 = teils-teils,0.319,0.321,0.318,none,1484
 15,2022-10-21,fin_ausk_akt,3 = nur schwer zurechtkommen,0.119,0.122,0.115,none,1484
 15,2022-10-21,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.09,0.094,0.085,none,1484
+15,2023-02-17,fin_ausk_akt,0 = sehr gut zurechtkommen,0.095,0.099,0.091,none,1487
+15,2023-02-17,fin_ausk_akt,1 = gut zurechtkommen,0.374,0.375,0.373,none,1487
+15,2023-02-17,fin_ausk_akt,2 = teils-teils,0.31,0.312,0.309,none,1487
+15,2023-02-17,fin_ausk_akt,3 = nur schwer zurechtkommen,0.138,0.141,0.135,none,1487
+15,2023-02-17,fin_ausk_akt,4 = nur sehr schwer zurechtkommen,0.083,0.087,0.078,none,1487
 16,2020-04-25,zuf_fam,0 = sehr zufrieden,0.417,0.418,0.416,none,1447
 16,2020-04-25,zuf_fam,1 = eher zufrieden,0.42,0.421,0.419,none,1447
 16,2020-04-25,zuf_fam,2 = weniger zufrieden,0.128,0.131,0.124,none,1447
