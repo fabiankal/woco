@@ -55,7 +55,7 @@ logodir <-""
 
 
 #dashboard release version
-version<-"V1.3" 
+version<-"V1.4" 
 
 #data with variable means
 data <-readr::read_csv(paste0(githubdir,"output/tables/export_shiny_data.csv"),show_col_types = FALSE)
@@ -328,11 +328,12 @@ renderPlotly({
     geom_area(position="stack", show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
     geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
     scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) + 
-    labs(y = "", x= "",fill="") +
+    labs(y = "", x= "",fill="", title=paste0("\n",data_labels$labels[data_labels$variable %in% input$var_shares])) +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-    scale_x_date(date_breaks = "3 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2))
+    scale_x_date(date_breaks = "3 month",date_labels = "%b %y",guide = guide_axis(n.dodge = 2)) +
     theme(legend.position="bottom") + 
+    theme(plot.title = element_text(margin = margin(b = -20))) +
     guides(fill=guide_legend(ncol=5,nrow=1,byrow=TRUE)) 
   
   #increase size (margin) around the plot to fit the logo and information about the data source and N
@@ -420,7 +421,7 @@ renderPlotly({
     geom_point(aes(text=paste("N (Welle): ",N)),position=position_stack(),colour="white") +
     #geom_text(aes(label=round(prop*100, digits = 0)), position=position_stack(vjust=0.5), color="black", size=2) +
     scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect)*2)-1)) +  #alternative:Blues
-    labs(y = "", x= "",fill="") +
+    labs(y = "", x= "",fill="", title=paste0("\n",data_labels$labels[data_labels$variable %in% input$var_shares])) +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     scale_x_date(date_breaks = "4 month",date_labels = "%b\n%y",guide = guide_axis(n.dodge = 2))
@@ -554,7 +555,7 @@ renderPlotly({
           error_y = ~list(array = y_err))
   p <- p %>% layout(title = "",
          xaxis = list(title = ""),
-         yaxis = list (title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
+         yaxis = list(title = "",rangemode = ifelse(input$axis0,"tozero","normal")),
          legend = list(orientation = 'h'),
          images = list(list(  
           source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
@@ -953,7 +954,7 @@ renderPlotly({
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~subgroup, 
           error_y = list(array = ~y_err))#,
           #sort = FALSE)
-  p <- p %>% layout(title = "",
+  p <- p %>% layout(title = list(text=data_labels$labels[data_labels$variable %in% input$variablesgr],x=0.05,y=.97),
          xaxis = list(title = ""),
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
@@ -988,9 +989,10 @@ renderPlotly({
   p <- data3[order(data3$subgroup),] %>%
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)#,
           #sort = FALSE)
-  p <- p %>% layout(title = "",
+  p <- p %>% layout(title = list(text=data_labels$labels[data_labels$variable %in% input$variablesgr],x=0.05,y=.97),
          xaxis = list(title = ""),
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
+         title = list(title = paste0("\n",data_labels$labels[data_labels$variable %in% input$variablesgr])),
          legend = list(orientation = 'h'),
          images = list(list(  
           source =  base64enc::dataURI(file = paste0(logodir,"logo2.png")), 
@@ -1091,7 +1093,7 @@ renderPlotly({
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter',mode = 'lines+markers',linetype=~subgroup, 
           error_y = list(array = ~y_err))#,
           #sort = FALSE)
-  p <- p %>% layout(title = "",
+  p <- p %>% layout(title = list(text=data_labels$labels[data_labels$variable %in% input$variablesgr],x=0.05,y=.97),
          xaxis = list(title = ""),
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
@@ -1125,7 +1127,7 @@ renderPlotly({
   p <- data3[order(data3$subgroup),] %>%
   plot_ly(x = ~wavedate, y= ~mean_measurement,type = 'scatter', mode = 'lines+markers',linetype=~subgroup)#,
           #sort = FALSE)
-  p <- p %>% layout(title = "",
+  p <- p %>% layout(title = list(text=data_labels$labels[data_labels$variable %in% input$variablesgr],x=0.05,y=.97),
          xaxis = list(title = ""),
          yaxis = list (title = "",rangemode = ifelse(input$axis02,"tozero","normal")),
          legend = list(orientation = 'h'),
@@ -1385,7 +1387,7 @@ renderPlotly({
   p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
     geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
     scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
-    labs(y = "", x= "",fill="") +
+    labs(y = "", x= "",fill="", title=paste0("\n",data_labels$labels[data_labels$variable %in% input$var_shares2])) +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     scale_x_discrete(guide = guide_axis(n.dodge = 2))+
@@ -1444,7 +1446,7 @@ layout(showlegend = FALSE,
    p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
     geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + 
     scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
-    labs(y = "", x= "") +
+    labs(y = "", x= "", title=paste0("\n",data_labels$labels[data_labels$variable %in% input$var_shares2])) +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     scale_x_discrete(guide = guide_axis(n.dodge = 2)) 
@@ -1535,7 +1537,7 @@ renderPlotly({
   p <- ggplot(data3, aes(fill=Kategorie,x=Kategorie, y=Anteil,text=paste("N:",Nrund))) + 
     geom_bar(show.legend = TRUE,stat = "identity",colour="white",alpha=.75) + 
     scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
-    labs(y = "", x= "",fill="") +
+    labs(y = "", x= "",fill="", title=paste0("\n",data_labels$labels[data_labels$variable %in% input$var_shares2])) +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     scale_x_discrete(guide = guide_axis(n.dodge = 2))+
@@ -1593,7 +1595,7 @@ layout(showlegend = FALSE,
    p <- ggplot(data4, aes(x=Kategorie,fill=Kategorie, y=Anteil,text=paste("N:",Nrund))) + #
     geom_col(aes(frame=Datum,ids = Kategorie),position = "identity",show.legend = FALSE,alpha=.75) + 
     scale_fill_brewer(palette = "RdYlBu", direction=((as.numeric(input$colordirect2)*2)-1)) +  
-    labs(y = "", x= "") +
+    labs(y = "", x= "", title=paste0("\n",data_labels$labels[data_labels$variable %in% input$var_shares2])) +
     theme_minimal() +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
     scale_x_discrete(guide = guide_axis(n.dodge = 2)) 
