@@ -1,7 +1,7 @@
 channels:
   - conda-forge
 dependencies:
-  - r-base=4.0.5
+  - r-base=3.6.3
   - r-tidyr
   - r-plotly
   - r-dplyr
