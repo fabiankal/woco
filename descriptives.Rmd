@@ -550,10 +550,11 @@ write_csv(export_shiny_data, "./output/tables/export_shiny_data.csv", na = "NA")
 write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.csv", na = "NA")
 write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
 
+#do not update covid cases anymore -> to update uncomment the following two lines
 
-epidf2 =            read.delim("https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+#epidf2 =            read.delim("https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
 
-write_csv(epidf2, "./output/tables/CovidFaelle_Timeline.csv", na = "NA")
+#write_csv(epidf2, "./output/tables/CovidFaelle_Timeline.csv", na = "NA")
 
 ```
 
