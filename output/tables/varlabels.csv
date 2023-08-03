@@ -278,7 +278,7 @@ Corona-Tests: Lange Menschenschlangen vor Teststationen,mastest_war,1,5
 Corona-Tests: Effektive Massnahme gegen Corona,mastest_eff,1,5
 Corona-Tests: Ergebnis ist zuverlaessig,mastest_zuv,1,5
 "Corona-Tests: Negativer Test bedeutet, dass ich mehr Personen treffen kann",mastest_tre,1,5
-Corona-Tests: Trotz negativen Testergebnisses kann ich Coronavirus verbreiten,mastest_ver,1,5
+Corona-Tests: Trotz negativen Testergebnisses kann ich das Coronavirus verbreite,mastest_ver,1,5
 Corona-Tests: Privater Test kurz vor Weihnachten,mastest_pri,1,5
 "Corona-Tests: Keine Teilnahme, da Quarantaene nicht leistbar",mastest_qua,1,5
 Corona-Tests: Strengere Massnahmen fuer Personen ohne Test,mastest_str,1,5
@@ -429,7 +429,7 @@ Mediennutzung: Der Standard oder derstandard.at,med_sta,1,5
 Mediennutzung: Die Presse oder diepresse.com,med_pre,1,5
 Mediennutzung: Oesterreich oder oe24.at,med_oes,1,5
 Mediennutzung: Kurier oder kurier.at,med_kur,1,5
-Mediennutzung: Salzburger Nachrichten oder sn.at,med_sbg,1,5
+Mediennutzung: Salzburger Nachrichten oder salzburg.at,med_sbg,1,5
 Mediennutzung: Sonstige oesterreichische Tageszeitungen,med_son,1,5
 Mediennutzung: orf.at,med_oat,1,5
 Mediennutzung: ORF (Nachrichten),new_orf,1,5
