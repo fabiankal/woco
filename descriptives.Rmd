@@ -1,7 +1,7 @@
 ---
 title: "Work and Corona dashboard aggregation of ACPP data"
 author: "Fabian Kalleitner"
-date: "16/03/2023"
+date: "03/08/2023"
 output:
   html_document:
     df_print: paged
@@ -34,7 +34,7 @@ pander::panderOptions("table.split.table", Inf)
 ```{r data import and sociodem, include = FALSE}
 
 #import ACPP data in long format
-bern_data_long2_factored = readRDS("./../../R/W1-34_CORONAPANEL_recoded.rds")
+bern_data_long2_factored = readRDS("./../../R/W1-35_CORONAPANEL_recoded.rds")
 
 #import reverse information (which variable scales to reverse [handcoded!])
 rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types = FALSE)
@@ -47,7 +47,7 @@ rev_labels<-readr::read_csv("./output/tables/varlabels_rev_2.csv",show_col_types
 bern_data_long2_factored$wavedate <- as_factor(as.character(bern_data_long2_factored$wave))
 
 #input median date of interview to wavedate for every survey wave
-#median(as.Date(bern_data_long2_factored$START_DATE[bern_data_long2_factored$wave==24],"%y-%m-%d"),na.rm=TRUE)
+median(as.Date(bern_data_long2_factored$START_DATE[bern_data_long2_factored$wave==35],"%y-%m-%d"),na.rm=TRUE)
 
 levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04.2020","17.04.2020","25.04.2020",
                                               "03.05.2020","09.05.2020","16.05.2020","24.05.2020","29.05.2020",
@@ -55,7 +55,7 @@ levels(bern_data_long2_factored$wavedate) <-c("28.03.2020", "04.04.2020", "11.04
                                               "17.10.2020","14.11.2020","13.12.2020","16.01.2021","13.02.2021",
                                               "13.03.2021","16.04.2021","22.05.2021","26.06.2021","25.09.2021",
                                               "23.10.2021","26.11.2021","14.01.2022","18.02.2022","18.03.2022",
-                                              "22.04.2022","21.05.2022","21.10.2022","17.02.2023")
+                                              "22.04.2022","21.05.2022","21.10.2022","17.02.2023","24.06.2023")
 bern_data_long2_factored$wavedate = as.Date(bern_data_long2_factored$wavedate, "%d.%m.%Y")
 
 #SOCIODEMOGRAPHICS--------------------------------------------------------------
@@ -178,7 +178,8 @@ bern_data_long2_factored <- bern_data_long2_factored %>% mutate(panelist2=ifelse
                                                 ifelse(Paneli_W31 == 1 & wave==31,31,
                                                 ifelse(Paneli_W32 == 1 & wave==32,32,
                                                 ifelse(Paneli_W33 == 1 & wave==33,33,
-                                                ifelse(Paneli_W33 == 1 & wave==34,34,NA)))))))))))))))))))))))))))))))))))
+                                                ifelse(Paneli_W34 == 1 & wave==34,34,
+                                                ifelse(Paneli_W35 == 1 & wave==35,35,NA))))))))))))))))))))))))))))))))))))
 
 bern_data_long2_factored <- bern_data_long2_factored %>% mutate(empl=ifelse(as.numeric(berufst) < 4 & (panelist2>1),"(self) employed as usual",empl))
 
@@ -551,9 +552,9 @@ write_csv(export_shiny_data_shares, "./output/tables/export_shiny_data_shares.cs
 write_csv(grouped_labels2, "./output/tables/grouped_labels.csv", na = "NA")
 
 
-epidf2 =            read.delim("https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
+#epidf2 =            read.delim("https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv", sep=";", header=TRUE)
 
-write_csv(epidf2, "./output/tables/CovidFaelle_Timeline.csv", na = "NA")
+#write_csv(epidf2, "./output/tables/CovidFaelle_Timeline.csv", na = "NA")
 
 ```
 
